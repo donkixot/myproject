@@ -1,0 +1,34 @@
+.addTask
+	&__item
+		&Text
+			font-size: 16px
+			line-height: 18px
+		&Span
+			background-color: #000
+			border-radius: 50%
+			font-size: 16px
+			line-height: 18px
+			display: inline-block
+			color: #fff
+			width: 18px
+			text-align: center
+			margin-right: 5px
+		&_subtask
+			padding: 10px 0 20px
+			color: rgba(0, 0, 0, 0.8)
+			text-decoration: underline
+			cursor: pointer
+			&:hover
+				text-decoration: none
+		&_assign
+			padding-top: 10px
+			color: rgba(0, 0, 0, 0.6)
+			.addTask__itemText
+				display: inline-block
+				vertical-align: top
+				line-height: 56px
+				margin-right: 5px
+				&+div
+					vertical-align: top
+	&__button
+		margin-top: 20px

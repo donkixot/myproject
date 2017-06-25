@@ -1,0 +1,98 @@
+.home
+	&Slider
+		position: relative
+		&__img
+			width: 100%
+			height: 500px
+			background-size: cover
+			background-position: 50% 50%
+		&__controls
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+		&__control
+			position: absolute
+			top: 0
+			transform: translate(0, -50%)
+			&_left
+				left: 0
+			&_right
+				right: 0
+
+
+.blockTitle
+	text-align: center
+	text-transform: uppercase
+	padding: 20px 0 40px
+	position: relative
+	&:before
+		content: ''
+		width: 100px
+		height: 2px
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 20px
+		margin: auto
+		background-color: #4298EB
+
+.pageDescr
+	width: 740px
+	font-weight: 400
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+	padding-bottom: 30px
+
+.possibilities
+	padding-bottom: 20px
+	&__items
+		margin: 0 -15px
+		&:after
+			content: ''
+			clear: both
+			display: table
+	&__item
+		float: left
+		width: 33.33%
+		padding: 0 15px
+		text-align: center
+		margin-bottom: 20px
+		&Icon
+			font-family: 'my-font'
+			font-size: 60px
+			line-height: 100px
+			color: #4298EB
+		&Title
+			font-size: 18px
+			text-transform: uppercase
+			padding-bottom: 20px
+		&Text
+			font-weight: 500
+
+.someNumbers
+	padding-bottom: 20px
+	&__items
+		margin: 0 -15px
+		padding: 20px 0 50px
+		&:after
+			content: ''
+			clear: both
+			display: table
+	&__item
+		float: left
+		width: 25%
+		padding: 0 15px
+		text-align: center
+		&Inner
+			border: 1px solid #4298EB
+			padding: 30px 30px
+		&Title
+			color: #4298EB
+			font-size: 30px
+		&Text
+			text-transform: uppercase
+			font-weight: 400
+			font-size: 20px
+			letter-spacing: -1px

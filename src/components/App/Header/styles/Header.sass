@@ -1,0 +1,161 @@
+.header
+	box-shadow: 0 1px 8px rgba(0,0,0,.3)
+	padding: 0 15px
+	background-color: #fff
+	position: relative
+	z-index: 5
+	&:after
+		clear: both
+		display: table
+		content: ''
+	&Logo
+		float: left
+		padding: 15px 15px 15px 0
+		&__img
+			display: inline-block
+			vertical-align: middle
+			width: 40px
+			height: 40px
+			margin-right: 5px
+		&__span
+			display: inline-block
+			vertical-align: middle
+			font-size: 24px
+			&_blue
+				color: #4298EB
+	&Menu
+		float: left
+		&__items
+			padding: 0
+			margin: 0
+			list-style-type: none
+			&:after
+				content: ''
+				clear: both
+				display: table
+		&__item
+			float: left
+			position: relative
+			&:last-child
+				.headerMenu__itemLink
+					border: none
+			&Link
+				padding: 28px 20px 22px
+				font-size: 16px
+				line-height: 20px
+				text-transform: uppercase
+				display: block
+				color: #000
+				text-decoration: none
+				transition: 0.3s all ease
+				position: relative
+				border-right: 1px solid #e8e8e8
+				&:before
+					content: ''
+					width: calc(100% - 40px)
+					height: 4px
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					transition: 0.3s all ease
+					background: #4298EB
+					transform-origin: 50% 100%
+					transform: scale(0)
+				&:focus
+					color: #4298EB
+					&:before
+						transform: scale(1)
+				&_active
+					color: #4298EB
+					&:before
+						transform: scale(1)
+			&:hover
+				.headerMenu__items_submenu
+					display: block
+				>.headerMenu__itemLink
+					color: #4298EB
+					&:before
+						transform: scale(1)
+		&__items_submenu
+			display: none
+			position: absolute
+			padding: 5px 0
+			background-color: #fff
+			box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3)
+		&__item_submenu
+		&__itemLink_submenu
+			white-space: nowrap
+			font-size: 14px
+			padding: 15px 20px
+			border: none
+			&:before
+				width: 4px
+				height: 100%
+				left: 0
+				right: auto
+				transform-origin: 100% 50%
+	&Search
+		float: left
+		position: relative
+		padding: 10px 0 10px
+		&__input
+			background-color: #e5e5e5
+			border: none
+			width: 250px
+			height: 48px
+			padding: 15px 30px 15px 15px
+			border-radius: 4px
+		&__icon
+			position: absolute
+			right: 15px
+			top: 25px
+			font-size: 45px
+			display: block
+			width: 15px
+			height: 15px
+			border: 2px solid #989898
+			border-radius: 50%
+			cursor: pointer
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				right: -7px
+				bottom: -4px
+				border-width: 0
+				background: #989898
+				width: 10px
+				height: 3px
+				transform: rotate(45deg)
+	&User
+		float: right
+		&__inner
+			padding-top: 18px
+		&__signin
+			padding-top: 25px
+		&__avatar
+			width: 30px
+			height: 30px
+			overflow: hidden
+			border-radius: 50%
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
+			&Img
+				width: 100%
+				display: block
+		&__name
+			display: inline-block
+			vertical-align: middle
+			text-decoration: none
+		&__link:hover
+			.headerUser__name
+				text-decoration: underline
+		&__exit
+			margin-left: 15px
+			cursor: pointer
+			text-decoration: none
+			&:hover
+				text-decoration: underline
