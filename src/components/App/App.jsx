@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { CSSTransitionGroup } from 'react-transition-group'
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import About      from '../About/About.jsx';
 import Cabinet    from '../Cabinet/Cabinet.jsx';
@@ -20,23 +21,28 @@ import Header from './Header/Header.jsx';
 const routes = [
 	{
 		path: '/about',
-		component: About
+		component: About,
+		name: 'About'
 	},
 	{
 		path: '/contacts',
-		component: Contacts
+		component: Contacts,
+		name: 'Contacts'
 	},
 	{
 		path: '/signin',
-		component: SignIn
+		component: SignIn,
+		name: 'Sign in'
 	},
 	{
 		path: '/forget-password',
-		component: ForgetPass
+		component: ForgetPass,
+		name: 'Forget password'
 	},
 	{
 		path: '/signup',
-		component: SignUp
+		component: SignUp,
+		name: 'Sign up'
 	}
 ]
 
@@ -49,16 +55,23 @@ export default class App extends Component {
 					{
 						<Switch>
 							{/*to avoid problem with changing pages*/}
-							<Route exact path='/' component={() => <Home {...this.props} />} />
+							<Route exact path='/' component={() => <Home name='Home' {...this.props} />} />
 							{/*pass props into children components*/}
 							{
 								routes.map((route, i) => (
 									<Route key={i} path={route.path} render={() => (
-										<route.component {...this.props} />
+										<route.component name={route.name} {...this.props} />
 									)}/>
 								))
 							}
-							<Route path='/cabinet' component={() => <Cabinet {...this.props} />} />
+							{
+								this.props.isSignIn ?
+								<Route path='/cabinet' component={() => <Cabinet {...this.props} />} />
+								:
+								<Redirect to={{
+									pathname: '/signin'
+								}}/>
+							}
 						</Switch>
 					}
 				</div>
@@ -66,3 +79,14 @@ export default class App extends Component {
 		);
 	}
 }
+
+  // <Route {...rest} render={props => (
+  //   fakeAuth.isAuthenticated ? (
+  //     <Component {...props}/>
+  //   ) : (
+  //     <Redirect to={{
+  //       pathname: '/login',
+  //       state: { from: props.location }
+  //     }}/>
+  //   )
+  // )}/>

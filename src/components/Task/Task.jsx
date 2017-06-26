@@ -3,7 +3,7 @@ import Checkbox from 'material-ui/Checkbox';
 
 const Task = (props) =>{
 	const currentTask = props.tasks.filter(task => {
-		return (task.id == props.location.pathname.slice(14))
+		return (task.id == props.location.pathname.slice(14));
 	});
 	console.log(currentTask);
 	return(
@@ -26,7 +26,7 @@ const Task = (props) =>{
 					/>
 				}
 			</div>
-			<div className='task_progress' style={'width':currentTask[0].progress} ></div>
+			{/*<div className='task_progress' style={'width':currentTask[0].progress} ></div>*/}
 		</div>
 	);
 }

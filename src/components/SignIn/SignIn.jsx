@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { HashRouter as Router } from 'react-router'
 
 import './styles/SignIn.sass'
 
@@ -23,45 +22,9 @@ export default class SignIn extends Component {
 			e.preventDefault();
 		}
 		this.props.pageActions.signIn(emailVal, passVal);
-		// setTimeout(function(){
-		// 	document.querySelector('.loggedIn').click();
-		// },3000)
-		/*
-		//get email value from input
-		let emailVal = document.querySelectorAll('.cardBox__labelInput')[0].value;
-		//get password value from input
-		let passVal = document.querySelectorAll('.cardBox__labelInput')[1].value;
-		if(emailVal && passVal){
-			e.preventDefault();
-		}
-		//search for user with current email
-		let currentUser = []
-		for (var i = 0; i < users.length; i++) {
-			if(users[i].email == emailVal){
-				currentUser.push(users[i]);
-			}
-		};
-		if (currentUser.length) {
-			//if user is exist - check his password
-			if(users[0].pass == passVal){
-				//if all is ok show preloader and redirect to user cabinet
-				document.querySelectorAll('.singInForm')[0].style.display = 'none';
-				document.querySelectorAll('.pageLoader')[0].style.display = 'block';
-				setTimeout(function(){
-					document.querySelector('.loggedIn').click();
-				},3000)
-			}else{
-				//if pass is wrong - show an error text and clear input for pass
-				document.querySelectorAll('.cardBox__spanError_pass')[0].style.display = 'block';
-				document.querySelectorAll('.cardBox__labelInput')[1].value = '';
-			}
-		}else{
-			//if user is not exist - show an error text and clear all inputs
-			document.querySelectorAll('.cardBox__spanError_email')[0].style.display = 'block';
-			document.querySelectorAll('.cardBox__labelInput')[0].value = '';
-			document.querySelectorAll('.cardBox__labelInput')[1].value = '';
-		}
-		*/
+		setTimeout(() => {
+			this.props.history.replace('/cabinet/account');
+		},2000)
 	}
 	render() {
 		return (
