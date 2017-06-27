@@ -39,7 +39,7 @@ export default class SignIn extends Component {
 							<div className='cardBox__item'>
 								<label className='cardBox__label'>
 									<span className='cardBox__labelSpan'>Email</span>
-									<input className='cardBox__labelInput' type='email' ref='signInEmail' required onFocus={this.handleFocusEmail.bind(this)} defaultValue='sith@gmail.com' />
+									<input className='cardBox__labelInput' type='email' ref='signInEmail' required onFocus={this.handleFocusEmail.bind(this)} defaultValue='anakin@gmail.com' />
 									<span className='cardBox__spanError cardBox__spanError_email spanError'>This user does not exist!</span>
 								</label>
 							</div>

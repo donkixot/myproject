@@ -8,6 +8,10 @@ export default function tasks(state = {
 	tasks: initialState.tasks
 }, action) {
 	switch (action.type) {
+		case AppConstants.COMPLETE_TASK:
+			return {
+				...state,
+			}
 		default:
 			return state;
 	}

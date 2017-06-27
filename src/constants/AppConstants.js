@@ -6,4 +6,5 @@ export default keyMirror({
 	SIGN_IN_FAILED   : null,
 	SIGN_OUT         : null,
 	SIGN_UP          : null,
+	COMPLETE_TASK    : null,
 });

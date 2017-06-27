@@ -42,19 +42,26 @@ var databaseTTS = [
 			{
 				"id":"01tf",
 				"title": "Clarify data",
+				"done": true,
 				"subtasks": [
-					"Size of images for gallery",
-					"Numbers of symbols in news preview"
+					{
+						"title": "Size of images for gallery",
+						"done": true
+					},
+					{
+						"title": "Numbers of symbols in news preview",
+						"done": true
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Gandalf the White",
 				"creator": "Frodo Baggins",
 				"progress": "100%"
 			},
-
 			{
 				"id":"01tg",
 				"title": "Find the ring",
+				"done": true,
 				"subtasks": [],
 				"project": "The fellowship of the ring",
 				"receiver": "Frodo Baggins",
@@ -64,12 +71,28 @@ var databaseTTS = [
 			{
 				"id":"02tg",
 				"title": "Meet Aragorn",
+				"done": false,
 				"subtasks": [
-					"Find the team",
-					"Hide from dark knight",
-					"Find the place to sleep",
-					"Get drunk",
-					"Put on the ring"
+					{
+						"title": "Find the team",
+						"done": true
+					},
+					{
+						"title": "Hide from dark knight",
+						"done": true
+					},
+					{
+						"title": "Find the place to sleep",
+						"done": true
+					},
+					{
+						"title": "Get drunk",
+						"done": true
+					},
+					{
+						"title": "Put on the ring",
+						"done": false
+					}
 				],
 				"project": "The fellowship of the ring",
 				"receiver": "Frodo Baggins",
@@ -79,15 +102,17 @@ var databaseTTS = [
 			{
 				"id":"03tg",
 				"title": "Fight with troll",
+				"done": false,
 				"subtasks": [],
 				"project": "The fellowship of the ring",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
-				"progress": "80%"
+				"progress": "0%"
 			},
 			{
 				"id":"04tg",
 				"title": "Escape from gollum",
+				"done": false,
 				"subtasks": [],
 				"project": "The two towers",
 				"receiver": "Frodo Baggins",
@@ -97,11 +122,24 @@ var databaseTTS = [
 			{
 				"id":"05tg",
 				"title": "Develop the homepage",
+				"done": false,
 				"subtasks": [
-					"Develop header",
-					"Develop slider",
-					"Develop content",
-					"Develop footer"
+					{
+						"title": "Develop header",
+						"done": true,
+					},
+					{
+						"title": "Develop slider",
+						"done": false,
+					},
+					{
+						"title": "Develop content",
+						"done": false,
+					},
+					{
+						"title": "Develop footer",
+						"done": false,
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -111,6 +149,7 @@ var databaseTTS = [
 			{
 				"id":"06tg",
 				"title": "Develop the productpage",
+				"done": true,
 				"subtasks": [],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -120,6 +159,7 @@ var databaseTTS = [
 			{
 				"id":"07tg",
 				"title": "Develop the newspage",
+				"done": true,
 				"subtasks": [],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -129,6 +169,7 @@ var databaseTTS = [
 			{
 				"id":"08tg",
 				"title": "Develop the aboutspage",
+				"done": true,
 				"subtasks": [],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -138,15 +179,17 @@ var databaseTTS = [
 			{
 				"id":"09tg",
 				"title": "Develop the contactspage",
+				"done": false,
 				"subtasks": [],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
-				"progress": "100%"
+				"progress": "0%"
 			},
 			{
 				"id":"10tg",
 				"title": "Develop the cabinetpage",
+				"done": true,
 				"subtasks": [],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -156,10 +199,20 @@ var databaseTTS = [
 			{
 				"id":"01ts",
 				"title": "Come to the dark side",
+				"done": false,
 				"subtasks": [
-					"Smash young padawans",
-					"Kill Obi-Van Kenobi",
-					"Lose legs"
+					{
+						"title": "Smash young padawans",
+						"done": true,
+					},
+					{
+						"title": "Kill Obi-Van Kenobi",
+						"done": true,
+					},
+					{
+						"title": "Lose legs",
+						"done": false,
+					}
 				],
 				"project": "Dark Side",
 				"receiver": "Anakin Skywalker",
@@ -169,6 +222,7 @@ var databaseTTS = [
 			{
 				"id":"02ts",
 				"title": "Destroy some planet",
+				"done": false,
 				"subtasks": [],
 				"project": "Dark Side",
 				"receiver": "Anakin Skywalker",
@@ -178,9 +232,16 @@ var databaseTTS = [
 			{
 				"id":"03ts",
 				"title": "Make test server",
+				"done": false,
 				"subtasks": [
-					"Choose the CMS",
-					"Do the start settings"
+					{
+						"title": "Choose the CMS",
+						"done": false
+					},
+					{
+						"title": "Do the start settings",
+						"done": false
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Anakin Skywalker",
@@ -190,17 +251,48 @@ var databaseTTS = [
 			{
 				"id":"04ts",
 				"title": "Start programming the site",
+				"done": false,
 				"subtasks": [
-					"Make database",
-					"Make data for admin",
-					"Make data for client",
-					"Make data for content manager",
-					"Finish admin area for admin",
-					"Finish admin area for client",
-					"Finish admin area for content manager",
-					"Install all plagins",
-					"Make test site visible only for developers",
-					"Programm the home page"
+					{
+						"title": "Make database",
+						"done": true
+					},
+					{
+						"title": "Make data for admin",
+						"done": false
+					},
+					{
+						"title": "Make data for client",
+						"done": false
+					},
+					{
+						"title": "Make data for content manager",
+						"done": false
+					},
+					{
+						"title": "Finish admin area for admin",
+						"done": false
+					},
+					{
+						"title": "Finish admin area for client",
+						"done": false
+					},
+					{
+						"title": "Finish admin area for content manager",
+						"done": false
+					},
+					{
+						"title": "Install all plagins",
+						"done": false
+					},
+					{
+						"title": "Make test site visible only for developers",
+						"done": false
+					},
+					{
+						"title": "Programm the home page",
+						"done": false
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Anakin Skywalker",
@@ -210,10 +302,20 @@ var databaseTTS = [
 			{
 				"id":"05ts",
 				"title": "Develop the authorisation pages",
+				"done": true,
 				"subtasks": [
-					"Develop the login page",
-					"Develop the forgetpass page",
-					"Develop the register page"
+					{
+						"title": "Develop the login page",
+						"done": true
+					},
+					{
+						"title": "Develop the forgetpass page",
+						"done": true
+					},
+					{
+						"title": "Develop the register page",
+						"done": true
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
@@ -223,9 +325,16 @@ var databaseTTS = [
 			{
 				"id":"06ts",
 				"title": "Develop the cabinet pages",
+				"done": false,
 				"subtasks": [
-					"Develop the account page",
-					"Develop the history page"
+					{
+						"title": "Develop the account page",
+						"done": true
+					},
+					{
+						"title": "Develop the history page",
+						"done": false
+					}
 				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",

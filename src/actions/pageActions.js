@@ -13,3 +13,11 @@ export function signIn(email, pass) {
 		}
 	};
 }
+
+export function completeTask(taskId, subtaskIndex) {
+	return {
+		type: AppConstants.COMPLETE_TASK,
+		taskId,
+		subtaskIndex
+	}
+}
