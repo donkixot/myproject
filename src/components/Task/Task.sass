@@ -11,9 +11,54 @@
 		position: absolute
 		top: -20px
 		left: -15px
-		transition: 0.3s all ease
+	&Share
+		padding-top: 50px
+		&__title
+			font-size: 18px
+			padding-bottom: 15px
+		&__items
+			list-style-type: none
+			margin: 0
+			padding: 0
+		&__item
+			display: inline-block
+			width: 50px
+			height: 40px
+			transition: 0.3s all ease
+			font-family: "myfontsoc"
+			text-align: center
+			cursor: pointer
+			color: #fff
+			line-height: 40px
+			&:before
+				display: block
+				font-size: 25px
+				font-weight: normal
+			&_twitter
+				background-color: #00aced
+				&:before
+					content: ' u'
+			&_vk
+				background-color: #4c75a3
+				&:before
+					content: ' v'
+			&_google
+				background-color: #e14d3a
+				&:before
+					content: ' w'
+			&_facebook
+				background-color: #3c5a99
+				&:before
+					content: ' x'
+			&:hover
+				background-color: #000
+
+
+
 
 .subtask
 	&__item
 		font-weight: 400
 		margin: 10px 0
+		label
+			color: rgba(0, 0, 0, 0.87) !important

@@ -5,7 +5,6 @@ import * as pageActions from '../actions/pageActions.js';
 import App from '../components/App/App.jsx';
 
 
-
 function getUser(email, pass, users){
 	let currentUser = users.filter(m => {
 		return (email == 'all' || email == m.email)
@@ -23,6 +22,8 @@ function mapStateToProps(state, props) {
 	const { preloader, isSignIn, email, pass, users } = state.users;
 	const { tasks } = state.tasks;
 
+	// _updateStorage(users, tasks);
+
 	return {
 		currentUser: getUser(email, pass, users),
 		tasks,
@@ -35,6 +36,18 @@ function mapDispatchToProps(dispatch) {
   return {
     pageActions: bindActionCreators(pageActions, dispatch)
   }
+}
+
+function _updateStorage(users, tasks){
+	let databaseTTS = [
+		{
+			users
+		},
+		{
+			tasks
+		}
+	]
+	localStorage.setItem('databaseTTS', JSON.stringify(databaseTTS));
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

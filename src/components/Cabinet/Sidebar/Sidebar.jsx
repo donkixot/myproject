@@ -41,12 +41,12 @@ const Sidebar = (props) =>
 				/>
 			</Link>
 		</List>
+		{console.log(props)}
 		<br/>
 		{
-			props.props.location.pathname == '/cabinet/add-task' ?
-			null
-			:
-			<Filters/>
+			props.location.pathname == '/cabinet/task-list' || props.location.pathname == '/cabinet/account'
+			?	<Filters/>
+			:	null
 		}
 	</div>
 

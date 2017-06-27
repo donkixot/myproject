@@ -14,10 +14,11 @@ export function signIn(email, pass) {
 	};
 }
 
-export function completeTask(taskId, subtaskIndex) {
+export function toggleTask(taskIndex, subtaskIndex, done) {
 	return {
-		type: AppConstants.COMPLETE_TASK,
-		taskId,
-		subtaskIndex
+		type: AppConstants.TOGGLE_TASK,
+		taskIndex,
+		subtaskIndex,
+		done
 	}
 }

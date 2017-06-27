@@ -24,7 +24,7 @@ export default class SignIn extends Component {
 		this.props.pageActions.signIn(emailVal, passVal);
 		setTimeout(() => {
 			this.props.history.replace('/cabinet/account');
-		},2000)
+		},1000)
 	}
 	render() {
 		return (

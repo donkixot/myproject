@@ -5,45 +5,66 @@ import Checkbox from 'material-ui/Checkbox';
 import './Task.sass';
 
 const Task = (props) => {
-	const currentTask = props.tasks.filter(task => {
-		return (task.id == props.location.pathname.slice(14));
-	});
 
-	const taskProgress = currentTask[0].subtasks.length ? '67%' : currentTask.done ? '100%' : '0%';
+	//find the index of current task
+	const taskIndex = props.tasks.findIndex((task) => task.id === props.location.pathname.slice(14));
+	const currentTask = props.tasks[taskIndex];
 
-	function handleClickSubtask(taskId, subtaskIndex) {
-		props.pageActions.completeTask(taskId, subtaskIndex)
+	let taskProgress = () => {
+		let count = 0;
+		for (let i = 0; i < currentTask.subtasks.length; i++) {
+			if(currentTask.subtasks[i].done){
+				count++;
+			}
+		}
+		return Math.round(100*count/currentTask.subtasks.length) + "%";
+	}
 
+	const handleClickSubtask = (taskIndex, subtaskIndex, done) => {
+		props.pageActions.toggleTask(taskIndex, subtaskIndex, done)
 	};
+
+	const handleNoChange = (e) => {
+		e.target.checked = true;
+	}
 
 	return(
 		<div className='cabinet'>
-			<div className='task__progress' style={{'width':taskProgress}} ></div>
-			<div className='task__title'>{currentTask[0].title}</div>
+			<div className='task__progress' style={{'width':taskProgress()}} ></div>
+			<div className='task__title'>{currentTask.title}</div>
 			<div className='task__subtitle'>List of subtasks:</div>
 			<div className='subtask__items'>
 				{
-					currentTask[0].subtasks.length ?
-					currentTask[0].subtasks.map( (subtask,i) =>
+					currentTask.subtasks.map( (subtask,i) =>
 						<Checkbox
 							key={i}
 							className='subtask__item'
-							taskId={currentTask[0].id}
-							idx={i}
 							label={subtask.title}
-							// defaultChecked={subtask.done}
-							onCheck={handleClickSubtask}
+							defaultChecked={subtask.done}
+							disabled={
+								currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
+								? false
+								: true
+							}
+							onCheck={handleClickSubtask.bind(this, taskIndex, i, subtask.done)}
 						/>
 					)
-					:
-					<Checkbox
-						className='subtask__item'
-						label='Done'
-						defaultChecked={currentTask.done}
-						// onCheck={handleClickSubtask}
-					/>
 				}
 			</div>
+			{
+				parseInt(taskProgress()) == 100 && currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
+				?
+					<div className='taskShare'>
+						<div className='taskShare__title'>Share in social networks:</div>
+						<ul className="taskShare__items">
+							<li className="taskShare__item taskShare__item_twitter"></li>
+							<li className="taskShare__item taskShare__item_vk"></li>
+							<li className="taskShare__item taskShare__item_google"></li>
+							<li className="taskShare__item taskShare__item_facebook"></li>
+						</ul>
+					</div>
+				: null
+			}
 		</div>
 	);
 }

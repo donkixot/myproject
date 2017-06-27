@@ -62,7 +62,12 @@ var databaseTTS = [
 				"id":"01tg",
 				"title": "Find the ring",
 				"done": true,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Find the ring",
+						"done": true
+					}
+				],
 				"project": "The fellowship of the ring",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -103,7 +108,12 @@ var databaseTTS = [
 				"id":"03tg",
 				"title": "Fight with troll",
 				"done": false,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Fight with troll",
+						"done": false
+					}
+				],
 				"project": "The fellowship of the ring",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -113,7 +123,12 @@ var databaseTTS = [
 				"id":"04tg",
 				"title": "Escape from gollum",
 				"done": false,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Escape from gollum",
+						"done": false
+					}
+				],
 				"project": "The two towers",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -150,7 +165,12 @@ var databaseTTS = [
 				"id":"06tg",
 				"title": "Develop the productpage",
 				"done": true,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Develop the productpage",
+						"done": true
+					}
+				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -160,7 +180,12 @@ var databaseTTS = [
 				"id":"07tg",
 				"title": "Develop the newspage",
 				"done": true,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Develop the newspage",
+						"done": true
+					}
+				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -170,7 +195,12 @@ var databaseTTS = [
 				"id":"08tg",
 				"title": "Develop the aboutspage",
 				"done": true,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Develop the aboutspage",
+						"done": true
+					}
+				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -180,7 +210,12 @@ var databaseTTS = [
 				"id":"09tg",
 				"title": "Develop the contactspage",
 				"done": false,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Develop the contactspage",
+						"done": false
+					}
+				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -190,7 +225,12 @@ var databaseTTS = [
 				"id":"10tg",
 				"title": "Develop the cabinetpage",
 				"done": true,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Develop the cabinetpage",
+						"done": true
+					}
+				],
 				"project": "Paint shop",
 				"receiver": "Frodo Baggins",
 				"creator": "Gandalf the White",
@@ -223,7 +263,12 @@ var databaseTTS = [
 				"id":"02ts",
 				"title": "Destroy some planet",
 				"done": false,
-				"subtasks": [],
+				"subtasks": [
+					{
+						"title": "Destroy some planet",
+						"done": false
+					}
+				],
 				"project": "Dark Side",
 				"receiver": "Anakin Skywalker",
 				"creator": "Sith Lord",

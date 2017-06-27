@@ -33,7 +33,7 @@ const Cabinet = (props) =>
 	<div className='pageContainer'>
 		<div className='pageTitle'>My cabinet</div>
 		<div className='content'>
-			<Sidebar props={props}/>
+			<Sidebar {...props} />
 			<div className='contentRight'>
 				<Switch>
 					{

@@ -8,6 +8,16 @@ const Account = ({currentUser, tasks}) =>{
 		return (task.receiver == `${currentUser.firstname} ${currentUser.lastname}`)
 	});
 
+	let taskProgress = (currentTask) => {
+		let count = 0;
+		for (let i = 0; i < currentTask.subtasks.length; i++) {
+			if(currentTask.subtasks[i].done){
+				count++;
+			}
+		}
+		return Math.round(100*count/currentTask.subtasks.length) + "%";
+	}
+
 	return(
 		<div className='cabinet'>
 			<div className='cabinetTitle'>Hello to you, {currentUser.role == 'manager' ? 'the great manager of all time!' : 'just programmer...'} </div>
@@ -22,15 +32,15 @@ const Account = ({currentUser, tasks}) =>{
 								<span
 									className='taskList__itemProgress'
 									style={
-										parseInt(task.progress) >= 50 ?
-											parseInt(task.progress) == 100 ?
+										parseInt(taskProgress(task)) >= 50 ?
+											parseInt(taskProgress(task)) == 100 ?
 											{color: '#4298EB'}
 											:
 											{color: 'green'}
 										:
 										{color: 'red'}
 									}
-								>{task.progress}</span>
+								>{taskProgress(task)}</span>
 								<Link to={`/cabinet/task:${task.id}`} className='taskList__itemText'>{task.title}</Link>
 							</div>
 						)
