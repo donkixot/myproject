@@ -6,6 +6,8 @@ const initialState = {
 
 export default function tasks(state = {
 	tasks: initialState.tasks,
+	creator: 'all',
+	project: 'all'
 }, action) {
 	switch (action.type) {
 		case AppConstants.TOGGLE_TASK:
@@ -25,11 +27,16 @@ export default function tasks(state = {
 					},
 					 ...state.tasks.slice(action.taskIndex+1) //after the one task we are updating
 				],
+				creator: 'all',
+				project: 'all'
 			};
 		case AppConstants.SET_CREATOR:
 			return state;
 		case AppConstants.SET_PROJECT:
-			return state;
+			return {
+				...state,
+				project: action.project,
+			};
 		default:
 			return state;
 	}

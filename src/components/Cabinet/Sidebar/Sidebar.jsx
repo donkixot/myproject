@@ -44,7 +44,7 @@ const Sidebar = (props) =>
 		<br/>
 		{
 			props.location.pathname == '/cabinet/task-list' || props.location.pathname == '/cabinet/account'
-			?	<Filters/>
+			?	<Filters {...props} />
 			:	null
 		}
 	</div>

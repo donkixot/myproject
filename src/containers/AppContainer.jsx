@@ -6,22 +6,22 @@ import App from '../components/App/App.jsx';
 
 
 //simple helper function, which return all filters from state by given key.
-function getFilters(key, movies) {
-	return movies.reduce((acc, movie) => {
-		if (!acc.includes(movie[key])) {
-			return [...acc, movie[key]];
+function getFilters(key, tasks) {
+	return tasks.reduce((acc, task) => {
+		if (!acc.includes(task[key])) {
+			return [...acc, task[key]];
 		}
 		return acc;
 	}, []);
 }
 
 //getting visible tasks from state.
-function getVisibleTasks(creator, project) {
+function getVisibleTasks(tasks, creator, project, sorting) {
 	return tasks
 		.filter(t => {
 			return (
-				(project == 'all' || project == t.project) &&
-				(creator == 'all' || creator[1] == t.creator || creator[2] == t.creator)
+				(creator == 'all' || creator == t.creator) &&
+				(project == 'all' || project == t.project)
 			);
 		})
 		.sort((a, b) => {
@@ -30,17 +30,13 @@ function getVisibleTasks(creator, project) {
 			}
 		});
 }
+
+//getting authorized user
 function getUser(email, pass, users){
 	let currentUser = users.filter(m => {
 		return (email == 'all' || email == m.email)
 	});
-	// if(currentUser.length == 1){
-	// 	if (currentUser[0].pass == pass) {
-			return currentUser[0];
-	// 	}
-	// }else{
-	// 	return undefined;
-	// };
+	return currentUser[0];
 }
 
 function mapStateToProps(state, props) {
@@ -51,13 +47,14 @@ function mapStateToProps(state, props) {
 
 	return {
 		currentUser: getUser(email, pass, users),
-		tasks: getVisibleTasks(creator, project),
+		tasks: getVisibleTasks(tasks, creator, project, sorting),
+		// tasks,
 		isSignIn,
 		preloader,
 		selectedCreator: creator,
 		selectedProject: project,
-		creators: getFilters('creator', state.tasks),
-		projects: getFilters('project', state.tasks),
+		creators: getFilters('creator', tasks),
+		projects: getFilters('project', tasks),
 		sorting,
 	};
 }
