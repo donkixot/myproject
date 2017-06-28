@@ -22,3 +22,20 @@ export function toggleTask(taskIndex, subtaskIndex, done) {
 		done
 	}
 }
+
+export function filterProjects() {
+	return (dispatch) => {
+		function onStatusChange(creator) {
+			dispatch({
+				type: AppConstants.SET_CREATOR,
+				creator,
+			});
+		};
+		function onCategoryChange(project) {
+			dispatch({
+				type: AppConstants.SET_PROJECT,
+				project,
+			});
+		};
+	}
+}

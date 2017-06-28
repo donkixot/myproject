@@ -14,7 +14,7 @@ import ForgetPass from '../ForgetPass/ForgetPass.jsx';
 import SignUp     from '../SignUp/SingUp.jsx';
 
 
-import './styles/App.sass';
+import './App.sass';
 
 import Header from './Header/Header.jsx';
 

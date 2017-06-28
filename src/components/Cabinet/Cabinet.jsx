@@ -8,7 +8,7 @@ import TaskList from '../TaskList/TaskList.jsx';
 import Task     from '../Task/Task.jsx';
 
 
-import './styles/Cabinet.sass'
+import './Cabinet.sass'
 
 const cabinetRoutes = [
 	{

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './styles/SignIn.sass'
+import './SignIn.sass'
 
 export default class SignIn extends Component {
 	handleFocusEmail(e) {

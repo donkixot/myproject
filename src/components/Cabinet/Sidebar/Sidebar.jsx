@@ -41,7 +41,6 @@ const Sidebar = (props) =>
 				/>
 			</Link>
 		</List>
-		{console.log(props)}
 		<br/>
 		{
 			props.location.pathname == '/cabinet/task-list' || props.location.pathname == '/cabinet/account'

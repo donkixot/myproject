@@ -17,16 +17,12 @@ const Task = (props) => {
 				count++;
 			}
 		}
-		return Math.round(100*count/currentTask.subtasks.length) + "%";
+		return Math.round(100*count/currentTask.subtasks.length) + '%';
 	}
 
 	const handleClickSubtask = (taskIndex, subtaskIndex, done) => {
 		props.pageActions.toggleTask(taskIndex, subtaskIndex, done)
 	};
-
-	const handleNoChange = (e) => {
-		e.target.checked = true;
-	}
 
 	return(
 		<div className='cabinet'>
@@ -54,13 +50,13 @@ const Task = (props) => {
 			{
 				parseInt(taskProgress()) == 100 && currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
 				?
-					<div className='taskShare'>
+				<div className='taskShare'>
 						<div className='taskShare__title'>Share in social networks:</div>
-						<ul className="taskShare__items">
-							<li className="taskShare__item taskShare__item_twitter"></li>
-							<li className="taskShare__item taskShare__item_vk"></li>
-							<li className="taskShare__item taskShare__item_google"></li>
-							<li className="taskShare__item taskShare__item_facebook"></li>
+						<ul className='taskShare__items'>
+							<li className='taskShare__item taskShare__item_twitter'></li>
+							<li className='taskShare__item taskShare__item_vk'></li>
+							<li className='taskShare__item taskShare__item_google'></li>
+							<li className='taskShare__item taskShare__item_facebook'></li>
 						</ul>
 					</div>
 				: null

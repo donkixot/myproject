@@ -25,7 +25,11 @@ export default function tasks(state = {
 					},
 					 ...state.tasks.slice(action.taskIndex+1) //after the one task we are updating
 				],
-			}
+			};
+		case AppConstants.SET_CREATOR:
+			return state;
+		case AppConstants.SET_PROJECT:
+			return state;
 		default:
 			return state;
 	}

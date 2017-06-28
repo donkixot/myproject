@@ -7,4 +7,6 @@ export default keyMirror({
 	SIGN_OUT         : null,
 	SIGN_UP          : null,
 	TOGGLE_TASK      : null,
+	SET_CREATOR      : null,
+	SET_PROJECT      : null,
 });
