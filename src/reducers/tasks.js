@@ -7,7 +7,8 @@ const initialState = {
 export default function tasks(state = {
 	tasks: initialState.tasks,
 	creator: 'all',
-	project: 'all'
+	project: 'all',
+	sorting: 'Random'
 }, action) {
 	switch (action.type) {
 		case AppConstants.TOGGLE_TASK:
@@ -27,15 +28,25 @@ export default function tasks(state = {
 					},
 					 ...state.tasks.slice(action.taskIndex+1) //after the one task we are updating
 				],
-				creator: 'all',
+				creator:'all',
 				project: 'all'
 			};
 		case AppConstants.SET_CREATOR:
-			return state;
+			return  {
+				...state,
+				creator: action.creator,
+				project: action.project
+			};
 		case AppConstants.SET_PROJECT:
 			return {
 				...state,
-				project: action.project,
+				creator: action.creator,
+				project: action.project
+			};
+		case AppConstants.SET_SORTING:
+			return {
+				...state,
+				sorting: action.sorting
 			};
 		default:
 			return state;

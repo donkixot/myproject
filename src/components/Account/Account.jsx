@@ -26,6 +26,12 @@ const Account = ({currentUser, tasks}) =>{
 				//if tasks exist show them, else show error massage
 				currentUserTasks.length ?
 				<div className='taskList__items'>
+					<div className='taskList__item taskList__item_head'>
+						<span className='taskList__itemProgress'>Progress</span>
+						<span className='taskList__itemText'>Task name</span>
+						<span className='taskList__itemProject'>Project name</span>
+						<span className='taskList__itemCreator'>Creator</span>
+					</div>
 					{
 						currentUserTasks.map( (task) =>
 							<div key={task.id} className='taskList__item'>
@@ -41,7 +47,9 @@ const Account = ({currentUser, tasks}) =>{
 										{color: 'red'}
 									}
 								>{taskProgress(task)}</span>
-								<Link to={`/cabinet/task:${task.id}`} className='taskList__itemText'>{task.title}</Link>
+								<span className='taskList__itemText'><Link to={`/cabinet/task:${task.id}`} className='taskList__itemTextLink'>{task.title}</Link></span>
+								<span className='taskList__itemProject'>{task.project}</span>
+								<span className='taskList__itemCreator'>{task.creator}</span>
 							</div>
 						)
 					}

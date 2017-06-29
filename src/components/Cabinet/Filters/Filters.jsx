@@ -6,15 +6,44 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import './Filters.sass';
 
+let chooseProject = ['all'];
+
 export default class Filters extends Component {
 
 	handleSetProject(e){
-		this.props.pageActions.onProjectChange(e.target.nextSibling.children[1].textContent);
+		// e.target.checked
+		// ? this.props.pageActions.onProjectChange(e.target.nextSibling.children[1].textContent, this.props.selectedCreator)
+		// : this.props.pageActions.onProjectChange('all', this.props.selectedCreator)
+
+		let isPositive = (str) =>	{ return str == e.target.nextSibling.children[1].textContent; }
+		if(!chooseProject.some(isPositive)){
+			chooseProject.push(e.target.nextSibling.children[1].textContent);
+		}else{
+			for (let i = 0; i < chooseProject.length; i++) {
+				if (chooseProject[i] == e.target.nextSibling.children[1].textContent) {
+					chooseProject.splice([i],1);
+				}
+			};
+		}
+		this.props.pageActions.onProjectChange(chooseProject, this.props.selectedCreator);
 	}
 
+	handleSetCreator(e){
+		this.props.pageActions.onCreatorChange(e.target.textContent, this.props.project);
+	}
+
+	handleSortSorting(e){
+		this.props.pageActions.onSortChange(e.target.textContent);
+	}
+
+	handleResetFilters(){
+		this.props.pageActions.onProjectChange('all', 'all');
+		this.props.pageActions.onSortChange('Random');
+		chooseProject = ['all']
+	}
 	render() {
 
-		const {creators, projects} = this.props;
+		const {creatorsForFilters, projectsForFilters} = this.props;
 
 		return (
 			<div className="filters">
@@ -22,12 +51,18 @@ export default class Filters extends Component {
 				<div className="filters__group">
 					<div className="filters__groupTitle">Projects</div>
 						{
-							projects.map( (p, i) =>
+							projectsForFilters.map( (p, i) =>
 								<Checkbox
 									key={i}
 									className='filters__checkbox'
+									checked={
+										Object.prototype.toString.call(this.props.project) === '[object Array]'
+										?	this.props.project.some((str) => str == p) ? true : false
+										: false
+									}
 									label={p}
 									onCheck={this.handleSetProject.bind(this)}
+									style={{'width':'225px'}}
 								/>
 							)
 						}
@@ -36,17 +71,17 @@ export default class Filters extends Component {
 					<div className="filters__groupTitle">Creator</div>
 					<SelectField
 						className='filters__select'
-						value='0'
-						// onChange={this.handleChange}
+						value={this.props.selectedCreator}
+						onChange={this.handleSetCreator.bind(this)}
 						maxHeight={200}
 						iconStyle={{fill:'#000'}}
 					>
-						<MenuItem value='0' primaryText='All' />
+						<MenuItem value='all' primaryText='all' />
 						{
-							creators.map( (c, i) =>
+							creatorsForFilters.map( (c, i) =>
 								<MenuItem
 									key={i}
-									value={i}
+									value={c}
 									primaryText={c}
 								/>
 							)
@@ -57,20 +92,24 @@ export default class Filters extends Component {
 				<div className="filters__group">
 					<SelectField
 						className='filters__select'
-						value='0'
-						// onChange={this.handleChange}
+						value={this.props.sorting}
+						onChange={this.handleSortSorting.bind(this)}
 						maxHeight={200}
 						iconStyle={{fill:'#000'}}
 						autoWidth={false}
 					>
-						<MenuItem value='0' primaryText='Random' />
-						<MenuItem value='1' primaryText='Name, A to Z' />
-						<MenuItem value='2' primaryText='Name, Z to A' />
-						<MenuItem value='3' primaryText='Progress, low to hight' />
-						<MenuItem value='4' primaryText='Progress, hight to low' />
+						<MenuItem value='Random' primaryText='Random' />
+						<MenuItem value='Name, A to Z' primaryText='Name, A to Z' />
+						<MenuItem value='Name, Z to A' primaryText='Name, Z to A' />
+						<MenuItem value='Progress, low to hight' primaryText='Progress, low to hight' />
+						<MenuItem value='Progress, hight to low' primaryText='Progress, hight to low' />
 					</SelectField>
 				</div>
-				<RaisedButton className='filters__button' label="Clear all"/>
+				<RaisedButton
+					className='filters__button'
+					label="Clear all"
+					onClick={this.handleResetFilters.bind(this)}
+				/>
 			</div>
 		);
 	}

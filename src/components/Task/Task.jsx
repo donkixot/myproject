@@ -21,7 +21,7 @@ const Task = (props) => {
 	}
 
 	const handleClickSubtask = (taskIndex, subtaskIndex, done) => {
-		props.pageActions.toggleTask(taskIndex, subtaskIndex, done)
+		props.pageActions.toggleTask(taskIndex, subtaskIndex, done, props.selectedProject, props.selectedCreator)
 	};
 
 	return(

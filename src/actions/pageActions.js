@@ -14,27 +14,37 @@ export function signIn(email, pass) {
 	};
 }
 
-export function toggleTask(taskIndex, subtaskIndex, done) {
+export function toggleTask(taskIndex, subtaskIndex, done, project, creator) {
 	return {
 		type: AppConstants.TOGGLE_TASK,
 		taskIndex,
 		subtaskIndex,
-		done
+		done,
+		project,
+		creator
 	}
 }
 
-export function	onCreatorChange(creator) {
+export function	onCreatorChange(creator, project) {
 	return {
 		type: AppConstants.SET_CREATOR,
 		creator,
-	}
-}
-
-export function	onProjectChange(project) {
-	return {
-		type: AppConstants.SET_PROJECT,
 		project,
 	}
 }
 
+export function	onProjectChange(project, creator) {
+	return {
+		type: AppConstants.SET_PROJECT,
+		project,
+		creator
+	}
+}
+
+export function	onSortChange(sorting) {
+	return {
+		type: AppConstants.SET_SORTING,
+		sorting
+	}
+}
 

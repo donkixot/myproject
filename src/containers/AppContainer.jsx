@@ -21,12 +21,16 @@ function getVisibleTasks(tasks, creator, project, sorting) {
 		.filter(t => {
 			return (
 				(creator == 'all' || creator == t.creator) &&
-				(project == 'all' || project == t.project)
+				(project == 'all' || project[1] == t.project || project[2] == t.project || project[3] == t.project || project[4] == t.project)
 			);
 		})
 		.sort((a, b) => {
-			if (sorting == 'alphabetically') {
+			if(sorting == 'Random'){
+				return;
+			}else if (sorting == 'Name, A to Z') {
 				return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
+			}else if (sorting == 'Name, Z to A') {
+				return a.title < b.title ? 1 : a.title > b.title ? -1 : 0;
 			}
 		});
 }
@@ -42,9 +46,6 @@ function getUser(email, pass, users){
 function mapStateToProps(state, props) {
 	const { preloader, isSignIn, email, pass, users } = state.users;
 	const { creator, project, sorting, tasks } = state.tasks;
-
-	// _updateStorage(users, tasks);
-
 	return {
 		currentUser: getUser(email, pass, users),
 		tasks: getVisibleTasks(tasks, creator, project, sorting),
@@ -52,9 +53,9 @@ function mapStateToProps(state, props) {
 		isSignIn,
 		preloader,
 		selectedCreator: creator,
-		selectedProject: project,
-		creators: getFilters('creator', tasks),
-		projects: getFilters('project', tasks),
+		project,
+		creatorsForFilters: getFilters('creator', tasks),
+		projectsForFilters: getFilters('project', tasks),
 		sorting,
 	};
 }
@@ -63,18 +64,6 @@ function mapDispatchToProps(dispatch) {
 	return {
 		pageActions: bindActionCreators(pageActions, dispatch)
 	}
-}
-
-function _updateStorage(users, tasks){
-	let databaseTTS = [
-		{
-			users
-		},
-		{
-			tasks
-		}
-	]
-	localStorage.setItem('databaseTTS', JSON.stringify(databaseTTS));
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

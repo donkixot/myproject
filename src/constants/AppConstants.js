@@ -9,4 +9,5 @@ export default keyMirror({
 	TOGGLE_TASK      : null,
 	SET_CREATOR      : null,
 	SET_PROJECT      : null,
+	SET_SORTING      : null,
 });
