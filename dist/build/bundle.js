@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 559);
+/******/ 	return __webpack_require__(__webpack_require__.s = 558);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -19537,7 +19537,7 @@ var _pageActions = __webpack_require__(520);
 
 var pageActions = _interopRequireWildcard(_pageActions);
 
-var _App = __webpack_require__(542);
+var _App = __webpack_require__(541);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -19558,9 +19558,9 @@ function getFilters(key, tasks) {
 }
 
 //getting visible tasks from state.
-function getVisibleTasks(tasks, creator, project, sorting) {
+function getVisibleTasks(tasks, creator, projects, sorting) {
 	return tasks.filter(function (t) {
-		return (creator == 'all' || creator == t.creator) && (project == 'all' || project[1] == t.project || project[2] == t.project || project[3] == t.project || project[4] == t.project);
+		return (creator == 'all' || creator == t.creator) && (projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project);
 	}).sort(function (a, b) {
 		if (sorting == 'Random') {
 			return;
@@ -19589,18 +19589,18 @@ function mapStateToProps(state, props) {
 	    users = _state$users.users;
 	var _state$tasks = state.tasks,
 	    creator = _state$tasks.creator,
-	    project = _state$tasks.project,
+	    projects = _state$tasks.projects,
 	    sorting = _state$tasks.sorting,
 	    tasks = _state$tasks.tasks;
 
 	return {
 		currentUser: getUser(email, pass, users),
-		tasks: getVisibleTasks(tasks, creator, project, sorting),
+		tasks: getVisibleTasks(tasks, creator, projects, sorting),
 		// tasks,
 		isSignIn: isSignIn,
 		preloader: preloader,
-		selectedCreator: creator,
-		project: project,
+		creator: creator,
+		projects: projects,
 		creatorsForFilters: getFilters('creator', tasks),
 		projectsForFilters: getFilters('project', tasks),
 		sorting: sorting
@@ -20822,7 +20822,7 @@ for (var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList
  */
 
 !function (root, name, definition) {
-  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(573)(name, definition);else root[name] = definition();
+  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(572)(name, definition);else root[name] = definition();
 }(undefined, 'bowser', function () {
   /**
     * See useragents.js for examples of navigator.userAgent
@@ -50515,29 +50515,30 @@ function signIn(email, pass) {
 	};
 }
 
-function toggleTask(taskIndex, subtaskIndex, done, project, creator) {
+function toggleTask(taskIndex, subtaskIndex, done, projects, creator, sorting) {
 	return {
 		type: _AppConstants2.default.TOGGLE_TASK,
 		taskIndex: taskIndex,
 		subtaskIndex: subtaskIndex,
 		done: done,
-		project: project,
-		creator: creator
+		projects: projects,
+		creator: creator,
+		sorting: sorting
 	};
 }
 
-function onCreatorChange(creator, project) {
+function onCreatorChange(creator, projects) {
 	return {
 		type: _AppConstants2.default.SET_CREATOR,
 		creator: creator,
-		project: project
+		projects: projects
 	};
 }
 
-function onProjectChange(project, creator) {
+function onProjectChange(projects, creator) {
 	return {
 		type: _AppConstants2.default.SET_PROJECT,
-		project: project,
+		projects: projects,
 		creator: creator
 	};
 }
@@ -50608,7 +50609,7 @@ function tasks() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
 		tasks: initialState.tasks,
 		creator: 'all',
-		project: 'all',
+		projects: 'all',
 		sorting: 'Random'
 	};
 	var action = arguments[1];
@@ -50625,18 +50626,19 @@ function tasks() {
 					)))
 				})], _toConsumableArray(state.tasks.slice(action.taskIndex + 1 //after the one task we are updating
 				))),
-				creator: 'all',
-				project: 'all'
+				creator: action.creator,
+				projects: action.projects,
+				sorting: action.sorting
 			};
 		case _AppConstants2.default.SET_CREATOR:
 			return _extends({}, state, {
 				creator: action.creator,
-				project: action.project
+				projects: action.projects
 			});
 		case _AppConstants2.default.SET_PROJECT:
 			return _extends({}, state, {
 				creator: action.creator,
-				project: action.project
+				projects: action.projects
 			});
 		case _AppConstants2.default.SET_SORTING:
 			return _extends({}, state, {
@@ -50720,7 +50722,7 @@ exports = module.exports = __webpack_require__(20)(true);
 
 
 // module
-exports.push([module.i, ".whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  width: 300px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 80px; }\n  .pageSlider__img {\n    width: 100%;\n    height: 300px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0; }\n    .pageSlider__control_right {\n      right: 0; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n", "", {"version":3,"sources":["D:/git/myproject/src/components/About/src/components/About/About.sass"],"names":[],"mappings":"AACC;EACC,gBAAe,EAIM;EALtB;IAGE,YAAW;IACX,YAAW;IACX,eAAc,EAAI;;AACpB;EACC,YAAW;EACX,WAAU;EACV,gBAAe;EACf,oBAAmB,EAqBI;EAzBxB;IAME,YAAW;IACX,eAAc;IACd,YAAW,EAAI;EAChB;IACC,uBAAsB;IACtB,gBAAe;IACf,kBAAiB;IACjB,YAAW;IACX,WAAU;IACV,mBAAkB;IAClB,eAAc,EAAI;EACnB;IACC,YAAW;IACX,WAAU,EAAI;EACf;IACC,gBAAe;IACf,0BAAyB;IACzB,qBAAoB,EAAI;EACzB;IACC,iBAAgB,EAAI;;AAGtB;EACC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,mBAAkB;EAClB,oBAAmB,EAkBD;EAjBlB;IACC,YAAW;IACX,cAAa;IACb,uBAAsB;IACtB,6BAA4B,EAAI;EACjC;IACC,mBAAkB;IAClB,QAAO;IACP,SAAQ;IACR,SAAQ,EAAI;EACb;IACC,mBAAkB;IAClB,OAAM;IACN,8BAA6B,EAId;IAHf;MACC,QAAO,EAAI;IACZ;MACC,SAAQ,EAAI;;AAGf;EACC,sBAAqB;EACrB,kBAAiB;EACjB,UAAS,EAAI;;AACd;EACC,sBAAqB;EACrB,eAAc,EAQS;EAVxB;IAIE,aAAY;IACZ,kBAAiB,EAAI;EALvB;IAOE,gBAAe,EAAI;EAPrB;IAUG,cAAa,EAAI","file":"About.sass","sourcesContent":[".whoweare {\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 50%;\n\t\tpadding: 0 15px;\n\t\tmargin-bottom: 30px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tdisplay: table;\n\t\t\tclear: both; }\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 60px;\n\t\t\tfloat: left;\n\t\t\twidth: 10%;\n\t\t\ttext-align: center;\n\t\t\tcolor: #4298EB; }\n\t\t&Inner {\n\t\t\tfloat: left;\n\t\t\twidth: 90%; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 15px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n.page {\n\t&Slider {\n\t\tposition: relative;\n\t\twidth: 300px;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;\n\t\tmargin-bottom: 80px;\n\t\t&__img {\n\t\t\twidth: 100%;\n\t\t\theight: 300px;\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: 50% 50%; }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0; }\n\t\t\t&_right {\n\t\t\t\tright: 0; } } } }\n\n.breadcrumbs {\n\t&__items {\n\t\tlist-style-type: none;\n\t\tpadding: 15px 0 0;\n\t\tmargin: 0; }\n\t&__item {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 6px;\n\t\t&:after {\n\t\t\tcontent: '>';\n\t\t\tmargin-left: 16px; }\n\t\t&:first-child {\n\t\t\tpadding-left: 0; }\n\t\t&:last-child {\n\t\t\t&:after {\n\t\t\t\tdisplay: none; } } } }\n"],"sourceRoot":""}]);
+exports.push([module.i, ".whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  width: 300px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 80px; }\n  .pageSlider__img {\n    width: 100%;\n    height: 300px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0; }\n    .pageSlider__control_right {\n      right: 0; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n\n.slidershow-container {\n  max-width: 1000px;\n  position: relative;\n  margin: auto; }\n  .slidershow-container img {\n    width: 100%; }\n\n.prev, .next {\n  cursor: pointer;\n  position: absolute;\n  top: 50%;\n  width: auto;\n  margin-top: -22px;\n  padding: 16px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  transition: 0.6s ease all;\n  border-radius: 0 3px 3px 0; }\n  .prev:hover, .next:hover {\n    background-color: rgba(0, 0, 0, 0.8); }\n\n.next {\n  right: 0;\n  border-radius: 3px 0 0 3px; }\n\n.text {\n  color: #f2f2f2;\n  font-size: 12px;\n  padding: 8px 12px;\n  position: absolute;\n  top: 0; }\n\n.dots {\n  text-align: center; }\n\n.dot {\n  cursor: pointer;\n  width: 13px;\n  height: 13px;\n  margin: 0 2px;\n  background-color: #bbb;\n  border-radius: 50%;\n  display: inline-block;\n  transition: 0.6s ease; }\n  .dot.active, .dot:hover {\n    background-color: #717171; }\n\n.fade {\n  animation-name: fade;\n  animation-duration: 1.5s; }\n\n@keyframes fade {\n  from {\n    opacity: .4; }\n  to {\n    opacity: 1; } }\n", "", {"version":3,"sources":["D:/git/myproject/src/components/About/src/components/About/About.sass"],"names":[],"mappings":"AACC;EACC,gBAAe,EAIM;EALtB;IAGE,YAAW;IACX,YAAW;IACX,eAAc,EAAI;;AACpB;EACC,YAAW;EACX,WAAU;EACV,gBAAe;EACf,oBAAmB,EAqBI;EAzBxB;IAME,YAAW;IACX,eAAc;IACd,YAAW,EAAI;EAChB;IACC,uBAAsB;IACtB,gBAAe;IACf,kBAAiB;IACjB,YAAW;IACX,WAAU;IACV,mBAAkB;IAClB,eAAc,EAAI;EACnB;IACC,YAAW;IACX,WAAU,EAAI;EACf;IACC,gBAAe;IACf,0BAAyB;IACzB,qBAAoB,EAAI;EACzB;IACC,iBAAgB,EAAI;;AAGtB;EACC,mBAAkB;EAClB,aAAY;EACZ,kBAAiB;EACjB,mBAAkB;EAClB,oBAAmB,EAkBD;EAjBlB;IACC,YAAW;IACX,cAAa;IACb,uBAAsB;IACtB,6BAA4B,EAAI;EACjC;IACC,mBAAkB;IAClB,QAAO;IACP,SAAQ;IACR,SAAQ,EAAI;EACb;IACC,mBAAkB;IAClB,OAAM;IACN,8BAA6B,EAId;IAHf;MACC,QAAO,EAAI;IACZ;MACC,SAAQ,EAAI;;AAGf;EACC,sBAAqB;EACrB,kBAAiB;EACjB,UAAS,EAAI;;AACd;EACC,sBAAqB;EACrB,eAAc,EAQS;EAVxB;IAIE,aAAY;IACZ,kBAAiB,EAAI;EALvB;IAOE,gBAAe,EAAI;EAPrB;IAUG,cAAa,EAAI;;AAErB;EACC,kBAAiB;EACjB,mBAAkB;EAClB,aAAY,EAEM;EALnB;IAKE,YAAW,EAAI;;AAEjB;EACC,gBAAe;EACf,mBAAkB;EAClB,SAAQ;EACR,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,YAAW;EACX,kBAAiB;EACjB,gBAAe;EACf,0BAAyB;EACzB,2BAA0B,EAEa;EAbxC;IAaE,qCAAiC,EAAG;;AAEtC;EACC,SAAQ;EACR,2BAA0B,EAAI;;AAE/B;EACC,eAAc;EACd,gBAAe;EACf,kBAAiB;EACjB,mBAAkB;EAClB,OAAM,EAAI;;AAEX;EACC,mBAAkB,EAAI;;AACvB;EACC,gBAAe;EACf,YAAW;EACX,aAAY;EACZ,cAAa;EACb,uBAAsB;EACtB,mBAAkB;EAClB,sBAAqB;EACrB,sBAAqB,EAGW;EAXjC;IAWE,0BAAyB,EAAI;;AAE/B;EACC,qBAAoB;EACpB,yBAAwB,EAAI;;AAE7B;EACC;IACC,YAAW,EAAA;EACZ;IACC,WAAU,EAAA,EAAA","file":"About.sass","sourcesContent":[".whoweare {\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 50%;\n\t\tpadding: 0 15px;\n\t\tmargin-bottom: 30px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tdisplay: table;\n\t\t\tclear: both; }\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 60px;\n\t\t\tfloat: left;\n\t\t\twidth: 10%;\n\t\t\ttext-align: center;\n\t\t\tcolor: #4298EB; }\n\t\t&Inner {\n\t\t\tfloat: left;\n\t\t\twidth: 90%; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 15px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n.page {\n\t&Slider {\n\t\tposition: relative;\n\t\twidth: 300px;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;\n\t\tmargin-bottom: 80px;\n\t\t&__img {\n\t\t\twidth: 100%;\n\t\t\theight: 300px;\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: 50% 50%; }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0; }\n\t\t\t&_right {\n\t\t\t\tright: 0; } } } }\n\n.breadcrumbs {\n\t&__items {\n\t\tlist-style-type: none;\n\t\tpadding: 15px 0 0;\n\t\tmargin: 0; }\n\t&__item {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 6px;\n\t\t&:after {\n\t\t\tcontent: '>';\n\t\t\tmargin-left: 16px; }\n\t\t&:first-child {\n\t\t\tpadding-left: 0; }\n\t\t&:last-child {\n\t\t\t&:after {\n\t\t\t\tdisplay: none; } } } }\n\n.slidershow-container {\n\tmax-width: 1000px;\n\tposition: relative;\n\tmargin: auto;\n\timg {\n\t\twidth: 100%; } }\n\n.prev,.next {\n\tcursor: pointer;\n\tposition: absolute;\n\ttop: 50%;\n\twidth: auto;\n\tmargin-top: -22px;\n\tpadding: 16px;\n\tcolor: #fff;\n\tfont-weight: bold;\n\tfont-size: 18px;\n\ttransition: 0.6s ease all;\n\tborder-radius: 0 3px 3px 0;\n\t&:hover {\n\t\tbackground-color: rgba(0,0,0,0.8); } }\n\n.next {\n\tright: 0;\n\tborder-radius: 3px 0 0 3px; }\n\n.text {\n\tcolor: #f2f2f2;\n\tfont-size: 12px;\n\tpadding: 8px 12px;\n\tposition: absolute;\n\ttop: 0; }\n\n.dots {\n\ttext-align: center; }\n.dot {\n\tcursor: pointer;\n\twidth: 13px;\n\theight: 13px;\n\tmargin: 0 2px;\n\tbackground-color: #bbb;\n\tborder-radius: 50%;\n\tdisplay: inline-block;\n\ttransition: 0.6s ease;\n\t&.active,\n\t&:hover {\n\t\tbackground-color: #717171; } }\n\n.fade {\n\tanimation-name: fade;\n\tanimation-duration: 1.5s; }\n\n@keyframes fade {\n\tfrom {\n\t\topacity: .4; }\n\tto {\n\t\topacity: 1; } }\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -50748,7 +50750,7 @@ exports = module.exports = __webpack_require__(20)(true);
 
 
 // module
-exports.push([module.i, ".pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover, .sliderBtn:focus {\n    background-color: #4298EB; }\n", "", {"version":3,"sources":["D:/git/myproject/src/components/App/src/components/App/App.sass"],"names":[],"mappings":"AAAA;EACC,mBAAkB,EAAI;;AAEvB;EACC,gBAAe;EACf,iBAAgB;EAChB,2BAAuB,EAAG;;AAE3B;EACC,YAAW;EACX,YAAW;EACX,eAAc,EAAI;;AAGnB;EACC,YAAW;EACX,aAAY;EACZ,uBAAsB;EACtB,YAAW;EACX,aAAY;EACZ,0BAAyB,EAGO;EATjC;IASE,0BAAyB,EAAI","file":"App.sass","sourcesContent":[".pageContainer {\n\tpadding: 20px 15px; }\n\n.pageTitle {\n\tfont-size: 26px;\n\tfont-weight: 500;\n\tcolor: rgba(0,0,0,0.87); }\n\n.content:after {\n\tcontent: '';\n\tclear: both;\n\tdisplay: table; }\n\n\n.sliderBtn {\n\twidth: 40px;\n\theight: 40px;\n\tbackground-color: #000;\n\tcolor: #fff;\n\tborder: none;\n\ttransition: 0.3s all ease;\n\t&:hover,\n\t&:focus {\n\t\tbackground-color: #4298EB; } }\n\n\n"],"sourceRoot":""}]);
+exports.push([module.i, ".pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover {\n    background-color: #4298EB; }\n", "", {"version":3,"sources":["D:/git/myproject/src/components/App/src/components/App/App.sass"],"names":[],"mappings":"AAAA;EACC,mBAAkB,EAAI;;AAEvB;EACC,gBAAe;EACf,iBAAgB;EAChB,2BAAuB,EAAG;;AAE3B;EACC,YAAW;EACX,YAAW;EACX,eAAc,EAAI;;AAGnB;EACC,YAAW;EACX,aAAY;EACZ,uBAAsB;EACtB,YAAW;EACX,aAAY;EACZ,0BAAyB,EAEO;EARjC;IAQE,0BAAyB,EAAI","file":"App.sass","sourcesContent":[".pageContainer {\n\tpadding: 20px 15px; }\n\n.pageTitle {\n\tfont-size: 26px;\n\tfont-weight: 500;\n\tcolor: rgba(0,0,0,0.87); }\n\n.content:after {\n\tcontent: '';\n\tclear: both;\n\tdisplay: table; }\n\n\n.sliderBtn {\n\twidth: 40px;\n\theight: 40px;\n\tbackground-color: #000;\n\tcolor: #fff;\n\tborder: none;\n\ttransition: 0.3s all ease;\n\t&:hover {\n\t\tbackground-color: #4298EB; } }\n\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -50895,43 +50897,6 @@ exports.push([module.i, "html {\n  font-family: sans-serif;\n  -webkit-text-size
 
 /***/ }),
 /* 538 */
-/***/ (function(module, exports) {
-
-module.exports = [
-	{
-		"icon": "a",
-		"title": "Analise",
-		"text": "Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam."
-	},
-	{
-		"icon": "b",
-		"title": "Preparing",
-		"text": "Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon": "c",
-		"title": "Working",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon": "d",
-		"title": "Finalyse",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon": "e",
-		"title": "Testing",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon": "f",
-		"title": "Deliver",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	}
-];
-
-/***/ }),
-/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -50942,6 +50907,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -50950,13 +50917,211 @@ var _Breadcrumbs = __webpack_require__(214);
 
 var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-__webpack_require__(561);
-
-var _possibilities = __webpack_require__(538);
-
-var _possibilities2 = _interopRequireDefault(_possibilities);
+__webpack_require__(560);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import React, { Component } from 'react';
+// import Breadcrumbs from '../Breadcrumbs/Breadcrumbs.jsx';
+
+// import './About.sass';
+
+// const possibilities = [
+// 	{
+// 		'icon':'a',
+// 		'title': 'Analise',
+// 		'text': 'Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam.'
+// 	},
+// 	{
+// 		'icon':'b',
+// 		'title': 'Preparing',
+// 		'text': 'Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+// 	},
+// 	{
+// 		'icon':'c',
+// 		'title': 'Working',
+// 		'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+// 	},
+// 	{
+// 		'icon':'d',
+// 		'title': 'Finalyse',
+// 		'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+// 	},
+// 	{
+// 		'icon':'e',
+// 		'title': 'Testing',
+// 		'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+// 	},
+// 	{
+// 		'icon':'f',
+// 		'title': 'Deliver',
+// 		'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+// 	}
+// ]
+
+// const whoweareItems = [
+// 	{
+// 		'icon': 'g',
+// 		'title': 'On time projects',
+// 		'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
+// 	},
+// 	{
+// 		'icon': 'h',
+// 		'title': 'Professional experience',
+// 		'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
+// 	},
+// 	{
+// 		'icon': 'j',
+// 		'title': 'Fully support',
+// 		'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
+// 	},
+// 	{
+// 		'icon': 'k',
+// 		'title': 'Communicative team',
+// 		'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
+// 	}
+// ]
+
+// var slideIndex = 1;
+
+// showSlides(slideIndex);
+
+// function plusSlides(n){
+// 	showSlides(slideIndex += n);
+// }
+
+// function currentSlide(n){
+// 	showSlides(slideIndex = n);
+// }
+
+// function showSlides(n){
+// 	var slides = document.querySelectorAll('mySlides');
+// 	var dots = document.querySelectorAll('dot');
+
+// console.log(slides);
+// 	if(n > slides.length){
+// 		slideIndex = 1;
+// 	}
+// 	if(n < 1){
+// 		slideIndex = slides.length;
+// 	}
+// 	for (var i = 0; i < slides.length; i++){
+// 		slides[i].style.display = 'none';
+// 	}
+// 	for (var i = 0; i < dots.length; i++) {
+// 		dots[i].className = dots[i].className.replace('active','');
+// 	}
+// 	slides[slideIndex-1].style = {'display':'block'};
+// 	dots[slideIndex-1].className +=' active';
+// }
+
+// const About = (props) =>
+// 	<div className='pageContainer'>
+// 		<Breadcrumbs name={props.name} />
+// 		<div className='whoweare'>
+// 			<div className='pageTitle blockTitle'>Who we Are</div>
+// 			<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+// 			<div className='whoweare__items'>
+// 				{
+// 					whoweareItems.map( (whoweareItem, i) =>
+// 						<div key={i} className='whoweare__item'>
+// 							<div className='whoweare__itemIcon'>{whoweareItem.icon}</div>
+// 							<div className='whoweare__itemInner'>
+// 								<div className='whoweare__itemTitle'>{whoweareItem.title}</div>
+// 								<div className='whoweare__itemText'>{whoweareItem.text}</div>
+// 							</div>
+// 						</div>
+// 					)
+// 				}
+// 			</div>
+// 		</div>
+// 		<br/><br/><br/><br/>
+// 		<div className='pageTitle blockTitle' id='benefits'>Benefits</div>
+// 		<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+// 		<div className='possibilities'>
+// 			<div className='possibilities__items'>
+// 				{
+// 					possibilities.map( (possibility, i) =>
+// 						<div key={i} className='possibilities__item'>
+// 							<div className='possibilities__itemIcon'>&nbsp;{possibility.icon}</div>
+// 							<div className='possibilities__itemTitle'>{possibility.title}</div>
+// 							<div className='possibilities__itemText'>{possibility.text}</div>
+// 						</div>
+// 					)
+// 				}
+// 			</div>
+// 		</div>
+// 		<br/><br/><br/><br/><br/><br/>
+// 		<div className='pageTitle blockTitle' id='team'>Our team</div>
+// 		<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+// 		<div className='slidershow-container'>
+// 			<div className='mySlides fade'>
+// 				<div className='numbertext'>1/3</div>
+// 				<img src='./img/homeslider1.jpg' />
+// 				<div className='text'>Text</div>
+// 			</div>
+// 			<div className='mySlides fade'>
+// 				<div className='numbertext'>2/3</div>
+// 				<img src='./img/homeslider2.jpg' />
+// 				<div className='text'>Text</div>
+// 			</div>
+// 			<div className='mySlides fade'>
+// 				<div className='numbertext'>3/3</div>
+// 				<img src='./img/homeslider3.jpg' />
+// 				<div className='text'>Text</div>
+// 			</div>
+// 			<a className='prev' onClick={plusSlides(-1)}>&#10094;</a>
+// 			<a className='next' onClick={plusSlides(1)}>&#10095;</a>
+// 		</div>
+// 		<br/>
+// 		<div className='dots'>
+// 			<span className='dot' onClick={currentSlide(1)}></span>
+// 			<span className='dot' onClick={currentSlide(2)}></span>
+// 			<span className='dot' onClick={currentSlide(3)}></span>
+// 		</div>
+// 		<div className='pageSlider'>
+// 			<div className='pageSlider__imgs'>
+// 				<div className='pageSlider__img' style={{backgroundImage: 'url(\'./img/homeSlider5.jpg\')'}}></div>
+// 			</div>
+// 			<div className='pageSlider__controls'>
+// 				<button className='pageSlider__control pageSlider__control_left sliderBtn sliderBtn_left' type='button'>left</button>
+// 				<button className='pageSlider__control pageSlider__control_right sliderBtn sliderBtn_right' type='button'>right</button>
+// 			</div>
+// 		</div>
+// 	</div>
+
+
+// export default About;
+
+var possibilities = [{
+	'icon': 'a',
+	'title': 'Analise',
+	'text': 'Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam.'
+}, {
+	'icon': 'b',
+	'title': 'Preparing',
+	'text': 'Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+}, {
+	'icon': 'c',
+	'title': 'Working',
+	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+}, {
+	'icon': 'd',
+	'title': 'Finalyse',
+	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+}, {
+	'icon': 'e',
+	'title': 'Testing',
+	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+}, {
+	'icon': 'f',
+	'title': 'Deliver',
+	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
+}];
 
 var whoweareItems = [{
 	'icon': 'g',
@@ -50976,146 +51141,279 @@ var whoweareItems = [{
 	'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
 }];
 
-var About = function About(props) {
-	return _react2.default.createElement(
-		'div',
-		{ className: 'pageContainer' },
-		_react2.default.createElement(_Breadcrumbs2.default, { name: props.name }),
-		_react2.default.createElement(
-			'div',
-			{ className: 'whoweare' },
-			_react2.default.createElement(
+var About = function (_Component) {
+	_inherits(About, _Component);
+
+	function About() {
+		_classCallCheck(this, About);
+
+		return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	}
+
+	_createClass(About, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var slideIndex = 1;
+
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var slides = document.querySelectorAll('.mySlides');
+				var dots = document.querySelectorAll('.dot');
+
+				for (var i = 0; i < dots.length; i++) {
+					dots[i].addEventListener("click", function () {
+						currentSlide(i);
+					});
+				}
+
+				document.querySelector('.prev').addEventListener("click", function () {
+					plusSlides(-1);
+				});
+				document.querySelector('.next').addEventListener("click", function () {
+					plusSlides(1);
+				});
+
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (var i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+				for (var i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace('active', '');
+				}
+				slides[slideIndex - 1].style.display = 'block';
+				dots[slideIndex - 1].className += ' active';
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+
+			var props = this.props;
+
+			return _react2.default.createElement(
 				'div',
-				{ className: 'pageTitle blockTitle' },
-				'Who we Are'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageDescr' },
-				'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'whoweare__items' },
-				whoweareItems.map(function (whoweareItem, i) {
-					return _react2.default.createElement(
-						'div',
-						{ key: i, className: 'whoweare__item' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'whoweare__itemIcon' },
-							whoweareItem.icon
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'whoweare__itemInner' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'whoweare__itemTitle' },
-								whoweareItem.title
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'whoweare__itemText' },
-								whoweareItem.text
-							)
-						)
-					);
-				})
-			)
-		),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageTitle blockTitle', id: 'benefits' },
-			'Benefits'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageDescr' },
-			'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'possibilities' },
-			_react2.default.createElement(
-				'div',
-				{ className: 'possibilities__items' },
-				_possibilities2.default.map(function (possibility, i) {
-					return _react2.default.createElement(
-						'div',
-						{ key: i, className: 'possibilities__item' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'possibilities__itemIcon' },
-							'\xA0',
-							possibility.icon
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'possibilities__itemTitle' },
-							possibility.title
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'possibilities__itemText' },
-							possibility.text
-						)
-					);
-				})
-			)
-		),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement('br', null),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageTitle blockTitle', id: 'team' },
-			'Our team'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageDescr' },
-			'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageSlider' },
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageSlider__imgs' },
-				_react2.default.createElement('div', { className: 'pageSlider__img', style: { backgroundImage: 'url(\'./img/homeSlider5.jpg\')' } })
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageSlider__controls' },
+				{ className: 'pageContainer' },
+				_react2.default.createElement(_Breadcrumbs2.default, { name: props.name }),
 				_react2.default.createElement(
-					'button',
-					{ className: 'pageSlider__control pageSlider__control_left sliderBtn sliderBtn_left', type: 'button' },
-					'left'
+					'div',
+					{ className: 'whoweare' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageTitle blockTitle' },
+						'Who we Are'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageDescr' },
+						'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'whoweare__items' },
+						whoweareItems.map(function (whoweareItem, i) {
+							return _react2.default.createElement(
+								'div',
+								{ key: i, className: 'whoweare__item' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'whoweare__itemIcon' },
+									whoweareItem.icon
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'whoweare__itemInner' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'whoweare__itemTitle' },
+										whoweareItem.title
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'whoweare__itemText' },
+										whoweareItem.text
+									)
+								)
+							);
+						})
+					)
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'div',
+					{ className: 'pageTitle blockTitle', id: 'benefits' },
+					'Benefits'
 				),
 				_react2.default.createElement(
-					'button',
-					{ className: 'pageSlider__control pageSlider__control_right sliderBtn sliderBtn_right', type: 'button' },
-					'right'
+					'div',
+					{ className: 'pageDescr' },
+					'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'possibilities' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'possibilities__items' },
+						possibilities.map(function (possibility, i) {
+							return _react2.default.createElement(
+								'div',
+								{ key: i, className: 'possibilities__item' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'possibilities__itemIcon' },
+									'\xA0',
+									possibility.icon
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'possibilities__itemTitle' },
+									possibility.title
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'possibilities__itemText' },
+									possibility.text
+								)
+							);
+						})
+					)
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'div',
+					{ className: 'pageTitle blockTitle', id: 'team' },
+					'Our team'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'pageDescr' },
+					'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'slidershow-container' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'mySlides fade' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'numbertext' },
+							'1/3'
+						),
+						_react2.default.createElement('img', { src: './img/homeslider1.jpg' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'Text'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'mySlides fade' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'numbertext' },
+							'2/3'
+						),
+						_react2.default.createElement('img', { src: './img/homeslider2.jpg' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'Text'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'mySlides fade' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'numbertext' },
+							'3/3'
+						),
+						_react2.default.createElement('img', { src: './img/homeslider3.jpg' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'Text'
+						)
+					),
+					_react2.default.createElement(
+						'a',
+						{ className: 'prev' },
+						'\u276E'
+					),
+					_react2.default.createElement(
+						'a',
+						{ className: 'next' },
+						'\u276F'
+					)
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'div',
+					{ className: 'dots' },
+					_react2.default.createElement('span', { className: 'dot' }),
+					_react2.default.createElement('span', { className: 'dot' }),
+					_react2.default.createElement('span', { className: 'dot' })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'pageSlider' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageSlider__imgs' },
+						_react2.default.createElement('div', { className: 'pageSlider__img', style: { backgroundImage: 'url(\'./img/homeSlider5.jpg\')' } })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageSlider__controls' },
+						_react2.default.createElement(
+							'button',
+							{ className: 'pageSlider__control pageSlider__control_left sliderBtn sliderBtn_left', type: 'button' },
+							'left'
+						),
+						_react2.default.createElement(
+							'button',
+							{ className: 'pageSlider__control pageSlider__control_right sliderBtn sliderBtn_right', type: 'button' },
+							'right'
+						)
+					)
 				)
-			)
-		)
-	);
-};
+			);
+		}
+	}]);
+
+	return About;
+}(_react.Component);
 
 exports.default = About;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "About.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 540 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51244,7 +51542,7 @@ exports.default = Account;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Account.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 541 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51275,7 +51573,7 @@ var _RaisedButton = __webpack_require__(169);
 
 var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
-__webpack_require__(562);
+__webpack_require__(561);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51354,7 +51652,7 @@ exports.default = AddTask;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "AddTask.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 542 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51381,41 +51679,41 @@ var _reactTransitionGroup = __webpack_require__(487);
 
 var _reactRouterDom = __webpack_require__(19);
 
-var _About = __webpack_require__(539);
+var _About = __webpack_require__(538);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Cabinet = __webpack_require__(548);
+var _Cabinet = __webpack_require__(547);
 
 var _Cabinet2 = _interopRequireDefault(_Cabinet);
 
-var _Contacts = __webpack_require__(551);
+var _Contacts = __webpack_require__(550);
 
 var _Contacts2 = _interopRequireDefault(_Contacts);
 
-var _Home = __webpack_require__(553);
+var _Home = __webpack_require__(552);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _NotFound = __webpack_require__(554);
+var _NotFound = __webpack_require__(553);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
-var _SignIn = __webpack_require__(555);
+var _SignIn = __webpack_require__(554);
 
 var _SignIn2 = _interopRequireDefault(_SignIn);
 
-var _ForgetPass = __webpack_require__(552);
+var _ForgetPass = __webpack_require__(551);
 
 var _ForgetPass2 = _interopRequireDefault(_ForgetPass);
 
-var _SingUp = __webpack_require__(556);
+var _SingUp = __webpack_require__(555);
 
 var _SingUp2 = _interopRequireDefault(_SingUp);
 
-__webpack_require__(563);
+__webpack_require__(562);
 
-var _Header = __webpack_require__(543);
+var _Header = __webpack_require__(542);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -51512,7 +51810,7 @@ exports.default = App;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 543 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51527,23 +51825,23 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _HeaderLogo = __webpack_require__(544);
+var _HeaderLogo = __webpack_require__(543);
 
 var _HeaderLogo2 = _interopRequireDefault(_HeaderLogo);
 
-var _HeaderMenu = __webpack_require__(545);
+var _HeaderMenu = __webpack_require__(544);
 
 var _HeaderMenu2 = _interopRequireDefault(_HeaderMenu);
 
-var _HeaderSearch = __webpack_require__(546);
+var _HeaderSearch = __webpack_require__(545);
 
 var _HeaderSearch2 = _interopRequireDefault(_HeaderSearch);
 
-var _HeaderUser = __webpack_require__(547);
+var _HeaderUser = __webpack_require__(546);
 
 var _HeaderUser2 = _interopRequireDefault(_HeaderUser);
 
-__webpack_require__(564);
+__webpack_require__(563);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51563,7 +51861,7 @@ exports.default = Header;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Header.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 544 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51609,7 +51907,7 @@ exports.default = HeaderLogo;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderLogo.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 545 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51737,7 +52035,7 @@ exports.default = HeaderMenu;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderMenu.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 546 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51768,7 +52066,7 @@ exports.default = HeaderSearch;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderSearch.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 547 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51842,7 +52140,7 @@ exports.default = HeaderUser;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderUser.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 548 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51859,27 +52157,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(19);
 
-var _Sidebar = __webpack_require__(550);
+var _Sidebar = __webpack_require__(549);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
-var _Account = __webpack_require__(540);
+var _Account = __webpack_require__(539);
 
 var _Account2 = _interopRequireDefault(_Account);
 
-var _AddTask = __webpack_require__(541);
+var _AddTask = __webpack_require__(540);
 
 var _AddTask2 = _interopRequireDefault(_AddTask);
 
-var _TaskList = __webpack_require__(557);
+var _TaskList = __webpack_require__(556);
 
 var _TaskList2 = _interopRequireDefault(_TaskList);
 
-var _Task = __webpack_require__(558);
+var _Task = __webpack_require__(557);
 
 var _Task2 = _interopRequireDefault(_Task);
 
-__webpack_require__(565);
+__webpack_require__(564);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51932,7 +52230,7 @@ exports.default = Cabinet;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Cabinet.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 549 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -51965,7 +52263,7 @@ var _RaisedButton = __webpack_require__(169);
 
 var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 
-__webpack_require__(566);
+__webpack_require__(565);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52005,12 +52303,12 @@ var Filters = function (_Component) {
 					}
 				};
 			}
-			this.props.pageActions.onProjectChange(chooseProject, this.props.selectedCreator);
+			this.props.pageActions.onProjectChange(chooseProject, this.props.creator);
 		}
 	}, {
 		key: 'handleSetCreator',
 		value: function handleSetCreator(e) {
-			this.props.pageActions.onCreatorChange(e.target.textContent, this.props.project);
+			this.props.pageActions.onCreatorChange(e.target.textContent, this.props.projects);
 		}
 	}, {
 		key: 'handleSortSorting',
@@ -52054,7 +52352,7 @@ var Filters = function (_Component) {
 						return _react2.default.createElement(_Checkbox2.default, {
 							key: i,
 							className: 'filters__checkbox',
-							checked: Object.prototype.toString.call(_this2.props.project) === '[object Array]' ? _this2.props.project.some(function (str) {
+							checked: Object.prototype.toString.call(_this2.props.projects) === '[object Array]' ? _this2.props.projects.some(function (str) {
 								return str == p;
 							}) ? true : false : false,
 							label: p,
@@ -52132,7 +52430,7 @@ exports.default = Filters;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Filters.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 550 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52149,7 +52447,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(19);
 
-var _Filters = __webpack_require__(549);
+var _Filters = __webpack_require__(548);
 
 var _Filters2 = _interopRequireDefault(_Filters);
 
@@ -52171,7 +52469,7 @@ var _playlistAdd2 = _interopRequireDefault(_playlistAdd);
 
 var _List = __webpack_require__(330);
 
-__webpack_require__(567);
+__webpack_require__(566);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52229,7 +52527,7 @@ exports.default = Sidebar;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Sidebar.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 551 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52240,6 +52538,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -52248,100 +52548,149 @@ var _Breadcrumbs = __webpack_require__(214);
 
 var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-__webpack_require__(568);
+__webpack_require__(567);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Contacts = function Contacts(props) {
-	return _react2.default.createElement(
-		'div',
-		{ className: 'pageContainer' },
-		_react2.default.createElement(_Breadcrumbs2.default, { name: props.name }),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageTitle blockTitle' },
-			'Where you can find us'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageDescr' },
-			'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'findUs' },
-			_react2.default.createElement(
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contacts = function (_Component) {
+	_inherits(Contacts, _Component);
+
+	function Contacts() {
+		_classCallCheck(this, Contacts);
+
+		return _possibleConstructorReturn(this, (Contacts.__proto__ || Object.getPrototypeOf(Contacts)).apply(this, arguments));
+	}
+
+	_createClass(Contacts, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var lat = document.getElementById('map-canvas').getAttribute('data-lat');
+			var lng = document.getElementById('map-canvas').getAttribute('data-lng');
+			var zoom = document.getElementById('map-canvas').getAttribute('data-zoom');
+			var mapOptions = {
+				zoom: parseInt(zoom),
+				scrollwheel: false,
+				center: new google.maps.LatLng(lat, lng)
+			};
+			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			var point = new google.maps.LatLng(lat, lng);
+			var marker = new google.maps.Marker({
+				draggable: false,
+				raiseOnDrag: false,
+				map: map,
+				position: point,
+				icon: {
+					url: './img/point.png',
+					scaledSize: new google.maps.Size(175, 175)
+				}
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
 				'div',
-				{ className: 'findUs__items' },
+				{ className: 'pageContainer' },
+				_react2.default.createElement(_Breadcrumbs2.default, { name: this.props.name }),
 				_react2.default.createElement(
 					'div',
-					{ className: 'findUs__item' },
+					{ className: 'pageTitle blockTitle' },
+					'Where you can find us'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'pageDescr' },
+					'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'findUs' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'findUs__itemIcon' },
-						'\xA0l'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemTitle' },
-						'Our adress'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemText' },
-						'Not home and not street'
+						{ className: 'findUs__items' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'findUs__item' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemIcon' },
+								'\xA0l'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemTitle' },
+								'Our adress'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemText' },
+								'Not home and not street'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'findUs__item' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemIcon' },
+								'\xA0m'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemTitle' },
+								'Our email'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemText' },
+								'www.com'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'findUs__item' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemIcon' },
+								'\xA0n'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemTitle' },
+								'Our phone'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'findUs__itemText' },
+								'(0) 123-456-789-00'
+							)
+						)
 					)
 				),
 				_react2.default.createElement(
 					'div',
-					{ className: 'findUs__item' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemIcon' },
-						'\xA0m'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemTitle' },
-						'Our email'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemText' },
-						'www.com'
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					{ className: 'findUs__item' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemIcon' },
-						'\xA0n'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemTitle' },
-						'Our phone'
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'findUs__itemText' },
-						'(0) 123-456-789-00'
-					)
+					{ className: 'contacts_mapWrap' },
+					_react2.default.createElement('div', { id: 'map-canvas', className: 'contacts_map', 'data-lat': '50.4627983', 'data-lng': '30.5057531', 'data-zoom': '14' })
 				)
-			)
-		),
-		_react2.default.createElement('div', { className: 'contacts_mapWrap' })
-	);
-};
+			);
+		}
+	}]);
+
+	return Contacts;
+}(_react.Component);
 
 exports.default = Contacts;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Contacts.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 552 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52440,7 +52789,7 @@ exports.default = ForgetPass;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ForgetPass.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 553 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52451,13 +52800,21 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(569);
+__webpack_require__(568);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var possibilities = [{
 	"icon": "a",
@@ -52503,124 +52860,189 @@ var sliderBgStyle = {
 	backgroungImage: "url('./img/homeslider1.jpg')"
 };
 
-var Home = function Home(props) {
-	return _react2.default.createElement(
-		'div',
-		{ className: 'homePage' },
-		_react2.default.createElement(
-			'div',
-			{ className: 'homeSlider' },
-			_react2.default.createElement(
+var Home = function (_Component) {
+	_inherits(Home, _Component);
+
+	function Home() {
+		_classCallCheck(this, Home);
+
+		return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+	}
+
+	_createClass(Home, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			//func for change slides
+			var plusSlides = function plusSlides(n) {
+				return showSlides(slideIndex += n);
+			};
+
+			//add events on control buttons
+			document.querySelector('.homeSlider__control_left').addEventListener("click", function () {
+				plusSlides(-1);
+			});
+			document.querySelector('.homeSlider__control_right').addEventListener("click", function () {
+				plusSlides(1);
+			});
+
+			var showSlides = function showSlides(n) {
+				var slides = document.querySelectorAll('.homeSlider__img');
+
+				//if slider has only one image - hide control buttons
+				if (slides.length <= 1) document.querySelector('.homeSlider__controls').style.display = 'none';
+
+				//if index of slides more then number of slides - show first slide
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+
+				//if index of slides less then number of slides - show last slide
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+
+				for (var i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+
+				slides[slideIndex - 1].style.display = 'block';
+			};
+
+			//start slideshow from first slide
+			var slideIndex = 1;
+			showSlides(slideIndex);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+
+			var props = this.props;
+
+			return _react2.default.createElement(
 				'div',
-				{ className: 'homeSlider__imgs' },
-				_react2.default.createElement('div', { className: 'homeSlider__img', style: { backgroundImage: 'url(\'./img/homeslider5.jpg\')' } })
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'homeSlider__controls' },
+				{ className: 'homePage' },
 				_react2.default.createElement(
-					'button',
-					{ className: 'homeSlider__control homeSlider__control_left sliderBtn sliderBtn_left', type: 'button' },
-					'left'
+					'div',
+					{ className: 'homeSlider' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'homeSlider__imgs' },
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider5.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider6.png\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider2.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider3.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider4.jpg\')' } })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'homeSlider__controls' },
+						_react2.default.createElement(
+							'button',
+							{ className: 'homeSlider__control homeSlider__control_left sliderBtn sliderBtn_left', type: 'button' },
+							'\u276E'
+						),
+						_react2.default.createElement(
+							'button',
+							{ className: 'homeSlider__control homeSlider__control_right sliderBtn sliderBtn_right', type: 'button' },
+							'\u276F'
+						)
+					)
 				),
 				_react2.default.createElement(
-					'button',
-					{ className: 'homeSlider__control homeSlider__control_right sliderBtn sliderBtn_right', type: 'button' },
-					'right'
-				)
-			)
-		),
-		_react2.default.createElement(
-			'div',
-			{ className: 'pageContainer' },
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageTitle blockTitle' },
-				'Some numbers'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageDescr' },
-				'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'someNumbers' },
-				_react2.default.createElement(
 					'div',
-					{ className: 'someNumbers__items' },
-					someNumbers.map(function (someNumber, i) {
-						return _react2.default.createElement(
+					{ className: 'pageContainer' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageTitle blockTitle' },
+						'Some numbers'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageDescr' },
+						'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'someNumbers' },
+						_react2.default.createElement(
 							'div',
-							{ key: i, className: 'someNumbers__item' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'someNumbers__itemInner' },
-								_react2.default.createElement(
+							{ className: 'someNumbers__items' },
+							someNumbers.map(function (someNumber, i) {
+								return _react2.default.createElement(
 									'div',
-									{ className: 'someNumbers__itemTitle' },
-									someNumber.title
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'someNumbers__itemText' },
-									someNumber.text
-								)
-							)
-						);
-					})
-				)
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageTitle blockTitle' },
-				'Possibilities'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'pageDescr' },
-				'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
-			),
-			_react2.default.createElement(
-				'div',
-				{ className: 'possibilities' },
-				_react2.default.createElement(
-					'div',
-					{ className: 'possibilities__items' },
-					possibilities.map(function (possibility, i) {
-						return _react2.default.createElement(
+									{ key: i, className: 'someNumbers__item' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'someNumbers__itemInner' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'someNumbers__itemTitle' },
+											someNumber.title
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'someNumbers__itemText' },
+											someNumber.text
+										)
+									)
+								);
+							})
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageTitle blockTitle' },
+						'Possibilities'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'pageDescr' },
+						'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'possibilities' },
+						_react2.default.createElement(
 							'div',
-							{ key: i, className: 'possibilities__item' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'possibilities__itemIcon' },
-								'\xA0',
-								possibility.icon
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'possibilities__itemTitle' },
-								possibility.title
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'possibilities__itemText' },
-								possibility.text
-							)
-						);
-					})
+							{ className: 'possibilities__items' },
+							possibilities.map(function (possibility, i) {
+								return _react2.default.createElement(
+									'div',
+									{ key: i, className: 'possibilities__item' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'possibilities__itemIcon' },
+										'\xA0',
+										possibility.icon
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'possibilities__itemTitle' },
+										possibility.title
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'possibilities__itemText' },
+										possibility.text
+									)
+								);
+							})
+						)
+					)
 				)
-			)
-		)
-	);
-};
+			);
+		}
+	}]);
+
+	return Home;
+}(_react.Component);
 
 exports.default = Home;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Home.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 554 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52637,7 +53059,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(560);
+__webpack_require__(559);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52679,7 +53101,7 @@ exports.default = NotFound;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "NotFound.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 555 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52698,7 +53120,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(19);
 
-__webpack_require__(570);
+__webpack_require__(569);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52839,7 +53261,7 @@ exports.default = SignIn;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SignIn.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 556 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52958,7 +53380,7 @@ exports.default = SingUp;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SingUp.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 557 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -52975,7 +53397,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(19);
 
-__webpack_require__(571);
+__webpack_require__(570);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53078,7 +53500,7 @@ exports.default = TaskList;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "TaskList.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 558 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -53097,7 +53519,7 @@ var _Checkbox = __webpack_require__(161);
 
 var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
-__webpack_require__(572);
+__webpack_require__(571);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53120,7 +53542,7 @@ var Task = function Task(props) {
 	};
 
 	var handleClickSubtask = function handleClickSubtask(taskIndex, subtaskIndex, done) {
-		props.pageActions.toggleTask(taskIndex, subtaskIndex, done, props.selectedProject, props.selectedCreator);
+		props.pageActions.toggleTask(taskIndex, subtaskIndex, done, props.projects, props.creator, props.sorting);
 	};
 
 	return _react2.default.createElement(
@@ -53176,7 +53598,7 @@ exports.default = Task;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Task.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 559 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\git\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -53230,7 +53652,7 @@ _reactDom2.default.render(_react2.default.createElement(
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\git\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "main.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 560 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53261,7 +53683,7 @@ if(false) {
 }
 
 /***/ }),
-/* 561 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53292,7 +53714,7 @@ if(false) {
 }
 
 /***/ }),
-/* 562 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53323,7 +53745,7 @@ if(false) {
 }
 
 /***/ }),
-/* 563 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53354,7 +53776,7 @@ if(false) {
 }
 
 /***/ }),
-/* 564 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53385,7 +53807,7 @@ if(false) {
 }
 
 /***/ }),
-/* 565 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53416,7 +53838,7 @@ if(false) {
 }
 
 /***/ }),
-/* 566 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53447,7 +53869,7 @@ if(false) {
 }
 
 /***/ }),
-/* 567 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53478,7 +53900,7 @@ if(false) {
 }
 
 /***/ }),
-/* 568 */
+/* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53509,7 +53931,7 @@ if(false) {
 }
 
 /***/ }),
-/* 569 */
+/* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53540,7 +53962,7 @@ if(false) {
 }
 
 /***/ }),
-/* 570 */
+/* 569 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53571,7 +53993,7 @@ if(false) {
 }
 
 /***/ }),
-/* 571 */
+/* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53602,7 +54024,7 @@ if(false) {
 }
 
 /***/ }),
-/* 572 */
+/* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -53633,7 +54055,7 @@ if(false) {
 }
 
 /***/ }),
-/* 573 */
+/* 572 */
 /***/ (function(module, exports) {
 
 module.exports = function() {

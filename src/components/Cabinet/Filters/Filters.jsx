@@ -25,11 +25,11 @@ export default class Filters extends Component {
 				}
 			};
 		}
-		this.props.pageActions.onProjectChange(chooseProject, this.props.selectedCreator);
+		this.props.pageActions.onProjectChange(chooseProject, this.props.creator);
 	}
 
 	handleSetCreator(e){
-		this.props.pageActions.onCreatorChange(e.target.textContent, this.props.project);
+		this.props.pageActions.onCreatorChange(e.target.textContent, this.props.projects);
 	}
 
 	handleSortSorting(e){
@@ -56,8 +56,8 @@ export default class Filters extends Component {
 									key={i}
 									className='filters__checkbox'
 									checked={
-										Object.prototype.toString.call(this.props.project) === '[object Array]'
-										?	this.props.project.some((str) => str == p) ? true : false
+										Object.prototype.toString.call(this.props.projects) === '[object Array]'
+										?	this.props.projects.some((str) => str == p) ? true : false
 										: false
 									}
 									label={p}

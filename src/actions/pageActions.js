@@ -14,29 +14,30 @@ export function signIn(email, pass) {
 	};
 }
 
-export function toggleTask(taskIndex, subtaskIndex, done, project, creator) {
+export function toggleTask(taskIndex, subtaskIndex, done, projects, creator, sorting) {
 	return {
 		type: AppConstants.TOGGLE_TASK,
 		taskIndex,
 		subtaskIndex,
 		done,
-		project,
-		creator
+		projects,
+		creator,
+		sorting
 	}
 }
 
-export function	onCreatorChange(creator, project) {
+export function	onCreatorChange(creator, projects) {
 	return {
 		type: AppConstants.SET_CREATOR,
 		creator,
-		project,
+		projects,
 	}
 }
 
-export function	onProjectChange(project, creator) {
+export function	onProjectChange(projects, creator) {
 	return {
 		type: AppConstants.SET_PROJECT,
-		project,
+		projects,
 		creator
 	}
 }
