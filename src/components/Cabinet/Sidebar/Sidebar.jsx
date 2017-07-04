@@ -7,8 +7,6 @@ import ActionList from 'material-ui/svg-icons/action/list';
 import AVPlaylistAdd from 'material-ui/svg-icons/AV/playlist-add';
 import {List, ListItem} from 'material-ui/List';
 
-import './Sidebar.sass';
-
 const Sidebar = (props) =>
 	<div className='sidebar'>
 		<List>

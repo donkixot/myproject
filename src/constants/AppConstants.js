@@ -10,4 +10,5 @@ export default keyMirror({
 	SET_CREATOR      : null,
 	SET_PROJECT      : null,
 	SET_SORTING      : null,
+	FILTERS_RESET    : null,
 });

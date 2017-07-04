@@ -7,9 +7,6 @@ import AddTask  from '../AddTask/AddTask.jsx';
 import TaskList from '../TaskList/TaskList.jsx';
 import Task     from '../Task/Task.jsx';
 
-
-import './Cabinet.sass'
-
 const cabinetRoutes = [
 	{
 		path: '/cabinet/account',

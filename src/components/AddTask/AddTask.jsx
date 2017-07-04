@@ -4,8 +4,6 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import './AddTask.sass'
-
 const handleChange = (event, index, value) => {
 	this.setState({value});
 };

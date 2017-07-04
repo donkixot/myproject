@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs.jsx';
 
-import './Contacts.sass'
-
-
 export default class Contacts extends Component {
 
 	componentDidMount() {

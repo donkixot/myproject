@@ -1,14 +1,7 @@
 .headerUser__avatar{
 	background-image: url(../img/avatar_bg.png);
-	-webkit-background-size: cover;
-	background-size: cover;
 }
 
 .pageLoader{
-	width: 19px;
-	height: 19px;
-	margin: 50px auto;
 	background-image: url(../img/google_loading.gif);
-	-webkit-background-size: cover;
-	background-size: cover;
 }

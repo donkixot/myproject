@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import './Home.sass';
-
 const possibilities = [
 	{
 		"icon":"a",
@@ -59,15 +57,16 @@ const sliderBgStyle ={
 }
 
 export default class Home extends Component {
+
 	componentDidMount() {
 		//func for change slides
 		let plusSlides = n => showSlides(slideIndex += n);
 
 		//add events on control buttons
-		document.querySelector('.homeSlider__control_left').addEventListener("click", function(){
+		document.querySelector('.homeSlider__control_left').addEventListener('click', function(){
 			plusSlides(-1);
 		});
-		document.querySelector('.homeSlider__control_right').addEventListener("click", function(){
+		document.querySelector('.homeSlider__control_right').addEventListener('click', function(){
 			plusSlides(1);
 		});
 
@@ -75,31 +74,41 @@ export default class Home extends Component {
 		let showSlides = n => {
 			let slides = document.querySelectorAll('.homeSlider__img');
 
-			//if slider has only one image - hide control buttons
-			if(slides.length <= 1)	document.querySelector('.homeSlider__controls').style.display = 'none';
+			if(slides.length){
+				//if slider has only one image - hide control buttons
+				if(slides.length <= 1)	document.querySelector('.homeSlider__controls').style.display = 'none';
 
-			//if index of slides more then number of slides - show first slide
-			if(n > slides.length) {
-				slideIndex = 1
+				//if index of slides more then number of slides - show first slide
+				if(n > slides.length) {
+					slideIndex = 1
+				}
+
+				//if index of slides less then number of slides - show last slide
+				if(n < 1)  {
+					slideIndex = slides.length
+				}
+
+				for (let i = 0; i < slides.length; i++){
+					slides[i].style.display = 'none';
+				}
+
+				slides[slideIndex-1].style.display = 'block';
 			}
+		}
 
-			//if index of slides less then number of slides - show last slide
-			if(n < 1)  {
-				slideIndex = slides.length
-			}
-
-			for (let i = 0; i < slides.length; i++){
-				slides[i].style.display = 'none';
-			}
-
-			slides[slideIndex-1].style.display = 'block';
+		const autoslideshow = (speed) => {
+			const timer = setInterval(function () {
+				plusSlides(1);
+			}, speed)
 		}
 
 		//start slideshow from first slide
 		let slideIndex = 1;
 		showSlides(slideIndex);
-
+		//run autoslideshow
+		autoslideshow(6000);
 	}
+
 	render() {
 
 		const props = this.props;
@@ -112,6 +121,7 @@ export default class Home extends Component {
 						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider6.png\')'}}></div>
 						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider2.jpg\')'}}></div>
 						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider3.jpg\')'}}></div>
+						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider7.png\')'}}></div>
 						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider4.jpg\')'}}></div>
 					</div>
 					<div className='homeSlider__controls'>

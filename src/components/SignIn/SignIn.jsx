@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './SignIn.sass'
-
 export default class SignIn extends Component {
 	handleFocusEmail(e) {
 		document.querySelectorAll('.cardBox__spanError_email')[0].style.display = 'none';

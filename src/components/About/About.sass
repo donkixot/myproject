@@ -32,18 +32,50 @@
 		&Text
 			font-weight: 500
 
+$slidersize: 300px;
+
 .page
 	&Slider
 		position: relative
-		width: 300px
-		margin-left: auto
-		margin-right: auto
 		margin-bottom: 80px
-		&__img
-			width: 100%
-			height: 300px
-			background-size: cover
-			background-position: 50% 50%
+		width: 3*$slidersize+50
+		margin: auto
+		overflow: hidden
+		&__items
+			margin: 0 -10px
+			&:after
+				display: table
+				clear: both
+				content: ''
+		&__item
+			float: left
+			width: $slidersize
+			vertical-align: top
+			margin: 0 10px
+			td
+				border: none
+				text-align: center
+			&ImgWrap
+				border: none
+				min-width: $slidersize
+				max-width: $slidersize
+				min-height: $slidersize
+				max-height: $slidersize
+				height: $slidersize
+				margin: 0
+				padding: 0
+				text-align: center
+			&TextWrap
+				padding: 10px
+			&Img
+				display: block
+				max-width: 100%
+				max-height: 100%
+				margin: auto
+			&Name
+				font-size: 18px
+			&Descr
+				font-weight: 400
 		&__controls
 			position: absolute
 			left: 0

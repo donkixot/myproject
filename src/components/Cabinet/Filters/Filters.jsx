@@ -4,8 +4,6 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import './Filters.sass';
-
 let chooseProject = ['all'];
 
 export default class Filters extends Component {
@@ -37,10 +35,12 @@ export default class Filters extends Component {
 	}
 
 	handleResetFilters(){
-		this.props.pageActions.onProjectChange('all', 'all');
-		this.props.pageActions.onSortChange('Random');
+		// this.props.pageActions.onProjectChange('all', 'all');
+		// this.props.pageActions.onSortChange('Random');
+		this.props.pageActions.onSortChange('all', 'All', 'Random');
 		chooseProject = ['all']
 	}
+
 	render() {
 
 		const {creatorsForFilters, projectsForFilters} = this.props;
@@ -71,12 +71,12 @@ export default class Filters extends Component {
 					<div className="filters__groupTitle">Creator</div>
 					<SelectField
 						className='filters__select'
-						value={this.props.selectedCreator}
+						value={this.props.creator}
 						onChange={this.handleSetCreator.bind(this)}
 						maxHeight={200}
 						iconStyle={{fill:'#000'}}
 					>
-						<MenuItem value='all' primaryText='all' />
+						<MenuItem value='All' primaryText='All' />
 						{
 							creatorsForFilters.map( (c, i) =>
 								<MenuItem

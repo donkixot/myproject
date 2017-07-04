@@ -6,7 +6,7 @@ const initialState = {
 
 export default function tasks(state = {
 	tasks: initialState.tasks,
-	creator: 'all',
+	creator: 'All',
 	projects: 'all',
 	sorting: 'Random'
 }, action) {
@@ -47,6 +47,13 @@ export default function tasks(state = {
 		case AppConstants.SET_SORTING:
 			return {
 				...state,
+				sorting: action.sorting
+			};
+		case AppConstants.FILTERS_RESET:
+			return {
+				...state,
+				creator: action.creator,
+				projects: action.projects,
 				sorting: action.sorting
 			};
 		default:

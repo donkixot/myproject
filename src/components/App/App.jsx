@@ -7,16 +7,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import About      from '../About/About.jsx';
 import Cabinet    from '../Cabinet/Cabinet.jsx';
 import Contacts   from '../Contacts/Contacts.jsx';
+import Header     from '../Header/Header.jsx';
 import Home       from '../Home/Home.jsx';
 import NotFound   from '../NotFound/NotFound.jsx';
 import SignIn     from '../SignIn/SignIn.jsx';
 import ForgetPass from '../ForgetPass/ForgetPass.jsx';
 import SignUp     from '../SignUp/SingUp.jsx';
 
-
-import './App.sass';
-
-import Header from './Header/Header.jsx';
 
 const routes = [
 	{
@@ -55,7 +52,7 @@ export default class App extends Component {
 					{
 						<Switch>
 							{/*to avoid problem with changing pages*/}
-							<Route exact path='/' component={() => <Home name='Home' {...this.props} />} />
+							<Route exact path='/' component={() => <Home {...this.props} />} />
 							{/*pass props into children components*/}
 							{
 								routes.map((route, i) => (

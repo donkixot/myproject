@@ -18,13 +18,25 @@ const HeaderMenu = (props) =>
 				><span>About</span></NavLink>
 				<ul className='headerMenu__items headerMenu__items_submenu'>
 					<li className='headerMenu__item headerMenu__item_submenu'>
-						<NavLink className='headerMenu__itemLink headerMenu__itemLink_submenu' to='/about/#who'><span>Who are we</span></NavLink>
+						<NavLink
+							className='headerMenu__itemLink headerMenu__itemLink_submenu'
+							activeClassName='headerMenu__itemLink_submenu_active'
+							to='/about/who-we-are'
+						><span>Who are we</span></NavLink>
 					</li>
 					<li className='headerMenu__item headerMenu__item_submenu'>
-						<NavLink className='headerMenu__itemLink headerMenu__itemLink_submenu' to='/about/#benefits'><span>Benefits</span></NavLink>
+						<NavLink
+							className='headerMenu__itemLink headerMenu__itemLink_submenu'
+							activeClassName='headerMenu__itemLink_submenu_active'
+							to='/about/benefits'
+						><span>Benefits</span></NavLink>
 					</li>
 					<li className='headerMenu__item headerMenu__item_submenu'>
-						<NavLink className='headerMenu__itemLink headerMenu__itemLink_submenu' to='/about/#team'><span>Team</span></NavLink>
+						<NavLink
+							className='headerMenu__itemLink headerMenu__itemLink_submenu'
+							activeClassName='headerMenu__itemLink_submenu_active'
+							to='/about/our-team'
+						><span>Team</span></NavLink>
 					</li>
 				</ul>
 			</li>
@@ -35,22 +47,6 @@ const HeaderMenu = (props) =>
 					activeClassName='headerMenu__itemLink_active'
 				><span>Contacts</span></NavLink>
 			</li>
-			{
-/*				<li className='headerMenu__item'>
-				<NavLink
-					className='headerMenu__itemLink'
-					to='/task-list'
-					activeClassName='headerMenu__itemLink_active'
-				>Список задач</NavLink>
-			</li>
-			<li className='headerMenu__item'>
-				<NavLink
-					className='headerMenu__itemLink'
-					to='/add-task'
-					activeClassName='headerMenu__itemLink_active'
-				>Добавить задачу</NavLink>
-			</li>*/
-			}
 		</ul>
 	</nav>
 

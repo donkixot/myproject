@@ -49,3 +49,12 @@ export function	onSortChange(sorting) {
 	}
 }
 
+export function	onFiltersReset(projects, creator, sorting) {
+	return {
+		type: AppConstants.FILTERS_RESET,
+		projects,
+		creator,
+		sorting
+	}
+}
+

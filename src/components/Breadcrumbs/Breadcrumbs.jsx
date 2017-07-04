@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Breadcrumbs = ({name}) =>
+const Breadcrumbs = ({name, parentpath, parentname}) =>
 	<div>
 		<div className='pageTitle'>{name}</div>
 		<div className='breadcrumbs'>
@@ -9,6 +9,14 @@ const Breadcrumbs = ({name}) =>
 				<li className='breadcrumbs__item'>
 					<Link to='/' className='breadcrumbs__itemLink'>Home</Link>
 				</li>
+				{
+					parentpath ?
+					<li className='breadcrumbs__item'>
+						<Link to={parentpath} className='breadcrumbs__itemLink'>{parentname}</Link>
+					</li>
+					:
+					null
+				}
 				<li className='breadcrumbs__item'>{name}</li>
 			</ul>
 		</div>

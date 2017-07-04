@@ -1,9 +1,6 @@
 import React from 'react';
 import Checkbox from 'material-ui/Checkbox';
 
-
-import './Task.sass';
-
 const Task = (props) => {
 
 	//find the index of current task
