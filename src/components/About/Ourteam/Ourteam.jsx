@@ -70,65 +70,49 @@ const teamMembers = [
 export default class Ourteam extends Component {
 
 	componentDidMount() {
-		let slideIndex = 1;
+		let showSlides = (n) => {
+			let slider = document.querySelector('.pageSlider__items');
+			let slides = document.querySelectorAll('.pageSlider__item');
+			let slidesHeight = [];
+			for (var i = 0; i < slides.length; i++) {
+				slidesHeight.push(slides[i].clientHeight);
+			}
+			let maxSlidesHeigth = Math.max.apply(null, slidesHeight);
+			document.querySelector('.pageSlider').setAttribute('style', `height: ${maxSlidesHeigth}px`);
+			let slidesWidth = document.querySelector('.pageSlider__item').clientWidth;
+			let sliderWidth = slidesWidth*slides.length;
+			slider.setAttribute('style',`width: ${sliderWidth}px;`);
+			//add events on control buttons
+			document.querySelector('.pageSlider__controls').addEventListener('click', function(e){
+				if (e.target.getAttribute('data-control') == 'left') {
+					slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(-300px, 0);`);
+				}else{
+					slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(0px, 0);`);
+				}
+			});
+			// if(n > slides.length){
+			// 	slideIndex = 1;
+			// }
+			// if(n < 1){
+			// 	slideIndex = slides.length;
+			// }
+		}
 
-		showSlides(slideIndex);
-
-		function plusSlides(n){
+		let plusSlides = (n) => {
 			showSlides(slideIndex += n);
 		}
 
-		function currentSlide(n){
+		let currentSlide = (n) => {
 			showSlides(slideIndex = n);
 		}
 
-		function showSlides(n){
-			var slides = document.querySelectorAll('.mySlides');
-			var dots = document.querySelectorAll('.dot');
-
-			for (var i = 0; i < dots.length; i++) {
-				dots[i].addEventListener("click", function(){
-					currentSlide(i);
-				});
-			}
-
-			document.querySelector('.prev').addEventListener("click", function(){
-				plusSlides(-1);
-			});
-			document.querySelector('.next').addEventListener("click", function(){
-				plusSlides(1);
-			});
-
-			if(n > slides.length){
-				slideIndex = 1;
-			}
-			if(n < 1){
-				slideIndex = slides.length;
-			}
-			for (var i = 0; i < slides.length; i++){
-				slides[i].style.display = 'none';
-			}
-			for (var i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace('active','');
-			}
-			slides[slideIndex-1].style.display = 'block';
-			dots[slideIndex-1].className +=' active';
-		}
-
-		let arr = document.querySelectorAll('.pageSlider__item');
-		let arr2 = [];
-		for (var i = 0; i < arr.length; i++) {
-			arr2.push(arr[i].clientHeight);
-		}
-		let maxHeigth = Math.max.apply(null, arr2);
-		console.log(maxHeigth);
+		let slideIndex = 1;
+		showSlides(slideIndex);
 	}
 
 	render() {
 
 		const props = this.props;
-
-
 
 		return (
 			<div>
@@ -140,31 +124,6 @@ export default class Ourteam extends Component {
 				<div className='ourteam'>
 					<div className='pageTitle blockTitle'>Our team</div>
 					<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
-					<div className='slidershow-container'>
-						<div className='mySlides fade'>
-							<div className='numbertext'>1/3</div>
-							<img src='./img/homeslider1.jpg' />
-							<div className='text'>Text</div>
-						</div>
-						<div className='mySlides fade'>
-							<div className='numbertext'>2/3</div>
-							<img src='./img/homeslider2.jpg' />
-							<div className='text'>Text</div>
-						</div>
-						<div className='mySlides fade'>
-							<div className='numbertext'>3/3</div>
-							<img src='./img/homeslider3.jpg' />
-							<div className='text'>Text</div>
-						</div>
-						<a className='prev'>&#10094;</a>
-						<a className='next'>&#10095;</a>
-					</div>
-					<br/>
-					<div className='dots'>
-						<span className='dot'></span>
-						<span className='dot'></span>
-						<span className='dot'></span>
-					</div>
 					<div className='pageSlider'>
 						<div className='pageSlider__items'>
 							{
@@ -193,8 +152,8 @@ export default class Ourteam extends Component {
 							}
 						</div>
 						<div className='pageSlider__controls'>
-							<button className='pageSlider__control pageSlider__control_left sliderBtn sliderBtn_left' type='button'>&#10094;</button>
-							<button className='pageSlider__control pageSlider__control_right sliderBtn sliderBtn_right' type='button'>&#10095;</button>
+							<button className='pageSlider__control pageSlider__control_left sliderBtn sliderBtn_left' data-control='left' type='button'>&#10094;</button>
+							<button className='pageSlider__control pageSlider__control_right sliderBtn sliderBtn_right' data-control='right' type='button'>&#10095;</button>
 						</div>
 					</div>
 				</div>

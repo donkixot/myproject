@@ -63,11 +63,12 @@ export default class Home extends Component {
 		let plusSlides = n => showSlides(slideIndex += n);
 
 		//add events on control buttons
-		document.querySelector('.homeSlider__control_left').addEventListener('click', function(){
-			plusSlides(-1);
-		});
-		document.querySelector('.homeSlider__control_right').addEventListener('click', function(){
-			plusSlides(1);
+		document.querySelector('.homeSlider__controls').addEventListener('click', function(e){
+			if (e.target.getAttribute('data-control') == 'left') {
+				plusSlides(-1);
+			}else{
+				plusSlides(1);
+			}
 		});
 
 
@@ -125,8 +126,8 @@ export default class Home extends Component {
 						<div className='homeSlider__img fade' style={{backgroundImage: 'url(\'./img/homeslider4.jpg\')'}}></div>
 					</div>
 					<div className='homeSlider__controls'>
-						<button className='homeSlider__control homeSlider__control_left sliderBtn sliderBtn_left' type='button'>&#10094;</button>
-						<button className='homeSlider__control homeSlider__control_right sliderBtn sliderBtn_right' type='button'>&#10095;</button>
+						<button className='homeSlider__control homeSlider__control_left sliderBtn' data-control='left' type='button'>&#10094;</button>
+						<button className='homeSlider__control homeSlider__control_right sliderBtn' data-control='right' type='button'>&#10095;</button>
 					</div>
 				</div>
 				<div className='pageContainer'>
