@@ -1,15 +1,25 @@
 import AppConstants from '../constants/AppConstants';
 
 export function signIn(email, pass) {
-	if (email && pass) {
-		return {
-			type: AppConstants.SIGN_IN,
-			email,
-			pass
+	if (email) {
+		if(pass){
+			return {
+				type: AppConstants.SIGN_IN,
+				email,
+				pass
+			}
+		}else{
+			return {
+				type: AppConstants.SIGN_IN_FAILED,
+				showEmailError: false,
+				showPassError: true
+			}
 		}
 	}else{
 		return {
-			type: AppConstants.SIGN_IN_FAILED
+			type: AppConstants.SIGN_IN_FAILED,
+			showEmailError: true,
+			showPassError: true
 		}
 	};
 }

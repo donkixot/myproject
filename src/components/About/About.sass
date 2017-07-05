@@ -42,7 +42,7 @@ $slidersize: 300px;
 		margin: auto
 		overflow: hidden
 		&__items
-			margin: 0 -10px
+			// margin: 0 -10px
 			transition: 0.6s all ease
 			&:after
 				display: table
@@ -52,7 +52,7 @@ $slidersize: 300px;
 			float: left
 			width: $slidersize
 			vertical-align: top
-			margin: 0 10px
+			// margin: 0 5px
 			td
 				border: none
 				text-align: center
@@ -64,7 +64,7 @@ $slidersize: 300px;
 				max-height: $slidersize
 				height: $slidersize
 				margin: 0
-				padding: 0
+				padding: 0 5px
 				text-align: center
 			&TextWrap
 				padding: 10px
@@ -88,8 +88,10 @@ $slidersize: 300px;
 			transform: translate(0, -50%)
 			&_left
 				left: 0
+				transition: 0.3s all ease
 			&_right
 				right: 0
+				transition: 0.3s all ease
 
 .breadcrumbs
 	&__items
@@ -108,61 +110,10 @@ $slidersize: 300px;
 			&:after
 				display: none
 
-.slidershow-container
-	max-width: 1000px
-	position: relative
-	margin: auto
-	img
-		width: 100%
+@media only screen and (max-width : 480px)
+	.pageSlider__itemImgWrap
+		padding: 0
 
-.prev,.next
-	cursor: pointer
-	position: absolute
-	top: 50%
-	width: auto
-	margin-top: -22px
-	padding: 16px
-	color: #fff
-	font-weight: bold
-	font-size: 18px
-	transition: 0.6s ease all
-	border-radius: 0 3px 3px 0
-	&:hover
-		background-color: rgba(0,0,0,0.8)
-
-.next
-	right: 0
-	border-radius: 3px 0 0 3px
-
-.text
-	color: #f2f2f2
-	font-size: 12px
-	padding: 8px 12px
-	position: absolute
-	top: 0
-
-.dots
-	text-align: center
-.dot
-	cursor: pointer
-	width: 13px
-	height: 13px
-	margin: 0 2px
-	background-color: #bbb
-	border-radius: 50%
-	display: inline-block
-	transition: 0.6s ease
-	&.active,
-	&:hover
-		background-color: #717171
-
-.fade
-	animation-name: fade
-	animation-duration: 1.5s
-
-@keyframes fade
-	from
-		opacity: .4
-	to
-		opacity: 1
-
+@media only screen and (max-width : 329px)
+	.pageSlider
+		margin: 0 -5px 80px

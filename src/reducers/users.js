@@ -9,6 +9,8 @@ export default function users(state = {
 	isSignIn: false,
 	preloader: false,
 	email: 'all',
+	showEmailError: false,
+	showPassError: false,
 	pass: ''
 }, action) {
 	switch (action.type) {
@@ -18,10 +20,14 @@ export default function users(state = {
 				email: action.email,
 				pass: action.pass,
 				isSignIn: true,
-				preloader: true
+				preloader: true,
 			};
 			case AppConstants.SIGN_IN_FAILED:
-				return state;
+				return {
+					...state,
+					showEmailError: action.showEmailError,
+					showPassError: action.showPassError
+				};
 		default:
 			return state;
 	}

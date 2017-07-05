@@ -20,7 +20,7 @@ function getVisibleTasks(tasks, creator, projects, sorting) {
 	return tasks
 		.filter(t => {
 			return (
-				(creator == 'all' || creator == t.creator) &&
+				(creator == 'All' || creator == t.creator) &&
 				(projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project)
 			);
 		})
@@ -44,7 +44,7 @@ function getUser(email, pass, users){
 }
 
 function mapStateToProps(state, props) {
-	const { preloader, isSignIn, email, pass, users } = state.users;
+	const { preloader, isSignIn, email, pass, showEmailError, showPassError, users } = state.users;
 	const { creator, projects, sorting, tasks } = state.tasks;
 	return {
 		currentUser: getUser(email, pass, users),
@@ -52,6 +52,8 @@ function mapStateToProps(state, props) {
 		// tasks,
 		isSignIn,
 		preloader,
+		showEmailError,
+		showPassError,
 		creator,
 		projects,
 		creatorsForFilters: getFilters('creator', tasks),

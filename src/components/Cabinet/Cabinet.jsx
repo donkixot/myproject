@@ -35,8 +35,8 @@ const Cabinet = (props) =>
 				<Switch>
 					{
 						cabinetRoutes.map((route, i) => (
-							<Route key={i} path={route.path} render={() => (
-								<route.component {...props} />
+							<Route key={i} path={route.path} render={({match}) => (
+								<route.component {...props} match={match}/>
 							)}/>
 						))
 					}

@@ -4,7 +4,7 @@ import Checkbox from 'material-ui/Checkbox';
 const Task = (props) => {
 
 	//find the index of current task
-	const taskIndex = props.tasks.findIndex((task) => task.id === props.location.pathname.slice(14));
+	const taskIndex = props.tasks.findIndex((task) => task.id === props.match.params.taskId.slice(1));
 	const currentTask = props.tasks[taskIndex];
 
 	let taskProgress = () => {

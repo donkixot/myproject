@@ -70,44 +70,81 @@ const teamMembers = [
 export default class Ourteam extends Component {
 
 	componentDidMount() {
+
+		let slider = document.querySelector('.pageSlider__items');
+		//get all slides
+		let slides = document.querySelectorAll('.pageSlider__item');
+		let slidesHeight = [];
+		//get height of all slides
+		for (var i = 0; i < slides.length; i++) {
+			slidesHeight.push(slides[i].clientHeight);
+		}
+		//equal max height
+		let maxSlidesHeigth = Math.max.apply(null, slidesHeight);
+		//set max height to slider wrapper
+		document.querySelector('.pageSlider').setAttribute('style', `height: ${maxSlidesHeigth}px`);
+		//get width of slide
+		let slideWidth = document.querySelector('.pageSlider__item').offsetWidth;
+		//set width to sliders container - slide width multiply by number of slides
+		let sliderWidth = slideWidth*slides.length;
+		slider.setAttribute('style',`width: ${sliderWidth}px;`);
+
+
 		let showSlides = (n) => {
-			let slider = document.querySelector('.pageSlider__items');
-			let slides = document.querySelectorAll('.pageSlider__item');
-			let slidesHeight = [];
-			for (var i = 0; i < slides.length; i++) {
-				slidesHeight.push(slides[i].clientHeight);
+			//window width
+			let contentWidth = window.innerWidth;
+			//get number of visible slides
+			let numberVisibleSlides = Math.floor(contentWidth / slideWidth);
+			//set width of slider wrapper
+			let sliderWrapperWidth = numberVisibleSlides*slideWidth;
+			document.querySelector('.pageSlider').setAttribute('style', `width: ${sliderWrapperWidth}px`);
+			//set slider position
+			slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(${n}px, 0);`);
+
+			//get number of slides that are not visible
+			let numberHiddenSlides = slides.length - numberVisibleSlides;
+			//get control button width
+			let controlWidth = document.querySelector('.pageSlider__control_right').clientWidth;
+			//hide right control button when slider don't need to move in right
+			document.querySelector('.pageSlider__control_right').setAttribute('style', `right: -${controlWidth}px`);
+
+			//if slider achive his last slide - hide left control button
+			if(n == -slideWidth*numberHiddenSlides){
+				document.querySelector('.pageSlider__control_left').setAttribute('style', `left: -${controlWidth}px`);
+			}else{
+				document.querySelector('.pageSlider__control_left').setAttribute('style', `left: 0px`);
 			}
-			let maxSlidesHeigth = Math.max.apply(null, slidesHeight);
-			document.querySelector('.pageSlider').setAttribute('style', `height: ${maxSlidesHeigth}px`);
-			let slidesWidth = document.querySelector('.pageSlider__item').clientWidth;
-			let sliderWidth = slidesWidth*slides.length;
-			slider.setAttribute('style',`width: ${sliderWidth}px;`);
-			//add events on control buttons
-			document.querySelector('.pageSlider__controls').addEventListener('click', function(e){
-				if (e.target.getAttribute('data-control') == 'left') {
-					slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(-300px, 0);`);
-				}else{
-					slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(0px, 0);`);
-				}
-			});
-			// if(n > slides.length){
-			// 	slideIndex = 1;
-			// }
-			// if(n < 1){
-			// 	slideIndex = slides.length;
-			// }
+
+			//if slider achive his first slide - hide right control button
+			if(n <= -slideWidth){
+				document.querySelector('.pageSlider__control_right').setAttribute('style', `right: 0px`);
+			}else{
+				document.querySelector('.pageSlider__control_right').setAttribute('style', `right: -${controlWidth}px`);
+			}
 		}
 
-		let plusSlides = (n) => {
-			showSlides(slideIndex += n);
+
+		let slideTranslate = 0;
+		showSlides(slideTranslate);
+
+		//get visible slides in differens window width
+		window.addEventListener('resize', function(){
+			showSlides(slideTranslate);
+		});
+
+		let moveSlides = (n) => {
+			let presentSlideTranslate = parseInt(slider.style.transform.slice(10));
+			showSlides(n += presentSlideTranslate);
 		}
 
-		let currentSlide = (n) => {
-			showSlides(slideIndex = n);
-		}
-
-		let slideIndex = 1;
-		showSlides(slideIndex);
+		//add events on control buttons
+		document.querySelector('.pageSlider__controls').addEventListener('click', function(e){
+			if (e.target.getAttribute('data-control') == 'left') {
+				moveSlides(-slideWidth);
+			}else{
+				moveSlides(slideWidth);
+			}
+		});
 	}
 
 	render() {
