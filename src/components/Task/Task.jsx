@@ -48,14 +48,14 @@ const Task = (props) => {
 				parseInt(taskProgress()) == 100 && currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
 				?
 				<div className='taskShare'>
-						<div className='taskShare__title'>Share in social networks:</div>
-						<ul className='taskShare__items'>
-							<li className='taskShare__item taskShare__item_twitter'></li>
-							<li className='taskShare__item taskShare__item_vk'></li>
-							<li className='taskShare__item taskShare__item_google'></li>
-							<li className='taskShare__item taskShare__item_facebook'></li>
-						</ul>
-					</div>
+					<div className='taskShare__title'>Share in social networks:</div>
+					<ul className='taskShare__items'>
+						<li className='taskShare__item taskShare__item_twitter'></li>
+						<li className='taskShare__item taskShare__item_vk'></li>
+						<li className='taskShare__item taskShare__item_google'></li>
+						<li className='taskShare__item taskShare__item_facebook'></li>
+					</ul>
+				</div>
 				: null
 			}
 		</div>

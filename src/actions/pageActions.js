@@ -1,4 +1,5 @@
 import AppConstants from '../constants/AppConstants';
+import * as api from '../api/api.js';
 
 export function signIn(email, pass) {
 	if (email) {
@@ -75,7 +76,8 @@ export function	onFiltersReset(projects, creator, sorting) {
 }
 
 export function	addTask(task) {
+	api.addTaskToApi(task);
 	return {
-		type: AppConstants.ADD_TASK
+		type: AppConstants.ADD_TASK,
 	}
 }

@@ -75,7 +75,17 @@ export default class AddTask extends Component {
 		let subtasks = [];
 		let subtasksItems = document.querySelectorAll('.addTask__subtaskItem input');
 		for (var i = 0; i < subtasksItems.length; i++) {
-			subtasks.push(subtasksItems[i].value);
+			subtasks.push({
+				'title': subtasksItems[i].value,
+				'done': false
+			});
+		}
+		//if no added subtask - set one subtask with task title value
+		if(!subtasks.length){
+			subtasks = [{
+				'title': taskTitleVal[0],
+				'done': false
+			}]
 		}
 		task.subtasks = subtasks;
 		if(taskTitleVal[0] && projectNameVal[0] && assignTo[0]){
