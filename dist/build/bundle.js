@@ -63126,6 +63126,10 @@ function getVisibleTasks(tasks, creator, projects, sorting) {
 			return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
 		} else if (sorting == 'Name, Z to A') {
 			return a.title < b.title ? 1 : a.title > b.title ? -1 : 0;
+		} else if (sorting == 'Progress, low to hight') {
+			return parseInt(a.progress) > parseInt(b.progress) ? 1 : parseInt(a.progress) < parseInt(b.progress) ? -1 : 0;
+		} else if (sorting == 'Progress, hight to low') {
+			return parseInt(a.progress) < parseInt(b.progress) ? 1 : parseInt(a.progress) > parseInt(b.progress) ? -1 : 0;
 		}
 	});
 }
