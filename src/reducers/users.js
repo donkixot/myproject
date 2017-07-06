@@ -28,6 +28,16 @@ export default function users(state = {
 					showEmailError: action.showEmailError,
 					showPassError: action.showPassError
 				};
+			case AppConstants.SIGN_OUT:
+				return {
+					...state,
+					isSignIn: false,
+					preloader: false,
+					email: 'all',
+					showEmailError: false,
+					showPassError: false,
+					pass: ''
+				};
 		default:
 			return state;
 	}

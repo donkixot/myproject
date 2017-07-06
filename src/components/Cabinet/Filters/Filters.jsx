@@ -11,13 +11,13 @@ export default class Filters extends Component {
 
 	handleSetProject(e){
 		//if array of checked checkboxes hasn't current checkbox text - add this text to array
-		let isPositive = (str) =>	{ return str == e.target.nextSibling.children[1].textContent; }
+		let isPositive = str => str === e.target.nextSibling.children[1].textContent;
 		if(!chooseProject.some(isPositive)){
 			chooseProject.push(e.target.nextSibling.children[1].textContent);
 		}else{
 			//if array of checked checkboxes has current checkbox text - remove this text from array
 			for (let i = 0; i < chooseProject.length; i++) {
-				if (chooseProject[chooseProject.length] == e.target.nextSibling.children[1].textContent) {
+				if (chooseProject[i] === e.target.nextSibling.children[1].textContent) {
 					chooseProject.splice([i],1);
 				}
 			};
@@ -55,7 +55,7 @@ export default class Filters extends Component {
 										className='filters__checkbox'
 										checked={
 											Object.prototype.toString.call(this.props.projects) === '[object Array]'
-											?	this.props.projects.some((str) => str == p) ? true : false
+											?	this.props.projects.some( str => str == p) ? true : false
 											: false
 										}
 										label={p}

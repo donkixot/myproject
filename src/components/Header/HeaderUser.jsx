@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const HeaderUser = ({currentUser, isSignIn}) =>
+const HeaderUser = ({currentUser, isSignIn, pageActions}) =>
 	<div className='headerUser'>
 		{
 			isSignIn ?
@@ -12,7 +12,7 @@ const HeaderUser = ({currentUser, isSignIn}) =>
 					</div>
 					<div className='headerUser__name'><span>{currentUser.firstname} {currentUser.lastname}</span></div>
 				</Link>
-				<span className='headerUser__exit'>Sing out</span>
+				<span className='headerUser__exit' onClick={() => pageActions.signOut()}>Sing out</span>
 			</div>
 			:
 			<div className='headerUser__signin'>

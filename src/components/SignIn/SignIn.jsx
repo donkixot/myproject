@@ -2,32 +2,52 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class SignIn extends Component {
+	constructor(props){
+		super(props);
+		console.log(props);
+		this.state = {
+			showEmailError: props.showEmailError,
+			showPassError: props.showPassError
+		}
+	}
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			showEmailError: nextProps.showEmailError,
+			showPassError: nextProps.showPassError
+		});
+	}
 
 	handleFocusForm(e) {
 		if(e.target.getAttribute('type') === 'email'){
-			// document.querySelector('.cardBox__spanError_email').setAttribute('style','display: none;');
+			this.setState({
+				showEmailError: false
+			});
 		}else{
-			// document.querySelector('.cardBox__spanError_pass').setAttribute('style','display: none;');
+			this.setState({
+				showPassError: false
+			});
 		}
 	}
 
 	handleSubmitForm(e) {
+		//get password value from input
+		let passVal = this.refs.signInPass.value;
 		//get email value from input
 		let emailVal = this.refs.signInEmail.value;
 		//validate email value
 		let emailRegexp = /^\w+@\w+\.\w{2,3}$/;
 		if(!emailRegexp.test(emailVal)){
-			// document.querySelector('.cardBox__spanError_email').setAttribute('style','display: block;');
+			this.setState({
+				showEmailError: true
+			});
+		}else{
+			this.props.pageActions.signIn(emailVal, passVal);
+			setTimeout(() => {
+				if (this.props.isSignIn) {
+					this.props.history.replace('/cabinet/account');
+				}
+			},1000)
 		}
-		//get password value from input
-		let passVal = this.refs.signInPass.value;
-
-		this.props.pageActions.signIn(emailVal, passVal);
-		setTimeout(() => {
-			if (this.props.isSignIn) {
-				this.props.history.replace('/cabinet/account');
-			}
-		},1000)
 	}
 	render() {
 		return (
@@ -60,7 +80,7 @@ export default class SignIn extends Component {
 									<span
 										className='cardBox__spanError cardBox__spanError_pass spanError'
 										style={
-											this.props.showPassError
+											this.state.showPassError
 											? {display:'block'}
 											: {display:'none'}
 										}

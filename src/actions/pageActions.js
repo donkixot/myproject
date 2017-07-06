@@ -24,6 +24,12 @@ export function signIn(email, pass) {
 	};
 }
 
+export function signOut() {
+	return {
+		type: AppConstants.SIGN_OUT
+	}
+}
+
 export function toggleTask(taskIndex, subtaskIndex, done, projects, creator, sorting) {
 	return {
 		type: AppConstants.TOGGLE_TASK,
