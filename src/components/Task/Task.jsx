@@ -7,23 +7,13 @@ const Task = (props) => {
 	const taskIndex = props.tasks.findIndex((task) => task.id === props.match.params.taskId.slice(1));
 	const currentTask = props.tasks[taskIndex];
 
-	let taskProgress = () => {
-		let count = 0;
-		for (let i = 0; i < currentTask.subtasks.length; i++) {
-			if(currentTask.subtasks[i].done){
-				count++;
-			}
-		}
-		return Math.round(100*count/currentTask.subtasks.length) + '%';
-	}
-
-	const handleClickSubtask = (taskIndex, subtaskIndex, done) => {
-		props.pageActions.toggleTask(taskIndex, subtaskIndex, done, props.projects, props.creator, props.sorting)
+	const handleClickSubtask = (taskId, subtaskIndex, done) => {
+		props.pageActions.toggleTask(taskId, subtaskIndex, done)
 	};
 
 	return(
 		<div className='cabinet'>
-			<div className='task__progress' style={{'width':taskProgress()}} ></div>
+			<div className='task__progress' style={{'width':currentTask.progress}} ></div>
 			<div className='task__title'>{currentTask.title}</div>
 			<div className='task__subtitle'>List of subtasks:</div>
 			<div className='subtask__items'>
@@ -39,13 +29,13 @@ const Task = (props) => {
 								? false
 								: true
 							}
-							onCheck={handleClickSubtask.bind(this, taskIndex, i, subtask.done)}
+							onCheck={handleClickSubtask.bind(this, currentTask.id, i, subtask.done)}
 						/>
 					)
 				}
 			</div>
 			{
-				parseInt(taskProgress()) == 100 && currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
+				currentTask.progress == '100%' && currentTask.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`
 				?
 				<div className='taskShare'>
 					<div className='taskShare__title'>Share in social networks:</div>

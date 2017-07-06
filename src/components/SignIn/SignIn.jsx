@@ -41,6 +41,7 @@ export default class SignIn extends Component {
 			});
 		}else{
 			this.props.pageActions.signIn(emailVal, passVal);
+			this.props.pageActions.getTask();
 			setTimeout(() => {
 				if (this.props.isSignIn) {
 					this.props.history.replace('/cabinet/account');

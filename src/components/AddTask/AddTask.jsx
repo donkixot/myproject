@@ -45,8 +45,8 @@ export default class AddTask extends Component {
 
 	handleAddTask(){
 		let task = {
-			'done': false,
-			'creator': `${this.props.currentUser.firstname} ${this.props.currentUser.lastname}`
+			'creator': `${this.props.currentUser.firstname} ${this.props.currentUser.lastname}`,
+			'progress': '0%'
 		}
 
 		let checkValue = ([currentValue, testKey, errorKey]) => {

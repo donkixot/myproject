@@ -13638,12 +13638,13 @@ exports.default = (0, _keymirror2.default)({
 	SIGN_IN_FAILED: null,
 	SIGN_OUT: null,
 	SIGN_UP: null,
+	GET_TASKS: null,
+	ADD_TASK: null,
 	TOGGLE_TASK: null,
 	SET_CREATOR: null,
 	SET_PROJECT: null,
 	SET_SORTING: null,
-	FILTERS_RESET: null,
-	ADD_TASK: null
+	FILTERS_RESET: null
 }); //Create an object with values equal to its key names.
 
 /***/ }),
@@ -59681,12 +59682,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.signIn = signIn;
 exports.signOut = signOut;
+exports.getTask = getTask;
 exports.toggleTask = toggleTask;
+exports.addTask = addTask;
 exports.onCreatorChange = onCreatorChange;
 exports.onProjectChange = onProjectChange;
 exports.onSortChange = onSortChange;
 exports.onFiltersReset = onFiltersReset;
-exports.addTask = addTask;
 
 var _AppConstants = __webpack_require__(216);
 
@@ -59730,31 +59732,40 @@ function signOut() {
 	};
 }
 
-function toggleTask(taskIndex, subtaskIndex, done, projects, creator, sorting) {
+function getTask() {
+	return {
+		type: _AppConstants2.default.GET_TASKS,
+		tasks: api.getTaskFromApi()
+	};
+}
+
+function toggleTask(taskId, subtaskIndex, done) {
+	api.toggleTaskInApi(taskId, subtaskIndex, done);
 	return {
 		type: _AppConstants2.default.TOGGLE_TASK,
-		taskIndex: taskIndex,
-		subtaskIndex: subtaskIndex,
-		done: done,
-		projects: projects,
-		creator: creator,
-		sorting: sorting
+		tasks: api.getTaskFromApi()
 	};
 }
 
-function onCreatorChange(creator, projects) {
+function addTask(task) {
+	api.addTaskToApi(task);
+	return {
+		type: _AppConstants2.default.ADD_TASK,
+		tasks: api.getTaskFromApi()
+	};
+}
+
+function onCreatorChange(creator) {
 	return {
 		type: _AppConstants2.default.SET_CREATOR,
-		creator: creator,
-		projects: projects
+		creator: creator
 	};
 }
 
-function onProjectChange(projects, creator) {
+function onProjectChange(projects) {
 	return {
 		type: _AppConstants2.default.SET_PROJECT,
-		projects: projects,
-		creator: creator
+		projects: projects
 	};
 }
 
@@ -59774,13 +59785,6 @@ function onFiltersReset(projects, creator, sorting) {
 	};
 }
 
-function addTask(task) {
-	api.addTaskToApi(task);
-	return {
-		type: _AppConstants2.default.ADD_TASK
-	};
-}
-
 /***/ }),
 /* 825 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -59791,7 +59795,15 @@ function addTask(task) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.addTaskToApi = addTaskToApi;
+exports.toggleTaskInApi = toggleTaskInApi;
+exports.getTaskFromApi = getTaskFromApi;
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function addTaskToApi(task) {
 	//get database from localStorage
 	var localDB = JSON.parse(localStorage.getItem('databaseTTS'));
@@ -59799,6 +59811,48 @@ function addTaskToApi(task) {
 	localDB[0].tasks.push(task);
 	//update local storage
 	localStorage.setItem('databaseTTS', JSON.stringify(localDB));
+}
+
+function toggleTaskInApi(taskId, subtaskIndex, done) {
+	//get database from localStorage
+	var localDB = JSON.parse(localStorage.getItem('databaseTTS'));
+
+	//get tasks list from localStorage
+	var localTasks = localDB[0].tasks;
+
+	//find the index of current task
+	var taskIndex = localTasks.findIndex(function (task) {
+		return task.id === taskId;
+	});
+	var currentTask = localTasks[taskIndex];
+
+	//change subtask status
+	currentTask.subtasks = [].concat(_toConsumableArray(currentTask.subtasks.slice(0, subtaskIndex)), [//before the one subtask we are updating
+	_extends({}, currentTask.subtasks[subtaskIndex], { //current subtask
+		done: !done
+	})], _toConsumableArray(currentTask.subtasks.slice(subtaskIndex + 1 //after the one subtask we are updating
+	)));
+
+	//get new progress value
+	var taskProgress = function taskProgress() {
+		var count = 0;
+		for (var i = 0; i < currentTask.subtasks.length; i++) {
+			if (currentTask.subtasks[i].done) {
+				count++;
+			}
+		}
+		return Math.round(100 * count / currentTask.subtasks.length) + '%';
+	};
+
+	//set new progress value
+	currentTask.progress = taskProgress();
+
+	//update local storage
+	localStorage.setItem('databaseTTS', JSON.stringify(localDB));
+}
+
+function getTaskFromApi() {
+	return JSON.parse(localStorage.getItem('databaseTTS'))[0].tasks;
 }
 
 /***/ }),
@@ -59850,15 +59904,9 @@ var _AppConstants2 = _interopRequireDefault(_AppConstants);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var initialState = {
-	tasks: JSON.parse(localStorage.getItem('databaseTTS'))[0].tasks
-};
-
 function tasks() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-		tasks: initialState.tasks,
+		tasks: [],
 		creator: 'All',
 		projects: 'all',
 		sorting: 'Random'
@@ -59866,29 +59914,20 @@ function tasks() {
 	var action = arguments[1];
 
 	switch (action.type) {
+		case _AppConstants2.default.GET_TASKS:
+			return _extends({}, state, {
+				tasks: action.tasks
+			});
 		case _AppConstants2.default.TOGGLE_TASK:
-			return {
-				tasks: [].concat(_toConsumableArray(state.tasks.slice(0, action.taskIndex)), [//before the one task we are updating
-				_extends({}, state.tasks[action.taskIndex], {
-					subtasks: [].concat(_toConsumableArray(state.tasks[action.taskIndex].subtasks.slice(0, action.subtaskIndex)), [//before the one subtask we are updating
-					_extends({}, state.tasks[action.taskIndex].subtasks[action.subtaskIndex], { //current subtask
-						done: !action.done
-					})], _toConsumableArray(state.tasks[action.taskIndex].subtasks.slice(action.subtaskIndex + 1 //after the one subtask we are updating
-					)))
-				})], _toConsumableArray(state.tasks.slice(action.taskIndex + 1 //after the one task we are updating
-				))),
-				creator: action.creator,
-				projects: action.projects,
-				sorting: action.sorting
-			};
+			return _extends({}, state, {
+				tasks: action.tasks
+			});
 		case _AppConstants2.default.SET_CREATOR:
 			return _extends({}, state, {
-				creator: action.creator,
-				projects: action.projects
+				creator: action.creator
 			});
 		case _AppConstants2.default.SET_PROJECT:
 			return _extends({}, state, {
-				creator: action.creator,
 				projects: action.projects
 			});
 		case _AppConstants2.default.SET_SORTING:
@@ -59902,7 +59941,9 @@ function tasks() {
 				sorting: action.sorting
 			});
 		case _AppConstants2.default.ADD_TASK:
-			return state;
+			return _extends({}, state, {
+				tasks: action.tasks
+			});
 		default:
 			return state;
 	}
@@ -60868,8 +60909,8 @@ var AddTask = function (_Component) {
 			var _this2 = this;
 
 			var task = {
-				'done': false,
-				'creator': this.props.currentUser.firstname + ' ' + this.props.currentUser.lastname
+				'creator': this.props.currentUser.firstname + ' ' + this.props.currentUser.lastname,
+				'progress': '0%'
 			};
 
 			var checkValue = function checkValue(_ref) {
@@ -61367,12 +61408,12 @@ var Filters = function (_Component) {
 					chooseProject.splice([indexOfCurrentCheckbox], 1);
 				};
 			}
-			this.props.pageActions.onProjectChange(chooseProject, this.props.creator);
+			this.props.pageActions.onProjectChange(chooseProject);
 		}
 	}, {
 		key: 'handleSetCreator',
 		value: function handleSetCreator(e) {
-			this.props.pageActions.onCreatorChange(e.target.textContent, this.props.projects);
+			this.props.pageActions.onCreatorChange(e.target.textContent);
 		}
 	}, {
 		key: 'handleSortSorting',
@@ -62613,6 +62654,7 @@ var SignIn = function (_Component) {
 				});
 			} else {
 				this.props.pageActions.signIn(emailVal, passVal);
+				this.props.pageActions.getTask();
 				setTimeout(function () {
 					if (_this2.props.isSignIn) {
 						_this2.props.history.replace('/cabinet/account');
@@ -62859,17 +62901,6 @@ var _reactRouterDom = __webpack_require__(28);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TaskList = function TaskList(props) {
-
-	var taskProgress = function taskProgress(currentTask) {
-		var count = 0;
-		for (var i = 0; i < currentTask.subtasks.length; i++) {
-			if (currentTask.subtasks[i].done) {
-				count++;
-			}
-		}
-		return Math.round(100 * count / currentTask.subtasks.length) + "%";
-	};
-
 	return _react2.default.createElement(
 		'div',
 		{ className: 'cabinet' },
@@ -62918,9 +62949,9 @@ var TaskList = function TaskList(props) {
 						'span',
 						{
 							className: 'taskList__itemProgress',
-							style: parseInt(taskProgress(task)) >= 50 ? parseInt(taskProgress(task)) == 100 ? { color: '#4298EB' } : { color: 'green' } : { color: 'red' }
+							style: parseInt(task.progress) >= 50 ? parseInt(task.progress) == 100 ? { color: '#4298EB' } : { color: 'green' } : { color: 'red' }
 						},
-						taskProgress(task)
+						task.progress
 					),
 					_react2.default.createElement(
 						'span',
@@ -62986,24 +63017,14 @@ var Task = function Task(props) {
 	});
 	var currentTask = props.tasks[taskIndex];
 
-	var taskProgress = function taskProgress() {
-		var count = 0;
-		for (var i = 0; i < currentTask.subtasks.length; i++) {
-			if (currentTask.subtasks[i].done) {
-				count++;
-			}
-		}
-		return Math.round(100 * count / currentTask.subtasks.length) + '%';
-	};
-
-	var handleClickSubtask = function handleClickSubtask(taskIndex, subtaskIndex, done) {
-		props.pageActions.toggleTask(taskIndex, subtaskIndex, done, props.projects, props.creator, props.sorting);
+	var handleClickSubtask = function handleClickSubtask(taskId, subtaskIndex, done) {
+		props.pageActions.toggleTask(taskId, subtaskIndex, done);
 	};
 
 	return _react2.default.createElement(
 		'div',
 		{ className: 'cabinet' },
-		_react2.default.createElement('div', { className: 'task__progress', style: { 'width': taskProgress() } }),
+		_react2.default.createElement('div', { className: 'task__progress', style: { 'width': currentTask.progress } }),
 		_react2.default.createElement(
 			'div',
 			{ className: 'task__title' },
@@ -63024,11 +63045,11 @@ var Task = function Task(props) {
 					label: subtask.title,
 					defaultChecked: subtask.done,
 					disabled: currentTask.receiver === props.currentUser.firstname + ' ' + props.currentUser.lastname ? false : true,
-					onCheck: handleClickSubtask.bind(undefined, taskIndex, i, subtask.done)
+					onCheck: handleClickSubtask.bind(undefined, currentTask.id, i, subtask.done)
 				});
 			})
 		),
-		parseInt(taskProgress()) == 100 && currentTask.receiver === props.currentUser.firstname + ' ' + props.currentUser.lastname ? _react2.default.createElement(
+		currentTask.progress == '100%' && currentTask.receiver === props.currentUser.firstname + ' ' + props.currentUser.lastname ? _react2.default.createElement(
 			'div',
 			{ className: 'taskShare' },
 			_react2.default.createElement(

@@ -31,31 +31,40 @@ export function signOut() {
 	}
 }
 
-export function toggleTask(taskIndex, subtaskIndex, done, projects, creator, sorting) {
+export function	getTask() {
+	return {
+		type: AppConstants.GET_TASKS,
+		tasks: api.getTaskFromApi(),
+	}
+}
+
+export function toggleTask(taskId, subtaskIndex, done) {
+	api.toggleTaskInApi(taskId, subtaskIndex, done);
 	return {
 		type: AppConstants.TOGGLE_TASK,
-		taskIndex,
-		subtaskIndex,
-		done,
-		projects,
-		creator,
-		sorting
+		tasks: api.getTaskFromApi()
 	}
 }
 
-export function	onCreatorChange(creator, projects) {
+export function	addTask(task) {
+	api.addTaskToApi(task);
+	return {
+		type: AppConstants.ADD_TASK,
+		tasks: api.getTaskFromApi(),
+	}
+}
+
+export function	onCreatorChange(creator) {
 	return {
 		type: AppConstants.SET_CREATOR,
-		creator,
-		projects,
+		creator
 	}
 }
 
-export function	onProjectChange(projects, creator) {
+export function	onProjectChange(projects) {
 	return {
 		type: AppConstants.SET_PROJECT,
-		projects,
-		creator
+		projects
 	}
 }
 
@@ -75,9 +84,3 @@ export function	onFiltersReset(projects, creator, sorting) {
 	}
 }
 
-export function	addTask(task) {
-	api.addTaskToApi(task);
-	return {
-		type: AppConstants.ADD_TASK,
-	}
-}

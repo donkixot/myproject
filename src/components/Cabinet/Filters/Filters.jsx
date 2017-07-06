@@ -21,11 +21,11 @@ export default class Filters extends Component {
 				chooseProject.splice([indexOfCurrentCheckbox],1);
 			};
 		}
-		this.props.pageActions.onProjectChange(chooseProject, this.props.creator);
+		this.props.pageActions.onProjectChange(chooseProject);
 	}
 
 	handleSetCreator(e){
-		this.props.pageActions.onCreatorChange(e.target.textContent, this.props.projects);
+		this.props.pageActions.onCreatorChange(e.target.textContent);
 	}
 
 	handleSortSorting(e){

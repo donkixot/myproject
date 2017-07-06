@@ -42,7 +42,6 @@ var databaseTTS = [
 			{
 				"id":"01tf",
 				"title": "Clarify data",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Size of images for gallery",
@@ -61,7 +60,6 @@ var databaseTTS = [
 			{
 				"id":"01tg",
 				"title": "Find the ring",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Find the ring",
@@ -76,7 +74,6 @@ var databaseTTS = [
 			{
 				"id":"02tg",
 				"title": "Meet Aragorn",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Find the team",
@@ -107,7 +104,6 @@ var databaseTTS = [
 			{
 				"id":"03tg",
 				"title": "Fight with troll",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Fight with troll",
@@ -122,7 +118,7 @@ var databaseTTS = [
 			{
 				"id":"04tg",
 				"title": "Escape from gollum",
-				"done": false,
+
 				"subtasks": [
 					{
 						"title": "Escape from gollum",
@@ -137,7 +133,6 @@ var databaseTTS = [
 			{
 				"id":"05tg",
 				"title": "Develop the homepage",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Develop header",
@@ -164,7 +159,6 @@ var databaseTTS = [
 			{
 				"id":"06tg",
 				"title": "Develop the productpage",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Develop the productpage",
@@ -179,7 +173,6 @@ var databaseTTS = [
 			{
 				"id":"07tg",
 				"title": "Develop the newspage",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Develop the newspage",
@@ -194,7 +187,6 @@ var databaseTTS = [
 			{
 				"id":"08tg",
 				"title": "Develop the aboutspage",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Develop the aboutspage",
@@ -209,7 +201,6 @@ var databaseTTS = [
 			{
 				"id":"09tg",
 				"title": "Develop the contactspage",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Develop the contactspage",
@@ -224,7 +215,6 @@ var databaseTTS = [
 			{
 				"id":"10tg",
 				"title": "Develop the cabinetpage",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Develop the cabinetpage",
@@ -239,7 +229,6 @@ var databaseTTS = [
 			{
 				"id":"01ts",
 				"title": "Come to the dark side",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Smash young padawans",
@@ -262,7 +251,6 @@ var databaseTTS = [
 			{
 				"id":"02ts",
 				"title": "Destroy some planet",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Destroy some planet",
@@ -277,7 +265,6 @@ var databaseTTS = [
 			{
 				"id":"03ts",
 				"title": "Make test server",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Choose the CMS",
@@ -296,7 +283,6 @@ var databaseTTS = [
 			{
 				"id":"04ts",
 				"title": "Start programming the site",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Make database",
@@ -347,7 +333,6 @@ var databaseTTS = [
 			{
 				"id":"05ts",
 				"title": "Develop the authorisation pages",
-				"done": true,
 				"subtasks": [
 					{
 						"title": "Develop the login page",
@@ -370,7 +355,6 @@ var databaseTTS = [
 			{
 				"id":"06ts",
 				"title": "Develop the cabinet pages",
-				"done": false,
 				"subtasks": [
 					{
 						"title": "Develop the account page",
