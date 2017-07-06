@@ -1,4 +1,5 @@
 .addTask
+	width: 300px
 	&__item
 		&Text
 			font-size: 16px
@@ -13,13 +14,7 @@
 			width: 18px
 			text-align: center
 			margin-right: 5px
-		&_subtask
-			padding: 10px 0 20px
-			color: rgba(0, 0, 0, 0.8)
-			text-decoration: underline
-			cursor: pointer
-			&:hover
-				text-decoration: none
+			transition: 0.2s all ease
 		&_assign
 			padding-top: 10px
 			color: rgba(0, 0, 0, 0.6)
@@ -27,8 +22,31 @@
 				display: inline-block
 				vertical-align: top
 				line-height: 56px
-				margin-right: 5px
+				margin-right: 10px
 				&+div
 					vertical-align: top
+	&__subtask
+		&Add
+			padding: 10px 0 0px
+			margin-bottom: 20px
+			color: rgba(0, 0, 0, 0.8)
+			text-decoration: underline
+			cursor: pointer
+			display: inline-block
+			&:hover
+				text-decoration: none
+				.addTask__itemSpan
+					background-color: #989898
+		&Item
+			position: relative
+		&Remove
+			display: block
+			position: absolute
+			right: 10px
+			top: 35px
+			cursor: pointer
+			transition: 0.2s all ease
+			&:hover
+				background-color: #989898
 	&__button
 		margin-top: 20px

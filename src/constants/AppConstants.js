@@ -11,4 +11,5 @@ export default keyMirror({
 	SET_PROJECT      : null,
 	SET_SORTING      : null,
 	FILTERS_RESET    : null,
+	ADD_TASK         : null,
 });

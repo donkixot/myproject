@@ -16,10 +16,9 @@ export default class Filters extends Component {
 			chooseProject.push(e.target.nextSibling.children[1].textContent);
 		}else{
 			//if array of checked checkboxes has current checkbox text - remove this text from array
-			for (let i = 0; i < chooseProject.length; i++) {
-				if (chooseProject[i] === e.target.nextSibling.children[1].textContent) {
-					chooseProject.splice([i],1);
-				}
+			let indexOfCurrentCheckbox = chooseProject.indexOf(e.target.nextSibling.children[1].textContent);
+			if(indexOfCurrentCheckbox !== -1){
+				chooseProject.splice([indexOfCurrentCheckbox],1);
 			};
 		}
 		this.props.pageActions.onProjectChange(chooseProject, this.props.creator);

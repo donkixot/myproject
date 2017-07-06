@@ -74,3 +74,8 @@ export function	onFiltersReset(projects, creator, sorting) {
 	}
 }
 
+export function	addTask(task) {
+	return {
+		type: AppConstants.ADD_TASK
+	}
+}

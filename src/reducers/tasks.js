@@ -56,6 +56,8 @@ export default function tasks(state = {
 				projects: action.projects,
 				sorting: action.sorting
 			};
+		case AppConstants.ADD_TASK:
+			return state;
 		default:
 			return state;
 	}

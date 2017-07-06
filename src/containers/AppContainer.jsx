@@ -36,7 +36,7 @@ function getVisibleTasks(tasks, creator, projects, sorting) {
 }
 
 //getting authorized user
-function getUser(email, pass, users){
+function getUser(email, users){
 	let currentUser = users.filter(m => {
 		return (email == 'all' || email == m.email)
 	});
@@ -47,18 +47,17 @@ function mapStateToProps(state, props) {
 	const { preloader, isSignIn, email, pass, showEmailError, showPassError, users } = state.users;
 	const { creator, projects, sorting, tasks } = state.tasks;
 	return {
-		currentUser: getUser(email, pass, users),
-		tasks: getVisibleTasks(tasks, creator, projects, sorting),
-		// tasks,
-		isSignIn,
-		preloader,
+		currentUser: getUser(email, users),
 		showEmailError,
 		showPassError,
-		creator,
-		projects,
+		isSignIn,
+		preloader,
+		tasks: getVisibleTasks(tasks, creator, projects, sorting),
 		creatorsForFilters: getFilters('creator', tasks),
 		projectsForFilters: getFilters('project', tasks),
-		sorting,
+		creator,
+		projects,
+		sorting
 	};
 }
 
