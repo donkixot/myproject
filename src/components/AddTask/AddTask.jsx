@@ -51,11 +51,11 @@ export default class AddTask extends Component {
 
 		let checkValue = ([currentValue, testKey, errorKey]) => {
 			if (currentValue) {
-				//if value is exist add it to task object and hide error massage
+				//if value is exist add it to task object and hide error message
 				task[testKey] = currentValue;
 				this.setState( state => state[errorKey] = false );
 			}else{
-				//if value is empty - show error massage
+				//if value is empty - show error message
 				this.setState( state => state[errorKey] = true );
 			}
 		}

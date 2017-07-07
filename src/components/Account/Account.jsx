@@ -23,7 +23,7 @@ const Account = ({currentUser, tasks}) =>{
 			<div className='cabinetTitle'>Hello to you, {currentUser.role == 'manager' ? 'the great manager of all time!' : 'just programmer...'} </div>
 			<div className='cabinetSubTitle'>List of task, that was assigned to you:</div>
 			{
-				//if tasks exist show them, else show error massage
+				//if tasks exist show them, else show error message
 				currentUserTasks.length ?
 				<div className='taskList__items'>
 					<div className='taskList__item taskList__item_head'>

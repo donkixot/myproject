@@ -1,24 +1,24 @@
 import AppConstants from '../constants/AppConstants';
 
-const initialState = {
-	users: JSON.parse(localStorage.getItem('databaseTTS'))[0].users,
-}
-
 export default function users(state = {
-	users: initialState.users,
+	currentUser: [],
 	isSignIn: false,
 	preloader: false,
-	email: 'all',
 	showEmailError: false,
 	showPassError: false,
-	pass: ''
 }, action) {
 	switch (action.type) {
 		case AppConstants.SIGN_IN:
 			return {
 				...state,
-				email: action.email,
-				pass: action.pass,
+				currentUser: action.currentUser,
+				isSignIn: true,
+				preloader: true,
+			};
+		case AppConstants.SIGN_IN_SUCCESS:
+			return {
+				...state,
+				currentUser: action.currentUser,
 				isSignIn: true,
 				preloader: true,
 			};
@@ -33,10 +33,8 @@ export default function users(state = {
 					...state,
 					isSignIn: false,
 					preloader: false,
-					email: 'all',
 					showEmailError: false,
 					showPassError: false,
-					pass: ''
 				};
 		default:
 			return state;

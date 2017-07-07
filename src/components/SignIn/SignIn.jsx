@@ -40,13 +40,14 @@ export default class SignIn extends Component {
 				showEmailError: true
 			});
 		}else{
+			//if email is valid post the form
 			this.props.pageActions.signIn(emailVal, passVal);
-			this.props.pageActions.getTask();
 			setTimeout(() => {
 				if (this.props.isSignIn) {
+					this.props.pageActions.getTask();
 					this.props.history.replace('/cabinet/account');
 				}
-			},1000)
+			},1000);
 		}
 	}
 	render() {

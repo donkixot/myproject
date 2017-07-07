@@ -1,28 +1,25 @@
 import AppConstants from '../constants/AppConstants';
-import * as api from '../api/api.js';
+import api from '../api/api';
+
 
 export function signIn(email, pass) {
-	if (email) {
-		if(pass){
-			return {
-				type: AppConstants.SIGN_IN,
-				email,
-				pass
-			}
-		}else{
-			return {
+	return function(dispatch){
+		api.getCurrentUserFromApi(email, pass)
+		.then(data => {
+			dispatch({
+				type: AppConstants.SIGN_IN_SUCCESS,
+				currentUser: data
+			});
+		})
+		.catch(err => {
+			let checkErrorType = message => message === 'SIGN_IN_EMAIL_FAILED' ? true : false
+			dispatch({
 				type: AppConstants.SIGN_IN_FAILED,
-				showEmailError: false,
+				showEmailError: checkErrorType(err.message),
 				showPassError: true
-			}
-		}
-	}else{
-		return {
-			type: AppConstants.SIGN_IN_FAILED,
-			showEmailError: true,
-			showPassError: true
-		}
-	};
+			});
+		});
+	}
 }
 
 export function signOut() {
