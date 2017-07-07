@@ -26,3 +26,28 @@
 			display: inline-block
 		&_head
 			font-weight: 500
+
+.paginationWrap
+	text-align: center
+	padding-top: 30px
+.pagination
+	display: inline-block
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+		padding: 0 3px
+		&.disabled
+			display: none
+		a
+			cursor: pointer
+			text-decoration: none
+			font-size: 16px
+			padding: 0 3px
+			&:hover
+				text-decoration: underline
+		&.active
+			a
+				text-decoration: underline
+				cursor: auto

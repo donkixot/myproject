@@ -1,64 +1,85 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const Account = ({currentUser, tasks}) =>{
+import TaskListItems from '../TaskListItems/TaskListItems.jsx';
+import Pagination from '../Pagination/Pagination.jsx';
 
-	//if full name of task receiver equal full name of current user get tasks of current user from all tasks
-	let currentUserTasks = tasks.filter(task => {
-		return (task.receiver == `${currentUser.firstname} ${currentUser.lastname}`)
-	});
-
-	let taskProgress = (currentTask) => {
-		let count = 0;
-		for (let i = 0; i < currentTask.subtasks.length; i++) {
-			if(currentTask.subtasks[i].done){
-				count++;
-			}
+export default class Account extends Component {
+	constructor(props) {
+		super(props);
+		//if full name of task receiver equal full name of current user get tasks of current user from all tasks
+		let currentUserTasks = props.tasks.filter(task => {
+			return (task.receiver === `${props.currentUser.firstname} ${props.currentUser.lastname}`)
+		});
+		this.state = {
+			currentUserTasks: currentUserTasks.slice(0,10),
+			pageCount: Math.ceil(currentUserTasks.length/10)
 		}
-		return Math.round(100*count/currentTask.subtasks.length) + "%";
 	}
 
-	return(
-		<div className='cabinet'>
-			<div className='cabinetTitle'>Hello to you, {currentUser.role == 'manager' ? 'the great manager of all time!' : 'just programmer...'} </div>
-			<div className='cabinetSubTitle'>List of task, that was assigned to you:</div>
-			{
-				//if tasks exist show them, else show error message
-				currentUserTasks.length ?
-				<div className='taskList__items'>
-					<div className='taskList__item taskList__item_head'>
-						<span className='taskList__itemProgress'>Progress</span>
-						<span className='taskList__itemText'>Task name</span>
-						<span className='taskList__itemProject'>Project name</span>
-						<span className='taskList__itemCreator'>Creator</span>
-					</div>
-					{
-						currentUserTasks.map( (task) =>
-							<div key={task.id} className='taskList__item'>
-								<span
-									className='taskList__itemProgress'
-									style={
-										parseInt(taskProgress(task)) >= 50 ?
-											parseInt(taskProgress(task)) == 100 ?
-											{color: '#4298EB'}
-											:
-											{color: 'green'}
-										:
-										{color: 'red'}
-									}
-								>{taskProgress(task)}</span>
-								<span className='taskList__itemText'><Link to={`/cabinet/task:${task.id}`} className='taskList__itemTextLink'>{task.title}</Link></span>
-								<span className='taskList__itemProject'>{task.project}</span>
-								<span className='taskList__itemCreator'>{task.creator}</span>
-							</div>
-						)
-					}
-				</div>
-				:
-				<div className='taskList__empty'>no tasks yet</div>
-			}
-		</div>
-	);
-}
+	handlePageClick(data){
 
-export default Account;
+		//if full name of task receiver equal full name of current user get tasks of current user from all tasks
+		let currentUserTasks = this.props.tasks.filter(task => {
+			return (task.receiver === `${this.props.currentUser.firstname} ${this.props.currentUser.lastname}`)
+		});
+
+		let selected = data.selected;
+		let offset = Math.ceil(selected * 10);
+
+		this.setState({
+			currentUserTasks: currentUserTasks.slice(offset, offset+10)
+		});
+	}
+
+	render() {
+
+		//if full name of task receiver equal full name of current user get tasks of current user from all tasks
+		let currentUserTasks = this.props.tasks.filter(task => {
+			return (task.receiver === `${this.props.currentUser.firstname} ${this.props.currentUser.lastname}`)
+		});
+
+		return (
+			<div className='cabinet'>
+				<div className='cabinetTitle'>Hello to you, {this.props.currentUser.role == 'manager' ? 'the great manager of all time!' : 'just programmer...'} </div>
+				<div className='cabinetSubTitle'>List of task, that was assigned to you:</div>
+				{
+					//if tasks exist show them, else show error message
+					currentUserTasks.length ?
+					<div className='taskList__items'>
+						<div className='taskList__item taskList__item_head'>
+							<span className='taskList__itemProgress'>Progress</span>
+							<span className='taskList__itemText'>Task name</span>
+							<span className='taskList__itemProject'>Project name</span>
+							<span className='taskList__itemCreator'>Creator</span>
+						</div>
+						{
+							this.state.currentUserTasks.map( (t, i) =>
+								<TaskListItems
+									key={i}
+									id={t.id}
+									title={t.title}
+									progress={t.progress}
+									project={t.project}
+									creator={t.creator}
+								/>
+							)
+						}
+					</div>
+					:
+					<div className='taskList__empty'>no tasks yet</div>
+				}
+				{
+					currentUserTasks.length > 10
+					?
+						<Pagination
+							pageCount={this.state.pageCount}
+							onPageChange={this.handlePageClick.bind(this)}
+						/>
+					:
+					null
+				}
+			</div>
+		);
+	}
+}
