@@ -28,6 +28,13 @@ export function signOut() {
 	}
 }
 
+export function registerUser(user) {
+	api.registerUserInApi(user);
+	return {
+		type: AppConstants.SIGN_UP
+	}
+}
+
 export function	getTask() {
 	return {
 		type: AppConstants.GET_TASKS,

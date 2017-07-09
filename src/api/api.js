@@ -22,6 +22,15 @@ export default{
 		});
 	},
 
+	registerUserInApi(user){
+		//get database from localStorage
+		let localDB = JSON.parse(localStorage.getItem('databaseTTS'));
+		//push new user
+		localDB[0].users.push(user);
+		//update local storage
+		console.log(localDB);
+		localStorage.setItem('databaseTTS', JSON.stringify(localDB));
+	},
 
 
 	getTaskFromApi(){

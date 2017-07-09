@@ -1,4 +1,5 @@
-.headerUser__avatar{
+.headerUser__avatar,
+.cardBox__imgWrap{
 	background-image: url(../img/avatar_bg.png);
 }
 

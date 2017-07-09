@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
+
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs.jsx';
 
 export default class SignIn extends Component {
 	constructor(props){
@@ -9,6 +12,7 @@ export default class SignIn extends Component {
 			showPassError: props.showPassError
 		}
 	}
+
 	componentWillReceiveProps(nextProps) {
 		this.setState({
 			showEmailError: nextProps.showEmailError,
@@ -29,6 +33,7 @@ export default class SignIn extends Component {
 	}
 
 	handleSubmitForm(e) {
+		e.preventDefault()
 		//get password value from input
 		let passVal = this.refs.signInPass.value;
 		//get email value from input
@@ -45,7 +50,9 @@ export default class SignIn extends Component {
 			setTimeout(() => {
 				if (this.props.isSignIn) {
 					this.props.pageActions.getTask();
-					this.props.history.replace('/cabinet/account');
+					//go to cabinet page
+					document.querySelector('.loggedIn').click();
+					// this.props.history.replace('/cabinet/account'); - not working in ie
 				}
 			},1000);
 		}
@@ -53,7 +60,7 @@ export default class SignIn extends Component {
 	render() {
 		return (
 			<div className='pageContainer'>
-				<div className='pageTitle'>Log in to your account</div>
+				<Breadcrumbs name={this.props.name} />
 				<div className='cardBox'>
 					{
 						this.props.preloader ?
@@ -91,14 +98,16 @@ export default class SignIn extends Component {
 							<div className='cardBox__item cardBox__item_center'>
 								<Link className='cardBox__itemLink' to='/forget-password'>Forgot your password?</Link>
 							</div>
-							<button className='cardBox__itemButton' type='submit'>Enter</button>
+							<div className='cardBox__itemButtonWrap'>
+								<RaisedButton className='cardBox__itemButton' type='submit' label="Enter" primary={true} />
+							</div>
 							<hr/>
 							<div className='cardBox__item cardBox__item_center'>
 								<Link className='cardBox__itemLink' to='/signup'>No account? Creat one here</Link>
 							</div>
 						</form>
 					}
-					<Link className='loggedIn' to='/cabinet'></Link>
+					<Link className='loggedIn' to='/cabinet/account'></Link>
 				</div>
 			</div>
 		);

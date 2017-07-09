@@ -29,7 +29,7 @@ const routes = [
 	{
 		path: '/signin',
 		component: SignIn,
-		name: 'Sign in'
+		name: 'Log in to your account'
 	},
 	{
 		path: '/forget-password',
@@ -39,7 +39,7 @@ const routes = [
 	{
 		path: '/signup',
 		component: SignUp,
-		name: 'Sign up'
+		name: 'Create an account'
 	}
 ]
 

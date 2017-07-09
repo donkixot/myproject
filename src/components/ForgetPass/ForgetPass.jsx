@@ -30,11 +30,11 @@ const ForgetPass = () => {
 					</div>
 					<button className='cardBox__itemButton' type='submit' onClick={handleRemindPass}>Send</button>
 				</form>
-				<form className='formSpree hidden' action='' method='POST'>
+				<form className='formSpree hidden' action='' method='POST' noValidate>
 					<input className='formSpree_email' type='email' name='Your email' />
 					<textarea className='formSpree__textarea' name='Your password' placeholder='Your message'></textarea>
-					<input className='hidden' type='text' name='_gotcha'/>
 					<input type='hidden' name='_next' value='' />
+					<input type='text' name='_gotcha'/>
 					<input className='formSpree__submit' type='submit' value='Send' />
 				</form>
 				<div className='cardBox__item cardBox__item_center'>
