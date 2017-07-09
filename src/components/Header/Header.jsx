@@ -18,8 +18,8 @@ const Header = (props) =>
 		<div className='header__dropdown'>
 			<HeaderLogo />
 			<HeaderMenu />
-			<HeaderSearch />
-			<HeaderUser {...props}	/>
+			<HeaderSearch {...props} />
+			<HeaderUser {...props} />
 		</div>
 	</header>
 

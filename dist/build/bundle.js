@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 876);
+/******/ 	return __webpack_require__(__webpack_require__.s = 877);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1934,7 +1934,7 @@ exports.f = __webpack_require__(21) ? gOPD : function getOwnPropertyDescriptor(O
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(30),
     toObject = __webpack_require__(27),
-    IE_PROTO = __webpack_require__(158)('IE_PROTO'),
+    IE_PROTO = __webpack_require__(159)('IE_PROTO'),
     ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -2035,7 +2035,7 @@ var _Route2 = __webpack_require__(320);
 
 var _Route3 = _interopRequireDefault(_Route2);
 
-var _Router2 = __webpack_require__(213);
+var _Router2 = __webpack_require__(214);
 
 var _Router3 = _interopRequireDefault(_Router2);
 
@@ -2047,7 +2047,7 @@ var _Switch2 = __webpack_require__(788);
 
 var _Switch3 = _interopRequireDefault(_Switch2);
 
-var _matchPath2 = __webpack_require__(214);
+var _matchPath2 = __webpack_require__(215);
 
 var _matchPath3 = _interopRequireDefault(_matchPath2);
 
@@ -2257,7 +2257,7 @@ module.exports = function (it, S) {
 "use strict";
 
 
-var store = __webpack_require__(178)('wks'),
+var store = __webpack_require__(179)('wks'),
     uid = __webpack_require__(130),
     _Symbol = __webpack_require__(64).Symbol,
     USE_SYMBOL = typeof _Symbol == 'function';
@@ -2681,7 +2681,7 @@ if (__webpack_require__(21)) {
       fails = __webpack_require__(14),
       $export = __webpack_require__(1),
       $typed = __webpack_require__(127),
-      $buffer = __webpack_require__(165),
+      $buffer = __webpack_require__(166),
       ctx = __webpack_require__(56),
       anInstance = __webpack_require__(71),
       propertyDesc = __webpack_require__(61),
@@ -2696,21 +2696,21 @@ if (__webpack_require__(21)) {
       classof = __webpack_require__(102),
       isObject = __webpack_require__(17),
       toObject = __webpack_require__(27),
-      isArrayIter = __webpack_require__(150),
+      isArrayIter = __webpack_require__(151),
       create = __webpack_require__(73),
       getPrototypeOf = __webpack_require__(40),
       gOPN = __webpack_require__(74).f,
-      getIterFn = __webpack_require__(167),
+      getIterFn = __webpack_require__(168),
       uid = __webpack_require__(79),
       wks = __webpack_require__(19),
       createArrayMethod = __webpack_require__(49),
       createArrayIncludes = __webpack_require__(117),
-      speciesConstructor = __webpack_require__(159),
-      ArrayIterators = __webpack_require__(168),
+      speciesConstructor = __webpack_require__(160),
+      ArrayIterators = __webpack_require__(169),
       Iterators = __webpack_require__(88),
       $iterDetect = __webpack_require__(123),
       setSpecies = __webpack_require__(77),
-      arrayFill = __webpack_require__(143),
+      arrayFill = __webpack_require__(144),
       arrayCopyWithin = __webpack_require__(222),
       $DP = __webpack_require__(22),
       $GOPD = __webpack_require__(39),
@@ -3537,7 +3537,7 @@ module.exports = function (it) {
 
 var global = __webpack_require__(64),
     core = __webpack_require__(41),
-    ctx = __webpack_require__(170),
+    ctx = __webpack_require__(171),
     hide = __webpack_require__(93),
     PROTOTYPE = 'prototype';
 
@@ -3622,7 +3622,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 var anObject = __webpack_require__(91),
     IE8_DOM_DEFINE = __webpack_require__(256),
-    toPrimitive = __webpack_require__(180),
+    toPrimitive = __webpack_require__(181),
     dP = Object.defineProperty;
 
 exports.f = __webpack_require__(80) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
@@ -4391,21 +4391,21 @@ module.exports = false;
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(6),
     dPs = __webpack_require__(235),
-    enumBugKeys = __webpack_require__(146),
-    IE_PROTO = __webpack_require__(158)('IE_PROTO'),
+    enumBugKeys = __webpack_require__(147),
+    IE_PROTO = __webpack_require__(159)('IE_PROTO'),
     Empty = function Empty() {/* empty */},
     PROTOTYPE = 'prototype';
 
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var _createDict = function createDict() {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(145)('iframe'),
+  var iframe = __webpack_require__(146)('iframe'),
       i = enumBugKeys.length,
       lt = '<',
       gt = '>',
       iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(148).appendChild(iframe);
+  __webpack_require__(149).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -4440,7 +4440,7 @@ module.exports = Object.create || function create(O, Properties) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys = __webpack_require__(237),
-    hiddenKeys = __webpack_require__(146).concat('length', 'prototype');
+    hiddenKeys = __webpack_require__(147).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -4455,7 +4455,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys = __webpack_require__(237),
-    enumBugKeys = __webpack_require__(146);
+    enumBugKeys = __webpack_require__(147);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -4560,7 +4560,7 @@ module.exports = function (it, key) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = __webpack_require__(257),
-    defined = __webpack_require__(171);
+    defined = __webpack_require__(172);
 module.exports = function (it) {
   return IObject(defined(it));
 };
@@ -4756,10 +4756,10 @@ module.exports = function (key) {
 
 var ctx = __webpack_require__(56),
     call = __webpack_require__(231),
-    isArrayIter = __webpack_require__(150),
+    isArrayIter = __webpack_require__(151),
     anObject = __webpack_require__(6),
     toLength = __webpack_require__(25),
-    getIterFn = __webpack_require__(167),
+    getIterFn = __webpack_require__(168),
     BREAK = {},
     RETURN = {};
 var _exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
@@ -4819,7 +4819,7 @@ module.exports = function (it, tag, stat) {
 var $export = __webpack_require__(1),
     defined = __webpack_require__(47),
     fails = __webpack_require__(14),
-    spaces = __webpack_require__(163),
+    spaces = __webpack_require__(164),
     space = '[' + spaces + ']',
     non = '\u200B\x85',
     ltrim = RegExp('^' + space + space + '*'),
@@ -4900,7 +4900,7 @@ module.exports = __webpack_require__(80) ? function (object, key, value) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys = __webpack_require__(262),
-    enumBugKeys = __webpack_require__(172);
+    enumBugKeys = __webpack_require__(173);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -4942,10 +4942,10 @@ module.exports = exports["default"];
 
 
 
-var DOMNamespaces = __webpack_require__(197);
+var DOMNamespaces = __webpack_require__(198);
 var setInnerHTML = __webpack_require__(139);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(204);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(205);
 var setTextContent = __webpack_require__(312);
 
 var ELEMENT_NODE_TYPE = 1;
@@ -5071,7 +5071,7 @@ var _prodInvariant = __webpack_require__(15);
 
 var EventPluginRegistry = __webpack_require__(133);
 var EventPluginUtils = __webpack_require__(134);
-var ReactErrorUtils = __webpack_require__(201);
+var ReactErrorUtils = __webpack_require__(202);
 
 var accumulateInto = __webpack_require__(306);
 var forEachAccumulated = __webpack_require__(307);
@@ -5667,7 +5667,7 @@ module.exports = ReactReconciler;
 
 var SyntheticEvent = __webpack_require__(59);
 
-var getEventTarget = __webpack_require__(207);
+var getEventTarget = __webpack_require__(208);
 
 /**
  * @interface UIEvent
@@ -5732,7 +5732,7 @@ module.exports = SyntheticUIEvent;
 var _assign = __webpack_require__(20);
 
 var ReactChildren = __webpack_require__(322);
-var ReactComponent = __webpack_require__(215);
+var ReactComponent = __webpack_require__(216);
 var ReactPureComponent = __webpack_require__(804);
 var ReactClass = __webpack_require__(800);
 var ReactDOMFactories = __webpack_require__(801);
@@ -5924,7 +5924,7 @@ module.exports = function (bitmap, value) {
 
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(171);
+var defined = __webpack_require__(172);
 module.exports = function (it) {
   return Object(defined(it));
 };
@@ -6578,7 +6578,7 @@ var global = __webpack_require__(13),
     fails = __webpack_require__(14),
     $iterDetect = __webpack_require__(123),
     setToStringTag = __webpack_require__(89),
-    inheritIfRequired = __webpack_require__(149);
+    inheritIfRequired = __webpack_require__(150);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
   var Base = global[NAME],
@@ -7383,7 +7383,7 @@ module.exports = EventPluginRegistry;
 
 var _prodInvariant = __webpack_require__(15);
 
-var ReactErrorUtils = __webpack_require__(201);
+var ReactErrorUtils = __webpack_require__(202);
 
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(5);
@@ -7617,10 +7617,10 @@ var _assign = __webpack_require__(20);
 
 var EventPluginRegistry = __webpack_require__(133);
 var ReactEventEmitterMixin = __webpack_require__(719);
-var ViewportMetrics = __webpack_require__(203);
+var ViewportMetrics = __webpack_require__(204);
 
 var getVendorPrefixedEventName = __webpack_require__(754);
-var isEventSupported = __webpack_require__(208);
+var isEventSupported = __webpack_require__(209);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -7947,9 +7947,9 @@ module.exports = ReactBrowserEventEmitter;
 
 
 var SyntheticUIEvent = __webpack_require__(100);
-var ViewportMetrics = __webpack_require__(203);
+var ViewportMetrics = __webpack_require__(204);
 
-var getEventModifierState = __webpack_require__(206);
+var getEventModifierState = __webpack_require__(207);
 
 /**
  * @interface MouseEvent
@@ -8383,12 +8383,12 @@ module.exports = escapeTextContentForBrowser;
 
 
 var ExecutionEnvironment = __webpack_require__(26);
-var DOMNamespaces = __webpack_require__(197);
+var DOMNamespaces = __webpack_require__(198);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(204);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(205);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -8911,6 +8911,40 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _keymirror = __webpack_require__(613);
+
+var _keymirror2 = _interopRequireDefault(_keymirror);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _keymirror2.default)({
+	SIGN_IN: null,
+	SIGN_IN_SUCCESS: null,
+	SIGN_IN_FAILED: null,
+	SIGN_IN_EMAIL_FAILED: null,
+	SIGN_IN_PASS_FAILED: null,
+	SIGN_OUT: null,
+	SIGN_UP: null,
+	GET_TASKS: null,
+	ADD_TASK: null,
+	TOGGLE_TASK: null,
+	SET_CREATOR: null,
+	SET_PROJECT: null,
+	SET_SORTING: null,
+	FILTERS_RESET: null
+}); //Create an object with values equal to its key names.
+
+/***/ }),
+/* 144 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 
 
@@ -8930,7 +8964,7 @@ module.exports = function fill(value /*, start = 0, end = @length */) {
 };
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8944,7 +8978,7 @@ module.exports = function (object, index, value) {
 };
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8960,7 +8994,7 @@ module.exports = function (it) {
 };
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8970,7 +9004,7 @@ module.exports = function (it) {
 module.exports = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'.split(',');
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8990,7 +9024,7 @@ module.exports = function (KEY) {
 };
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8999,14 +9033,14 @@ module.exports = function (KEY) {
 module.exports = __webpack_require__(13).document && document.documentElement;
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var isObject = __webpack_require__(17),
-    setPrototypeOf = __webpack_require__(157).set;
+    setPrototypeOf = __webpack_require__(158).set;
 module.exports = function (that, target, C) {
   var P,
       S = target.constructor;
@@ -9016,7 +9050,7 @@ module.exports = function (that, target, C) {
 };
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9032,7 +9066,7 @@ module.exports = function (it) {
 };
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9045,7 +9079,7 @@ module.exports = Array.isArray || function isArray(arg) {
 };
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9067,7 +9101,7 @@ module.exports = function (Constructor, NAME, next) {
 };
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9079,7 +9113,7 @@ var LIBRARY = __webpack_require__(72),
     hide = __webpack_require__(34),
     has = __webpack_require__(30),
     Iterators = __webpack_require__(88),
-    $iterCreate = __webpack_require__(152),
+    $iterCreate = __webpack_require__(153),
     setToStringTag = __webpack_require__(89),
     getPrototypeOf = __webpack_require__(40),
     ITERATOR = __webpack_require__(19)('iterator'),
@@ -9159,7 +9193,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 };
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9176,7 +9210,7 @@ module.exports = !$expm1
 } : $expm1;
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9188,14 +9222,14 @@ module.exports = Math.sign || function sign(x) {
 };
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var global = __webpack_require__(13),
-    macrotask = __webpack_require__(164).set,
+    macrotask = __webpack_require__(165).set,
     Observer = global.MutationObserver || global.WebKitMutationObserver,
     process = global.process,
     Promise = global.Promise,
@@ -9263,7 +9297,7 @@ module.exports = function () {
 };
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9297,7 +9331,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9310,7 +9344,7 @@ module.exports = function (key) {
 };
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9327,7 +9361,7 @@ module.exports = function (O, D) {
 };
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9351,7 +9385,7 @@ module.exports = function (TO_STRING) {
 };
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9367,7 +9401,7 @@ module.exports = function (that, searchString, NAME) {
 };
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9387,7 +9421,7 @@ module.exports = function repeat(count) {
 };
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9396,7 +9430,7 @@ module.exports = function repeat(count) {
 module.exports = '\t\n\x0B\f\r \xA0\u1680\u180E\u2000\u2001\u2002\u2003' + '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9404,8 +9438,8 @@ module.exports = '\t\n\x0B\f\r \xA0\u1680\u180E\u2000\u2001\u2002\u2003' + '\u20
 
 var ctx = __webpack_require__(56),
     invoke = __webpack_require__(121),
-    html = __webpack_require__(148),
-    cel = __webpack_require__(145),
+    html = __webpack_require__(149),
+    cel = __webpack_require__(146),
     global = __webpack_require__(13),
     process = global.process,
     setTask = global.setImmediate,
@@ -9483,7 +9517,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9501,7 +9535,7 @@ var global = __webpack_require__(13),
     toLength = __webpack_require__(25),
     gOPN = __webpack_require__(74).f,
     dP = __webpack_require__(22).f,
-    arrayFill = __webpack_require__(143),
+    arrayFill = __webpack_require__(144),
     setToStringTag = __webpack_require__(89),
     ARRAY_BUFFER = 'ArrayBuffer',
     DATA_VIEW = 'DataView',
@@ -9769,7 +9803,7 @@ exports[ARRAY_BUFFER] = $ArrayBuffer;
 exports[DATA_VIEW] = $DataView;
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9786,7 +9820,7 @@ module.exports = function (name) {
 };
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9800,7 +9834,7 @@ module.exports = __webpack_require__(55).getIteratorMethod = function (it) {
 };
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9815,7 +9849,7 @@ var addToUnscopables = __webpack_require__(86),
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(153)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(154)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0; // next index
   this._k = kind; // kind
@@ -9841,7 +9875,7 @@ addToUnscopables('values');
 addToUnscopables('entries');
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9854,7 +9888,7 @@ module.exports = function (it) {
 };
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9885,7 +9919,7 @@ module.exports = function (fn, that, length) {
 };
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9898,7 +9932,7 @@ module.exports = function (it) {
 };
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9908,7 +9942,7 @@ module.exports = function (it) {
 module.exports = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'.split(',');
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9917,7 +9951,7 @@ module.exports = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,
 module.exports = true;
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9926,8 +9960,8 @@ module.exports = true;
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(91),
     dPs = __webpack_require__(547),
-    enumBugKeys = __webpack_require__(172),
-    IE_PROTO = __webpack_require__(177)('IE_PROTO'),
+    enumBugKeys = __webpack_require__(173),
+    IE_PROTO = __webpack_require__(178)('IE_PROTO'),
     Empty = function Empty() {/* empty */},
     PROTOTYPE = 'prototype';
 
@@ -9967,7 +10001,7 @@ module.exports = Object.create || function create(O, Properties) {
 };
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9976,7 +10010,7 @@ module.exports = Object.create || function create(O, Properties) {
 exports.f = Object.getOwnPropertySymbols;
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9991,20 +10025,20 @@ module.exports = function (it, tag, stat) {
 };
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var shared = __webpack_require__(178)('keys'),
+var shared = __webpack_require__(179)('keys'),
     uid = __webpack_require__(130);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10018,7 +10052,7 @@ module.exports = function (key) {
 };
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10032,7 +10066,7 @@ module.exports = function (it) {
 };
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10052,7 +10086,7 @@ module.exports = function (it, S) {
 };
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10060,8 +10094,8 @@ module.exports = function (it, S) {
 
 var global = __webpack_require__(64),
     core = __webpack_require__(41),
-    LIBRARY = __webpack_require__(173),
-    wksExt = __webpack_require__(182),
+    LIBRARY = __webpack_require__(174),
+    wksExt = __webpack_require__(183),
     defineProperty = __webpack_require__(65).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -10069,7 +10103,7 @@ module.exports = function (name) {
 };
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10078,7 +10112,7 @@ module.exports = function (name) {
 exports.f = __webpack_require__(52);
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10097,7 +10131,7 @@ function isPrefixedValue(value) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10179,7 +10213,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10258,7 +10292,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10351,7 +10385,7 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10367,7 +10401,7 @@ function capitalizeString(str) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10450,7 +10484,7 @@ function isPlainObject(value) {
 exports.default = isPlainObject;
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10562,7 +10596,7 @@ exports.default = List;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10612,9 +10646,9 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _childUtils = __webpack_require__(193);
+var _childUtils = __webpack_require__(194);
 
-var _events = __webpack_require__(194);
+var _events = __webpack_require__(195);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -10968,7 +11002,7 @@ exports.default = EnhancedButton;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11264,7 +11298,7 @@ var darkWhite = exports.darkWhite = 'rgba(255, 255, 255, 0.87)';
 var lightWhite = exports.lightWhite = 'rgba(255, 255, 255, 0.54)';
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11280,7 +11314,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11340,7 +11374,7 @@ function extendChildren(children, extendedProps, extendedChildren) {
 }
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11385,7 +11419,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11405,7 +11439,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11426,7 +11460,7 @@ var Danger = __webpack_require__(691);
 var ReactDOMComponentTree = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(43);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(204);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(205);
 var setInnerHTML = __webpack_require__(139);
 var setTextContent = __webpack_require__(312);
 
@@ -11636,7 +11670,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11661,7 +11695,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11725,7 +11759,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11869,7 +11903,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11921,7 +11955,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12003,7 +12037,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12247,7 +12281,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12279,7 +12313,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12316,7 +12350,7 @@ var createMicrosoftUnsafeLocalFunction = function createMicrosoftUnsafeLocalFunc
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12371,7 +12405,7 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12419,7 +12453,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12459,7 +12493,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12524,7 +12558,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12573,7 +12607,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12956,7 +12990,7 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13197,7 +13231,7 @@ exports.default = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13230,7 +13264,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13380,7 +13414,7 @@ Router.childContextTypes = {
 exports.default = Router;
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13463,7 +13497,7 @@ var matchPath = function matchPath(pathname) {
 exports.default = matchPath;
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13483,7 +13517,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _prodInvariant = __webpack_require__(69);
 
-var ReactNoopUpdateQueue = __webpack_require__(216);
+var ReactNoopUpdateQueue = __webpack_require__(217);
 
 var canDefineProperty = __webpack_require__(141);
 var emptyObject = __webpack_require__(109);
@@ -13589,7 +13623,7 @@ module.exports = ReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13691,7 +13725,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13719,40 +13753,6 @@ module.exports = function (module) {
 	}
 	return module;
 };
-
-/***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _keymirror = __webpack_require__(613);
-
-var _keymirror2 = _interopRequireDefault(_keymirror);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _keymirror2.default)({
-	SIGN_IN: null,
-	SIGN_IN_SUCCESS: null,
-	SIGN_IN_FAILED: null,
-	SIGN_IN_EMAIL_FAILED: null,
-	SIGN_IN_PASS_FAILED: null,
-	SIGN_OUT: null,
-	SIGN_UP: null,
-	GET_TASKS: null,
-	ADD_TASK: null,
-	TOGGLE_TASK: null,
-	SET_CREATOR: null,
-	SET_PROJECT: null,
-	SET_SORTING: null,
-	FILTERS_RESET: null
-}); //Create an object with values equal to its key names.
 
 /***/ }),
 /* 219 */
@@ -14245,7 +14245,7 @@ var dP = __webpack_require__(22).f,
     anInstance = __webpack_require__(71),
     defined = __webpack_require__(47),
     forOf = __webpack_require__(87),
-    $iterDefine = __webpack_require__(153),
+    $iterDefine = __webpack_require__(154),
     step = __webpack_require__(232),
     setSpecies = __webpack_require__(77),
     DESCRIPTORS = __webpack_require__(21),
@@ -14498,7 +14498,7 @@ module.exports = {
 
 
 module.exports = !__webpack_require__(21) && !__webpack_require__(14)(function () {
-  return Object.defineProperty(__webpack_require__(145)('div'), 'a', { get: function get() {
+  return Object.defineProperty(__webpack_require__(146)('div'), 'a', { get: function get() {
       return 7;
     } }).a != 7;
 });
@@ -14665,7 +14665,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 var has = __webpack_require__(30),
     toIObject = __webpack_require__(37),
     arrayIndexOf = __webpack_require__(117)(false),
-    IE_PROTO = __webpack_require__(158)('IE_PROTO');
+    IE_PROTO = __webpack_require__(159)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object),
@@ -14736,7 +14736,7 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 var $parseFloat = __webpack_require__(13).parseFloat,
     $trim = __webpack_require__(90).trim;
 
-module.exports = 1 / $parseFloat(__webpack_require__(163) + '-0') !== -Infinity ? function parseFloat(str) {
+module.exports = 1 / $parseFloat(__webpack_require__(164) + '-0') !== -Infinity ? function parseFloat(str) {
   var string = $trim(String(str), 3),
       result = $parseFloat(string);
   return result === 0 && string.charAt(0) == '-' ? -0 : result;
@@ -14751,7 +14751,7 @@ module.exports = 1 / $parseFloat(__webpack_require__(163) + '-0') !== -Infinity 
 
 var $parseInt = __webpack_require__(13).parseInt,
     $trim = __webpack_require__(90).trim,
-    ws = __webpack_require__(163),
+    ws = __webpack_require__(164),
     hex = /^[\-+]?0[xX]/;
 
 module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? function parseInt(str, radix) {
@@ -14780,7 +14780,7 @@ module.exports = Object.is || function is(x, y) {
 
 // https://github.com/tc39/proposal-string-pad-start-end
 var toLength = __webpack_require__(25),
-    repeat = __webpack_require__(162),
+    repeat = __webpack_require__(163),
     defined = __webpack_require__(47);
 
 module.exports = function (that, maxLength, fillString, left) {
@@ -15050,7 +15050,7 @@ module.exports = !__webpack_require__(80) && !__webpack_require__(92)(function (
 
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(169);
+var cof = __webpack_require__(170);
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
@@ -15062,14 +15062,14 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 "use strict";
 
 
-var LIBRARY = __webpack_require__(173),
+var LIBRARY = __webpack_require__(174),
     $export = __webpack_require__(63),
     redefine = __webpack_require__(264),
     hide = __webpack_require__(93),
     has = __webpack_require__(81),
     Iterators = __webpack_require__(106),
     $iterCreate = __webpack_require__(541),
-    setToStringTag = __webpack_require__(176),
+    setToStringTag = __webpack_require__(177),
     getPrototypeOf = __webpack_require__(261),
     ITERATOR = __webpack_require__(52)('iterator'),
     BUGGY = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
@@ -15157,7 +15157,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 var pIE = __webpack_require__(129),
     createDesc = __webpack_require__(107),
     toIObject = __webpack_require__(82),
-    toPrimitive = __webpack_require__(180),
+    toPrimitive = __webpack_require__(181),
     has = __webpack_require__(81),
     IE8_DOM_DEFINE = __webpack_require__(256),
     gOPD = Object.getOwnPropertyDescriptor;
@@ -15180,7 +15180,7 @@ exports.f = __webpack_require__(80) ? gOPD : function getOwnPropertyDescriptor(O
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys = __webpack_require__(262),
-    hiddenKeys = __webpack_require__(172).concat('length', 'prototype');
+    hiddenKeys = __webpack_require__(173).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -15196,7 +15196,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(81),
     toObject = __webpack_require__(108),
-    IE_PROTO = __webpack_require__(177)('IE_PROTO'),
+    IE_PROTO = __webpack_require__(178)('IE_PROTO'),
     ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -15217,7 +15217,7 @@ module.exports = Object.getPrototypeOf || function (O) {
 var has = __webpack_require__(81),
     toIObject = __webpack_require__(82),
     arrayIndexOf = __webpack_require__(533)(false),
-    IE_PROTO = __webpack_require__(177)('IE_PROTO');
+    IE_PROTO = __webpack_require__(178)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object),
@@ -15271,7 +15271,7 @@ module.exports = __webpack_require__(93);
 
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(179),
+var toInteger = __webpack_require__(180),
     min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -15821,7 +15821,7 @@ var _transitions = __webpack_require__(23);
 
 var _transitions2 = _interopRequireDefault(_transitions);
 
-var _EnhancedButton = __webpack_require__(190);
+var _EnhancedButton = __webpack_require__(191);
 
 var _EnhancedButton2 = _interopRequireDefault(_EnhancedButton);
 
@@ -16957,7 +16957,7 @@ var _propTypes3 = __webpack_require__(66);
 
 var _propTypes4 = _interopRequireDefault(_propTypes3);
 
-var _List = __webpack_require__(189);
+var _List = __webpack_require__(190);
 
 var _List2 = _interopRequireDefault(_List);
 
@@ -17629,7 +17629,7 @@ var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactEventListener = __webpack_require__(211);
+var _reactEventListener = __webpack_require__(212);
 
 var _reactEventListener2 = _interopRequireDefault(_reactEventListener);
 
@@ -18457,7 +18457,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactEventListener = __webpack_require__(211);
+var _reactEventListener = __webpack_require__(212);
 
 var _reactEventListener2 = _interopRequireDefault(_reactEventListener);
 
@@ -18883,7 +18883,7 @@ var _shallowEqual = __webpack_require__(84);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-var _autoPrefix = __webpack_require__(192);
+var _autoPrefix = __webpack_require__(193);
 
 var _autoPrefix2 = _interopRequireDefault(_autoPrefix);
 
@@ -19423,7 +19423,7 @@ var emptyFunction = __webpack_require__(31);
 var invariant = __webpack_require__(4);
 var warning = __webpack_require__(5);
 
-var ReactPropTypesSecret = __webpack_require__(195);
+var ReactPropTypesSecret = __webpack_require__(196);
 var checkPropTypes = __webpack_require__(683);
 
 module.exports = function (isValidElement, throwOnDirectAccess) {
@@ -20463,7 +20463,7 @@ module.exports = ReactDOMComponentFlags;
 
 var _assign = __webpack_require__(20);
 
-var LinkedValueUtils = __webpack_require__(199);
+var LinkedValueUtils = __webpack_require__(200);
 var ReactDOMComponentTree = __webpack_require__(24);
 var ReactUpdates = __webpack_require__(53);
 
@@ -20947,14 +20947,14 @@ var ReactInstanceMap = __webpack_require__(115);
 var ReactInstrumentation = __webpack_require__(43);
 var ReactMarkupChecksum = __webpack_require__(724);
 var ReactReconciler = __webpack_require__(99);
-var ReactUpdateQueue = __webpack_require__(202);
+var ReactUpdateQueue = __webpack_require__(203);
 var ReactUpdates = __webpack_require__(53);
 
 var emptyObject = __webpack_require__(109);
 var instantiateReactComponent = __webpack_require__(310);
 var invariant = __webpack_require__(4);
 var setInnerHTML = __webpack_require__(139);
-var shouldUpdateReactComponent = __webpack_require__(209);
+var shouldUpdateReactComponent = __webpack_require__(210);
 var warning = __webpack_require__(5);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -21976,7 +21976,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(718);
 
 var getIteratorFn = __webpack_require__(752);
 var invariant = __webpack_require__(4);
-var KeyEscapeUtils = __webpack_require__(198);
+var KeyEscapeUtils = __webpack_require__(199);
 var warning = __webpack_require__(5);
 
 var SEPARATOR = '.';
@@ -22619,11 +22619,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = verifyPlainObject;
 
-var _isPlainObject = __webpack_require__(188);
+var _isPlainObject = __webpack_require__(189);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-var _warning = __webpack_require__(212);
+var _warning = __webpack_require__(213);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -22796,7 +22796,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _matchPath = __webpack_require__(214);
+var _matchPath = __webpack_require__(215);
 
 var _matchPath2 = _interopRequireDefault(_matchPath);
 
@@ -23670,7 +23670,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 exports.default = createStore;
 
-var _isPlainObject = __webpack_require__(188);
+var _isPlainObject = __webpack_require__(189);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
@@ -24141,15 +24141,15 @@ var _reactTapEventPlugin = __webpack_require__(793);
 
 var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-var _configureStore = __webpack_require__(871);
+var _configureStore = __webpack_require__(872);
 
 var _configureStore2 = _interopRequireDefault(_configureStore);
 
-var _AppContainer = __webpack_require__(870);
+var _AppContainer = __webpack_require__(840);
 
 var _AppContainer2 = _interopRequireDefault(_AppContainer);
 
-__webpack_require__(874);
+__webpack_require__(875);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24187,7 +24187,7 @@ module.exports = __webpack_require__(55).RegExp.escape;
 
 
 var isObject = __webpack_require__(17),
-    isArray = __webpack_require__(151),
+    isArray = __webpack_require__(152),
     SPECIES = __webpack_require__(19)('species');
 
 module.exports = function (original) {
@@ -24394,7 +24394,7 @@ $export($export.P + $export.F * !__webpack_require__(48)([].every, true), 'Array
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 var $export = __webpack_require__(1);
 
-$export($export.P, 'Array', { fill: __webpack_require__(143) });
+$export($export.P, 'Array', { fill: __webpack_require__(144) });
 
 __webpack_require__(86)('fill');
 
@@ -24490,10 +24490,10 @@ var ctx = __webpack_require__(56),
     $export = __webpack_require__(1),
     toObject = __webpack_require__(27),
     call = __webpack_require__(231),
-    isArrayIter = __webpack_require__(150),
+    isArrayIter = __webpack_require__(151),
     toLength = __webpack_require__(25),
-    createProperty = __webpack_require__(144),
-    getIterFn = __webpack_require__(167);
+    createProperty = __webpack_require__(145),
+    getIterFn = __webpack_require__(168);
 
 $export($export.S + $export.F * !__webpack_require__(123)(function (iter) {
   Array.from(iter);
@@ -24559,7 +24559,7 @@ $export($export.P + $export.F * (NEGATIVE_ZERO || !__webpack_require__(48)($nati
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
 var $export = __webpack_require__(1);
 
-$export($export.S, 'Array', { isArray: __webpack_require__(151) });
+$export($export.S, 'Array', { isArray: __webpack_require__(152) });
 
 /***/ }),
 /* 357 */
@@ -24635,7 +24635,7 @@ $export($export.P + $export.F * !__webpack_require__(48)([].map, true), 'Array',
 
 
 var $export = __webpack_require__(1),
-    createProperty = __webpack_require__(144);
+    createProperty = __webpack_require__(145);
 
 // WebKit Array.of isn't generic
 $export($export.S + $export.F * __webpack_require__(14)(function () {
@@ -24696,7 +24696,7 @@ $export($export.P + $export.F * !__webpack_require__(48)([].reduce, true), 'Arra
 
 
 var $export = __webpack_require__(1),
-    html = __webpack_require__(148),
+    html = __webpack_require__(149),
     cof = __webpack_require__(46),
     toIndex = __webpack_require__(78),
     toLength = __webpack_require__(25),
@@ -25010,7 +25010,7 @@ $export($export.S + $export.F * !($atanh && 1 / $atanh(-0) < 0), 'Math', {
 
 // 20.2.2.9 Math.cbrt(x)
 var $export = __webpack_require__(1),
-    sign = __webpack_require__(155);
+    sign = __webpack_require__(156);
 
 $export($export.S, 'Math', {
   cbrt: function cbrt(x) {
@@ -25060,7 +25060,7 @@ $export($export.S, 'Math', {
 
 // 20.2.2.14 Math.expm1(x)
 var $export = __webpack_require__(1),
-    $expm1 = __webpack_require__(154);
+    $expm1 = __webpack_require__(155);
 
 $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 });
 
@@ -25073,7 +25073,7 @@ $export($export.S + $export.F * ($expm1 != Math.expm1), 'Math', { expm1: $expm1 
 
 // 20.2.2.16 Math.fround(x)
 var $export = __webpack_require__(1),
-    sign = __webpack_require__(155),
+    sign = __webpack_require__(156),
     pow = Math.pow,
     EPSILON = pow(2, -52),
     EPSILON32 = pow(2, -23),
@@ -25212,7 +25212,7 @@ $export($export.S, 'Math', {
 // 20.2.2.28 Math.sign(x)
 var $export = __webpack_require__(1);
 
-$export($export.S, 'Math', { sign: __webpack_require__(155) });
+$export($export.S, 'Math', { sign: __webpack_require__(156) });
 
 /***/ }),
 /* 389 */
@@ -25223,7 +25223,7 @@ $export($export.S, 'Math', { sign: __webpack_require__(155) });
 
 // 20.2.2.30 Math.sinh(x)
 var $export = __webpack_require__(1),
-    expm1 = __webpack_require__(154),
+    expm1 = __webpack_require__(155),
     exp = Math.exp;
 
 // V8 near Chromium 38 has a problem with very small numbers
@@ -25244,7 +25244,7 @@ $export($export.S + $export.F * __webpack_require__(14)(function () {
 
 // 20.2.2.33 Math.tanh(x)
 var $export = __webpack_require__(1),
-    expm1 = __webpack_require__(154),
+    expm1 = __webpack_require__(155),
     exp = Math.exp;
 
 $export($export.S, 'Math', {
@@ -25281,7 +25281,7 @@ $export($export.S, 'Math', {
 var global = __webpack_require__(13),
     has = __webpack_require__(30),
     cof = __webpack_require__(46),
-    inheritIfRequired = __webpack_require__(149),
+    inheritIfRequired = __webpack_require__(150),
     toPrimitive = __webpack_require__(51),
     fails = __webpack_require__(14),
     gOPN = __webpack_require__(74).f,
@@ -25485,7 +25485,7 @@ $export($export.S + $export.F * (Number.parseInt != $parseInt), 'Number', { pars
 var $export = __webpack_require__(1),
     toInteger = __webpack_require__(62),
     aNumberValue = __webpack_require__(221),
-    repeat = __webpack_require__(162),
+    repeat = __webpack_require__(163),
     $toFixed = 1..toFixed,
     floor = Math.floor,
     data = [0, 0, 0, 0, 0, 0],
@@ -25845,7 +25845,7 @@ __webpack_require__(50)('seal', function ($seal) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = __webpack_require__(1);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(157).set });
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(158).set });
 
 /***/ }),
 /* 420 */
@@ -25904,9 +25904,9 @@ var LIBRARY = __webpack_require__(72),
     aFunction = __webpack_require__(33),
     anInstance = __webpack_require__(71),
     forOf = __webpack_require__(87),
-    speciesConstructor = __webpack_require__(159),
-    task = __webpack_require__(164).set,
-    microtask = __webpack_require__(156)(),
+    speciesConstructor = __webpack_require__(160),
+    task = __webpack_require__(165).set,
+    microtask = __webpack_require__(157)(),
     PROMISE = 'Promise',
     TypeError = global.TypeError,
     process = global.process,
@@ -26353,7 +26353,7 @@ var Enumerate = function Enumerate(iterated) {
     keys.push(key);
   }
 };
-__webpack_require__(152)(Enumerate, 'Object', function () {
+__webpack_require__(153)(Enumerate, 'Object', function () {
   var that = this,
       keys = that._k,
       key;
@@ -26511,7 +26511,7 @@ $export($export.S, 'Reflect', {
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
 var $export = __webpack_require__(1),
-    setProto = __webpack_require__(157);
+    setProto = __webpack_require__(158);
 
 if (setProto) $export($export.S, 'Reflect', {
   setPrototypeOf: function setPrototypeOf(target, proto) {
@@ -26573,7 +26573,7 @@ $export($export.S, 'Reflect', { set: set });
 
 
 var global = __webpack_require__(13),
-    inheritIfRequired = __webpack_require__(149),
+    inheritIfRequired = __webpack_require__(150),
     dP = __webpack_require__(22).f,
     gOPN = __webpack_require__(74).f,
     isRegExp = __webpack_require__(122),
@@ -26843,7 +26843,7 @@ __webpack_require__(36)('bold', function (createHTML) {
 
 
 var $export = __webpack_require__(1),
-    $at = __webpack_require__(160)(false);
+    $at = __webpack_require__(161)(false);
 $export($export.P, 'String', {
   // 21.1.3.3 String.prototype.codePointAt(pos)
   codePointAt: function codePointAt(pos) {
@@ -26861,11 +26861,11 @@ $export($export.P, 'String', {
 
 var $export = __webpack_require__(1),
     toLength = __webpack_require__(25),
-    context = __webpack_require__(161),
+    context = __webpack_require__(162),
     ENDS_WITH = 'endsWith',
     $endsWith = ''[ENDS_WITH];
 
-$export($export.P + $export.F * __webpack_require__(147)(ENDS_WITH), 'String', {
+$export($export.P + $export.F * __webpack_require__(148)(ENDS_WITH), 'String', {
   endsWith: function endsWith(searchString /*, endPosition = @length */) {
     var that = context(this, searchString, ENDS_WITH),
         endPosition = arguments.length > 1 ? arguments[1] : undefined,
@@ -26956,10 +26956,10 @@ $export($export.S + $export.F * (!!$fromCodePoint && $fromCodePoint.length != 1)
 
 
 var $export = __webpack_require__(1),
-    context = __webpack_require__(161),
+    context = __webpack_require__(162),
     INCLUDES = 'includes';
 
-$export($export.P + $export.F * __webpack_require__(147)(INCLUDES), 'String', {
+$export($export.P + $export.F * __webpack_require__(148)(INCLUDES), 'String', {
   includes: function includes(searchString /*, position = 0 */) {
     return !!~context(this, searchString, INCLUDES).indexOf(searchString, arguments.length > 1 ? arguments[1] : undefined);
   }
@@ -26986,10 +26986,10 @@ __webpack_require__(36)('italics', function (createHTML) {
 "use strict";
 
 
-var $at = __webpack_require__(160)(true);
+var $at = __webpack_require__(161)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(153)(String, 'String', function (iterated) {
+__webpack_require__(154)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0; // next index
   // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -27054,7 +27054,7 @@ var $export = __webpack_require__(1);
 
 $export($export.P, 'String', {
   // 21.1.3.13 String.prototype.repeat(count)
-  repeat: __webpack_require__(162)
+  repeat: __webpack_require__(163)
 });
 
 /***/ }),
@@ -27081,11 +27081,11 @@ __webpack_require__(36)('small', function (createHTML) {
 
 var $export = __webpack_require__(1),
     toLength = __webpack_require__(25),
-    context = __webpack_require__(161),
+    context = __webpack_require__(162),
     STARTS_WITH = 'startsWith',
     $startsWith = ''[STARTS_WITH];
 
-$export($export.P + $export.F * __webpack_require__(147)(STARTS_WITH), 'String', {
+$export($export.P + $export.F * __webpack_require__(148)(STARTS_WITH), 'String', {
   startsWith: function startsWith(searchString /*, position = 0 */) {
     var that = context(this, searchString, STARTS_WITH),
         index = toLength(Math.min(arguments.length > 1 ? arguments[1] : undefined, that.length)),
@@ -27172,10 +27172,10 @@ var global = __webpack_require__(13),
     uid = __webpack_require__(79),
     wks = __webpack_require__(19),
     wksExt = __webpack_require__(244),
-    wksDefine = __webpack_require__(166),
+    wksDefine = __webpack_require__(167),
     keyOf = __webpack_require__(342),
     enumKeys = __webpack_require__(341),
-    isArray = __webpack_require__(151),
+    isArray = __webpack_require__(152),
     anObject = __webpack_require__(6),
     toIObject = __webpack_require__(37),
     toPrimitive = __webpack_require__(51),
@@ -27409,13 +27409,13 @@ setToStringTag(global.JSON, 'JSON', true);
 
 var $export = __webpack_require__(1),
     $typed = __webpack_require__(127),
-    buffer = __webpack_require__(165),
+    buffer = __webpack_require__(166),
     anObject = __webpack_require__(6),
     toIndex = __webpack_require__(78),
     toLength = __webpack_require__(25),
     isObject = __webpack_require__(17),
     ArrayBuffer = __webpack_require__(13).ArrayBuffer,
-    speciesConstructor = __webpack_require__(159),
+    speciesConstructor = __webpack_require__(160),
     $ArrayBuffer = buffer.ArrayBuffer,
     $DataView = buffer.DataView,
     $isView = $typed.ABV && ArrayBuffer.isView,
@@ -27462,7 +27462,7 @@ __webpack_require__(77)(ARRAY_BUFFER);
 
 var $export = __webpack_require__(1);
 $export($export.G + $export.W + $export.F * !__webpack_require__(127).ABV, {
-  DataView: __webpack_require__(165).DataView
+  DataView: __webpack_require__(166).DataView
 });
 
 /***/ }),
@@ -27631,7 +27631,7 @@ __webpack_require__(86)('includes');
 
 // https://github.com/rwaldron/tc39-notes/blob/master/es6/2014-09/sept-25.md#510-globalasap-for-enqueuing-a-microtask
 var $export = __webpack_require__(1),
-    microtask = __webpack_require__(156)(),
+    microtask = __webpack_require__(157)(),
     process = __webpack_require__(13).process,
     isNode = __webpack_require__(46)(process) == 'process';
 
@@ -27824,7 +27824,7 @@ var $export = __webpack_require__(1),
     ownKeys = __webpack_require__(239),
     toIObject = __webpack_require__(37),
     gOPD = __webpack_require__(39),
-    createProperty = __webpack_require__(144);
+    createProperty = __webpack_require__(145);
 
 $export($export.S, 'Object', {
   getOwnPropertyDescriptors: function getOwnPropertyDescriptors(object) {
@@ -27918,7 +27918,7 @@ $export($export.S, 'Object', {
 var $export = __webpack_require__(1),
     global = __webpack_require__(13),
     core = __webpack_require__(55),
-    microtask = __webpack_require__(156)(),
+    microtask = __webpack_require__(157)(),
     OBSERVABLE = __webpack_require__(19)('observable'),
     aFunction = __webpack_require__(33),
     anObject = __webpack_require__(6),
@@ -28326,7 +28326,7 @@ $export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(227)('Set') 
 // https://github.com/mathiasbynens/String.prototype.at
 
 var $export = __webpack_require__(1),
-    $at = __webpack_require__(160)(true);
+    $at = __webpack_require__(161)(true);
 
 $export($export.P, 'String', {
   at: function at(pos) {
@@ -28354,7 +28354,7 @@ var $RegExpStringIterator = function $RegExpStringIterator(regexp, string) {
   this._s = string;
 };
 
-__webpack_require__(152)($RegExpStringIterator, 'RegExp String', function next() {
+__webpack_require__(153)($RegExpStringIterator, 'RegExp String', function next() {
   var match = this._r.exec(this._s);
   return { value: match, done: match === null };
 });
@@ -28440,7 +28440,7 @@ __webpack_require__(90)('trimRight', function ($trim) {
 "use strict";
 
 
-__webpack_require__(166)('asyncIterator');
+__webpack_require__(167)('asyncIterator');
 
 /***/ }),
 /* 512 */
@@ -28449,7 +28449,7 @@ __webpack_require__(166)('asyncIterator');
 "use strict";
 
 
-__webpack_require__(166)('observable');
+__webpack_require__(167)('observable');
 
 /***/ }),
 /* 513 */
@@ -28470,7 +28470,7 @@ $export($export.S, 'System', { global: __webpack_require__(13) });
 "use strict";
 
 
-var $iterators = __webpack_require__(168),
+var $iterators = __webpack_require__(169),
     redefine = __webpack_require__(35),
     global = __webpack_require__(13),
     hide = __webpack_require__(34),
@@ -28503,7 +28503,7 @@ for (var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList
 
 
 var $export = __webpack_require__(1),
-    $task = __webpack_require__(164);
+    $task = __webpack_require__(165);
 $export($export.G + $export.B, {
   setImmediate: $task.set,
   clearImmediate: $task.clear
@@ -28639,7 +28639,7 @@ __webpack_require__(349);
 __webpack_require__(352);
 __webpack_require__(351);
 __webpack_require__(366);
-__webpack_require__(168);
+__webpack_require__(169);
 __webpack_require__(438);
 __webpack_require__(443);
 __webpack_require__(246);
@@ -28852,7 +28852,7 @@ module.exports = __webpack_require__(41).Symbol;
 
 __webpack_require__(266);
 __webpack_require__(565);
-module.exports = __webpack_require__(182).f('iterator');
+module.exports = __webpack_require__(183).f('iterator');
 
 /***/ }),
 /* 531 */
@@ -28914,7 +28914,7 @@ module.exports = function (IS_INCLUDES) {
 
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(169),
+var cof = __webpack_require__(170),
     TAG = __webpack_require__(52)('toStringTag'
 // ES3 wrong here
 ),
@@ -28963,7 +28963,7 @@ module.exports = function (object, index, value) {
 
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(94),
-    gOPS = __webpack_require__(175),
+    gOPS = __webpack_require__(176),
     pIE = __webpack_require__(129);
 module.exports = function (it) {
   var result = getKeys(it),
@@ -29012,7 +29012,7 @@ module.exports = function (it) {
 
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(169);
+var cof = __webpack_require__(170);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
@@ -29044,9 +29044,9 @@ module.exports = function (iterator, fn, value, entries) {
 "use strict";
 
 
-var create = __webpack_require__(174),
+var create = __webpack_require__(175),
     descriptor = __webpack_require__(107),
-    setToStringTag = __webpack_require__(176),
+    setToStringTag = __webpack_require__(177),
     IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -29199,7 +29199,7 @@ var meta = module.exports = {
 // 19.1.2.1 Object.assign(target, source, ...)
 
 var getKeys = __webpack_require__(94),
-    gOPS = __webpack_require__(175),
+    gOPS = __webpack_require__(176),
     pIE = __webpack_require__(129),
     toObject = __webpack_require__(108),
     IObject = __webpack_require__(257),
@@ -29304,7 +29304,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
   function (test, buggy, set) {
     try {
-      set = __webpack_require__(170)(Function.call, __webpack_require__(259).f(Object.prototype, '__proto__').set, 2);
+      set = __webpack_require__(171)(Function.call, __webpack_require__(259).f(Object.prototype, '__proto__').set, 2);
       set(test, []);
       buggy = !(test instanceof Array);
     } catch (e) {
@@ -29326,8 +29326,8 @@ module.exports = {
 "use strict";
 
 
-var toInteger = __webpack_require__(179),
-    defined = __webpack_require__(171);
+var toInteger = __webpack_require__(180),
+    defined = __webpack_require__(172);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -29350,7 +29350,7 @@ module.exports = function (TO_STRING) {
 "use strict";
 
 
-var toInteger = __webpack_require__(179),
+var toInteger = __webpack_require__(180),
     max = Math.max,
     min = Math.min;
 module.exports = function (index, length) {
@@ -29379,7 +29379,7 @@ module.exports = __webpack_require__(41).getIteratorMethod = function (it) {
 "use strict";
 
 
-var ctx = __webpack_require__(170),
+var ctx = __webpack_require__(171),
     $export = __webpack_require__(63),
     toObject = __webpack_require__(108),
     call = __webpack_require__(540),
@@ -29483,7 +29483,7 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(546) });
 
 var $export = __webpack_require__(63
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-);$export($export.S, 'Object', { create: __webpack_require__(174) });
+);$export($export.S, 'Object', { create: __webpack_require__(175) });
 
 /***/ }),
 /* 557 */
@@ -29565,20 +29565,20 @@ var global = __webpack_require__(64),
     redefine = __webpack_require__(264),
     META = __webpack_require__(545).KEY,
     $fails = __webpack_require__(92),
-    shared = __webpack_require__(178),
-    setToStringTag = __webpack_require__(176),
+    shared = __webpack_require__(179),
+    setToStringTag = __webpack_require__(177),
     uid = __webpack_require__(130),
     wks = __webpack_require__(52),
-    wksExt = __webpack_require__(182),
-    wksDefine = __webpack_require__(181),
+    wksExt = __webpack_require__(183),
+    wksDefine = __webpack_require__(182),
     keyOf = __webpack_require__(544),
     enumKeys = __webpack_require__(536),
     isArray = __webpack_require__(539),
     anObject = __webpack_require__(91),
     toIObject = __webpack_require__(82),
-    toPrimitive = __webpack_require__(180),
+    toPrimitive = __webpack_require__(181),
     createDesc = __webpack_require__(107),
-    _create = __webpack_require__(174),
+    _create = __webpack_require__(175),
     gOPNExt = __webpack_require__(548),
     $GOPD = __webpack_require__(259),
     $DP = __webpack_require__(65),
@@ -29710,9 +29710,9 @@ if (!USE_NATIVE) {
   $DP.f = $defineProperty;
   __webpack_require__(260).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(129).f = $propertyIsEnumerable;
-  __webpack_require__(175).f = $getOwnPropertySymbols;
+  __webpack_require__(176).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(173)) {
+  if (DESCRIPTORS && !__webpack_require__(174)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -29805,7 +29805,7 @@ setToStringTag(global.JSON, 'JSON', true);
 "use strict";
 
 
-__webpack_require__(181)('asyncIterator');
+__webpack_require__(182)('asyncIterator');
 
 /***/ }),
 /* 564 */
@@ -29814,7 +29814,7 @@ __webpack_require__(181)('asyncIterator');
 "use strict";
 
 
-__webpack_require__(181)('observable');
+__webpack_require__(182)('observable');
 
 /***/ }),
 /* 565 */
@@ -29851,7 +29851,7 @@ for (var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList
  */
 
 !function (root, name, definition) {
-  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(875)(name, definition);else root[name] = definition();
+  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(876)(name, definition);else root[name] = definition();
 }(undefined, 'bowser', function () {
   /**
     * See useragents.js for examples of navigator.userAgent
@@ -31523,11 +31523,11 @@ var _invariant = __webpack_require__(112);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(185);
+var _LocationUtils = __webpack_require__(186);
 
 var _PathUtils = __webpack_require__(111);
 
-var _createTransitionManager = __webpack_require__(186);
+var _createTransitionManager = __webpack_require__(187);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -31842,11 +31842,11 @@ var _invariant = __webpack_require__(112);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(185);
+var _LocationUtils = __webpack_require__(186);
 
 var _PathUtils = __webpack_require__(111);
 
-var _createTransitionManager = __webpack_require__(186);
+var _createTransitionManager = __webpack_require__(187);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -32185,9 +32185,9 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _PathUtils = __webpack_require__(111);
 
-var _LocationUtils = __webpack_require__(185);
+var _LocationUtils = __webpack_require__(186);
 
-var _createTransitionManager = __webpack_require__(186);
+var _createTransitionManager = __webpack_require__(187);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -32391,7 +32391,7 @@ var _getPrefixedKeyframes = __webpack_require__(610);
 
 var _getPrefixedKeyframes2 = _interopRequireDefault(_getPrefixedKeyframes);
 
-var _capitalizeString = __webpack_require__(187);
+var _capitalizeString = __webpack_require__(188);
 
 var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
 
@@ -33009,7 +33009,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = calc;
 
-var _isPrefixedValue = __webpack_require__(183);
+var _isPrefixedValue = __webpack_require__(184);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -33142,7 +33142,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = gradient;
 
-var _isPrefixedValue = __webpack_require__(183);
+var _isPrefixedValue = __webpack_require__(184);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
@@ -33218,11 +33218,11 @@ var _hyphenateProperty = __webpack_require__(267);
 
 var _hyphenateProperty2 = _interopRequireDefault(_hyphenateProperty);
 
-var _isPrefixedValue = __webpack_require__(183);
+var _isPrefixedValue = __webpack_require__(184);
 
 var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
 
-var _capitalizeString = __webpack_require__(187);
+var _capitalizeString = __webpack_require__(188);
 
 var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
 
@@ -33473,7 +33473,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = prefixProperty;
 
-var _capitalizeString = __webpack_require__(187);
+var _capitalizeString = __webpack_require__(188);
 
 var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
 
@@ -36002,7 +36002,7 @@ function stubFalse() {
 }
 
 module.exports = merge;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(217)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(218)(module)))
 
 /***/ }),
 /* 623 */
@@ -36830,7 +36830,7 @@ var _keycode = __webpack_require__(131);
 
 var _keycode2 = _interopRequireDefault(_keycode);
 
-var _events = __webpack_require__(194);
+var _events = __webpack_require__(195);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -37592,7 +37592,7 @@ var _propTypes3 = __webpack_require__(66);
 
 var _propTypes4 = _interopRequireDefault(_propTypes3);
 
-var _EnhancedButton = __webpack_require__(190);
+var _EnhancedButton = __webpack_require__(191);
 
 var _EnhancedButton2 = _interopRequireDefault(_EnhancedButton);
 
@@ -37604,7 +37604,7 @@ var _Tooltip = __webpack_require__(657);
 
 var _Tooltip2 = _interopRequireDefault(_Tooltip);
 
-var _childUtils = __webpack_require__(193);
+var _childUtils = __webpack_require__(194);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -37933,7 +37933,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _List = __webpack_require__(189);
+var _List = __webpack_require__(190);
 
 var _List2 = _interopRequireDefault(_List);
 
@@ -37983,7 +37983,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.makeSelectable = exports.ListItem = exports.List = undefined;
 
-var _List2 = __webpack_require__(189);
+var _List2 = __webpack_require__(190);
 
 var _List3 = _interopRequireDefault(_List2);
 
@@ -39028,9 +39028,9 @@ var _transitions2 = _interopRequireDefault(_transitions);
 
 var _colorManipulator = __webpack_require__(114);
 
-var _childUtils = __webpack_require__(193);
+var _childUtils = __webpack_require__(194);
 
-var _EnhancedButton = __webpack_require__(190);
+var _EnhancedButton = __webpack_require__(191);
 
 var _EnhancedButton2 = _interopRequireDefault(_EnhancedButton);
 
@@ -40226,7 +40226,7 @@ var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactEventListener = __webpack_require__(211);
+var _reactEventListener = __webpack_require__(212);
 
 var _reactEventListener2 = _interopRequireDefault(_reactEventListener);
 
@@ -41565,7 +41565,7 @@ var _shallowEqual = __webpack_require__(84);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-var _autoPrefix = __webpack_require__(192);
+var _autoPrefix = __webpack_require__(193);
 
 var _autoPrefix2 = _interopRequireDefault(_autoPrefix);
 
@@ -41798,7 +41798,7 @@ var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _events = __webpack_require__(194);
+var _events = __webpack_require__(195);
 
 var _events2 = _interopRequireDefault(_events);
 
@@ -42270,7 +42270,7 @@ var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _autoPrefix = __webpack_require__(192);
+var _autoPrefix = __webpack_require__(193);
 
 var _autoPrefix2 = _interopRequireDefault(_autoPrefix);
 
@@ -42706,7 +42706,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _colors = __webpack_require__(191);
+var _colors = __webpack_require__(192);
 
 var _colorManipulator = __webpack_require__(114);
 
@@ -42799,7 +42799,7 @@ var _typography = __webpack_require__(662);
 
 var _typography2 = _interopRequireDefault(_typography);
 
-var _colors = __webpack_require__(191);
+var _colors = __webpack_require__(192);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -43175,7 +43175,7 @@ var _classCallCheck2 = __webpack_require__(7);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _colors = __webpack_require__(191);
+var _colors = __webpack_require__(192);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -44471,7 +44471,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(4);
   var warning = __webpack_require__(5);
-  var ReactPropTypesSecret = __webpack_require__(195);
+  var ReactPropTypesSecret = __webpack_require__(196);
   var loggedTypeFailures = {};
 }
 
@@ -44538,7 +44538,7 @@ module.exports = checkPropTypes;
 
 var emptyFunction = __webpack_require__(31);
 var invariant = __webpack_require__(4);
-var ReactPropTypesSecret = __webpack_require__(195);
+var ReactPropTypesSecret = __webpack_require__(196);
 
 module.exports = function () {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -45590,8 +45590,8 @@ var ReactDOMComponentTree = __webpack_require__(24);
 var ReactUpdates = __webpack_require__(53);
 var SyntheticEvent = __webpack_require__(59);
 
-var getEventTarget = __webpack_require__(207);
-var isEventSupported = __webpack_require__(208);
+var getEventTarget = __webpack_require__(208);
+var isEventSupported = __webpack_require__(209);
 var isTextInputElement = __webpack_require__(311);
 
 var eventTypes = {
@@ -46566,8 +46566,8 @@ module.exports = HTMLDOMPropertyConfig;
 var ReactReconciler = __webpack_require__(99);
 
 var instantiateReactComponent = __webpack_require__(310);
-var KeyEscapeUtils = __webpack_require__(198);
-var shouldUpdateReactComponent = __webpack_require__(209);
+var KeyEscapeUtils = __webpack_require__(199);
+var shouldUpdateReactComponent = __webpack_require__(210);
 var traverseAllChildren = __webpack_require__(313);
 var warning = __webpack_require__(5);
 
@@ -46723,7 +46723,7 @@ module.exports = ReactChildReconciler;
 
 
 
-var DOMChildrenOperations = __webpack_require__(196);
+var DOMChildrenOperations = __webpack_require__(197);
 var ReactDOMIDOperations = __webpack_require__(705);
 
 /**
@@ -46764,9 +46764,9 @@ var _prodInvariant = __webpack_require__(15),
     _assign = __webpack_require__(20);
 
 var React = __webpack_require__(101);
-var ReactComponentEnvironment = __webpack_require__(200);
+var ReactComponentEnvironment = __webpack_require__(201);
 var ReactCurrentOwner = __webpack_require__(54);
-var ReactErrorUtils = __webpack_require__(201);
+var ReactErrorUtils = __webpack_require__(202);
 var ReactInstanceMap = __webpack_require__(115);
 var ReactInstrumentation = __webpack_require__(43);
 var ReactNodeTypes = __webpack_require__(304);
@@ -46779,7 +46779,7 @@ if (process.env.NODE_ENV !== 'production') {
 var emptyObject = __webpack_require__(109);
 var invariant = __webpack_require__(4);
 var shallowEqual = __webpack_require__(110);
-var shouldUpdateReactComponent = __webpack_require__(209);
+var shouldUpdateReactComponent = __webpack_require__(210);
 var warning = __webpack_require__(5);
 
 var CompositeTypes = {
@@ -47795,7 +47795,7 @@ var _prodInvariant = __webpack_require__(15),
 var AutoFocusUtils = __webpack_require__(687);
 var CSSPropertyOperations = __webpack_require__(689);
 var DOMLazyTree = __webpack_require__(96);
-var DOMNamespaces = __webpack_require__(197);
+var DOMNamespaces = __webpack_require__(198);
 var DOMProperty = __webpack_require__(67);
 var DOMPropertyOperations = __webpack_require__(296);
 var EventPluginHub = __webpack_require__(97);
@@ -47814,9 +47814,9 @@ var ReactServerRenderingTransaction = __webpack_require__(730);
 var emptyFunction = __webpack_require__(31);
 var escapeTextContentForBrowser = __webpack_require__(138);
 var invariant = __webpack_require__(4);
-var isEventSupported = __webpack_require__(208);
+var isEventSupported = __webpack_require__(209);
 var shallowEqual = __webpack_require__(110);
-var validateDOMNesting = __webpack_require__(210);
+var validateDOMNesting = __webpack_require__(211);
 var warning = __webpack_require__(5);
 
 var Flags = ReactDOMComponentFlags;
@@ -48794,7 +48794,7 @@ module.exports = ReactDOMComponent;
 
 
 
-var validateDOMNesting = __webpack_require__(210);
+var validateDOMNesting = __webpack_require__(211);
 
 var DOC_NODE_TYPE = 9;
 
@@ -48922,7 +48922,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var DOMChildrenOperations = __webpack_require__(196);
+var DOMChildrenOperations = __webpack_require__(197);
 var ReactDOMComponentTree = __webpack_require__(24);
 
 /**
@@ -48965,7 +48965,7 @@ var _prodInvariant = __webpack_require__(15),
     _assign = __webpack_require__(20);
 
 var DOMPropertyOperations = __webpack_require__(296);
-var LinkedValueUtils = __webpack_require__(199);
+var LinkedValueUtils = __webpack_require__(200);
 var ReactDOMComponentTree = __webpack_require__(24);
 var ReactUpdates = __webpack_require__(53);
 
@@ -49749,13 +49749,13 @@ module.exports = ReactDOMSelection;
 var _prodInvariant = __webpack_require__(15),
     _assign = __webpack_require__(20);
 
-var DOMChildrenOperations = __webpack_require__(196);
+var DOMChildrenOperations = __webpack_require__(197);
 var DOMLazyTree = __webpack_require__(96);
 var ReactDOMComponentTree = __webpack_require__(24);
 
 var escapeTextContentForBrowser = __webpack_require__(138);
 var invariant = __webpack_require__(4);
-var validateDOMNesting = __webpack_require__(210);
+var validateDOMNesting = __webpack_require__(211);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -49919,7 +49919,7 @@ module.exports = ReactDOMTextComponent;
 var _prodInvariant = __webpack_require__(15),
     _assign = __webpack_require__(20);
 
-var LinkedValueUtils = __webpack_require__(199);
+var LinkedValueUtils = __webpack_require__(200);
 var ReactDOMComponentTree = __webpack_require__(24);
 var ReactUpdates = __webpack_require__(53);
 
@@ -50944,7 +50944,7 @@ var PooledClass = __webpack_require__(83);
 var ReactDOMComponentTree = __webpack_require__(24);
 var ReactUpdates = __webpack_require__(53);
 
-var getEventTarget = __webpack_require__(207);
+var getEventTarget = __webpack_require__(208);
 var getUnboundedScrollPosition = __webpack_require__(580);
 
 /**
@@ -51138,7 +51138,7 @@ module.exports = ReactHostOperationHistoryHook;
 var DOMProperty = __webpack_require__(67);
 var EventPluginHub = __webpack_require__(97);
 var EventPluginUtils = __webpack_require__(134);
-var ReactComponentEnvironment = __webpack_require__(200);
+var ReactComponentEnvironment = __webpack_require__(201);
 var ReactEmptyComponent = __webpack_require__(299);
 var ReactBrowserEventEmitter = __webpack_require__(135);
 var ReactHostComponent = __webpack_require__(301);
@@ -51274,7 +51274,7 @@ module.exports = ReactMarkupChecksum;
 
 var _prodInvariant = __webpack_require__(15);
 
-var ReactComponentEnvironment = __webpack_require__(200);
+var ReactComponentEnvironment = __webpack_require__(201);
 var ReactInstanceMap = __webpack_require__(115);
 var ReactInstrumentation = __webpack_require__(43);
 
@@ -51867,7 +51867,7 @@ var ReactBrowserEventEmitter = __webpack_require__(135);
 var ReactInputSelection = __webpack_require__(302);
 var ReactInstrumentation = __webpack_require__(43);
 var Transaction = __webpack_require__(137);
-var ReactUpdateQueue = __webpack_require__(202);
+var ReactUpdateQueue = __webpack_require__(203);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -52242,7 +52242,7 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-var ReactUpdateQueue = __webpack_require__(202);
+var ReactUpdateQueue = __webpack_require__(203);
 
 var warning = __webpack_require__(5);
 
@@ -52920,7 +52920,7 @@ var SyntheticUIEvent = __webpack_require__(100);
 var SyntheticWheelEvent = __webpack_require__(745);
 
 var emptyFunction = __webpack_require__(31);
-var getEventCharCode = __webpack_require__(205);
+var getEventCharCode = __webpack_require__(206);
 var invariant = __webpack_require__(4);
 
 /**
@@ -53389,9 +53389,9 @@ module.exports = SyntheticInputEvent;
 
 var SyntheticUIEvent = __webpack_require__(100);
 
-var getEventCharCode = __webpack_require__(205);
+var getEventCharCode = __webpack_require__(206);
 var getEventKey = __webpack_require__(751);
-var getEventModifierState = __webpack_require__(206);
+var getEventModifierState = __webpack_require__(207);
 
 /**
  * @interface KeyboardEvent
@@ -53478,7 +53478,7 @@ module.exports = SyntheticKeyboardEvent;
 
 var SyntheticUIEvent = __webpack_require__(100);
 
-var getEventModifierState = __webpack_require__(206);
+var getEventModifierState = __webpack_require__(207);
 
 /**
  * @interface TouchEvent
@@ -53927,7 +53927,7 @@ module.exports = findDOMNode;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var KeyEscapeUtils = __webpack_require__(198);
+var KeyEscapeUtils = __webpack_require__(199);
 var traverseAllChildren = __webpack_require__(313);
 var warning = __webpack_require__(5);
 
@@ -54008,7 +54008,7 @@ module.exports = flattenChildren;
 
 
 
-var getEventCharCode = __webpack_require__(205);
+var getEventCharCode = __webpack_require__(206);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -54869,7 +54869,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _PropTypes = __webpack_require__(317);
 
-var _warning = __webpack_require__(212);
+var _warning = __webpack_require__(213);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -55385,7 +55385,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = verifySubselectors;
 
-var _warning = __webpack_require__(212);
+var _warning = __webpack_require__(213);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -56032,7 +56032,7 @@ var _createMemoryHistory = __webpack_require__(591);
 
 var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-var _Router = __webpack_require__(213);
+var _Router = __webpack_require__(214);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -56334,7 +56334,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _PathUtils = __webpack_require__(111);
 
-var _Router = __webpack_require__(213);
+var _Router = __webpack_require__(214);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -56543,7 +56543,7 @@ var _warning = __webpack_require__(29);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _matchPath = __webpack_require__(214);
+var _matchPath = __webpack_require__(215);
 
 var _matchPath2 = _interopRequireDefault(_matchPath);
 
@@ -56729,7 +56729,7 @@ var EventPluginUtils = __webpack_require__(134);
 var EventPropagators = __webpack_require__(98);
 var SyntheticUIEvent = __webpack_require__(100);
 var TouchEventUtils = __webpack_require__(791);
-var ViewportMetrics = __webpack_require__(203);
+var ViewportMetrics = __webpack_require__(204);
 
 var keyOf = __webpack_require__(585);
 var topLevelTypes = EventConstants.topLevelTypes;
@@ -57645,10 +57645,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var _prodInvariant = __webpack_require__(69),
     _assign = __webpack_require__(20);
 
-var ReactComponent = __webpack_require__(215);
+var ReactComponent = __webpack_require__(216);
 var ReactElement = __webpack_require__(68);
 var ReactPropTypeLocationNames = __webpack_require__(325);
-var ReactNoopUpdateQueue = __webpack_require__(216);
+var ReactNoopUpdateQueue = __webpack_require__(217);
 
 var emptyObject = __webpack_require__(109);
 var invariant = __webpack_require__(4);
@@ -58594,8 +58594,8 @@ module.exports = ReactPropTypesSecret;
 
 var _assign = __webpack_require__(20);
 
-var ReactComponent = __webpack_require__(215);
-var ReactNoopUpdateQueue = __webpack_require__(216);
+var ReactComponent = __webpack_require__(216);
+var ReactNoopUpdateQueue = __webpack_require__(217);
 
 var emptyObject = __webpack_require__(109);
 
@@ -59739,7 +59739,7 @@ exports.default = combineReducers;
 
 var _createStore = __webpack_require__(330);
 
-var _isPlainObject = __webpack_require__(188);
+var _isPlainObject = __webpack_require__(189);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
@@ -60587,7 +60587,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 // object, this seems to be the most reliable technique that does not
 // use indirect eval (which violates Content Security Policy).
 (typeof global === "undefined" ? "undefined" : _typeof(global)) === "object" ? global : (typeof window === "undefined" ? "undefined" : _typeof(window)) === "object" ? window : (typeof self === "undefined" ? "undefined" : _typeof(self)) === "object" ? self : undefined);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(217)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(218)(module)))
 
 /***/ }),
 /* 824 */
@@ -61050,7 +61050,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(217)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85), __webpack_require__(218)(module)))
 
 /***/ }),
 /* 836 */
@@ -61154,7 +61154,7 @@ exports.onProjectChange = onProjectChange;
 exports.onSortChange = onSortChange;
 exports.onFiltersReset = onFiltersReset;
 
-var _AppConstants = __webpack_require__(218);
+var _AppConstants = __webpack_require__(143);
 
 var _AppConstants2 = _interopRequireDefault(_AppConstants);
 
@@ -61359,25 +61359,156 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _reactRedux = __webpack_require__(316);
+
+var _reactRouterDom = __webpack_require__(28);
+
 var _redux = __webpack_require__(116);
 
-var _users = __webpack_require__(842);
+var _pageActions = __webpack_require__(838);
 
-var _users2 = _interopRequireDefault(_users);
+var pageActions = _interopRequireWildcard(_pageActions);
 
-var _tasks = __webpack_require__(841);
+var _App = __webpack_require__(855);
+
+var _App2 = _interopRequireDefault(_App);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+//simple helper function, which return all filters from state by given key.
+function getFilters(key, tasks) {
+	return tasks.reduce(function (acc, task) {
+		if (!acc.includes(task[key])) {
+			return [].concat(_toConsumableArray(acc), [task[key]]);
+		}
+		return acc;
+	}, []);
+}
+
+//getting visible tasks from state.
+function getVisibleTasks(tasks, creator, projects, sorting) {
+	return tasks.filter(function (t) {
+		return (creator == 'All' || creator == t.creator) && (projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project);
+	}).sort(function (a, b) {
+		if (sorting == 'Random') {
+			return;
+		} else if (sorting == 'Name, A to Z') {
+			return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
+		} else if (sorting == 'Name, Z to A') {
+			return a.title < b.title ? 1 : a.title > b.title ? -1 : 0;
+		} else if (sorting == 'Progress, low to hight') {
+			return parseInt(a.progress) > parseInt(b.progress) ? 1 : parseInt(a.progress) < parseInt(b.progress) ? -1 : 0;
+		} else if (sorting == 'Progress, hight to low') {
+			return parseInt(a.progress) < parseInt(b.progress) ? 1 : parseInt(a.progress) > parseInt(b.progress) ? -1 : 0;
+		}
+	});
+}
+
+function mapStateToProps(state, props) {
+	var _state$user = state.user,
+	    preloader = _state$user.preloader,
+	    isSignIn = _state$user.isSignIn,
+	    showEmailError = _state$user.showEmailError,
+	    showPassError = _state$user.showPassError,
+	    currentUser = _state$user.currentUser,
+	    users = _state$user.users;
+	var _state$tasks = state.tasks,
+	    creator = _state$tasks.creator,
+	    projects = _state$tasks.projects,
+	    sorting = _state$tasks.sorting,
+	    tasks = _state$tasks.tasks;
+
+	return {
+		contents: state.contents,
+		currentUser: currentUser,
+		showEmailError: showEmailError,
+		showPassError: showPassError,
+		isSignIn: isSignIn,
+		preloader: preloader,
+		tasks: getVisibleTasks(tasks, creator, projects, sorting),
+		creatorsForFilters: getFilters('creator', tasks),
+		projectsForFilters: getFilters('project', tasks),
+		creator: creator,
+		projects: projects,
+		sorting: sorting
+	};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		pageActions: (0, _redux.bindActionCreators)(pageActions, dispatch)
+	};
+}
+
+exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_App2.default));
+
+/***/ }),
+/* 841 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = content;
+
+var _AppConstants = __webpack_require__(143);
+
+var _AppConstants2 = _interopRequireDefault(_AppConstants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function content() {
+	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : JSON.parse(localStorage.getItem('databaseTTS'))[0].contents;
+	var action = arguments[1];
+
+	switch (action.type) {
+		default:
+			return state;
+	}
+}
+
+/***/ }),
+/* 842 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _redux = __webpack_require__(116);
+
+var _user = __webpack_require__(844);
+
+var _user2 = _interopRequireDefault(_user);
+
+var _tasks = __webpack_require__(843);
 
 var _tasks2 = _interopRequireDefault(_tasks);
+
+var _contents = __webpack_require__(841);
+
+var _contents2 = _interopRequireDefault(_contents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
-	users: _users2.default,
-	tasks: _tasks2.default
+	user: _user2.default,
+	tasks: _tasks2.default,
+	contents: _contents2.default
 });
 
 /***/ }),
-/* 841 */
+/* 843 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61391,7 +61522,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.default = tasks;
 
-var _AppConstants = __webpack_require__(218);
+var _AppConstants = __webpack_require__(143);
 
 var _AppConstants2 = _interopRequireDefault(_AppConstants);
 
@@ -61443,7 +61574,7 @@ function tasks() {
 }
 
 /***/ }),
-/* 842 */
+/* 844 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61457,7 +61588,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.default = users;
 
-var _AppConstants = __webpack_require__(218);
+var _AppConstants = __webpack_require__(143);
 
 var _AppConstants2 = _interopRequireDefault(_AppConstants);
 
@@ -61504,24 +61635,24 @@ function users() {
 }
 
 /***/ }),
-/* 843 */
+/* 845 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(184)(true);
+exports = module.exports = __webpack_require__(185)(true);
 // imports
 
 
 // module
-exports.push([module.i, "#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px 30px 15px 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%;\n      cursor: pointer; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n", "", {"version":3,"sources":["D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/components/Header/src/components/Header/Header.sass"],"names":[],"mappings":"AAAA;EACC,cAAa,EAAI;;AAElB;EACC,yCAAoC;EACpC,gBAAe;EACf,uBAAsB;EACtB,mBAAkB;EAClB,WAAU,EAwM6B;EAtMtC;IACC,cAAa;IACb,YAAW;IACX,cAAa;IACb,YAAW;IACX,aAAY,EAoBQ;IAzBrB;MAOE,eAAc;MACd,YAAW;MACX,YAAW;MACX,iBAAgB;MAChB,mBAAkB;MAClB,0BAAyB,EAaR;MAzBnB;QAeG,YAAW;QACX,YAAW;QACX,aAAY;QACZ,mBAAkB;QAClB,QAAO;QACP,SAAQ;QACR,uBAAsB;QACtB,kCAAiC;QACjC,0BAAyB,EAAI;MAvBhC;QAyBI,UAAS,EAAI;EAClB;IAEE,YAAW;IACX,eAAc;IACd,YAAW,EAAI;EACjB;IACC,YAAW;IACX,0BAAyB,EAYD;IAXxB;MACC,sBAAqB;MACrB,uBAAsB;MACtB,YAAW;MACX,aAAY;MACZ,kBAAiB,EAAI;IACtB;MACC,sBAAqB;MACrB,uBAAsB;MACtB,gBAAe,EAEM;MADrB;QACC,eAAc,EAAI;EACrB;IACC,YAAW,EAsF4B;IArFvC;MACC,WAAU;MACV,UAAS;MACT,sBAAqB,EAIA;MAPtB;QAKE,YAAW;QACX,YAAW;QACX,eAAc,EAAI;IACpB;MACC,YAAW;MACX,mBAAkB,EA0Ca;MA5ChC;QAKG,aAAY,EAAI;MAClB;QACC,wBAAuB;QACvB,gBAAe;QACf,kBAAiB;QACjB,0BAAyB;QACzB,eAAc;QACd,YAAW;QACX,sBAAqB;QACrB,0BAAyB;QACzB,mBAAkB;QAClB,gCAA+B,EAqBH;QA/B7B;UAYE,YAAW;UACX,yBAAwB;UACxB,YAAW;UACX,mBAAkB;UAClB,QAAO;UACP,SAAQ;UACR,UAAS;UACT,aAAY;UACZ,0BAAyB;UACzB,oBAAmB;UACnB,2BAA0B;UAC1B,oBAAmB,EAAG;QAvBxB;UAyBE,eAAc,EAEW;UA3B3B;YA2BG,oBAAmB,EAAG;QACxB;UACC,eAAc,EAEW;UAH1B;YAGE,oBAAmB,EAAG;MArC1B;QAwCG,eAAc,EAAI;MAxCrB;QA0CG,eAAc,EAEW;QA5C5B;UA4CI,oBAAmB,EAAG;IAC1B;MACC,cAAa;MACb,mBAAkB;MAClB,eAAc;MACd,uBAAsB;MACtB,yCAAwC,EAAG;IAE5C;MACC,oBAAmB;MACnB,gBAAe;MACf,mBAAkB;MAClB,aAAY,EAqBwB;MAzBrC;QAME,WAAU;QACV,aAAY;QACZ,QAAO;QACP,YAAW;QACX,2BAA0B,EAAI;MAC/B;QACC,eAAc,EAamB;QAdlC;UAGE,YAAW;UACX,yBAAwB;UACxB,mBAAkB;UAClB,UAAS;UACT,aAAY;UACZ,oBAAmB;UACnB,oBAAmB;UACnB,WAAU;UACV,aAAY;UACZ,QAAO;UACP,YAAW;UACX,2BAA0B,EAAI;EAClC;IACC,YAAW;IACX,mBAAkB;IAClB,qBAAoB,EA6Ba;IA5BjC;MACC,0BAAyB;MACzB,aAAY;MACZ,aAAY;MACZ,aAAY;MACZ,6BAA4B;MAC5B,mBAAkB,EAAI;IACvB;MACC,mBAAkB;MAClB,YAAW;MACX,UAAS;MACT,gBAAe;MACf,eAAc;MACd,YAAW;MACX,aAAY;MACZ,0BAAyB;MACzB,mBAAkB;MAClB,gBAAe,EAWe;MArB/B;QAYE,YAAW;QACX,eAAc;QACd,mBAAkB;QAClB,YAAW;QACX,aAAY;QACZ,gBAAe;QACf,oBAAmB;QACnB,YAAW;QACX,YAAW;QACX,yBAAwB,EAAG;EAC9B;IACC,aAAY,EA8BwB;IA7BpC;MACC,kBAAiB,EAAI;IACtB;MACC,kBAAiB,EAAI;IACtB;MACC,YAAW;MACX,aAAY;MACZ,iBAAgB;MAChB,mBAAkB;MAClB,sBAAqB;MACrB,uBAAsB;MACtB,kBAAiB;MACjB,+BAA8B;MAC9B,uBAAsB,EAGD;MAFrB;QACC,YAAW;QACX,eAAc,EAAI;IACpB;MACC,sBAAqB;MACrB,uBAAsB;MACtB,sBAAqB,EAAI;IAC1B;MAEE,2BAA0B,EAAI;IAChC;MACC,kBAAiB;MACjB,gBAAe;MACf,sBAAqB,EAEY;MALlC;QAKE,2BAA0B,EAAI;;AAIlC;EACC,yBAAwB;EACxB,mBAAkB;EAClB,UAAS,EAAI;;AACd;EACC,SAAQ;EACR,0BAAyB,EAAG;;AAC7B;EACC,WAAU,EAAI;;AACf;EACC,2BAA0B;EAC1B,UAAS,EAAI;;AAId;EACC;IACC,mBAAkB,EAAI;EACvB;IACC,eAAc,EAAI;EACnB;IACC,yBAAwB;IACxB,mBAAkB;IAClB,UAAS,EAAI;EACd;IACC,SAAQ;IACR,0BAAyB,EAAG;EAC7B;IACC,WAAU,EAAI;EACf;IACC,WAAU,EAAI;EACf;IACC,+BAA8B;IAC9B,WAAU;IACV,mBAAkB;IAClB,0BAAyB;IACzB,uBAAsB;IACtB,YAAW;IACX,qBAAoB,EAAI;EACzB;;;;;IAKC,YAAW,EAAI;EAChB;IACC,YAAW,EAAI;EAChB;IACC,aAAY;IACZ,sBAAqB;IACrB,mBAAkB,EAAI;EACvB;IACC,eAAc;IACd,iBAAgB;IAChB,iBAAgB;IAChB,mBAAkB,EAAI;EACvB;IACC,sBAAqB,EAAI;EAC1B;IACC,eAAc;IACd,2BAA0B;IAC1B,UAAS,EAAI,EAAA","file":"Header.sass","sourcesContent":["#mobNav {\n\tdisplay: none; }\n\n.header {\n\tbox-shadow: 0 1px 8px rgba(0,0,0,.3);\n\tpadding: 0 15px;\n\tbackground-color: #fff;\n\tposition: relative;\n\tz-index: 5;\n\t&__toggle {\n\t\t&Label {\n\t\t\tdisplay: none;\n\t\t\tcolor: #000;\n\t\t\tpadding: 10px;\n\t\t\twidth: 50px;\n\t\t\theight: 35px;\n\t\t\tspan {\n\t\t\t\tdisplay: block;\n\t\t\t\twidth: 30px;\n\t\t\t\theight: 3px;\n\t\t\t\tbackground: #000;\n\t\t\t\tposition: relative;\n\t\t\t\ttransition: ease 0.3s all;\n\t\t\t\t&:before,\n\t\t\t\t&:after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 6px;\n\t\t\t\t\tbackground-color: #000;\n\t\t\t\t\t-webkit-transition: ease 0.3s all;\n\t\t\t\t\ttransition: ease 0.3s all; }\n\t\t\t\t&:after {\n\t\t\t\t  top: 12px; } } } }\n\t&__dropdown {\n\t\t&:after {\n\t\t\tclear: both;\n\t\t\tdisplay: table;\n\t\t\tcontent: ''; } }\n\t&Logo {\n\t\tfloat: left;\n\t\tpadding: 15px 15px 15px 0;\n\t\t&__img {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 40px;\n\t\t\theight: 40px;\n\t\t\tmargin-right: 5px; }\n\t\t&__span {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tfont-size: 24px;\n\t\t\t&_blue {\n\t\t\t\tcolor: #4298EB; } } }\n\t&Menu {\n\t\tfloat: left;\n\t\t&__items {\n\t\t\tpadding: 0;\n\t\t\tmargin: 0;\n\t\t\tlist-style-type: none;\n\t\t\t&:after {\n\t\t\t\tcontent: '';\n\t\t\t\tclear: both;\n\t\t\t\tdisplay: table; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\tposition: relative;\n\t\t\t&:last-child {\n\t\t\t\t.headerMenu__itemLink {\n\t\t\t\t\tborder: none; } }\n\t\t\t&Link {\n\t\t\t\tpadding: 28px 20px 22px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tline-height: 20px;\n\t\t\t\ttext-transform: uppercase;\n\t\t\t\tdisplay: block;\n\t\t\t\tcolor: #000;\n\t\t\t\ttext-decoration: none;\n\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\tposition: relative;\n\t\t\t\tborder-right: 1px solid #e8e8e8;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\ttransform-origin: 50% 100%;\n\t\t\t\t\ttransform: scale(0); }\n\t\t\t\t&:focus {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } }\n\t\t\t\t&_active {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } }\n\t\t\t&:hover {\n\t\t\t\t.headerMenu__items_submenu {\n\t\t\t\t\tdisplay: block; }\n\t\t\t\t>.headerMenu__itemLink {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } } }\n\t\t&__items_submenu {\n\t\t\tdisplay: none;\n\t\t\tposition: absolute;\n\t\t\tpadding: 5px 0;\n\t\t\tbackground-color: #fff;\n\t\t\tbox-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n\t\t&__item_submenu {}\n\t\t&__itemLink_submenu {\n\t\t\twhite-space: nowrap;\n\t\t\tfont-size: 14px;\n\t\t\tpadding: 15px 20px;\n\t\t\tborder: none;\n\t\t\t&:before {\n\t\t\t\twidth: 4px;\n\t\t\t\theight: 100%;\n\t\t\t\tleft: 0;\n\t\t\t\tright: auto;\n\t\t\t\ttransform-origin: 100% 50%; }\n\t\t\t&_active {\n\t\t\t\tcolor: #4298EB;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransform: scale(1);\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: auto;\n\t\t\t\t\ttransform-origin: 100% 50%; } } } }\n\t&Search {\n\t\tfloat: left;\n\t\tposition: relative;\n\t\tpadding: 10px 0 10px;\n\t\t&__input {\n\t\t\tbackground-color: #e5e5e5;\n\t\t\tborder: none;\n\t\t\twidth: 250px;\n\t\t\theight: 48px;\n\t\t\tpadding: 15px 30px 15px 15px;\n\t\t\tborder-radius: 4px; }\n\t\t&__icon {\n\t\t\tposition: absolute;\n\t\t\tright: 15px;\n\t\t\ttop: 25px;\n\t\t\tfont-size: 45px;\n\t\t\tdisplay: block;\n\t\t\twidth: 15px;\n\t\t\theight: 15px;\n\t\t\tborder: 2px solid #989898;\n\t\t\tborder-radius: 50%;\n\t\t\tcursor: pointer;\n\t\t\t&:before {\n\t\t\t\tcontent: \"\";\n\t\t\t\tdisplay: block;\n\t\t\t\tposition: absolute;\n\t\t\t\tright: -7px;\n\t\t\t\tbottom: -4px;\n\t\t\t\tborder-width: 0;\n\t\t\t\tbackground: #989898;\n\t\t\t\twidth: 10px;\n\t\t\t\theight: 3px;\n\t\t\t\ttransform: rotate(45deg); } } }\n\t&User {\n\t\tfloat: right;\n\t\t&__inner {\n\t\t\tpadding-top: 18px; }\n\t\t&__signin {\n\t\t\tpadding-top: 25px; }\n\t\t&__avatar {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t\toverflow: hidden;\n\t\t\tborder-radius: 50%;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tmargin-right: 5px;\n\t\t\t-webkit-background-size: cover;\n\t\t\tbackground-size: cover;\n\t\t\t&Img {\n\t\t\t\twidth: 100%;\n\t\t\t\tdisplay: block; } }\n\t\t&__name {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none; }\n\t\t&__link:hover {\n\t\t\t.headerUser__name {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&__exit {\n\t\t\tmargin-left: 15px;\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } } } }\n\n\n\n#mobNav:checked + .header__toggleLabel span {\n\ttransform: rotate(45deg);\n\tposition: relative;\n\ttop: 10px; }\n#mobNav:checked + .header__toggleLabel span:before {\n\ttop: 0px;\n\ttransform: rotate(-90deg); }\n#mobNav:checked + .header__toggleLabel span:after {\n\topacity: 0; }\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n\ttransform: translate(0, 0);\n\ttop: 34px; }\n\n\n\n@media only screen and (max-width : 1100px) {\n\t.header__toggle {\n\t\tpadding: 10px 15px; }\n\t.header__toggleLabel {\n\t\tdisplay: block; }\n\t#mobNav:checked + .header__toggleLabel span {\n\t\ttransform: rotate(45deg);\n\t\tposition: relative;\n\t\ttop: 10px; }\n\t#mobNav:checked + .header__toggleLabel span:before {\n\t\ttop: 0px;\n\t\ttransform: rotate(-90deg); }\n\t#mobNav:checked + .header__toggleLabel span:after {\n\t\topacity: 0; }\n\t.header {\n\t\tpadding: 0; }\n\t.header__dropdown {\n\t\ttransform: translate(0, -100%);\n\t\ttop: -100%;\n\t\tposition: absolute;\n\t\ttransition: 0.5s all ease;\n\t\tbackground-color: #fff;\n\t\twidth: 100%;\n\t\tpadding: 0 15px 25px; }\n\t.headerLogo,\n\t.headerMenu,\n\t.headerSearch,\n\t.headerUser,\n\t.headerMenu__item {\n\t\tfloat: none; }\n\t.headerSearch__input {\n\t\twidth: 100%; }\n\t.headerMenu__itemLink {\n\t\tborder: none;\n\t\tdisplay: inline-block;\n\t\tpadding: 10px 20px; }\n\t.headerMenu__items_submenu {\n\t\tdisplay: block;\n\t\tposition: static;\n\t\tbox-shadow: none;\n\t\tpadding-left: 30px; }\n\t.headerMenu__itemLink_submenu {\n\t\tpadding: 5px 0 0 10px; }\n\t#mobNav:checked + .header__dropdown {\n\t\tdisplay: block;\n\t\ttransform: translate(0, 0);\n\t\ttop: 50px; } }\n"],"sourceRoot":""}]);
+exports.push([module.i, "#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n    .headerSearch__items {\n      list-style-type: none;\n      margin: 0;\n      padding: 0 10px;\n      width: 250px;\n      position: absolute;\n      border-radius: 4px;\n      background-color: #e5e5e5; }\n    .headerSearch__item {\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      margin: 10px 0; }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: searchfield; }\n\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: searchfield-cancel-button; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n", "", {"version":3,"sources":["D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/components/Header/src/components/Header/Header.sass"],"names":[],"mappings":"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","file":"Header.sass","sourcesContent":["#mobNav {\n\tdisplay: none; }\n\n.header {\n\tbox-shadow: 0 1px 8px rgba(0,0,0,.3);\n\tpadding: 0 15px;\n\tbackground-color: #fff;\n\tposition: relative;\n\tz-index: 5;\n\t&__toggle {\n\t\t&Label {\n\t\t\tdisplay: none;\n\t\t\tcolor: #000;\n\t\t\tpadding: 10px;\n\t\t\twidth: 50px;\n\t\t\theight: 35px;\n\t\t\tspan {\n\t\t\t\tdisplay: block;\n\t\t\t\twidth: 30px;\n\t\t\t\theight: 3px;\n\t\t\t\tbackground: #000;\n\t\t\t\tposition: relative;\n\t\t\t\ttransition: ease 0.3s all;\n\t\t\t\t&:before,\n\t\t\t\t&:after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 6px;\n\t\t\t\t\tbackground-color: #000;\n\t\t\t\t\t-webkit-transition: ease 0.3s all;\n\t\t\t\t\ttransition: ease 0.3s all; }\n\t\t\t\t&:after {\n\t\t\t\t  top: 12px; } } } }\n\t&__dropdown {\n\t\t&:after {\n\t\t\tclear: both;\n\t\t\tdisplay: table;\n\t\t\tcontent: ''; } }\n\t&Logo {\n\t\tfloat: left;\n\t\tpadding: 15px 15px 15px 0;\n\t\t&__img {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 40px;\n\t\t\theight: 40px;\n\t\t\tmargin-right: 5px; }\n\t\t&__span {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tfont-size: 24px;\n\t\t\t&_blue {\n\t\t\t\tcolor: #4298EB; } } }\n\t&Menu {\n\t\tfloat: left;\n\t\t&__items {\n\t\t\tpadding: 0;\n\t\t\tmargin: 0;\n\t\t\tlist-style-type: none;\n\t\t\t&:after {\n\t\t\t\tcontent: '';\n\t\t\t\tclear: both;\n\t\t\t\tdisplay: table; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\tposition: relative;\n\t\t\t&:last-child {\n\t\t\t\t.headerMenu__itemLink {\n\t\t\t\t\tborder: none; } }\n\t\t\t&Link {\n\t\t\t\tpadding: 28px 20px 22px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tline-height: 20px;\n\t\t\t\ttext-transform: uppercase;\n\t\t\t\tdisplay: block;\n\t\t\t\tcolor: #000;\n\t\t\t\ttext-decoration: none;\n\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\tposition: relative;\n\t\t\t\tborder-right: 1px solid #e8e8e8;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\ttransform-origin: 50% 100%;\n\t\t\t\t\ttransform: scale(0); }\n\t\t\t\t&:focus {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } }\n\t\t\t\t&_active {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } }\n\t\t\t&:hover {\n\t\t\t\t.headerMenu__items_submenu {\n\t\t\t\t\tdisplay: block; }\n\t\t\t\t>.headerMenu__itemLink {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } } }\n\t\t&__items_submenu {\n\t\t\tdisplay: none;\n\t\t\tposition: absolute;\n\t\t\tpadding: 5px 0;\n\t\t\tbackground-color: #fff;\n\t\t\tbox-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n\t\t&__item_submenu {}\n\t\t&__itemLink_submenu {\n\t\t\twhite-space: nowrap;\n\t\t\tfont-size: 14px;\n\t\t\tpadding: 15px 20px;\n\t\t\tborder: none;\n\t\t\t&:before {\n\t\t\t\twidth: 4px;\n\t\t\t\theight: 100%;\n\t\t\t\tleft: 0;\n\t\t\t\tright: auto;\n\t\t\t\ttransform-origin: 100% 50%; }\n\t\t\t&_active {\n\t\t\t\tcolor: #4298EB;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransform: scale(1);\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: auto;\n\t\t\t\t\ttransform-origin: 100% 50%; } } } }\n\t&Search {\n\t\tfloat: left;\n\t\tposition: relative;\n\t\tpadding: 10px 0 10px;\n\t\t&__input {\n\t\t\tbackground-color: #e5e5e5;\n\t\t\tborder: none;\n\t\t\twidth: 250px;\n\t\t\theight: 48px;\n\t\t\tpadding: 15px;\n\t\t\tborder-radius: 4px; }\n\t\t&__icon {\n\t\t\tposition: absolute;\n\t\t\tright: 15px;\n\t\t\ttop: 25px;\n\t\t\tfont-size: 45px;\n\t\t\tdisplay: block;\n\t\t\twidth: 15px;\n\t\t\theight: 15px;\n\t\t\tborder: 2px solid #989898;\n\t\t\tborder-radius: 50%;\n\t\t\t// cursor: pointer\n\t\t\t&:before {\n\t\t\t\tcontent: \"\";\n\t\t\t\tdisplay: block;\n\t\t\t\tposition: absolute;\n\t\t\t\tright: -7px;\n\t\t\t\tbottom: -4px;\n\t\t\t\tborder-width: 0;\n\t\t\t\tbackground: #989898;\n\t\t\t\twidth: 10px;\n\t\t\t\theight: 3px;\n\t\t\t\ttransform: rotate(45deg); } }\n\t\t&__items {\n\t\t\tlist-style-type: none;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0 10px;\n\t\t\twidth: 250px;\n\t\t\tposition: absolute;\n\t\t\tborder-radius: 4px;\n\t\t\tbackground-color: #e5e5e5; }\n\t\t&__item {\n\t\t\twhite-space: nowrap;\n\t\t\toverflow: hidden;\n\t\t\ttext-overflow: ellipsis;\n\t\t\tmargin: 10px 0; } }\n\t&User {\n\t\tfloat: right;\n\t\t&__inner {\n\t\t\tpadding-top: 18px; }\n\t\t&__signin {\n\t\t\tpadding-top: 25px; }\n\t\t&__avatar {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t\toverflow: hidden;\n\t\t\tborder-radius: 50%;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tmargin-right: 5px;\n\t\t\t-webkit-background-size: cover;\n\t\t\tbackground-size: cover;\n\t\t\t&Img {\n\t\t\t\twidth: 100%;\n\t\t\t\tdisplay: block; } }\n\t\t&__name {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none; }\n\t\t&__link:hover {\n\t\t\t.headerUser__name {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&__exit {\n\t\t\tmargin-left: 15px;\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } } } }\n\ninput[type=\"search\"] {\n  -webkit-appearance: searchfield; }\n\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: searchfield-cancel-button; }\n\n\n\n#mobNav:checked + .header__toggleLabel span {\n\ttransform: rotate(45deg);\n\tposition: relative;\n\ttop: 10px; }\n#mobNav:checked + .header__toggleLabel span:before {\n\ttop: 0px;\n\ttransform: rotate(-90deg); }\n#mobNav:checked + .header__toggleLabel span:after {\n\topacity: 0; }\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n\ttransform: translate(0, 0);\n\ttop: 34px; }\n\n\n\n@media only screen and (max-width : 1100px) {\n\t.header__toggle {\n\t\tpadding: 10px 15px; }\n\t.header__toggleLabel {\n\t\tdisplay: block; }\n\t#mobNav:checked + .header__toggleLabel span {\n\t\ttransform: rotate(45deg);\n\t\tposition: relative;\n\t\ttop: 10px; }\n\t#mobNav:checked + .header__toggleLabel span:before {\n\t\ttop: 0px;\n\t\ttransform: rotate(-90deg); }\n\t#mobNav:checked + .header__toggleLabel span:after {\n\t\topacity: 0; }\n\t.header {\n\t\tpadding: 0; }\n\t.header__dropdown {\n\t\ttransform: translate(0, -100%);\n\t\ttop: -100%;\n\t\tposition: absolute;\n\t\ttransition: 0.5s all ease;\n\t\tbackground-color: #fff;\n\t\twidth: 100%;\n\t\tpadding: 0 15px 25px; }\n\t.headerLogo,\n\t.headerMenu,\n\t.headerSearch,\n\t.headerUser,\n\t.headerMenu__item {\n\t\tfloat: none; }\n\t.headerSearch__input {\n\t\twidth: 100%; }\n\t.headerMenu__itemLink {\n\t\tborder: none;\n\t\tdisplay: inline-block;\n\t\tpadding: 10px 20px; }\n\t.headerMenu__items_submenu {\n\t\tdisplay: block;\n\t\tposition: static;\n\t\tbox-shadow: none;\n\t\tpadding-left: 30px; }\n\t.headerMenu__itemLink_submenu {\n\t\tpadding: 5px 0 0 10px; }\n\t#mobNav:checked + .header__dropdown {\n\t\tdisplay: block;\n\t\ttransform: translate(0, 0);\n\t\ttop: 50px; } }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 844 */
+/* 846 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(184)(true);
+exports = module.exports = __webpack_require__(185)(true);
 // imports
 
 
@@ -61532,21 +61663,21 @@ exports.push([module.i, ".cardBox__img[src='data:image/png;base64,null'],\n.card
 
 
 /***/ }),
-/* 845 */
+/* 847 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(184)(true);
+exports = module.exports = __webpack_require__(185)(true);
 // imports
 
 
 // module
-exports.push([module.i, "html {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nbody {\n  margin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block; }\n\naudio, canvas, progress, video {\n  display: inline-block;\n  vertical-align: baseline; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n[hidden], template {\n  display: none; }\n\na {\n  background-color: transparent; }\n  a:active, a:hover {\n    outline: 0; }\n\nabbr[title] {\n  border-bottom: 1px dotted; }\n\nb, strong {\n  font-weight: bold; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  margin: .67em 0;\n  font-size: 2em; }\n\nmark {\n  color: #000;\n  background: #ff0; }\n\nsmall {\n  font-size: 80%; }\n\nsub {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline; }\n\nsup {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline;\n  top: -.5em; }\n\nsub {\n  bottom: -.25em; }\n\nimg {\n  border: 0; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  height: 0;\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box; }\n\npre {\n  overflow: auto; }\n\ncode, kbd, pre, samp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nbutton, optgroup, select, textarea {\n  margin: 0;\n  font: inherit;\n  color: inherit; }\n\ninput {\n  margin: 0; }\n\nbutton {\n  overflow: visible;\n  text-transform: none; }\n\nselect {\n  text-transform: none; }\n\nbutton, html input[type=\"button\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\ninput[type=\"reset\"], input[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\nbutton[disabled], html input[disabled] {\n  cursor: default; }\n\nbutton::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput {\n  line-height: normal; }\n  input::-moz-focus-inner {\n    padding: 0;\n    border: 0; }\n  input[type=\"checkbox\"], input[type=\"radio\"] {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    padding: 0; }\n  input[type=\"number\"]::-webkit-inner-spin-button, input[type=\"number\"]::-webkit-outer-spin-button {\n    height: auto; }\n  input[type=\"search\"] {\n    box-sizing: border-box;\n    -webkit-appearance: textfield; }\n    input[type=\"search\"]::-webkit-search-cancel-button, input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none; }\n\nfieldset {\n  padding: .35em .625em .75em;\n  margin: 0 2px;\n  border: 1px solid #c0c0c0; }\n\nlegend {\n  padding: 0;\n  border: 0; }\n\ntextarea {\n  overflow: auto; }\n\noptgroup {\n  font-weight: bold; }\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse; }\n\ntd, th {\n  padding: 0; }\n\n@media print {\n  * {\n    color: #000 !important;\n    text-shadow: none !important;\n    background: transparent !important;\n    -webkit-box-shadow: none !important;\n    box-shadow: none !important; }\n    *:before, *:after {\n      color: #000 !important;\n      text-shadow: none !important;\n      background: transparent !important;\n      -webkit-box-shadow: none !important;\n      box-shadow: none !important; }\n  a {\n    text-decoration: underline; }\n    a:visited {\n      text-decoration: underline; }\n    a[href]:after {\n      content: \" (\" attr(href) \")\"; }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\"; }\n  a[href^=\"#\"]:after, a[href^=\"javascript:\"]:after {\n    content: \"\"; }\n  pre, blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid; }\n  thead {\n    display: table-header-group; }\n  tr {\n    page-break-inside: avoid; }\n  img {\n    page-break-inside: avoid;\n    max-width: 100% !important; }\n  p, h2, h3 {\n    orphans: 3;\n    widows: 3; }\n  h2, h3 {\n    page-break-after: avoid; }\n  select {\n    background: #fff !important; }\n  .navbar {\n    display: none; }\n  .btn > .caret, .dropup > .btn > .caret {\n    border-top-color: #000 !important; }\n  .label {\n    border: 1px solid #000; }\n  .table {\n    border-collapse: collapse !important; }\n    .table td, .table th {\n      background-color: #fff !important; }\n  .table-bordered th, .table-bordered td {\n    border: 1px solid #ddd !important; } }\n\ntextarea::-webkit-input-placeholder,\ninput::-webkit-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea::-moz-placeholder,\ninput::-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-moz-placeholder,\ninput:-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-ms-input-placeholder,\ninput:-ms-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ninput {\n  border-radius: 0;\n  font-family: \"Roboto\";\n  color: #000;\n  font-weight: 900;\n  font-size: 14px;\n  background: none; }\n\nlabel {\n  cursor: pointer; }\n\nbody {\n  font-size: 14px;\n  position: relative;\n  line-height: 1.3;\n  overflow-x: hidden;\n  color: #000;\n  background-color: #eee;\n  font-family: \"Roboto\";\n  font-weight: 900; }\n\n.hidden {\n  display: none; }\n\n.lock {\n  overflow: hidden; }\n\nh1,\n.h1Title {\n  font-size: 30px;\n  line-height: 42px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh2,\n.h2Title {\n  font-size: 24px;\n  line-height: 30px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh3,\n.h3Title {\n  font-size: 20px;\n  line-height: 30px;\n  margin: 0 0 30px;\n  text-transform: uppercase;\n  color: #000; }\n\np {\n  margin: 0;\n  padding-bottom: 16px;\n  text-transform: uppercase;\n  line-height: 1.75; }\n\na {\n  color: #000; }\n  a:hover {\n    text-decoration: none; }\n\n.btn {\n  padding: 14px 34px;\n  background-color: #000;\n  text-transform: uppercase;\n  color: #fff;\n  transition: ease 0.3s all;\n  font-size: 14px;\n  line-height: 16px;\n  text-decoration: none;\n  display: inline-block;\n  border: none; }\n  .btn:hover, .btn:focus {\n    background-color: #663d15; }\n\n.btnLong {\n  width: 100%;\n  text-align: center;\n  white-space: nowrap; }\n\n.inputText {\n  border: 2px solid #000;\n  transition: ease 0.3s all;\n  padding: 10px 16px; }\n  .inputText:focus {\n    border-color: #663d15; }\n\n.labelCheckbox span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelCheckbox span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px; }\n  .labelCheckbox span:after {\n    content: '';\n    width: 14px;\n    height: 14px;\n    position: absolute;\n    left: 3px;\n    top: 1px;\n    background-color: #000;\n    background-position: -135px -3px;\n    opacity: 0; }\n  .labelCheckbox span:hover {\n    color: #663d15; }\n\n.labelCheckbox input:checked + span:after {\n  opacity: 1; }\n\n.labelCheckbox input:disabled + span {\n  color: #afadab; }\n\n.labelCheckbox input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelCheckbox input:disabled + span:before {\n  border-color: #afadab; }\n\n.labelRadio span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelRadio span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px;\n    border-radius: 50%; }\n  .labelRadio span:after {\n    content: '';\n    width: 8px;\n    height: 8px;\n    position: absolute;\n    left: 6px;\n    top: 4px;\n    opacity: 0;\n    border-radius: 50%;\n    background-color: #000; }\n  .labelRadio span:hover {\n    color: #663d15; }\n\n.labelRadio input:checked + span:after {\n  opacity: 1; }\n\n.labelRadio input:disabled + span {\n  color: #afadab; }\n\n.labelRadio input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelRadio input:disabled + span:before {\n  border-color: #afadab; }\n\ntable {\n  width: 100%; }\n  table td {\n    height: 40px;\n    padding: 0 15px;\n    border: 2px solid #000;\n    width: 50%; }\n    table td:nth-child(2) {\n      text-align: right; }\n\n.whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  margin-bottom: 80px;\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n  .pageSlider__items {\n    transition: 0.6s all ease; }\n    .pageSlider__items:after {\n      display: table;\n      clear: both;\n      content: ''; }\n  .pageSlider__item {\n    float: left;\n    width: 300px;\n    vertical-align: top; }\n    .pageSlider__item td {\n      border: none;\n      text-align: center; }\n    .pageSlider__itemImgWrap {\n      border: none;\n      min-width: 300px;\n      max-width: 300px;\n      min-height: 300px;\n      max-height: 300px;\n      height: 300px;\n      margin: 0;\n      padding: 0 5px;\n      text-align: center; }\n    .pageSlider__itemTextWrap {\n      padding: 10px; }\n    .pageSlider__itemImg {\n      display: block;\n      max-width: 100%;\n      max-height: 100%;\n      margin: auto; }\n    .pageSlider__itemName {\n      font-size: 18px; }\n    .pageSlider__itemDescr {\n      font-weight: 400; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0;\n      transition: 0.3s all ease; }\n    .pageSlider__control_right {\n      right: 0;\n      transition: 0.3s all ease; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n\n@media only screen and (max-width: 480px) {\n  .pageSlider__itemImgWrap {\n    padding: 0; } }\n\n@media only screen and (max-width: 329px) {\n  .pageSlider {\n    margin: 0 -5px 80px; } }\n\n.addTask {\n  width: 300px; }\n  .addTask__itemText {\n    font-size: 16px;\n    line-height: 18px; }\n  .addTask__itemSpan {\n    background-color: #000;\n    border-radius: 50%;\n    font-size: 16px;\n    line-height: 18px;\n    display: inline-block;\n    color: #fff;\n    width: 18px;\n    text-align: center;\n    margin-right: 5px;\n    transition: 0.2s all ease; }\n  .addTask__item_assign {\n    padding-top: 10px;\n    color: rgba(0, 0, 0, 0.6); }\n    .addTask__item_assign .addTask__itemText {\n      display: inline-block;\n      vertical-align: top;\n      line-height: 56px;\n      margin-right: 10px; }\n      .addTask__item_assign .addTask__itemText + div {\n        vertical-align: top; }\n  .addTask__subtaskAdd {\n    padding: 10px 0 0px;\n    margin-bottom: 20px;\n    color: rgba(0, 0, 0, 0.8);\n    text-decoration: underline;\n    cursor: pointer;\n    display: inline-block; }\n    .addTask__subtaskAdd:hover {\n      text-decoration: none; }\n      .addTask__subtaskAdd:hover .addTask__itemSpan {\n        background-color: #989898; }\n  .addTask__subtaskItem {\n    position: relative; }\n  .addTask__subtaskRemove {\n    display: block;\n    position: absolute;\n    right: 10px;\n    top: 35px;\n    cursor: pointer;\n    transition: 0.2s all ease; }\n    .addTask__subtaskRemove:hover {\n      background-color: #989898; }\n  .addTask__button {\n    margin-top: 20px; }\n\n.pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover {\n    background-color: #4298EB; }\n\n.pageLoader {\n  width: 19px;\n  height: 19px;\n  margin: 50px auto;\n  background-size: cover; }\n\n.cabinet {\n  position: relative; }\n  .cabinetTitle {\n    text-align: center;\n    text-transform: uppercase;\n    font-size: 22px;\n    padding: 10px 0; }\n  .cabinetSubTitle {\n    font-size: 18px;\n    padding-bottom: 10px; }\n\n.filtersTitle {\n  font-size: 18px;\n  padding-bottom: 10px; }\n\n.filters__groups {\n  max-height: 280px;\n  overflow-y: scroll; }\n\n.filters__group {\n  padding-bottom: 10px; }\n  .filters__groupTitle {\n    color: rgba(0, 0, 0, 0.6); }\n\n.filters__checkbox {\n  margin: 10px 0; }\n  .filters__checkbox label {\n    margin-left: -15px; }\n\n.filters__select {\n  width: 200px !important; }\n  .filters__select hr {\n    border-color: #000 !important; }\n\n.filters__button {\n  margin-bottom: 20px; }\n\n.sidebar {\n  float: left;\n  width: 30%; }\n\n.contentRight {\n  margin-top: 8px;\n  padding: 15px;\n  float: left;\n  width: 70%;\n  background-color: #f5f5f5;\n  position: relative; }\n\n.sidebar__itemLink {\n  text-decoration: none; }\n\n.findUs {\n  margin-bottom: 30px; }\n  .findUs__items {\n    margin: 0 -15px; }\n    .findUs__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .findUs__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .findUs__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .findUs__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .findUs__itemText {\n      font-weight: 500; }\n\n.contacts_mapWrap {\n  margin: 0 -15px 30px; }\n\n.contacts_map {\n  position: relative;\n  overflow: hidden;\n  background-color: #e5e3df;\n  width: 100%;\n  height: 500px; }\n\n#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px 30px 15px 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%;\n      cursor: pointer; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n\n.homeSlider {\n  position: relative; }\n  .homeSlider__img {\n    width: 100%;\n    height: 500px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .homeSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .homeSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .homeSlider__control_left {\n      left: 0; }\n    .homeSlider__control_right {\n      right: 0; }\n\n.blockTitle {\n  text-align: center;\n  text-transform: uppercase;\n  padding: 20px 0 40px;\n  position: relative; }\n  .blockTitle:before {\n    content: '';\n    width: 100px;\n    height: 2px;\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 20px;\n    margin: auto;\n    background-color: #4298EB; }\n\n.pageDescr {\n  width: 740px;\n  font-weight: 400;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n  padding-bottom: 30px; }\n\n.possibilities {\n  padding-bottom: 20px; }\n  .possibilities__items {\n    margin: 0 -15px; }\n    .possibilities__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .possibilities__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .possibilities__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .possibilities__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .possibilities__itemText {\n      font-weight: 500; }\n\n.someNumbers {\n  padding-bottom: 20px; }\n  .someNumbers__items {\n    margin: 0 -15px;\n    padding: 20px 0 50px; }\n    .someNumbers__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .someNumbers__item {\n    float: left;\n    width: 25%;\n    padding: 0 15px;\n    text-align: center; }\n    .someNumbers__itemInner {\n      border: 1px solid #4298EB;\n      padding: 30px 30px; }\n    .someNumbers__itemTitle {\n      color: #4298EB;\n      font-size: 30px; }\n    .someNumbers__itemText {\n      text-transform: uppercase;\n      font-weight: 400;\n      font-size: 20px;\n      letter-spacing: -1px; }\n\n.fade {\n  animation-name: fade;\n  animation-duration: 1.5s; }\n\n@keyframes fade {\n  from {\n    opacity: .4; }\n  to {\n    opacity: 1; } }\n\n@media only screen and (max-width: 1200px) {\n  .someNumbers__item {\n    width: 50%;\n    margin-bottom: 30px; } }\n\n@media only screen and (max-width: 1100px) {\n  .whoweare__item {\n    width: 100%; } }\n\n@media only screen and (max-width: 768px) {\n  .pageDescr {\n    width: 100%; }\n  .possibilities__item {\n    width: 50%; } }\n\n@media only screen and (max-width: 480px) {\n  .someNumbers__item {\n    width: 100%; }\n  .possibilities__item,\n  .findUs__item {\n    width: 100%; } }\n\n.cardBox {\n  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);\n  background-color: #fff;\n  width: 640px;\n  margin: 20px auto 0;\n  padding: 30px; }\n  .cardBox__item {\n    padding-bottom: 15px;\n    position: relative; }\n    .cardBox__item:last-child {\n      padding-top: 10px;\n      padding-bottom: 0; }\n    .cardBox__item_center {\n      text-align: center; }\n  .cardBox__labelSpan {\n    width: 100px;\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right;\n    padding-right: 10px;\n    color: #414141;\n    font-weight: 400; }\n  .cardBox__labelInput {\n    background-color: #ebebeb;\n    border: none;\n    height: 36px;\n    width: 400px;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 5px 10px; }\n  .cardBox__itemButtonWrap {\n    text-align: center; }\n  .cardBox__title {\n    padding-bottom: 15px; }\n\n.spanError {\n  color: red;\n  font-size: 12px;\n  font-weight: 400;\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  display: none; }\n\n.cardBox__spanError {\n  left: 100px; }\n\nhr {\n  border-top: none;\n  border-right: none;\n  border-left: none;\n  padding: 5px 0; }\n\n@media only screen and (max-width: 768px) {\n  .cardBox__labelSpan {\n    display: block;\n    text-align: left;\n    margin-bottom: 10px; }\n  .cardBox__labelInput {\n    width: 100%; }\n  .cardBox {\n    width: 100%; } }\n\n.task__title {\n  font-size: 20px;\n  text-transform: uppercase;\n  padding: 0 0 10px; }\n\n.task__subtitle {\n  padding: 0 0 5px; }\n\n.task__progress {\n  height: 5px;\n  background-color: #00bcd4;\n  position: absolute;\n  top: -20px;\n  left: -15px; }\n\n.taskShare {\n  padding-top: 50px; }\n  .taskShare__title {\n    font-size: 18px;\n    padding-bottom: 15px; }\n  .taskShare__items {\n    list-style-type: none;\n    margin: 0;\n    padding: 0; }\n  .taskShare__item {\n    display: inline-block;\n    vertical-align: middle;\n    width: 50px;\n    height: 40px;\n    transition: 0.3s all ease;\n    font-family: \"myfontsoc\";\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    line-height: 40px; }\n    .taskShare__item:before {\n      display: block;\n      font-size: 25px;\n      font-weight: normal;\n      margin-left: 5px; }\n    .taskShare__item_twitter {\n      background-color: #00aced; }\n      .taskShare__item_twitter:before {\n        content: 'u'; }\n    .taskShare__item_vk {\n      background-color: #4c75a3; }\n      .taskShare__item_vk:before {\n        content: 'v'; }\n    .taskShare__item_google {\n      background-color: #e14d3a; }\n      .taskShare__item_google:before {\n        content: 'w'; }\n    .taskShare__item_facebook {\n      background-color: #3c5a99; }\n      .taskShare__item_facebook:before {\n        content: 'x';\n        font-size: 18px; }\n    .taskShare__item:hover {\n      background-color: #000; }\n\n.subtask__item {\n  font-weight: 400;\n  margin: 10px 0; }\n  .subtask__item label {\n    color: rgba(0, 0, 0, 0.87) !important; }\n\n.taskList__empty {\n  color: red; }\n\n.taskList__item {\n  font-weight: 400;\n  padding: 10px 0; }\n  .taskList__itemProgress {\n    display: inline-block;\n    vertical-align: middle;\n    width: 80px; }\n  .taskList__itemText {\n    display: inline-block;\n    vertical-align: middle;\n    text-decoration: none;\n    width: 220px; }\n  .taskList__itemLink:hover {\n    text-decoration: none; }\n  .taskList__itemProject {\n    width: 200px;\n    display: inline-block; }\n  .taskList__itemCreator {\n    width: 150px;\n    display: inline-block; }\n  .taskList__item_head {\n    font-weight: 500; }\n\n.paginationWrap {\n  text-align: center;\n  padding-top: 30px; }\n\n.pagination {\n  display: inline-block;\n  list-style-type: none;\n  margin: 0;\n  padding: 0; }\n  .pagination li {\n    display: inline-block;\n    padding: 0 3px; }\n    .pagination li.disabled {\n      display: none; }\n    .pagination li a {\n      cursor: pointer;\n      text-decoration: none;\n      font-size: 16px;\n      padding: 0 3px; }\n      .pagination li a:hover {\n        text-decoration: underline; }\n    .pagination li.active a {\n      text-decoration: underline;\n      cursor: auto; }\n", "", {"version":3,"sources":["D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/main.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/main.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/About/About.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/AddTask/AddTask.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/App/App.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Cabinet.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Filters/Filters.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Sidebar/Sidebar.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Contacts/Contacts.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Header/Header.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Home/Home.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/SignIn/SignIn.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Task/Task.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/TaskList/TaskList.sass"],"names":[],"mappings":"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","file":"main.sass","sourcesContent":["////////////////////////////\n//bootstrap normalize\n////////////////////////////\n\n\nhtml {\n\tfont-family: sans-serif;\n\t-webkit-text-size-adjust: 100%;\n\t-ms-text-size-adjust: 100%; }\n\n* {\n\t-webkit-box-sizing: border-box;\n\t-moz-box-sizing: border-box;\n\tbox-sizing: border-box; }\n\nbody {\n\tmargin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n\tdisplay: block; }\n\naudio, canvas, progress, video {\n\tdisplay: inline-block;\n\tvertical-align: baseline; }\n\naudio:not([controls]) {\n\tdisplay: none;\n\theight: 0; }\n\n[hidden], template {\n\tdisplay: none; }\n\na {\n\tbackground-color: transparent;\n\t&:active, &:hover {\n\t\toutline: 0; } }\n\nabbr[title] {\n\tborder-bottom: 1px dotted; }\n\nb, strong {\n\tfont-weight: bold; }\n\ndfn {\n\tfont-style: italic; }\n\nh1 {\n\tmargin: .67em 0;\n\tfont-size: 2em; }\n\nmark {\n\tcolor: #000;\n\tbackground: #ff0; }\n\nsmall {\n\tfont-size: 80%; }\n\nsub {\n\tposition: relative;\n\tfont-size: 75%;\n\tline-height: 0;\n\tvertical-align: baseline; }\n\nsup {\n\tposition: relative;\n\tfont-size: 75%;\n\tline-height: 0;\n\tvertical-align: baseline;\n\ttop: -.5em; }\n\nsub {\n\tbottom: -.25em; }\n\nimg {\n\tborder: 0; }\n\nsvg:not(:root) {\n\toverflow: hidden; }\n\nfigure {\n\tmargin: 1em 40px; }\n\nhr {\n\theight: 0;\n\t-webkit-box-sizing: content-box;\n\t-moz-box-sizing: content-box;\n\tbox-sizing: content-box; }\n\npre {\n\toverflow: auto; }\n\ncode, kbd, pre, samp {\n\tfont-family: monospace, monospace;\n\tfont-size: 1em; }\n\nbutton, optgroup, select, textarea {\n\tmargin: 0;\n\tfont: inherit;\n\tcolor: inherit; }\n\ninput {\n\tmargin: 0; }\n\nbutton {\n\toverflow: visible;\n\ttext-transform: none; }\n\nselect {\n\ttext-transform: none; }\n\nbutton, html input[type=\"button\"] {\n\t-webkit-appearance: button;\n\tcursor: pointer; }\n\ninput {\n\t&[type=\"reset\"], &[type=\"submit\"] {\n\t\t-webkit-appearance: button;\n\t\tcursor: pointer; } }\n\nbutton[disabled], html input[disabled] {\n\tcursor: default; }\n\nbutton::-moz-focus-inner {\n\tpadding: 0;\n\tborder: 0; }\n\ninput {\n\t&::-moz-focus-inner {\n\t\tpadding: 0;\n\t\tborder: 0; }\n\tline-height: normal;\n\t&[type=\"checkbox\"], &[type=\"radio\"] {\n\t\t-webkit-box-sizing: border-box;\n\t\t-moz-box-sizing: border-box;\n\t\tbox-sizing: border-box;\n\t\tpadding: 0; }\n\t&[type=\"number\"] {\n\t\t&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {\n\t\t\theight: auto; } }\n\t&[type=\"search\"] {\n\t\tbox-sizing: border-box;\n\t\t-webkit-appearance: textfield;\n\t\t&::-webkit-search-cancel-button, &::-webkit-search-decoration {\n\t\t\t-webkit-appearance: none; } } }\n\nfieldset {\n\tpadding: .35em .625em .75em;\n\tmargin: 0 2px;\n\tborder: 1px solid #c0c0c0; }\n\nlegend {\n\tpadding: 0;\n\tborder: 0; }\n\ntextarea {\n\toverflow: auto; }\n\noptgroup {\n\tfont-weight: bold; }\n\ntable {\n\tborder-spacing: 0;\n\tborder-collapse: collapse; }\n\ntd, th {\n\tpadding: 0; }\n\n\n\n@media print {\n\t* {\n\t\tcolor: #000 !important;\n\t\ttext-shadow: none !important;\n\t\tbackground: transparent !important;\n\t\t-webkit-box-shadow: none !important;\n\t\tbox-shadow: none !important;\n\t\t&:before, &:after {\n\t\t\tcolor: #000 !important;\n\t\t\ttext-shadow: none !important;\n\t\t\tbackground: transparent !important;\n\t\t\t-webkit-box-shadow: none !important;\n\t\t\tbox-shadow: none !important; } }\n\ta {\n\t\ttext-decoration: underline;\n\t\t&:visited {\n\t\t\ttext-decoration: underline; }\n\t\t&[href]:after {\n\t\t\tcontent: \" (\" attr(href) \")\"; } }\n\tabbr[title]:after {\n\t\tcontent: \" (\" attr(title) \")\"; }\n\ta {\n\t\t&[href^=\"#\"]:after, &[href^=\"javascript:\"]:after {\n\t\t\tcontent: \"\"; } }\n\tpre, blockquote {\n\t\tborder: 1px solid #999;\n\t\tpage-break-inside: avoid; }\n\tthead {\n\t\tdisplay: table-header-group; }\n\ttr {\n\t\tpage-break-inside: avoid; }\n\timg {\n\t\tpage-break-inside: avoid;\n\t\tmax-width: 100% !important; }\n\tp, h2, h3 {\n\t\torphans: 3;\n\t\twidows: 3; }\n\th2, h3 {\n\t\tpage-break-after: avoid; }\n\tselect {\n\t\tbackground: #fff !important; }\n\t.navbar {\n\t\tdisplay: none; }\n\t.btn > .caret, .dropup > .btn > .caret {\n\t\tborder-top-color: #000 !important; }\n\t.label {\n\t\tborder: 1px solid #000; }\n\t.table {\n\t\tborder-collapse: collapse !important;\n\t\ttd, th {\n\t\t\tbackground-color: #fff !important; } }\n\t.table-bordered {\n\t\tth, td {\n\t\t\tborder: 1px solid #ddd !important; } } }\n\n////////////////////////////\n//bootstrap normalize\n////////////////////////////\n\n$bf: \"Roboto\";\n$placeholderColor: #636363;\n\n\ntextarea,\ninput {\n\t&::-webkit-input-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&::-moz-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&:-moz-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&:-ms-input-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; } }\n\n\ninput {\n\tborder-radius: 0;\n\tfont-family: $bf;\n\tcolor: #000;\n\tfont-weight: 900;\n\tfont-size: 14px;\n\tbackground: none; }\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n }\t// display: none\n\nlabel {\n\tcursor: pointer; }\n\n\nbody {\n\tfont-size: 14px;\n\tposition: relative;\n\tline-height: 1.3;\n\toverflow-x: hidden;\n\tcolor: #000;\n\tbackground-color: #eee;\n\tfont-family: $bf;\n\tfont-weight: 900; }\n\n\n.hidden {\n\tdisplay: none; }\n\n.lock {\n\toverflow: hidden; }\n\n\nh1,\n.h1Title {\n\tfont-size: 30px;\n\tline-height: 42px;\n\tmargin: 0 0 15px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\nh2,\n.h2Title {\n\tfont-size: 24px;\n\tline-height: 30px;\n\tmargin: 0 0 15px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\nh3,\n.h3Title {\n\tfont-size: 20px;\n\tline-height: 30px;\n\tmargin: 0 0 30px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\n\n\np {\n\tmargin: 0;\n\tpadding-bottom: 16px;\n\ttext-transform: uppercase;\n\tline-height: 1.75; }\n\n\n\na {\n\tcolor: #000;\n\t&:hover {\n\t\ttext-decoration: none; } }\n\n\n\n\n.btn {\n\tpadding: 14px 34px;\n\tbackground-color: #000;\n\ttext-transform: uppercase;\n\tcolor: #fff;\n\ttransition: ease 0.3s all;\n\tfont-size: 14px;\n\tline-height: 16px;\n\ttext-decoration: none;\n\tdisplay: inline-block;\n\tborder: none;\n\t&:hover,\n\t&:focus {\n\t\tbackground-color: #663d15; } }\n\n.btnLong {\n\twidth: 100%;\n\ttext-align: center;\n\twhite-space: nowrap; }\n\n.inputText {\n\tborder: 2px solid #000;\n\ttransition: ease 0.3s all;\n\tpadding: 10px 16px;\n\t&:focus {\n\t\tborder-color: #663d15; } }\n\n\n.labelCheckbox span {\n\tdisplay: inline-block;\n\tposition: relative;\n\tpadding-left: 40px;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\tborder: 2px solid #000;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\ttop: -2px; }\n\t&:after {\n\t\tcontent: '';\n\t\twidth: 14px;\n\t\theight: 14px;\n\t\tposition: absolute;\n\t\tleft: 3px;\n\t\ttop: 1px;\n\t\tbackground-color: #000;\n\t\tbackground-position: -135px -3px;\n\t\topacity: 0; }\n\t&:hover {\n\t\tcolor: #663d15; } }\n.labelCheckbox input:checked + span:after {\n\topacity: 1; }\n\n.labelCheckbox input:disabled + span {\n\tcolor: #afadab; }\n.labelCheckbox input:disabled + span:after {\n\topacity: 0.3; }\n.labelCheckbox input:disabled + span:before {\n\tborder-color: #afadab; }\n\n\n.labelRadio span {\n\tdisplay: inline-block;\n\tposition: relative;\n\tpadding-left: 40px;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\tborder: 2px solid #000;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\ttop: -2px;\n\t\tborder-radius: 50%; }\n\t&:after {\n\t\tcontent: '';\n\t\twidth: 8px;\n\t\theight: 8px;\n\t\tposition: absolute;\n\t\tleft: 6px;\n\t\ttop: 4px;\n\t\topacity: 0;\n\t\tborder-radius: 50%;\n\t\tbackground-color: #000; }\n\t&:hover {\n\t\tcolor: #663d15; } }\n.labelRadio input:checked + span:after {\n\topacity: 1; }\n\n.labelRadio input:disabled + span {\n\tcolor: #afadab; }\n.labelRadio input:disabled + span:after {\n\topacity: 0.3; }\n.labelRadio input:disabled + span:before {\n\tborder-color: #afadab; }\n\n\ntable {\n\twidth: 100%;\n\ttd {\n\t\theight: 40px;\n\t\tpadding: 0 15px;\n\t\tborder: 2px solid #000;\n\t\twidth: 50%;\n\t\t&:nth-child(2) {\n\t\t\ttext-align: right; } } }\n\n\n\n@import './components/About/About';\n@import './components/AddTask/AddTask';\n@import './components/App/App';\n@import './components/Cabinet/Cabinet';\n@import './components/Cabinet/Filters/Filters';\n@import './components/Cabinet/Sidebar/Sidebar';\n@import './components/Contacts/Contacts';\n@import './components/Header/Header';\n@import './components/Home/Home';\n@import './components/SignIn/SignIn';\n@import './components/Task/Task';\n@import './components/TaskList/TaskList';\n\n\n","html {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nbody {\n  margin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block; }\n\naudio, canvas, progress, video {\n  display: inline-block;\n  vertical-align: baseline; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n[hidden], template {\n  display: none; }\n\na {\n  background-color: transparent; }\n  a:active, a:hover {\n    outline: 0; }\n\nabbr[title] {\n  border-bottom: 1px dotted; }\n\nb, strong {\n  font-weight: bold; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  margin: .67em 0;\n  font-size: 2em; }\n\nmark {\n  color: #000;\n  background: #ff0; }\n\nsmall {\n  font-size: 80%; }\n\nsub {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline; }\n\nsup {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline;\n  top: -.5em; }\n\nsub {\n  bottom: -.25em; }\n\nimg {\n  border: 0; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  height: 0;\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box; }\n\npre {\n  overflow: auto; }\n\ncode, kbd, pre, samp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nbutton, optgroup, select, textarea {\n  margin: 0;\n  font: inherit;\n  color: inherit; }\n\ninput {\n  margin: 0; }\n\nbutton {\n  overflow: visible;\n  text-transform: none; }\n\nselect {\n  text-transform: none; }\n\nbutton, html input[type=\"button\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\ninput[type=\"reset\"], input[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\nbutton[disabled], html input[disabled] {\n  cursor: default; }\n\nbutton::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput {\n  line-height: normal; }\n  input::-moz-focus-inner {\n    padding: 0;\n    border: 0; }\n  input[type=\"checkbox\"], input[type=\"radio\"] {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    padding: 0; }\n  input[type=\"number\"]::-webkit-inner-spin-button, input[type=\"number\"]::-webkit-outer-spin-button {\n    height: auto; }\n  input[type=\"search\"] {\n    box-sizing: border-box;\n    -webkit-appearance: textfield; }\n    input[type=\"search\"]::-webkit-search-cancel-button, input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none; }\n\nfieldset {\n  padding: .35em .625em .75em;\n  margin: 0 2px;\n  border: 1px solid #c0c0c0; }\n\nlegend {\n  padding: 0;\n  border: 0; }\n\ntextarea {\n  overflow: auto; }\n\noptgroup {\n  font-weight: bold; }\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse; }\n\ntd, th {\n  padding: 0; }\n\n@media print {\n  * {\n    color: #000 !important;\n    text-shadow: none !important;\n    background: transparent !important;\n    -webkit-box-shadow: none !important;\n    box-shadow: none !important; }\n    *:before, *:after {\n      color: #000 !important;\n      text-shadow: none !important;\n      background: transparent !important;\n      -webkit-box-shadow: none !important;\n      box-shadow: none !important; }\n  a {\n    text-decoration: underline; }\n    a:visited {\n      text-decoration: underline; }\n    a[href]:after {\n      content: \" (\" attr(href) \")\"; }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\"; }\n  a[href^=\"#\"]:after, a[href^=\"javascript:\"]:after {\n    content: \"\"; }\n  pre, blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid; }\n  thead {\n    display: table-header-group; }\n  tr {\n    page-break-inside: avoid; }\n  img {\n    page-break-inside: avoid;\n    max-width: 100% !important; }\n  p, h2, h3 {\n    orphans: 3;\n    widows: 3; }\n  h2, h3 {\n    page-break-after: avoid; }\n  select {\n    background: #fff !important; }\n  .navbar {\n    display: none; }\n  .btn > .caret, .dropup > .btn > .caret {\n    border-top-color: #000 !important; }\n  .label {\n    border: 1px solid #000; }\n  .table {\n    border-collapse: collapse !important; }\n    .table td, .table th {\n      background-color: #fff !important; }\n  .table-bordered th, .table-bordered td {\n    border: 1px solid #ddd !important; } }\n\ntextarea::-webkit-input-placeholder,\ninput::-webkit-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea::-moz-placeholder,\ninput::-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-moz-placeholder,\ninput:-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-ms-input-placeholder,\ninput:-ms-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ninput {\n  border-radius: 0;\n  font-family: \"Roboto\";\n  color: #000;\n  font-weight: 900;\n  font-size: 14px;\n  background: none; }\n\nlabel {\n  cursor: pointer; }\n\nbody {\n  font-size: 14px;\n  position: relative;\n  line-height: 1.3;\n  overflow-x: hidden;\n  color: #000;\n  background-color: #eee;\n  font-family: \"Roboto\";\n  font-weight: 900; }\n\n.hidden {\n  display: none; }\n\n.lock {\n  overflow: hidden; }\n\nh1,\n.h1Title {\n  font-size: 30px;\n  line-height: 42px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh2,\n.h2Title {\n  font-size: 24px;\n  line-height: 30px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh3,\n.h3Title {\n  font-size: 20px;\n  line-height: 30px;\n  margin: 0 0 30px;\n  text-transform: uppercase;\n  color: #000; }\n\np {\n  margin: 0;\n  padding-bottom: 16px;\n  text-transform: uppercase;\n  line-height: 1.75; }\n\na {\n  color: #000; }\n  a:hover {\n    text-decoration: none; }\n\n.btn {\n  padding: 14px 34px;\n  background-color: #000;\n  text-transform: uppercase;\n  color: #fff;\n  transition: ease 0.3s all;\n  font-size: 14px;\n  line-height: 16px;\n  text-decoration: none;\n  display: inline-block;\n  border: none; }\n  .btn:hover, .btn:focus {\n    background-color: #663d15; }\n\n.btnLong {\n  width: 100%;\n  text-align: center;\n  white-space: nowrap; }\n\n.inputText {\n  border: 2px solid #000;\n  transition: ease 0.3s all;\n  padding: 10px 16px; }\n  .inputText:focus {\n    border-color: #663d15; }\n\n.labelCheckbox span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelCheckbox span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px; }\n  .labelCheckbox span:after {\n    content: '';\n    width: 14px;\n    height: 14px;\n    position: absolute;\n    left: 3px;\n    top: 1px;\n    background-color: #000;\n    background-position: -135px -3px;\n    opacity: 0; }\n  .labelCheckbox span:hover {\n    color: #663d15; }\n\n.labelCheckbox input:checked + span:after {\n  opacity: 1; }\n\n.labelCheckbox input:disabled + span {\n  color: #afadab; }\n\n.labelCheckbox input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelCheckbox input:disabled + span:before {\n  border-color: #afadab; }\n\n.labelRadio span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelRadio span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px;\n    border-radius: 50%; }\n  .labelRadio span:after {\n    content: '';\n    width: 8px;\n    height: 8px;\n    position: absolute;\n    left: 6px;\n    top: 4px;\n    opacity: 0;\n    border-radius: 50%;\n    background-color: #000; }\n  .labelRadio span:hover {\n    color: #663d15; }\n\n.labelRadio input:checked + span:after {\n  opacity: 1; }\n\n.labelRadio input:disabled + span {\n  color: #afadab; }\n\n.labelRadio input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelRadio input:disabled + span:before {\n  border-color: #afadab; }\n\ntable {\n  width: 100%; }\n  table td {\n    height: 40px;\n    padding: 0 15px;\n    border: 2px solid #000;\n    width: 50%; }\n    table td:nth-child(2) {\n      text-align: right; }\n\n.whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  margin-bottom: 80px;\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n  .pageSlider__items {\n    transition: 0.6s all ease; }\n    .pageSlider__items:after {\n      display: table;\n      clear: both;\n      content: ''; }\n  .pageSlider__item {\n    float: left;\n    width: 300px;\n    vertical-align: top; }\n    .pageSlider__item td {\n      border: none;\n      text-align: center; }\n    .pageSlider__itemImgWrap {\n      border: none;\n      min-width: 300px;\n      max-width: 300px;\n      min-height: 300px;\n      max-height: 300px;\n      height: 300px;\n      margin: 0;\n      padding: 0 5px;\n      text-align: center; }\n    .pageSlider__itemTextWrap {\n      padding: 10px; }\n    .pageSlider__itemImg {\n      display: block;\n      max-width: 100%;\n      max-height: 100%;\n      margin: auto; }\n    .pageSlider__itemName {\n      font-size: 18px; }\n    .pageSlider__itemDescr {\n      font-weight: 400; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0;\n      transition: 0.3s all ease; }\n    .pageSlider__control_right {\n      right: 0;\n      transition: 0.3s all ease; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n\n@media only screen and (max-width: 480px) {\n  .pageSlider__itemImgWrap {\n    padding: 0; } }\n\n@media only screen and (max-width: 329px) {\n  .pageSlider {\n    margin: 0 -5px 80px; } }\n\n.addTask {\n  width: 300px; }\n  .addTask__itemText {\n    font-size: 16px;\n    line-height: 18px; }\n  .addTask__itemSpan {\n    background-color: #000;\n    border-radius: 50%;\n    font-size: 16px;\n    line-height: 18px;\n    display: inline-block;\n    color: #fff;\n    width: 18px;\n    text-align: center;\n    margin-right: 5px;\n    transition: 0.2s all ease; }\n  .addTask__item_assign {\n    padding-top: 10px;\n    color: rgba(0, 0, 0, 0.6); }\n    .addTask__item_assign .addTask__itemText {\n      display: inline-block;\n      vertical-align: top;\n      line-height: 56px;\n      margin-right: 10px; }\n      .addTask__item_assign .addTask__itemText + div {\n        vertical-align: top; }\n  .addTask__subtaskAdd {\n    padding: 10px 0 0px;\n    margin-bottom: 20px;\n    color: rgba(0, 0, 0, 0.8);\n    text-decoration: underline;\n    cursor: pointer;\n    display: inline-block; }\n    .addTask__subtaskAdd:hover {\n      text-decoration: none; }\n      .addTask__subtaskAdd:hover .addTask__itemSpan {\n        background-color: #989898; }\n  .addTask__subtaskItem {\n    position: relative; }\n  .addTask__subtaskRemove {\n    display: block;\n    position: absolute;\n    right: 10px;\n    top: 35px;\n    cursor: pointer;\n    transition: 0.2s all ease; }\n    .addTask__subtaskRemove:hover {\n      background-color: #989898; }\n  .addTask__button {\n    margin-top: 20px; }\n\n.pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover {\n    background-color: #4298EB; }\n\n.pageLoader {\n  width: 19px;\n  height: 19px;\n  margin: 50px auto;\n  background-size: cover; }\n\n.cabinet {\n  position: relative; }\n  .cabinetTitle {\n    text-align: center;\n    text-transform: uppercase;\n    font-size: 22px;\n    padding: 10px 0; }\n  .cabinetSubTitle {\n    font-size: 18px;\n    padding-bottom: 10px; }\n\n.filtersTitle {\n  font-size: 18px;\n  padding-bottom: 10px; }\n\n.filters__groups {\n  max-height: 280px;\n  overflow-y: scroll; }\n\n.filters__group {\n  padding-bottom: 10px; }\n  .filters__groupTitle {\n    color: rgba(0, 0, 0, 0.6); }\n\n.filters__checkbox {\n  margin: 10px 0; }\n  .filters__checkbox label {\n    margin-left: -15px; }\n\n.filters__select {\n  width: 200px !important; }\n  .filters__select hr {\n    border-color: #000 !important; }\n\n.filters__button {\n  margin-bottom: 20px; }\n\n.sidebar {\n  float: left;\n  width: 30%; }\n\n.contentRight {\n  margin-top: 8px;\n  padding: 15px;\n  float: left;\n  width: 70%;\n  background-color: #f5f5f5;\n  position: relative; }\n\n.sidebar__itemLink {\n  text-decoration: none; }\n\n.findUs {\n  margin-bottom: 30px; }\n  .findUs__items {\n    margin: 0 -15px; }\n    .findUs__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .findUs__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .findUs__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .findUs__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .findUs__itemText {\n      font-weight: 500; }\n\n.contacts_mapWrap {\n  margin: 0 -15px 30px; }\n\n.contacts_map {\n  position: relative;\n  overflow: hidden;\n  background-color: #e5e3df;\n  width: 100%;\n  height: 500px; }\n\n#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px 30px 15px 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%;\n      cursor: pointer; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n\n.homeSlider {\n  position: relative; }\n  .homeSlider__img {\n    width: 100%;\n    height: 500px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .homeSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .homeSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .homeSlider__control_left {\n      left: 0; }\n    .homeSlider__control_right {\n      right: 0; }\n\n.blockTitle {\n  text-align: center;\n  text-transform: uppercase;\n  padding: 20px 0 40px;\n  position: relative; }\n  .blockTitle:before {\n    content: '';\n    width: 100px;\n    height: 2px;\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 20px;\n    margin: auto;\n    background-color: #4298EB; }\n\n.pageDescr {\n  width: 740px;\n  font-weight: 400;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n  padding-bottom: 30px; }\n\n.possibilities {\n  padding-bottom: 20px; }\n  .possibilities__items {\n    margin: 0 -15px; }\n    .possibilities__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .possibilities__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .possibilities__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .possibilities__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .possibilities__itemText {\n      font-weight: 500; }\n\n.someNumbers {\n  padding-bottom: 20px; }\n  .someNumbers__items {\n    margin: 0 -15px;\n    padding: 20px 0 50px; }\n    .someNumbers__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .someNumbers__item {\n    float: left;\n    width: 25%;\n    padding: 0 15px;\n    text-align: center; }\n    .someNumbers__itemInner {\n      border: 1px solid #4298EB;\n      padding: 30px 30px; }\n    .someNumbers__itemTitle {\n      color: #4298EB;\n      font-size: 30px; }\n    .someNumbers__itemText {\n      text-transform: uppercase;\n      font-weight: 400;\n      font-size: 20px;\n      letter-spacing: -1px; }\n\n.fade {\n  animation-name: fade;\n  animation-duration: 1.5s; }\n\n@keyframes fade {\n  from {\n    opacity: .4; }\n  to {\n    opacity: 1; } }\n\n@media only screen and (max-width: 1200px) {\n  .someNumbers__item {\n    width: 50%;\n    margin-bottom: 30px; } }\n\n@media only screen and (max-width: 1100px) {\n  .whoweare__item {\n    width: 100%; } }\n\n@media only screen and (max-width: 768px) {\n  .pageDescr {\n    width: 100%; }\n  .possibilities__item {\n    width: 50%; } }\n\n@media only screen and (max-width: 480px) {\n  .someNumbers__item {\n    width: 100%; }\n  .possibilities__item,\n  .findUs__item {\n    width: 100%; } }\n\n.cardBox {\n  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);\n  background-color: #fff;\n  width: 640px;\n  margin: 20px auto 0;\n  padding: 30px; }\n  .cardBox__item {\n    padding-bottom: 15px;\n    position: relative; }\n    .cardBox__item:last-child {\n      padding-top: 10px;\n      padding-bottom: 0; }\n    .cardBox__item_center {\n      text-align: center; }\n  .cardBox__labelSpan {\n    width: 100px;\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right;\n    padding-right: 10px;\n    color: #414141;\n    font-weight: 400; }\n  .cardBox__labelInput {\n    background-color: #ebebeb;\n    border: none;\n    height: 36px;\n    width: 400px;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 5px 10px; }\n  .cardBox__itemButtonWrap {\n    text-align: center; }\n  .cardBox__title {\n    padding-bottom: 15px; }\n\n.spanError {\n  color: red;\n  font-size: 12px;\n  font-weight: 400;\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  display: none; }\n\n.cardBox__spanError {\n  left: 100px; }\n\nhr {\n  border-top: none;\n  border-right: none;\n  border-left: none;\n  padding: 5px 0; }\n\n@media only screen and (max-width: 768px) {\n  .cardBox__labelSpan {\n    display: block;\n    text-align: left;\n    margin-bottom: 10px; }\n  .cardBox__labelInput {\n    width: 100%; }\n  .cardBox {\n    width: 100%; } }\n\n.task__title {\n  font-size: 20px;\n  text-transform: uppercase;\n  padding: 0 0 10px; }\n\n.task__subtitle {\n  padding: 0 0 5px; }\n\n.task__progress {\n  height: 5px;\n  background-color: #00bcd4;\n  position: absolute;\n  top: -20px;\n  left: -15px; }\n\n.taskShare {\n  padding-top: 50px; }\n  .taskShare__title {\n    font-size: 18px;\n    padding-bottom: 15px; }\n  .taskShare__items {\n    list-style-type: none;\n    margin: 0;\n    padding: 0; }\n  .taskShare__item {\n    display: inline-block;\n    vertical-align: middle;\n    width: 50px;\n    height: 40px;\n    transition: 0.3s all ease;\n    font-family: \"myfontsoc\";\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    line-height: 40px; }\n    .taskShare__item:before {\n      display: block;\n      font-size: 25px;\n      font-weight: normal;\n      margin-left: 5px; }\n    .taskShare__item_twitter {\n      background-color: #00aced; }\n      .taskShare__item_twitter:before {\n        content: 'u'; }\n    .taskShare__item_vk {\n      background-color: #4c75a3; }\n      .taskShare__item_vk:before {\n        content: 'v'; }\n    .taskShare__item_google {\n      background-color: #e14d3a; }\n      .taskShare__item_google:before {\n        content: 'w'; }\n    .taskShare__item_facebook {\n      background-color: #3c5a99; }\n      .taskShare__item_facebook:before {\n        content: 'x';\n        font-size: 18px; }\n    .taskShare__item:hover {\n      background-color: #000; }\n\n.subtask__item {\n  font-weight: 400;\n  margin: 10px 0; }\n  .subtask__item label {\n    color: rgba(0, 0, 0, 0.87) !important; }\n\n.taskList__empty {\n  color: red; }\n\n.taskList__item {\n  font-weight: 400;\n  padding: 10px 0; }\n  .taskList__itemProgress {\n    display: inline-block;\n    vertical-align: middle;\n    width: 80px; }\n  .taskList__itemText {\n    display: inline-block;\n    vertical-align: middle;\n    text-decoration: none;\n    width: 220px; }\n  .taskList__itemLink:hover {\n    text-decoration: none; }\n  .taskList__itemProject {\n    width: 200px;\n    display: inline-block; }\n  .taskList__itemCreator {\n    width: 150px;\n    display: inline-block; }\n  .taskList__item_head {\n    font-weight: 500; }\n\n.paginationWrap {\n  text-align: center;\n  padding-top: 30px; }\n\n.pagination {\n  display: inline-block;\n  list-style-type: none;\n  margin: 0;\n  padding: 0; }\n  .pagination li {\n    display: inline-block;\n    padding: 0 3px; }\n    .pagination li.disabled {\n      display: none; }\n    .pagination li a {\n      cursor: pointer;\n      text-decoration: none;\n      font-size: 16px;\n      padding: 0 3px; }\n      .pagination li a:hover {\n        text-decoration: underline; }\n    .pagination li.active a {\n      text-decoration: underline;\n      cursor: auto; }\n",".whoweare {\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 50%;\n\t\tpadding: 0 15px;\n\t\tmargin-bottom: 30px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tdisplay: table;\n\t\t\tclear: both; }\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 60px;\n\t\t\tfloat: left;\n\t\t\twidth: 10%;\n\t\t\ttext-align: center;\n\t\t\tcolor: #4298EB; }\n\t\t&Inner {\n\t\t\tfloat: left;\n\t\t\twidth: 90%; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 15px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n$slidersize: 300px;\n\n.page {\n\t&Slider {\n\t\tposition: relative;\n\t\tmargin-bottom: 80px;\n\t\twidth: 100%;\n\t\tmargin: auto;\n\t\toverflow: hidden;\n\t\t&__items {\n\t\t\t// margin: 0 -10px\n\t\t\ttransition: 0.6s all ease;\n\t\t\t&:after {\n\t\t\t\tdisplay: table;\n\t\t\t\tclear: both;\n\t\t\t\tcontent: ''; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\twidth: $slidersize;\n\t\t\tvertical-align: top;\n\t\t\t// margin: 0 5px\n\t\t\ttd {\n\t\t\t\tborder: none;\n\t\t\t\ttext-align: center; }\n\t\t\t&ImgWrap {\n\t\t\t\tborder: none;\n\t\t\t\tmin-width: $slidersize;\n\t\t\t\tmax-width: $slidersize;\n\t\t\t\tmin-height: $slidersize;\n\t\t\t\tmax-height: $slidersize;\n\t\t\t\theight: $slidersize;\n\t\t\t\tmargin: 0;\n\t\t\t\tpadding: 0 5px;\n\t\t\t\ttext-align: center; }\n\t\t\t&TextWrap {\n\t\t\t\tpadding: 10px; }\n\t\t\t&Img {\n\t\t\t\tdisplay: block;\n\t\t\t\tmax-width: 100%;\n\t\t\t\tmax-height: 100%;\n\t\t\t\tmargin: auto; }\n\t\t\t&Name {\n\t\t\t\tfont-size: 18px; }\n\t\t\t&Descr {\n\t\t\t\tfont-weight: 400; } }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0;\n\t\t\t\ttransition: 0.3s all ease; }\n\t\t\t&_right {\n\t\t\t\tright: 0;\n\t\t\t\ttransition: 0.3s all ease; } } } }\n\n.breadcrumbs {\n\t&__items {\n\t\tlist-style-type: none;\n\t\tpadding: 15px 0 0;\n\t\tmargin: 0; }\n\t&__item {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 6px;\n\t\t&:after {\n\t\t\tcontent: '>';\n\t\t\tmargin-left: 16px; }\n\t\t&:first-child {\n\t\t\tpadding-left: 0; }\n\t\t&:last-child {\n\t\t\t&:after {\n\t\t\t\tdisplay: none; } } } }\n\n@media only screen and (max-width : 480px) {\n\t.pageSlider__itemImgWrap {\n\t\tpadding: 0; } }\n\n@media only screen and (max-width : 329px) {\n\t.pageSlider {\n\t\tmargin: 0 -5px 80px; } }\n",".addTask {\n\twidth: 300px;\n\t&__item {\n\t\t&Text {\n\t\t\tfont-size: 16px;\n\t\t\tline-height: 18px; }\n\t\t&Span {\n\t\t\tbackground-color: #000;\n\t\t\tborder-radius: 50%;\n\t\t\tfont-size: 16px;\n\t\t\tline-height: 18px;\n\t\t\tdisplay: inline-block;\n\t\t\tcolor: #fff;\n\t\t\twidth: 18px;\n\t\t\ttext-align: center;\n\t\t\tmargin-right: 5px;\n\t\t\ttransition: 0.2s all ease; }\n\t\t&_assign {\n\t\t\tpadding-top: 10px;\n\t\t\tcolor: rgba(0, 0, 0, 0.6);\n\t\t\t.addTask__itemText {\n\t\t\t\tdisplay: inline-block;\n\t\t\t\tvertical-align: top;\n\t\t\t\tline-height: 56px;\n\t\t\t\tmargin-right: 10px;\n\t\t\t\t&+div {\n\t\t\t\t\tvertical-align: top; } } } }\n\t&__subtask {\n\t\t&Add {\n\t\t\tpadding: 10px 0 0px;\n\t\t\tmargin-bottom: 20px;\n\t\t\tcolor: rgba(0, 0, 0, 0.8);\n\t\t\ttext-decoration: underline;\n\t\t\tcursor: pointer;\n\t\t\tdisplay: inline-block;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: none;\n\t\t\t\t.addTask__itemSpan {\n\t\t\t\t\tbackground-color: #989898; } } }\n\t\t&Item {\n\t\t\tposition: relative; }\n\t\t&Remove {\n\t\t\tdisplay: block;\n\t\t\tposition: absolute;\n\t\t\tright: 10px;\n\t\t\ttop: 35px;\n\t\t\tcursor: pointer;\n\t\t\ttransition: 0.2s all ease;\n\t\t\t&:hover {\n\t\t\t\tbackground-color: #989898; } } }\n\t&__button {\n\t\tmargin-top: 20px; } }\n",".pageContainer {\n\tpadding: 20px 15px; }\n\n.pageTitle {\n\tfont-size: 26px;\n\tfont-weight: 500;\n\tcolor: rgba(0,0,0,0.87); }\n\n.content:after {\n\tcontent: '';\n\tclear: both;\n\tdisplay: table; }\n\n\n.sliderBtn {\n\twidth: 40px;\n\theight: 40px;\n\tbackground-color: #000;\n\tcolor: #fff;\n\tborder: none;\n\ttransition: 0.3s all ease;\n\t&:hover {\n\t\tbackground-color: #4298EB; } }\n\n.pageLoader {\n\twidth: 19px;\n\theight: 19px;\n\tmargin: 50px auto;\n\tbackground-size: cover; }\n\n\n",".cabinet {\n\tposition: relative;\n\t&Title {\n\t\ttext-align: center;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 22px;\n\t\tpadding: 10px 0; }\n\t&SubTitle {\n\t\tfont-size: 18px;\n\t\tpadding-bottom: 10px; } }\n\n\n",".filters {\n\t&Title {\n\t\tfont-size: 18px;\n\t\tpadding-bottom: 10px; }\n\t&__groups {\n\t\tmax-height: 280px;\n\t\toverflow-y: scroll; }\n\t&__group {\n\t\tpadding-bottom: 10px;\n\t\t&Title {\n\t\t\tcolor: rgba(0,0,0,0.6); } }\n\t&__checkbox {\n\t\tmargin: 10px 0;\n\t\tlabel {\n\t\t\tmargin-left: -15px; } }\n\t&__select {\n\t\twidth: 200px !important;\n\t\thr {\n\t\t\tborder-color: #000 !important; } }\n\t&__button {\n\t\tmargin-bottom: 20px; } }\n",".sidebar {\n\tfloat: left;\n\twidth: 30%; }\n.contentRight {\n\tmargin-top: 8px;\n\tpadding: 15px;\n\tfloat: left;\n\twidth: 70%;\n\tbackground-color: #f5f5f5;\n\tposition: relative; }\n\n.sidebar {\n\t&__item {\n\t\t&Link {\n\t\t\ttext-decoration: none; } } }\n",".findUs {\n\tmargin-bottom: 30px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 33.33%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\tmargin-bottom: 20px;\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 100px;\n\t\t\tcolor: #4298EB; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 20px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n.contacts_mapWrap {\n\tmargin: 0 -15px 30px; }\n\n.contacts_map {\n\tposition: relative;\n\toverflow: hidden;\n\tbackground-color: rgb(229, 227, 223);\n\twidth: 100%;\n\theight: 500px; }\n\n","#mobNav {\n\tdisplay: none; }\n\n.header {\n\tbox-shadow: 0 1px 8px rgba(0,0,0,.3);\n\tpadding: 0 15px;\n\tbackground-color: #fff;\n\tposition: relative;\n\tz-index: 5;\n\t&__toggle {\n\t\t&Label {\n\t\t\tdisplay: none;\n\t\t\tcolor: #000;\n\t\t\tpadding: 10px;\n\t\t\twidth: 50px;\n\t\t\theight: 35px;\n\t\t\tspan {\n\t\t\t\tdisplay: block;\n\t\t\t\twidth: 30px;\n\t\t\t\theight: 3px;\n\t\t\t\tbackground: #000;\n\t\t\t\tposition: relative;\n\t\t\t\ttransition: ease 0.3s all;\n\t\t\t\t&:before,\n\t\t\t\t&:after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 6px;\n\t\t\t\t\tbackground-color: #000;\n\t\t\t\t\t-webkit-transition: ease 0.3s all;\n\t\t\t\t\ttransition: ease 0.3s all; }\n\t\t\t\t&:after {\n\t\t\t\t  top: 12px; } } } }\n\t&__dropdown {\n\t\t&:after {\n\t\t\tclear: both;\n\t\t\tdisplay: table;\n\t\t\tcontent: ''; } }\n\t&Logo {\n\t\tfloat: left;\n\t\tpadding: 15px 15px 15px 0;\n\t\t&__img {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 40px;\n\t\t\theight: 40px;\n\t\t\tmargin-right: 5px; }\n\t\t&__span {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tfont-size: 24px;\n\t\t\t&_blue {\n\t\t\t\tcolor: #4298EB; } } }\n\t&Menu {\n\t\tfloat: left;\n\t\t&__items {\n\t\t\tpadding: 0;\n\t\t\tmargin: 0;\n\t\t\tlist-style-type: none;\n\t\t\t&:after {\n\t\t\t\tcontent: '';\n\t\t\t\tclear: both;\n\t\t\t\tdisplay: table; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\tposition: relative;\n\t\t\t&:last-child {\n\t\t\t\t.headerMenu__itemLink {\n\t\t\t\t\tborder: none; } }\n\t\t\t&Link {\n\t\t\t\tpadding: 28px 20px 22px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tline-height: 20px;\n\t\t\t\ttext-transform: uppercase;\n\t\t\t\tdisplay: block;\n\t\t\t\tcolor: #000;\n\t\t\t\ttext-decoration: none;\n\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\tposition: relative;\n\t\t\t\tborder-right: 1px solid #e8e8e8;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\ttransform-origin: 50% 100%;\n\t\t\t\t\ttransform: scale(0); }\n\t\t\t\t&:focus {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } }\n\t\t\t\t&_active {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } }\n\t\t\t&:hover {\n\t\t\t\t.headerMenu__items_submenu {\n\t\t\t\t\tdisplay: block; }\n\t\t\t\t>.headerMenu__itemLink {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } } }\n\t\t&__items_submenu {\n\t\t\tdisplay: none;\n\t\t\tposition: absolute;\n\t\t\tpadding: 5px 0;\n\t\t\tbackground-color: #fff;\n\t\t\tbox-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n\t\t&__item_submenu {}\n\t\t&__itemLink_submenu {\n\t\t\twhite-space: nowrap;\n\t\t\tfont-size: 14px;\n\t\t\tpadding: 15px 20px;\n\t\t\tborder: none;\n\t\t\t&:before {\n\t\t\t\twidth: 4px;\n\t\t\t\theight: 100%;\n\t\t\t\tleft: 0;\n\t\t\t\tright: auto;\n\t\t\t\ttransform-origin: 100% 50%; }\n\t\t\t&_active {\n\t\t\t\tcolor: #4298EB;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransform: scale(1);\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: auto;\n\t\t\t\t\ttransform-origin: 100% 50%; } } } }\n\t&Search {\n\t\tfloat: left;\n\t\tposition: relative;\n\t\tpadding: 10px 0 10px;\n\t\t&__input {\n\t\t\tbackground-color: #e5e5e5;\n\t\t\tborder: none;\n\t\t\twidth: 250px;\n\t\t\theight: 48px;\n\t\t\tpadding: 15px 30px 15px 15px;\n\t\t\tborder-radius: 4px; }\n\t\t&__icon {\n\t\t\tposition: absolute;\n\t\t\tright: 15px;\n\t\t\ttop: 25px;\n\t\t\tfont-size: 45px;\n\t\t\tdisplay: block;\n\t\t\twidth: 15px;\n\t\t\theight: 15px;\n\t\t\tborder: 2px solid #989898;\n\t\t\tborder-radius: 50%;\n\t\t\tcursor: pointer;\n\t\t\t&:before {\n\t\t\t\tcontent: \"\";\n\t\t\t\tdisplay: block;\n\t\t\t\tposition: absolute;\n\t\t\t\tright: -7px;\n\t\t\t\tbottom: -4px;\n\t\t\t\tborder-width: 0;\n\t\t\t\tbackground: #989898;\n\t\t\t\twidth: 10px;\n\t\t\t\theight: 3px;\n\t\t\t\ttransform: rotate(45deg); } } }\n\t&User {\n\t\tfloat: right;\n\t\t&__inner {\n\t\t\tpadding-top: 18px; }\n\t\t&__signin {\n\t\t\tpadding-top: 25px; }\n\t\t&__avatar {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t\toverflow: hidden;\n\t\t\tborder-radius: 50%;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tmargin-right: 5px;\n\t\t\t-webkit-background-size: cover;\n\t\t\tbackground-size: cover;\n\t\t\t&Img {\n\t\t\t\twidth: 100%;\n\t\t\t\tdisplay: block; } }\n\t\t&__name {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none; }\n\t\t&__link:hover {\n\t\t\t.headerUser__name {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&__exit {\n\t\t\tmargin-left: 15px;\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } } } }\n\n\n\n#mobNav:checked + .header__toggleLabel span {\n\ttransform: rotate(45deg);\n\tposition: relative;\n\ttop: 10px; }\n#mobNav:checked + .header__toggleLabel span:before {\n\ttop: 0px;\n\ttransform: rotate(-90deg); }\n#mobNav:checked + .header__toggleLabel span:after {\n\topacity: 0; }\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n\ttransform: translate(0, 0);\n\ttop: 34px; }\n\n\n\n@media only screen and (max-width : 1100px) {\n\t.header__toggle {\n\t\tpadding: 10px 15px; }\n\t.header__toggleLabel {\n\t\tdisplay: block; }\n\t#mobNav:checked + .header__toggleLabel span {\n\t\ttransform: rotate(45deg);\n\t\tposition: relative;\n\t\ttop: 10px; }\n\t#mobNav:checked + .header__toggleLabel span:before {\n\t\ttop: 0px;\n\t\ttransform: rotate(-90deg); }\n\t#mobNav:checked + .header__toggleLabel span:after {\n\t\topacity: 0; }\n\t.header {\n\t\tpadding: 0; }\n\t.header__dropdown {\n\t\ttransform: translate(0, -100%);\n\t\ttop: -100%;\n\t\tposition: absolute;\n\t\ttransition: 0.5s all ease;\n\t\tbackground-color: #fff;\n\t\twidth: 100%;\n\t\tpadding: 0 15px 25px; }\n\t.headerLogo,\n\t.headerMenu,\n\t.headerSearch,\n\t.headerUser,\n\t.headerMenu__item {\n\t\tfloat: none; }\n\t.headerSearch__input {\n\t\twidth: 100%; }\n\t.headerMenu__itemLink {\n\t\tborder: none;\n\t\tdisplay: inline-block;\n\t\tpadding: 10px 20px; }\n\t.headerMenu__items_submenu {\n\t\tdisplay: block;\n\t\tposition: static;\n\t\tbox-shadow: none;\n\t\tpadding-left: 30px; }\n\t.headerMenu__itemLink_submenu {\n\t\tpadding: 5px 0 0 10px; }\n\t#mobNav:checked + .header__dropdown {\n\t\tdisplay: block;\n\t\ttransform: translate(0, 0);\n\t\ttop: 50px; } }\n",".home {\n\t&Slider {\n\t\tposition: relative;\n\t\t&__img {\n\t\t\twidth: 100%;\n\t\t\theight: 500px;\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: 50% 50%; }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0; }\n\t\t\t&_right {\n\t\t\t\tright: 0; } } } }\n\n\n.blockTitle {\n\ttext-align: center;\n\ttext-transform: uppercase;\n\tpadding: 20px 0 40px;\n\tposition: relative;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 100px;\n\t\theight: 2px;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\tright: 0;\n\t\tbottom: 20px;\n\t\tmargin: auto;\n\t\tbackground-color: #4298EB; } }\n\n.pageDescr {\n\twidth: 740px;\n\tfont-weight: 400;\n\tmargin-left: auto;\n\tmargin-right: auto;\n\ttext-align: center;\n\tpadding-bottom: 30px; }\n\n.possibilities {\n\tpadding-bottom: 20px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 33.33%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\tmargin-bottom: 20px;\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 100px;\n\t\t\tcolor: #4298EB; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 20px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n.someNumbers {\n\tpadding-bottom: 20px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\tpadding: 20px 0 50px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 25%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\t&Inner {\n\t\t\tborder: 1px solid #4298EB;\n\t\t\tpadding: 30px 30px; }\n\t\t&Title {\n\t\t\tcolor: #4298EB;\n\t\t\tfont-size: 30px; }\n\t\t&Text {\n\t\t\ttext-transform: uppercase;\n\t\t\tfont-weight: 400;\n\t\t\tfont-size: 20px;\n\t\t\tletter-spacing: -1px; } } }\n\n\n.fade {\n\tanimation-name: fade;\n\tanimation-duration: 1.5s; }\n\n@keyframes fade {\n\tfrom {\n\t\topacity: .4; }\n\tto {\n\t\topacity: 1; } }\n\n\n@media only screen and (max-width : 1200px) {\n\t.someNumbers__item {\n\t\twidth: 50%;\n\t\tmargin-bottom: 30px; } }\n\n@media only screen and (max-width : 1100px) {\n\t.whoweare__item {\n\t\twidth: 100%; } }\n\n@media only screen and (max-width : 768px) {\n\t.pageDescr {\n\t\twidth: 100%; }\n\t.possibilities__item {\n\t\twidth: 50%; } }\n\n@media only screen and (max-width : 480px) {\n\t.someNumbers__item {\n\t\twidth: 100%; }\n\t.possibilities__item,\n\t.findUs__item {\n\t\twidth: 100%; } }\n",".cardBox {\n\tbox-shadow: 2px 2px 11px 0 rgba(0,0,0,.1);\n\tbackground-color: #fff;\n\twidth: 640px;\n\tmargin: 20px auto 0;\n\tpadding: 30px;\n\t&__item {\n\t\tpadding-bottom: 15px;\n\t\tposition: relative;\n\t\t&:last-child {\n\t\t\tpadding-top: 10px;\n\t\t\tpadding-bottom: 0; }\n\t\t&_center {\n\t\t\ttext-align: center; } }\n\t&__label {\n\t\t&Span {\n\t\t\twidth: 100px;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-align: right;\n\t\t\tpadding-right: 10px;\n\t\t\tcolor: #414141;\n\t\t\tfont-weight: 400; }\n\t\t&Input {\n\t\t\tbackground-color: #ebebeb;\n\t\t\tborder: none;\n\t\t\theight: 36px;\n\t\t\twidth: 400px;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tpadding: 5px 10px; } }\n\t&__itemButtonWrap {\n\t\ttext-align: center; }\n\t&__title {\n\t\tpadding-bottom: 15px; } }\n\n\n\n.spanError {\n\tcolor: red;\n\tfont-size: 12px;\n\tfont-weight: 400;\n\tdisplay: block;\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0;\n\tdisplay: none; }\n\n.pageLoader {\n }\t// display: none\n\n\n.cardBox__spanError {\n\tleft: 100px; }\n\n\nhr {\n\tborder-top: none;\n\tborder-right: none;\n\tborder-left: none;\n\tpadding: 5px 0; }\n\n\n\n@media only screen and (max-width : 768px) {\n\t.cardBox__labelSpan {\n\t\tdisplay: block;\n\t\ttext-align: left;\n\t\tmargin-bottom: 10px; }\n\t.cardBox__labelInput {\n\t\twidth: 100%; }\n\t.cardBox {\n\t\twidth: 100%; } }\n",".task {\n\t&__title {\n\t\tfont-size: 20px;\n\t\ttext-transform: uppercase;\n\t\tpadding: 0 0 10px; }\n\t&__subtitle {\n\t\tpadding: 0 0 5px; }\n\t&__progress {\n\t\theight: 5px;\n\t\tbackground-color: rgb(0, 188, 212);\n\t\tposition: absolute;\n\t\ttop: -20px;\n\t\tleft: -15px; }\n\t&Share {\n\t\tpadding-top: 50px;\n\t\t&__title {\n\t\t\tfont-size: 18px;\n\t\t\tpadding-bottom: 15px; }\n\t\t&__items {\n\t\t\tlist-style-type: none;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0; }\n\t\t&__item {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 50px;\n\t\t\theight: 40px;\n\t\t\ttransition: 0.3s all ease;\n\t\t\tfont-family: \"myfontsoc\";\n\t\t\ttext-align: center;\n\t\t\tcursor: pointer;\n\t\t\tcolor: #fff;\n\t\t\tline-height: 40px;\n\t\t\t&:before {\n\t\t\t\tdisplay: block;\n\t\t\t\tfont-size: 25px;\n\t\t\t\tfont-weight: normal;\n\t\t\t\tmargin-left: 5px; }\n\t\t\t&_twitter {\n\t\t\t\tbackground-color: #00aced;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'u'; } }\n\t\t\t&_vk {\n\t\t\t\tbackground-color: #4c75a3;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'v'; } }\n\t\t\t&_google {\n\t\t\t\tbackground-color: #e14d3a;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'w'; } }\n\t\t\t&_facebook {\n\t\t\t\tbackground-color: #3c5a99;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'x';\n\t\t\t\t\tfont-size: 18px; } }\n\t\t\t&:hover {\n\t\t\t\tbackground-color: #000; } } } }\n\n\n\n\n.subtask {\n\t&__item {\n\t\tfont-weight: 400;\n\t\tmargin: 10px 0;\n\t\tlabel {\n\t\t\tcolor: rgba(0, 0, 0, 0.87) !important; } } }\n",".taskList {\n\t&__empty {\n\t\tcolor: red; }\n\t&__items {}\n\t&__item {\n\t\tfont-weight: 400;\n\t\tpadding: 10px 0;\n\t\t&Progress {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 80px; }\n\t\t&Text {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none;\n\t\t\twidth: 220px; }\n\t\t&Link {\n\t\t\t// text-decoration: none\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: none; } }\n\t\t&Project {\n\t\t\twidth: 200px;\n\t\t\tdisplay: inline-block; }\n\t\t&Creator {\n\t\t\twidth: 150px;\n\t\t\tdisplay: inline-block; }\n\t\t&_head {\n\t\t\tfont-weight: 500; } } }\n\n.paginationWrap {\n\ttext-align: center;\n\tpadding-top: 30px; }\n.pagination {\n\tdisplay: inline-block;\n\tlist-style-type: none;\n\tmargin: 0;\n\tpadding: 0;\n\tli {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 3px;\n\t\t&.disabled {\n\t\t\tdisplay: none; }\n\t\ta {\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\tfont-size: 16px;\n\t\t\tpadding: 0 3px;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&.active {\n\t\t\ta {\n\t\t\t\ttext-decoration: underline;\n\t\t\t\tcursor: auto; } } } }\n"],"sourceRoot":""}]);
+exports.push([module.i, "html {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nbody {\n  margin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block; }\n\naudio, canvas, progress, video {\n  display: inline-block;\n  vertical-align: baseline; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n[hidden], template {\n  display: none; }\n\na {\n  background-color: transparent; }\n  a:active, a:hover {\n    outline: 0; }\n\nabbr[title] {\n  border-bottom: 1px dotted; }\n\nb, strong {\n  font-weight: bold; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  margin: .67em 0;\n  font-size: 2em; }\n\nmark {\n  color: #000;\n  background: #ff0; }\n\nsmall {\n  font-size: 80%; }\n\nsub {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline; }\n\nsup {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline;\n  top: -.5em; }\n\nsub {\n  bottom: -.25em; }\n\nimg {\n  border: 0; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  height: 0;\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box; }\n\npre {\n  overflow: auto; }\n\ncode, kbd, pre, samp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nbutton, optgroup, select, textarea {\n  margin: 0;\n  font: inherit;\n  color: inherit; }\n\ninput {\n  margin: 0; }\n\nbutton {\n  overflow: visible;\n  text-transform: none; }\n\nselect {\n  text-transform: none; }\n\nbutton, html input[type=\"button\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\ninput[type=\"reset\"], input[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\nbutton[disabled], html input[disabled] {\n  cursor: default; }\n\nbutton::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput {\n  line-height: normal; }\n  input::-moz-focus-inner {\n    padding: 0;\n    border: 0; }\n  input[type=\"checkbox\"], input[type=\"radio\"] {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    padding: 0; }\n  input[type=\"number\"]::-webkit-inner-spin-button, input[type=\"number\"]::-webkit-outer-spin-button {\n    height: auto; }\n  input[type=\"search\"] {\n    box-sizing: border-box;\n    -webkit-appearance: textfield; }\n    input[type=\"search\"]::-webkit-search-cancel-button, input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none; }\n\nfieldset {\n  padding: .35em .625em .75em;\n  margin: 0 2px;\n  border: 1px solid #c0c0c0; }\n\nlegend {\n  padding: 0;\n  border: 0; }\n\ntextarea {\n  overflow: auto; }\n\noptgroup {\n  font-weight: bold; }\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse; }\n\ntd, th {\n  padding: 0; }\n\n@media print {\n  * {\n    color: #000 !important;\n    text-shadow: none !important;\n    background: transparent !important;\n    -webkit-box-shadow: none !important;\n    box-shadow: none !important; }\n    *:before, *:after {\n      color: #000 !important;\n      text-shadow: none !important;\n      background: transparent !important;\n      -webkit-box-shadow: none !important;\n      box-shadow: none !important; }\n  a {\n    text-decoration: underline; }\n    a:visited {\n      text-decoration: underline; }\n    a[href]:after {\n      content: \" (\" attr(href) \")\"; }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\"; }\n  a[href^=\"#\"]:after, a[href^=\"javascript:\"]:after {\n    content: \"\"; }\n  pre, blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid; }\n  thead {\n    display: table-header-group; }\n  tr {\n    page-break-inside: avoid; }\n  img {\n    page-break-inside: avoid;\n    max-width: 100% !important; }\n  p, h2, h3 {\n    orphans: 3;\n    widows: 3; }\n  h2, h3 {\n    page-break-after: avoid; }\n  select {\n    background: #fff !important; }\n  .navbar {\n    display: none; }\n  .btn > .caret, .dropup > .btn > .caret {\n    border-top-color: #000 !important; }\n  .label {\n    border: 1px solid #000; }\n  .table {\n    border-collapse: collapse !important; }\n    .table td, .table th {\n      background-color: #fff !important; }\n  .table-bordered th, .table-bordered td {\n    border: 1px solid #ddd !important; } }\n\ntextarea::-webkit-input-placeholder,\ninput::-webkit-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea::-moz-placeholder,\ninput::-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-moz-placeholder,\ninput:-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-ms-input-placeholder,\ninput:-ms-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ninput {\n  border-radius: 0;\n  font-family: \"Roboto\";\n  color: #000;\n  font-weight: 900;\n  font-size: 14px;\n  background: none; }\n\nlabel {\n  cursor: pointer; }\n\nbody {\n  font-size: 14px;\n  position: relative;\n  line-height: 1.3;\n  overflow-x: hidden;\n  color: #000;\n  background-color: #eee;\n  font-family: \"Roboto\";\n  font-weight: 900; }\n\n.hidden {\n  display: none; }\n\n.lock {\n  overflow: hidden; }\n\nh1,\n.h1Title {\n  font-size: 30px;\n  line-height: 42px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh2,\n.h2Title {\n  font-size: 24px;\n  line-height: 30px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh3,\n.h3Title {\n  font-size: 20px;\n  line-height: 30px;\n  margin: 0 0 30px;\n  text-transform: uppercase;\n  color: #000; }\n\np {\n  margin: 0;\n  padding-bottom: 16px;\n  text-transform: uppercase;\n  line-height: 1.75; }\n\na {\n  color: #000; }\n  a:hover {\n    text-decoration: none; }\n\n.btn {\n  padding: 14px 34px;\n  background-color: #000;\n  text-transform: uppercase;\n  color: #fff;\n  transition: ease 0.3s all;\n  font-size: 14px;\n  line-height: 16px;\n  text-decoration: none;\n  display: inline-block;\n  border: none; }\n  .btn:hover, .btn:focus {\n    background-color: #663d15; }\n\n.btnLong {\n  width: 100%;\n  text-align: center;\n  white-space: nowrap; }\n\n.inputText {\n  border: 2px solid #000;\n  transition: ease 0.3s all;\n  padding: 10px 16px; }\n  .inputText:focus {\n    border-color: #663d15; }\n\n.labelCheckbox span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelCheckbox span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px; }\n  .labelCheckbox span:after {\n    content: '';\n    width: 14px;\n    height: 14px;\n    position: absolute;\n    left: 3px;\n    top: 1px;\n    background-color: #000;\n    background-position: -135px -3px;\n    opacity: 0; }\n  .labelCheckbox span:hover {\n    color: #663d15; }\n\n.labelCheckbox input:checked + span:after {\n  opacity: 1; }\n\n.labelCheckbox input:disabled + span {\n  color: #afadab; }\n\n.labelCheckbox input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelCheckbox input:disabled + span:before {\n  border-color: #afadab; }\n\n.labelRadio span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelRadio span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px;\n    border-radius: 50%; }\n  .labelRadio span:after {\n    content: '';\n    width: 8px;\n    height: 8px;\n    position: absolute;\n    left: 6px;\n    top: 4px;\n    opacity: 0;\n    border-radius: 50%;\n    background-color: #000; }\n  .labelRadio span:hover {\n    color: #663d15; }\n\n.labelRadio input:checked + span:after {\n  opacity: 1; }\n\n.labelRadio input:disabled + span {\n  color: #afadab; }\n\n.labelRadio input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelRadio input:disabled + span:before {\n  border-color: #afadab; }\n\ntable {\n  width: 100%; }\n  table td {\n    height: 40px;\n    padding: 0 15px;\n    border: 2px solid #000;\n    width: 50%; }\n    table td:nth-child(2) {\n      text-align: right; }\n\n.whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  margin-bottom: 80px;\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n  .pageSlider__items {\n    transition: 0.6s all ease; }\n    .pageSlider__items:after {\n      display: table;\n      clear: both;\n      content: ''; }\n  .pageSlider__item {\n    float: left;\n    width: 300px;\n    vertical-align: top; }\n    .pageSlider__item td {\n      border: none;\n      text-align: center; }\n    .pageSlider__itemImgWrap {\n      border: none;\n      min-width: 300px;\n      max-width: 300px;\n      min-height: 300px;\n      max-height: 300px;\n      height: 300px;\n      margin: 0;\n      padding: 0 5px;\n      text-align: center; }\n    .pageSlider__itemTextWrap {\n      padding: 10px; }\n    .pageSlider__itemImg {\n      display: block;\n      max-width: 100%;\n      max-height: 100%;\n      margin: auto; }\n    .pageSlider__itemName {\n      font-size: 18px; }\n    .pageSlider__itemDescr {\n      font-weight: 400; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0;\n      transition: 0.3s all ease; }\n    .pageSlider__control_right {\n      right: 0;\n      transition: 0.3s all ease; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n\n@media only screen and (max-width: 480px) {\n  .pageSlider__itemImgWrap {\n    padding: 0; } }\n\n@media only screen and (max-width: 329px) {\n  .pageSlider {\n    margin: 0 -5px 80px; } }\n\n.addTask {\n  width: 300px; }\n  .addTask__itemText {\n    font-size: 16px;\n    line-height: 18px; }\n  .addTask__itemSpan {\n    background-color: #000;\n    border-radius: 50%;\n    font-size: 16px;\n    line-height: 18px;\n    display: inline-block;\n    color: #fff;\n    width: 18px;\n    text-align: center;\n    margin-right: 5px;\n    transition: 0.2s all ease; }\n  .addTask__item_assign {\n    padding-top: 10px;\n    color: rgba(0, 0, 0, 0.6); }\n    .addTask__item_assign .addTask__itemText {\n      display: inline-block;\n      vertical-align: top;\n      line-height: 56px;\n      margin-right: 10px; }\n      .addTask__item_assign .addTask__itemText + div {\n        vertical-align: top; }\n  .addTask__subtaskAdd {\n    padding: 10px 0 0px;\n    margin-bottom: 20px;\n    color: rgba(0, 0, 0, 0.8);\n    text-decoration: underline;\n    cursor: pointer;\n    display: inline-block; }\n    .addTask__subtaskAdd:hover {\n      text-decoration: none; }\n      .addTask__subtaskAdd:hover .addTask__itemSpan {\n        background-color: #989898; }\n  .addTask__subtaskItem {\n    position: relative; }\n  .addTask__subtaskRemove {\n    display: block;\n    position: absolute;\n    right: 10px;\n    top: 35px;\n    cursor: pointer;\n    transition: 0.2s all ease; }\n    .addTask__subtaskRemove:hover {\n      background-color: #989898; }\n  .addTask__button {\n    margin-top: 20px; }\n\n.pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover {\n    background-color: #4298EB; }\n\n.pageLoader {\n  width: 19px;\n  height: 19px;\n  margin: 50px auto;\n  background-size: cover; }\n\n.cabinet {\n  position: relative; }\n  .cabinetTitle {\n    text-align: center;\n    text-transform: uppercase;\n    font-size: 22px;\n    padding: 10px 0; }\n  .cabinetSubTitle {\n    font-size: 18px;\n    padding-bottom: 10px; }\n\n.filtersTitle {\n  font-size: 18px;\n  padding-bottom: 10px; }\n\n.filters__groups {\n  max-height: 280px;\n  overflow-y: scroll; }\n\n.filters__group {\n  padding-bottom: 10px; }\n  .filters__groupTitle {\n    color: rgba(0, 0, 0, 0.6); }\n\n.filters__checkbox {\n  margin: 10px 0; }\n  .filters__checkbox label {\n    margin-left: -15px; }\n\n.filters__select {\n  width: 200px !important; }\n  .filters__select hr {\n    border-color: #000 !important; }\n\n.filters__button {\n  margin-bottom: 20px; }\n\n.sidebar {\n  float: left;\n  width: 30%; }\n\n.contentRight {\n  margin-top: 8px;\n  padding: 15px;\n  float: left;\n  width: 70%;\n  background-color: #f5f5f5;\n  position: relative; }\n\n.sidebar__itemLink {\n  text-decoration: none; }\n\n.findUs {\n  margin-bottom: 30px; }\n  .findUs__items {\n    margin: 0 -15px; }\n    .findUs__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .findUs__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .findUs__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .findUs__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .findUs__itemText {\n      font-weight: 500; }\n\n.contacts_mapWrap {\n  margin: 0 -15px 30px; }\n\n.contacts_map {\n  position: relative;\n  overflow: hidden;\n  background-color: #e5e3df;\n  width: 100%;\n  height: 500px; }\n\n#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n    .headerSearch__items {\n      list-style-type: none;\n      margin: 0;\n      padding: 0 10px;\n      width: 250px;\n      position: absolute;\n      border-radius: 4px;\n      background-color: #e5e5e5; }\n    .headerSearch__item {\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      margin: 10px 0; }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: searchfield; }\n\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: searchfield-cancel-button; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n\n.homeSlider {\n  position: relative; }\n  .homeSlider__img {\n    width: 100%;\n    height: 500px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .homeSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .homeSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .homeSlider__control_left {\n      left: 0; }\n    .homeSlider__control_right {\n      right: 0; }\n\n.blockTitle {\n  text-align: center;\n  text-transform: uppercase;\n  padding: 20px 0 40px;\n  position: relative; }\n  .blockTitle:before {\n    content: '';\n    width: 100px;\n    height: 2px;\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 20px;\n    margin: auto;\n    background-color: #4298EB; }\n\n.pageDescr {\n  width: 740px;\n  font-weight: 400;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n  padding-bottom: 30px; }\n\n.possibilities {\n  padding-bottom: 20px; }\n  .possibilities__items {\n    margin: 0 -15px; }\n    .possibilities__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .possibilities__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center; }\n    .possibilities__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .possibilities__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .possibilities__itemText {\n      font-weight: 500;\n      min-height: 110px; }\n\n.someNumbers {\n  padding-bottom: 20px; }\n  .someNumbers__items {\n    margin: 0 -15px;\n    padding: 20px 0 50px; }\n    .someNumbers__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .someNumbers__item {\n    float: left;\n    width: 25%;\n    padding: 0 15px;\n    text-align: center; }\n    .someNumbers__itemInner {\n      border: 1px solid #4298EB;\n      padding: 30px 30px; }\n    .someNumbers__itemTitle {\n      color: #4298EB;\n      font-size: 30px; }\n    .someNumbers__itemText {\n      text-transform: uppercase;\n      font-weight: 400;\n      font-size: 20px;\n      letter-spacing: -1px; }\n\n.fade {\n  animation-name: fade;\n  animation-duration: 1.5s; }\n\n@keyframes fade {\n  from {\n    opacity: .4; }\n  to {\n    opacity: 1; } }\n\n@media only screen and (max-width: 1200px) {\n  .someNumbers__item {\n    width: 50%;\n    margin-bottom: 30px; } }\n\n@media only screen and (max-width: 1100px) {\n  .whoweare__item {\n    width: 100%; } }\n\n@media only screen and (max-width: 768px) {\n  .pageDescr {\n    width: 100%; }\n  .possibilities__item {\n    width: 50%; } }\n\n@media only screen and (max-width: 480px) {\n  .someNumbers__item {\n    width: 100%; }\n  .possibilities__item,\n  .findUs__item {\n    width: 100%; } }\n\n.cardBox {\n  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);\n  background-color: #fff;\n  width: 640px;\n  margin: 20px auto 0;\n  padding: 30px; }\n  .cardBox__item {\n    padding-bottom: 15px;\n    position: relative; }\n    .cardBox__item:last-child {\n      padding-top: 10px;\n      padding-bottom: 0; }\n    .cardBox__item_center {\n      text-align: center; }\n  .cardBox__labelSpan {\n    width: 100px;\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right;\n    padding-right: 10px;\n    color: #414141;\n    font-weight: 400; }\n  .cardBox__labelInput {\n    background-color: #ebebeb;\n    border: none;\n    height: 36px;\n    width: 400px;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 5px 10px; }\n  .cardBox__itemButtonWrap {\n    text-align: center; }\n  .cardBox__title {\n    padding-bottom: 15px; }\n\n.spanError {\n  color: red;\n  font-size: 12px;\n  font-weight: 400;\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  display: none; }\n\n.cardBox__spanError {\n  left: 100px; }\n\nhr {\n  border-top: none;\n  border-right: none;\n  border-left: none;\n  padding: 5px 0; }\n\n@media only screen and (max-width: 768px) {\n  .cardBox__labelSpan {\n    display: block;\n    text-align: left;\n    margin-bottom: 10px; }\n  .cardBox__labelInput {\n    width: 100%; }\n  .cardBox {\n    width: 100%; } }\n\n.task__title {\n  font-size: 20px;\n  text-transform: uppercase;\n  padding: 0 0 10px; }\n\n.task__subtitle {\n  padding: 0 0 5px; }\n\n.task__progress {\n  height: 5px;\n  background-color: #00bcd4;\n  position: absolute;\n  top: -20px;\n  left: -15px; }\n\n.taskShare {\n  padding-top: 50px; }\n  .taskShare__title {\n    font-size: 18px;\n    padding-bottom: 15px; }\n  .taskShare__items {\n    list-style-type: none;\n    margin: 0;\n    padding: 0; }\n  .taskShare__item {\n    display: inline-block;\n    vertical-align: middle;\n    width: 50px;\n    height: 40px;\n    transition: 0.3s all ease;\n    font-family: \"myfontsoc\";\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    line-height: 40px; }\n    .taskShare__item:before {\n      display: block;\n      font-size: 25px;\n      font-weight: normal;\n      margin-left: 5px; }\n    .taskShare__item_twitter {\n      background-color: #00aced; }\n      .taskShare__item_twitter:before {\n        content: 'u'; }\n    .taskShare__item_vk {\n      background-color: #4c75a3; }\n      .taskShare__item_vk:before {\n        content: 'v'; }\n    .taskShare__item_google {\n      background-color: #e14d3a; }\n      .taskShare__item_google:before {\n        content: 'w'; }\n    .taskShare__item_facebook {\n      background-color: #3c5a99; }\n      .taskShare__item_facebook:before {\n        content: 'x';\n        font-size: 18px; }\n    .taskShare__item:hover {\n      background-color: #000; }\n\n.subtask__item {\n  font-weight: 400;\n  margin: 10px 0; }\n  .subtask__item label {\n    color: rgba(0, 0, 0, 0.87) !important; }\n\n.taskList__empty {\n  color: red; }\n\n.taskList__item {\n  font-weight: 400;\n  padding: 10px 0; }\n  .taskList__itemProgress {\n    display: inline-block;\n    vertical-align: middle;\n    width: 80px; }\n  .taskList__itemText {\n    display: inline-block;\n    vertical-align: middle;\n    text-decoration: none;\n    width: 220px; }\n  .taskList__itemLink:hover {\n    text-decoration: none; }\n  .taskList__itemProject {\n    width: 200px;\n    display: inline-block; }\n  .taskList__itemCreator {\n    width: 150px;\n    display: inline-block; }\n  .taskList__item_head {\n    font-weight: 500; }\n\n.paginationWrap {\n  text-align: center;\n  padding-top: 30px; }\n\n.pagination {\n  display: inline-block;\n  list-style-type: none;\n  margin: 0;\n  padding: 0; }\n  .pagination li {\n    display: inline-block;\n    padding: 0 3px; }\n    .pagination li.disabled {\n      display: none; }\n    .pagination li a {\n      cursor: pointer;\n      text-decoration: none;\n      font-size: 16px;\n      padding: 0 3px; }\n      .pagination li a:hover {\n        text-decoration: underline; }\n    .pagination li.active a {\n      text-decoration: underline;\n      cursor: auto; }\n", "", {"version":3,"sources":["D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/main.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/main.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/About/About.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/AddTask/AddTask.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/App/App.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Cabinet.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Filters/Filters.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Cabinet/Sidebar/Sidebar.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Contacts/Contacts.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Header/Header.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Home/Home.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/SignIn/SignIn.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/Task/Task.sass","D:/_EPAM/final-task/TaskTrackingSystem/myproject/src/src/components/TaskList/TaskList.sass"],"names":[],"mappings":"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","file":"main.sass","sourcesContent":["////////////////////////////\n//bootstrap normalize\n////////////////////////////\n\n\nhtml {\n\tfont-family: sans-serif;\n\t-webkit-text-size-adjust: 100%;\n\t-ms-text-size-adjust: 100%; }\n\n* {\n\t-webkit-box-sizing: border-box;\n\t-moz-box-sizing: border-box;\n\tbox-sizing: border-box; }\n\nbody {\n\tmargin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n\tdisplay: block; }\n\naudio, canvas, progress, video {\n\tdisplay: inline-block;\n\tvertical-align: baseline; }\n\naudio:not([controls]) {\n\tdisplay: none;\n\theight: 0; }\n\n[hidden], template {\n\tdisplay: none; }\n\na {\n\tbackground-color: transparent;\n\t&:active, &:hover {\n\t\toutline: 0; } }\n\nabbr[title] {\n\tborder-bottom: 1px dotted; }\n\nb, strong {\n\tfont-weight: bold; }\n\ndfn {\n\tfont-style: italic; }\n\nh1 {\n\tmargin: .67em 0;\n\tfont-size: 2em; }\n\nmark {\n\tcolor: #000;\n\tbackground: #ff0; }\n\nsmall {\n\tfont-size: 80%; }\n\nsub {\n\tposition: relative;\n\tfont-size: 75%;\n\tline-height: 0;\n\tvertical-align: baseline; }\n\nsup {\n\tposition: relative;\n\tfont-size: 75%;\n\tline-height: 0;\n\tvertical-align: baseline;\n\ttop: -.5em; }\n\nsub {\n\tbottom: -.25em; }\n\nimg {\n\tborder: 0; }\n\nsvg:not(:root) {\n\toverflow: hidden; }\n\nfigure {\n\tmargin: 1em 40px; }\n\nhr {\n\theight: 0;\n\t-webkit-box-sizing: content-box;\n\t-moz-box-sizing: content-box;\n\tbox-sizing: content-box; }\n\npre {\n\toverflow: auto; }\n\ncode, kbd, pre, samp {\n\tfont-family: monospace, monospace;\n\tfont-size: 1em; }\n\nbutton, optgroup, select, textarea {\n\tmargin: 0;\n\tfont: inherit;\n\tcolor: inherit; }\n\ninput {\n\tmargin: 0; }\n\nbutton {\n\toverflow: visible;\n\ttext-transform: none; }\n\nselect {\n\ttext-transform: none; }\n\nbutton, html input[type=\"button\"] {\n\t-webkit-appearance: button;\n\tcursor: pointer; }\n\ninput {\n\t&[type=\"reset\"], &[type=\"submit\"] {\n\t\t-webkit-appearance: button;\n\t\tcursor: pointer; } }\n\nbutton[disabled], html input[disabled] {\n\tcursor: default; }\n\nbutton::-moz-focus-inner {\n\tpadding: 0;\n\tborder: 0; }\n\ninput {\n\t&::-moz-focus-inner {\n\t\tpadding: 0;\n\t\tborder: 0; }\n\tline-height: normal;\n\t&[type=\"checkbox\"], &[type=\"radio\"] {\n\t\t-webkit-box-sizing: border-box;\n\t\t-moz-box-sizing: border-box;\n\t\tbox-sizing: border-box;\n\t\tpadding: 0; }\n\t&[type=\"number\"] {\n\t\t&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {\n\t\t\theight: auto; } }\n\t&[type=\"search\"] {\n\t\tbox-sizing: border-box;\n\t\t-webkit-appearance: textfield;\n\t\t&::-webkit-search-cancel-button, &::-webkit-search-decoration {\n\t\t\t-webkit-appearance: none; } } }\n\nfieldset {\n\tpadding: .35em .625em .75em;\n\tmargin: 0 2px;\n\tborder: 1px solid #c0c0c0; }\n\nlegend {\n\tpadding: 0;\n\tborder: 0; }\n\ntextarea {\n\toverflow: auto; }\n\noptgroup {\n\tfont-weight: bold; }\n\ntable {\n\tborder-spacing: 0;\n\tborder-collapse: collapse; }\n\ntd, th {\n\tpadding: 0; }\n\n\n\n@media print {\n\t* {\n\t\tcolor: #000 !important;\n\t\ttext-shadow: none !important;\n\t\tbackground: transparent !important;\n\t\t-webkit-box-shadow: none !important;\n\t\tbox-shadow: none !important;\n\t\t&:before, &:after {\n\t\t\tcolor: #000 !important;\n\t\t\ttext-shadow: none !important;\n\t\t\tbackground: transparent !important;\n\t\t\t-webkit-box-shadow: none !important;\n\t\t\tbox-shadow: none !important; } }\n\ta {\n\t\ttext-decoration: underline;\n\t\t&:visited {\n\t\t\ttext-decoration: underline; }\n\t\t&[href]:after {\n\t\t\tcontent: \" (\" attr(href) \")\"; } }\n\tabbr[title]:after {\n\t\tcontent: \" (\" attr(title) \")\"; }\n\ta {\n\t\t&[href^=\"#\"]:after, &[href^=\"javascript:\"]:after {\n\t\t\tcontent: \"\"; } }\n\tpre, blockquote {\n\t\tborder: 1px solid #999;\n\t\tpage-break-inside: avoid; }\n\tthead {\n\t\tdisplay: table-header-group; }\n\ttr {\n\t\tpage-break-inside: avoid; }\n\timg {\n\t\tpage-break-inside: avoid;\n\t\tmax-width: 100% !important; }\n\tp, h2, h3 {\n\t\torphans: 3;\n\t\twidows: 3; }\n\th2, h3 {\n\t\tpage-break-after: avoid; }\n\tselect {\n\t\tbackground: #fff !important; }\n\t.navbar {\n\t\tdisplay: none; }\n\t.btn > .caret, .dropup > .btn > .caret {\n\t\tborder-top-color: #000 !important; }\n\t.label {\n\t\tborder: 1px solid #000; }\n\t.table {\n\t\tborder-collapse: collapse !important;\n\t\ttd, th {\n\t\t\tbackground-color: #fff !important; } }\n\t.table-bordered {\n\t\tth, td {\n\t\t\tborder: 1px solid #ddd !important; } } }\n\n////////////////////////////\n//bootstrap normalize\n////////////////////////////\n\n$bf: \"Roboto\";\n$placeholderColor: #636363;\n\n\ntextarea,\ninput {\n\t&::-webkit-input-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&::-moz-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&:-moz-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; }\n\t&:-ms-input-placeholder {\n\t\tcolor: $placeholderColor;\n\t\topacity: 1;\n\t\tfont-family: $bf;\n\t\tcolor: #989898;\n\t\tfont-weight: 500; } }\n\n\ninput {\n\tborder-radius: 0;\n\tfont-family: $bf;\n\tcolor: #000;\n\tfont-weight: 900;\n\tfont-size: 14px;\n\tbackground: none; }\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n }\t// display: none\n\nlabel {\n\tcursor: pointer; }\n\n\nbody {\n\tfont-size: 14px;\n\tposition: relative;\n\tline-height: 1.3;\n\toverflow-x: hidden;\n\tcolor: #000;\n\tbackground-color: #eee;\n\tfont-family: $bf;\n\tfont-weight: 900; }\n\n\n.hidden {\n\tdisplay: none; }\n\n.lock {\n\toverflow: hidden; }\n\n\nh1,\n.h1Title {\n\tfont-size: 30px;\n\tline-height: 42px;\n\tmargin: 0 0 15px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\nh2,\n.h2Title {\n\tfont-size: 24px;\n\tline-height: 30px;\n\tmargin: 0 0 15px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\nh3,\n.h3Title {\n\tfont-size: 20px;\n\tline-height: 30px;\n\tmargin: 0 0 30px;\n\ttext-transform: uppercase;\n\tcolor: #000; }\n\n\np {\n\tmargin: 0;\n\tpadding-bottom: 16px;\n\ttext-transform: uppercase;\n\tline-height: 1.75; }\n\n\n\na {\n\tcolor: #000;\n\t&:hover {\n\t\ttext-decoration: none; } }\n\n\n\n\n.btn {\n\tpadding: 14px 34px;\n\tbackground-color: #000;\n\ttext-transform: uppercase;\n\tcolor: #fff;\n\ttransition: ease 0.3s all;\n\tfont-size: 14px;\n\tline-height: 16px;\n\ttext-decoration: none;\n\tdisplay: inline-block;\n\tborder: none;\n\t&:hover,\n\t&:focus {\n\t\tbackground-color: #663d15; } }\n\n.btnLong {\n\twidth: 100%;\n\ttext-align: center;\n\twhite-space: nowrap; }\n\n.inputText {\n\tborder: 2px solid #000;\n\ttransition: ease 0.3s all;\n\tpadding: 10px 16px;\n\t&:focus {\n\t\tborder-color: #663d15; } }\n\n\n.labelCheckbox span {\n\tdisplay: inline-block;\n\tposition: relative;\n\tpadding-left: 40px;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\tborder: 2px solid #000;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\ttop: -2px; }\n\t&:after {\n\t\tcontent: '';\n\t\twidth: 14px;\n\t\theight: 14px;\n\t\tposition: absolute;\n\t\tleft: 3px;\n\t\ttop: 1px;\n\t\tbackground-color: #000;\n\t\tbackground-position: -135px -3px;\n\t\topacity: 0; }\n\t&:hover {\n\t\tcolor: #663d15; } }\n.labelCheckbox input:checked + span:after {\n\topacity: 1; }\n\n.labelCheckbox input:disabled + span {\n\tcolor: #afadab; }\n.labelCheckbox input:disabled + span:after {\n\topacity: 0.3; }\n.labelCheckbox input:disabled + span:before {\n\tborder-color: #afadab; }\n\n\n.labelRadio span {\n\tdisplay: inline-block;\n\tposition: relative;\n\tpadding-left: 40px;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 16px;\n\t\theight: 16px;\n\t\tborder: 2px solid #000;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\ttop: -2px;\n\t\tborder-radius: 50%; }\n\t&:after {\n\t\tcontent: '';\n\t\twidth: 8px;\n\t\theight: 8px;\n\t\tposition: absolute;\n\t\tleft: 6px;\n\t\ttop: 4px;\n\t\topacity: 0;\n\t\tborder-radius: 50%;\n\t\tbackground-color: #000; }\n\t&:hover {\n\t\tcolor: #663d15; } }\n.labelRadio input:checked + span:after {\n\topacity: 1; }\n\n.labelRadio input:disabled + span {\n\tcolor: #afadab; }\n.labelRadio input:disabled + span:after {\n\topacity: 0.3; }\n.labelRadio input:disabled + span:before {\n\tborder-color: #afadab; }\n\n\ntable {\n\twidth: 100%;\n\ttd {\n\t\theight: 40px;\n\t\tpadding: 0 15px;\n\t\tborder: 2px solid #000;\n\t\twidth: 50%;\n\t\t&:nth-child(2) {\n\t\t\ttext-align: right; } } }\n\n\n\n@import './components/About/About';\n@import './components/AddTask/AddTask';\n@import './components/App/App';\n@import './components/Cabinet/Cabinet';\n@import './components/Cabinet/Filters/Filters';\n@import './components/Cabinet/Sidebar/Sidebar';\n@import './components/Contacts/Contacts';\n@import './components/Header/Header';\n@import './components/Home/Home';\n@import './components/SignIn/SignIn';\n@import './components/Task/Task';\n@import './components/TaskList/TaskList';\n\n\n","html {\n  font-family: sans-serif;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nbody {\n  margin: 0; }\n\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block; }\n\naudio, canvas, progress, video {\n  display: inline-block;\n  vertical-align: baseline; }\n\naudio:not([controls]) {\n  display: none;\n  height: 0; }\n\n[hidden], template {\n  display: none; }\n\na {\n  background-color: transparent; }\n  a:active, a:hover {\n    outline: 0; }\n\nabbr[title] {\n  border-bottom: 1px dotted; }\n\nb, strong {\n  font-weight: bold; }\n\ndfn {\n  font-style: italic; }\n\nh1 {\n  margin: .67em 0;\n  font-size: 2em; }\n\nmark {\n  color: #000;\n  background: #ff0; }\n\nsmall {\n  font-size: 80%; }\n\nsub {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline; }\n\nsup {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline;\n  top: -.5em; }\n\nsub {\n  bottom: -.25em; }\n\nimg {\n  border: 0; }\n\nsvg:not(:root) {\n  overflow: hidden; }\n\nfigure {\n  margin: 1em 40px; }\n\nhr {\n  height: 0;\n  -webkit-box-sizing: content-box;\n  -moz-box-sizing: content-box;\n  box-sizing: content-box; }\n\npre {\n  overflow: auto; }\n\ncode, kbd, pre, samp {\n  font-family: monospace, monospace;\n  font-size: 1em; }\n\nbutton, optgroup, select, textarea {\n  margin: 0;\n  font: inherit;\n  color: inherit; }\n\ninput {\n  margin: 0; }\n\nbutton {\n  overflow: visible;\n  text-transform: none; }\n\nselect {\n  text-transform: none; }\n\nbutton, html input[type=\"button\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\ninput[type=\"reset\"], input[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer; }\n\nbutton[disabled], html input[disabled] {\n  cursor: default; }\n\nbutton::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput {\n  line-height: normal; }\n  input::-moz-focus-inner {\n    padding: 0;\n    border: 0; }\n  input[type=\"checkbox\"], input[type=\"radio\"] {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    padding: 0; }\n  input[type=\"number\"]::-webkit-inner-spin-button, input[type=\"number\"]::-webkit-outer-spin-button {\n    height: auto; }\n  input[type=\"search\"] {\n    box-sizing: border-box;\n    -webkit-appearance: textfield; }\n    input[type=\"search\"]::-webkit-search-cancel-button, input[type=\"search\"]::-webkit-search-decoration {\n      -webkit-appearance: none; }\n\nfieldset {\n  padding: .35em .625em .75em;\n  margin: 0 2px;\n  border: 1px solid #c0c0c0; }\n\nlegend {\n  padding: 0;\n  border: 0; }\n\ntextarea {\n  overflow: auto; }\n\noptgroup {\n  font-weight: bold; }\n\ntable {\n  border-spacing: 0;\n  border-collapse: collapse; }\n\ntd, th {\n  padding: 0; }\n\n@media print {\n  * {\n    color: #000 !important;\n    text-shadow: none !important;\n    background: transparent !important;\n    -webkit-box-shadow: none !important;\n    box-shadow: none !important; }\n    *:before, *:after {\n      color: #000 !important;\n      text-shadow: none !important;\n      background: transparent !important;\n      -webkit-box-shadow: none !important;\n      box-shadow: none !important; }\n  a {\n    text-decoration: underline; }\n    a:visited {\n      text-decoration: underline; }\n    a[href]:after {\n      content: \" (\" attr(href) \")\"; }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\"; }\n  a[href^=\"#\"]:after, a[href^=\"javascript:\"]:after {\n    content: \"\"; }\n  pre, blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid; }\n  thead {\n    display: table-header-group; }\n  tr {\n    page-break-inside: avoid; }\n  img {\n    page-break-inside: avoid;\n    max-width: 100% !important; }\n  p, h2, h3 {\n    orphans: 3;\n    widows: 3; }\n  h2, h3 {\n    page-break-after: avoid; }\n  select {\n    background: #fff !important; }\n  .navbar {\n    display: none; }\n  .btn > .caret, .dropup > .btn > .caret {\n    border-top-color: #000 !important; }\n  .label {\n    border: 1px solid #000; }\n  .table {\n    border-collapse: collapse !important; }\n    .table td, .table th {\n      background-color: #fff !important; }\n  .table-bordered th, .table-bordered td {\n    border: 1px solid #ddd !important; } }\n\ntextarea::-webkit-input-placeholder,\ninput::-webkit-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea::-moz-placeholder,\ninput::-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-moz-placeholder,\ninput:-moz-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ntextarea:-ms-input-placeholder,\ninput:-ms-input-placeholder {\n  color: #636363;\n  opacity: 1;\n  font-family: \"Roboto\";\n  color: #989898;\n  font-weight: 500; }\n\ninput {\n  border-radius: 0;\n  font-family: \"Roboto\";\n  color: #000;\n  font-weight: 900;\n  font-size: 14px;\n  background: none; }\n\nlabel {\n  cursor: pointer; }\n\nbody {\n  font-size: 14px;\n  position: relative;\n  line-height: 1.3;\n  overflow-x: hidden;\n  color: #000;\n  background-color: #eee;\n  font-family: \"Roboto\";\n  font-weight: 900; }\n\n.hidden {\n  display: none; }\n\n.lock {\n  overflow: hidden; }\n\nh1,\n.h1Title {\n  font-size: 30px;\n  line-height: 42px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh2,\n.h2Title {\n  font-size: 24px;\n  line-height: 30px;\n  margin: 0 0 15px;\n  text-transform: uppercase;\n  color: #000; }\n\nh3,\n.h3Title {\n  font-size: 20px;\n  line-height: 30px;\n  margin: 0 0 30px;\n  text-transform: uppercase;\n  color: #000; }\n\np {\n  margin: 0;\n  padding-bottom: 16px;\n  text-transform: uppercase;\n  line-height: 1.75; }\n\na {\n  color: #000; }\n  a:hover {\n    text-decoration: none; }\n\n.btn {\n  padding: 14px 34px;\n  background-color: #000;\n  text-transform: uppercase;\n  color: #fff;\n  transition: ease 0.3s all;\n  font-size: 14px;\n  line-height: 16px;\n  text-decoration: none;\n  display: inline-block;\n  border: none; }\n  .btn:hover, .btn:focus {\n    background-color: #663d15; }\n\n.btnLong {\n  width: 100%;\n  text-align: center;\n  white-space: nowrap; }\n\n.inputText {\n  border: 2px solid #000;\n  transition: ease 0.3s all;\n  padding: 10px 16px; }\n  .inputText:focus {\n    border-color: #663d15; }\n\n.labelCheckbox span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelCheckbox span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px; }\n  .labelCheckbox span:after {\n    content: '';\n    width: 14px;\n    height: 14px;\n    position: absolute;\n    left: 3px;\n    top: 1px;\n    background-color: #000;\n    background-position: -135px -3px;\n    opacity: 0; }\n  .labelCheckbox span:hover {\n    color: #663d15; }\n\n.labelCheckbox input:checked + span:after {\n  opacity: 1; }\n\n.labelCheckbox input:disabled + span {\n  color: #afadab; }\n\n.labelCheckbox input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelCheckbox input:disabled + span:before {\n  border-color: #afadab; }\n\n.labelRadio span {\n  display: inline-block;\n  position: relative;\n  padding-left: 40px; }\n  .labelRadio span:before {\n    content: '';\n    width: 16px;\n    height: 16px;\n    border: 2px solid #000;\n    position: absolute;\n    left: 0;\n    top: -2px;\n    border-radius: 50%; }\n  .labelRadio span:after {\n    content: '';\n    width: 8px;\n    height: 8px;\n    position: absolute;\n    left: 6px;\n    top: 4px;\n    opacity: 0;\n    border-radius: 50%;\n    background-color: #000; }\n  .labelRadio span:hover {\n    color: #663d15; }\n\n.labelRadio input:checked + span:after {\n  opacity: 1; }\n\n.labelRadio input:disabled + span {\n  color: #afadab; }\n\n.labelRadio input:disabled + span:after {\n  opacity: 0.3; }\n\n.labelRadio input:disabled + span:before {\n  border-color: #afadab; }\n\ntable {\n  width: 100%; }\n  table td {\n    height: 40px;\n    padding: 0 15px;\n    border: 2px solid #000;\n    width: 50%; }\n    table td:nth-child(2) {\n      text-align: right; }\n\n.whoweare__items {\n  margin: 0 -15px; }\n  .whoweare__items:after {\n    content: '';\n    clear: both;\n    display: table; }\n\n.whoweare__item {\n  float: left;\n  width: 50%;\n  padding: 0 15px;\n  margin-bottom: 30px; }\n  .whoweare__item:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .whoweare__itemIcon {\n    font-family: 'my-font';\n    font-size: 60px;\n    line-height: 60px;\n    float: left;\n    width: 10%;\n    text-align: center;\n    color: #4298EB; }\n  .whoweare__itemInner {\n    float: left;\n    width: 90%; }\n  .whoweare__itemTitle {\n    font-size: 18px;\n    text-transform: uppercase;\n    padding-bottom: 15px; }\n  .whoweare__itemText {\n    font-weight: 500; }\n\n.pageSlider {\n  position: relative;\n  margin-bottom: 80px;\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n  .pageSlider__items {\n    transition: 0.6s all ease; }\n    .pageSlider__items:after {\n      display: table;\n      clear: both;\n      content: ''; }\n  .pageSlider__item {\n    float: left;\n    width: 300px;\n    vertical-align: top; }\n    .pageSlider__item td {\n      border: none;\n      text-align: center; }\n    .pageSlider__itemImgWrap {\n      border: none;\n      min-width: 300px;\n      max-width: 300px;\n      min-height: 300px;\n      max-height: 300px;\n      height: 300px;\n      margin: 0;\n      padding: 0 5px;\n      text-align: center; }\n    .pageSlider__itemTextWrap {\n      padding: 10px; }\n    .pageSlider__itemImg {\n      display: block;\n      max-width: 100%;\n      max-height: 100%;\n      margin: auto; }\n    .pageSlider__itemName {\n      font-size: 18px; }\n    .pageSlider__itemDescr {\n      font-weight: 400; }\n  .pageSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .pageSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .pageSlider__control_left {\n      left: 0;\n      transition: 0.3s all ease; }\n    .pageSlider__control_right {\n      right: 0;\n      transition: 0.3s all ease; }\n\n.breadcrumbs__items {\n  list-style-type: none;\n  padding: 15px 0 0;\n  margin: 0; }\n\n.breadcrumbs__item {\n  display: inline-block;\n  padding: 0 6px; }\n  .breadcrumbs__item:after {\n    content: '>';\n    margin-left: 16px; }\n  .breadcrumbs__item:first-child {\n    padding-left: 0; }\n  .breadcrumbs__item:last-child:after {\n    display: none; }\n\n@media only screen and (max-width: 480px) {\n  .pageSlider__itemImgWrap {\n    padding: 0; } }\n\n@media only screen and (max-width: 329px) {\n  .pageSlider {\n    margin: 0 -5px 80px; } }\n\n.addTask {\n  width: 300px; }\n  .addTask__itemText {\n    font-size: 16px;\n    line-height: 18px; }\n  .addTask__itemSpan {\n    background-color: #000;\n    border-radius: 50%;\n    font-size: 16px;\n    line-height: 18px;\n    display: inline-block;\n    color: #fff;\n    width: 18px;\n    text-align: center;\n    margin-right: 5px;\n    transition: 0.2s all ease; }\n  .addTask__item_assign {\n    padding-top: 10px;\n    color: rgba(0, 0, 0, 0.6); }\n    .addTask__item_assign .addTask__itemText {\n      display: inline-block;\n      vertical-align: top;\n      line-height: 56px;\n      margin-right: 10px; }\n      .addTask__item_assign .addTask__itemText + div {\n        vertical-align: top; }\n  .addTask__subtaskAdd {\n    padding: 10px 0 0px;\n    margin-bottom: 20px;\n    color: rgba(0, 0, 0, 0.8);\n    text-decoration: underline;\n    cursor: pointer;\n    display: inline-block; }\n    .addTask__subtaskAdd:hover {\n      text-decoration: none; }\n      .addTask__subtaskAdd:hover .addTask__itemSpan {\n        background-color: #989898; }\n  .addTask__subtaskItem {\n    position: relative; }\n  .addTask__subtaskRemove {\n    display: block;\n    position: absolute;\n    right: 10px;\n    top: 35px;\n    cursor: pointer;\n    transition: 0.2s all ease; }\n    .addTask__subtaskRemove:hover {\n      background-color: #989898; }\n  .addTask__button {\n    margin-top: 20px; }\n\n.pageContainer {\n  padding: 20px 15px; }\n\n.pageTitle {\n  font-size: 26px;\n  font-weight: 500;\n  color: rgba(0, 0, 0, 0.87); }\n\n.content:after {\n  content: '';\n  clear: both;\n  display: table; }\n\n.sliderBtn {\n  width: 40px;\n  height: 40px;\n  background-color: #000;\n  color: #fff;\n  border: none;\n  transition: 0.3s all ease; }\n  .sliderBtn:hover {\n    background-color: #4298EB; }\n\n.pageLoader {\n  width: 19px;\n  height: 19px;\n  margin: 50px auto;\n  background-size: cover; }\n\n.cabinet {\n  position: relative; }\n  .cabinetTitle {\n    text-align: center;\n    text-transform: uppercase;\n    font-size: 22px;\n    padding: 10px 0; }\n  .cabinetSubTitle {\n    font-size: 18px;\n    padding-bottom: 10px; }\n\n.filtersTitle {\n  font-size: 18px;\n  padding-bottom: 10px; }\n\n.filters__groups {\n  max-height: 280px;\n  overflow-y: scroll; }\n\n.filters__group {\n  padding-bottom: 10px; }\n  .filters__groupTitle {\n    color: rgba(0, 0, 0, 0.6); }\n\n.filters__checkbox {\n  margin: 10px 0; }\n  .filters__checkbox label {\n    margin-left: -15px; }\n\n.filters__select {\n  width: 200px !important; }\n  .filters__select hr {\n    border-color: #000 !important; }\n\n.filters__button {\n  margin-bottom: 20px; }\n\n.sidebar {\n  float: left;\n  width: 30%; }\n\n.contentRight {\n  margin-top: 8px;\n  padding: 15px;\n  float: left;\n  width: 70%;\n  background-color: #f5f5f5;\n  position: relative; }\n\n.sidebar__itemLink {\n  text-decoration: none; }\n\n.findUs {\n  margin-bottom: 30px; }\n  .findUs__items {\n    margin: 0 -15px; }\n    .findUs__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .findUs__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center;\n    margin-bottom: 20px; }\n    .findUs__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .findUs__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .findUs__itemText {\n      font-weight: 500; }\n\n.contacts_mapWrap {\n  margin: 0 -15px 30px; }\n\n.contacts_map {\n  position: relative;\n  overflow: hidden;\n  background-color: #e5e3df;\n  width: 100%;\n  height: 500px; }\n\n#mobNav {\n  display: none; }\n\n.header {\n  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);\n  padding: 0 15px;\n  background-color: #fff;\n  position: relative;\n  z-index: 5; }\n  .header__toggleLabel {\n    display: none;\n    color: #000;\n    padding: 10px;\n    width: 50px;\n    height: 35px; }\n    .header__toggleLabel span {\n      display: block;\n      width: 30px;\n      height: 3px;\n      background: #000;\n      position: relative;\n      transition: ease 0.3s all; }\n      .header__toggleLabel span:before, .header__toggleLabel span:after {\n        content: '';\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        left: 0;\n        top: 6px;\n        background-color: #000;\n        -webkit-transition: ease 0.3s all;\n        transition: ease 0.3s all; }\n      .header__toggleLabel span:after {\n        top: 12px; }\n  .header__dropdown:after {\n    clear: both;\n    display: table;\n    content: ''; }\n  .headerLogo {\n    float: left;\n    padding: 15px 15px 15px 0; }\n    .headerLogo__img {\n      display: inline-block;\n      vertical-align: middle;\n      width: 40px;\n      height: 40px;\n      margin-right: 5px; }\n    .headerLogo__span {\n      display: inline-block;\n      vertical-align: middle;\n      font-size: 24px; }\n      .headerLogo__span_blue {\n        color: #4298EB; }\n  .headerMenu {\n    float: left; }\n    .headerMenu__items {\n      padding: 0;\n      margin: 0;\n      list-style-type: none; }\n      .headerMenu__items:after {\n        content: '';\n        clear: both;\n        display: table; }\n    .headerMenu__item {\n      float: left;\n      position: relative; }\n      .headerMenu__item:last-child .headerMenu__itemLink {\n        border: none; }\n      .headerMenu__itemLink {\n        padding: 28px 20px 22px;\n        font-size: 16px;\n        line-height: 20px;\n        text-transform: uppercase;\n        display: block;\n        color: #000;\n        text-decoration: none;\n        transition: 0.3s all ease;\n        position: relative;\n        border-right: 1px solid #e8e8e8; }\n        .headerMenu__itemLink:before {\n          content: '';\n          width: calc(100% - 40px);\n          height: 4px;\n          position: absolute;\n          left: 0;\n          right: 0;\n          bottom: 0;\n          margin: auto;\n          transition: 0.3s all ease;\n          background: #4298EB;\n          transform-origin: 50% 100%;\n          transform: scale(0); }\n        .headerMenu__itemLink:focus {\n          color: #4298EB; }\n          .headerMenu__itemLink:focus:before {\n            transform: scale(1); }\n        .headerMenu__itemLink_active {\n          color: #4298EB; }\n          .headerMenu__itemLink_active:before {\n            transform: scale(1); }\n      .headerMenu__item:hover .headerMenu__items_submenu {\n        display: block; }\n      .headerMenu__item:hover > .headerMenu__itemLink {\n        color: #4298EB; }\n        .headerMenu__item:hover > .headerMenu__itemLink:before {\n          transform: scale(1); }\n    .headerMenu__items_submenu {\n      display: none;\n      position: absolute;\n      padding: 5px 0;\n      background-color: #fff;\n      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n    .headerMenu__itemLink_submenu {\n      white-space: nowrap;\n      font-size: 14px;\n      padding: 15px 20px;\n      border: none; }\n      .headerMenu__itemLink_submenu:before {\n        width: 4px;\n        height: 100%;\n        left: 0;\n        right: auto;\n        transform-origin: 100% 50%; }\n      .headerMenu__itemLink_submenu_active {\n        color: #4298EB; }\n        .headerMenu__itemLink_submenu_active:before {\n          content: '';\n          width: calc(100% - 40px);\n          position: absolute;\n          bottom: 0;\n          margin: auto;\n          transform: scale(1);\n          background: #4298EB;\n          width: 4px;\n          height: 100%;\n          left: 0;\n          right: auto;\n          transform-origin: 100% 50%; }\n  .headerSearch {\n    float: left;\n    position: relative;\n    padding: 10px 0 10px; }\n    .headerSearch__input {\n      background-color: #e5e5e5;\n      border: none;\n      width: 250px;\n      height: 48px;\n      padding: 15px;\n      border-radius: 4px; }\n    .headerSearch__icon {\n      position: absolute;\n      right: 15px;\n      top: 25px;\n      font-size: 45px;\n      display: block;\n      width: 15px;\n      height: 15px;\n      border: 2px solid #989898;\n      border-radius: 50%; }\n      .headerSearch__icon:before {\n        content: \"\";\n        display: block;\n        position: absolute;\n        right: -7px;\n        bottom: -4px;\n        border-width: 0;\n        background: #989898;\n        width: 10px;\n        height: 3px;\n        transform: rotate(45deg); }\n    .headerSearch__items {\n      list-style-type: none;\n      margin: 0;\n      padding: 0 10px;\n      width: 250px;\n      position: absolute;\n      border-radius: 4px;\n      background-color: #e5e5e5; }\n    .headerSearch__item {\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      margin: 10px 0; }\n  .headerUser {\n    float: right; }\n    .headerUser__inner {\n      padding-top: 18px; }\n    .headerUser__signin {\n      padding-top: 25px; }\n    .headerUser__avatar {\n      width: 30px;\n      height: 30px;\n      overflow: hidden;\n      border-radius: 50%;\n      display: inline-block;\n      vertical-align: middle;\n      margin-right: 5px;\n      -webkit-background-size: cover;\n      background-size: cover; }\n      .headerUser__avatarImg {\n        width: 100%;\n        display: block; }\n    .headerUser__name {\n      display: inline-block;\n      vertical-align: middle;\n      text-decoration: none; }\n    .headerUser__link:hover .headerUser__name {\n      text-decoration: underline; }\n    .headerUser__exit {\n      margin-left: 15px;\n      cursor: pointer;\n      text-decoration: none; }\n      .headerUser__exit:hover {\n        text-decoration: underline; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: searchfield; }\n\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: searchfield-cancel-button; }\n\n#mobNav:checked + .header__toggleLabel span {\n  transform: rotate(45deg);\n  position: relative;\n  top: 10px; }\n\n#mobNav:checked + .header__toggleLabel span:before {\n  top: 0px;\n  transform: rotate(-90deg); }\n\n#mobNav:checked + .header__toggleLabel span:after {\n  opacity: 0; }\n\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n  transform: translate(0, 0);\n  top: 34px; }\n\n@media only screen and (max-width: 1100px) {\n  .header__toggle {\n    padding: 10px 15px; }\n  .header__toggleLabel {\n    display: block; }\n  #mobNav:checked + .header__toggleLabel span {\n    transform: rotate(45deg);\n    position: relative;\n    top: 10px; }\n  #mobNav:checked + .header__toggleLabel span:before {\n    top: 0px;\n    transform: rotate(-90deg); }\n  #mobNav:checked + .header__toggleLabel span:after {\n    opacity: 0; }\n  .header {\n    padding: 0; }\n  .header__dropdown {\n    transform: translate(0, -100%);\n    top: -100%;\n    position: absolute;\n    transition: 0.5s all ease;\n    background-color: #fff;\n    width: 100%;\n    padding: 0 15px 25px; }\n  .headerLogo,\n  .headerMenu,\n  .headerSearch,\n  .headerUser,\n  .headerMenu__item {\n    float: none; }\n  .headerSearch__input {\n    width: 100%; }\n  .headerMenu__itemLink {\n    border: none;\n    display: inline-block;\n    padding: 10px 20px; }\n  .headerMenu__items_submenu {\n    display: block;\n    position: static;\n    box-shadow: none;\n    padding-left: 30px; }\n  .headerMenu__itemLink_submenu {\n    padding: 5px 0 0 10px; }\n  #mobNav:checked + .header__dropdown {\n    display: block;\n    transform: translate(0, 0);\n    top: 50px; } }\n\n.homeSlider {\n  position: relative; }\n  .homeSlider__img {\n    width: 100%;\n    height: 500px;\n    background-size: cover;\n    background-position: 50% 50%; }\n  .homeSlider__controls {\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 50%; }\n  .homeSlider__control {\n    position: absolute;\n    top: 0;\n    transform: translate(0, -50%); }\n    .homeSlider__control_left {\n      left: 0; }\n    .homeSlider__control_right {\n      right: 0; }\n\n.blockTitle {\n  text-align: center;\n  text-transform: uppercase;\n  padding: 20px 0 40px;\n  position: relative; }\n  .blockTitle:before {\n    content: '';\n    width: 100px;\n    height: 2px;\n    position: absolute;\n    left: 0;\n    right: 0;\n    bottom: 20px;\n    margin: auto;\n    background-color: #4298EB; }\n\n.pageDescr {\n  width: 740px;\n  font-weight: 400;\n  margin-left: auto;\n  margin-right: auto;\n  text-align: center;\n  padding-bottom: 30px; }\n\n.possibilities {\n  padding-bottom: 20px; }\n  .possibilities__items {\n    margin: 0 -15px; }\n    .possibilities__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .possibilities__item {\n    float: left;\n    width: 33.33%;\n    padding: 0 15px;\n    text-align: center; }\n    .possibilities__itemIcon {\n      font-family: 'my-font';\n      font-size: 60px;\n      line-height: 100px;\n      color: #4298EB; }\n    .possibilities__itemTitle {\n      font-size: 18px;\n      text-transform: uppercase;\n      padding-bottom: 20px; }\n    .possibilities__itemText {\n      font-weight: 500;\n      min-height: 110px; }\n\n.someNumbers {\n  padding-bottom: 20px; }\n  .someNumbers__items {\n    margin: 0 -15px;\n    padding: 20px 0 50px; }\n    .someNumbers__items:after {\n      content: '';\n      clear: both;\n      display: table; }\n  .someNumbers__item {\n    float: left;\n    width: 25%;\n    padding: 0 15px;\n    text-align: center; }\n    .someNumbers__itemInner {\n      border: 1px solid #4298EB;\n      padding: 30px 30px; }\n    .someNumbers__itemTitle {\n      color: #4298EB;\n      font-size: 30px; }\n    .someNumbers__itemText {\n      text-transform: uppercase;\n      font-weight: 400;\n      font-size: 20px;\n      letter-spacing: -1px; }\n\n.fade {\n  animation-name: fade;\n  animation-duration: 1.5s; }\n\n@keyframes fade {\n  from {\n    opacity: .4; }\n  to {\n    opacity: 1; } }\n\n@media only screen and (max-width: 1200px) {\n  .someNumbers__item {\n    width: 50%;\n    margin-bottom: 30px; } }\n\n@media only screen and (max-width: 1100px) {\n  .whoweare__item {\n    width: 100%; } }\n\n@media only screen and (max-width: 768px) {\n  .pageDescr {\n    width: 100%; }\n  .possibilities__item {\n    width: 50%; } }\n\n@media only screen and (max-width: 480px) {\n  .someNumbers__item {\n    width: 100%; }\n  .possibilities__item,\n  .findUs__item {\n    width: 100%; } }\n\n.cardBox {\n  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);\n  background-color: #fff;\n  width: 640px;\n  margin: 20px auto 0;\n  padding: 30px; }\n  .cardBox__item {\n    padding-bottom: 15px;\n    position: relative; }\n    .cardBox__item:last-child {\n      padding-top: 10px;\n      padding-bottom: 0; }\n    .cardBox__item_center {\n      text-align: center; }\n  .cardBox__labelSpan {\n    width: 100px;\n    display: inline-block;\n    vertical-align: middle;\n    text-align: right;\n    padding-right: 10px;\n    color: #414141;\n    font-weight: 400; }\n  .cardBox__labelInput {\n    background-color: #ebebeb;\n    border: none;\n    height: 36px;\n    width: 400px;\n    display: inline-block;\n    vertical-align: middle;\n    padding: 5px 10px; }\n  .cardBox__itemButtonWrap {\n    text-align: center; }\n  .cardBox__title {\n    padding-bottom: 15px; }\n\n.spanError {\n  color: red;\n  font-size: 12px;\n  font-weight: 400;\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  display: none; }\n\n.cardBox__spanError {\n  left: 100px; }\n\nhr {\n  border-top: none;\n  border-right: none;\n  border-left: none;\n  padding: 5px 0; }\n\n@media only screen and (max-width: 768px) {\n  .cardBox__labelSpan {\n    display: block;\n    text-align: left;\n    margin-bottom: 10px; }\n  .cardBox__labelInput {\n    width: 100%; }\n  .cardBox {\n    width: 100%; } }\n\n.task__title {\n  font-size: 20px;\n  text-transform: uppercase;\n  padding: 0 0 10px; }\n\n.task__subtitle {\n  padding: 0 0 5px; }\n\n.task__progress {\n  height: 5px;\n  background-color: #00bcd4;\n  position: absolute;\n  top: -20px;\n  left: -15px; }\n\n.taskShare {\n  padding-top: 50px; }\n  .taskShare__title {\n    font-size: 18px;\n    padding-bottom: 15px; }\n  .taskShare__items {\n    list-style-type: none;\n    margin: 0;\n    padding: 0; }\n  .taskShare__item {\n    display: inline-block;\n    vertical-align: middle;\n    width: 50px;\n    height: 40px;\n    transition: 0.3s all ease;\n    font-family: \"myfontsoc\";\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    line-height: 40px; }\n    .taskShare__item:before {\n      display: block;\n      font-size: 25px;\n      font-weight: normal;\n      margin-left: 5px; }\n    .taskShare__item_twitter {\n      background-color: #00aced; }\n      .taskShare__item_twitter:before {\n        content: 'u'; }\n    .taskShare__item_vk {\n      background-color: #4c75a3; }\n      .taskShare__item_vk:before {\n        content: 'v'; }\n    .taskShare__item_google {\n      background-color: #e14d3a; }\n      .taskShare__item_google:before {\n        content: 'w'; }\n    .taskShare__item_facebook {\n      background-color: #3c5a99; }\n      .taskShare__item_facebook:before {\n        content: 'x';\n        font-size: 18px; }\n    .taskShare__item:hover {\n      background-color: #000; }\n\n.subtask__item {\n  font-weight: 400;\n  margin: 10px 0; }\n  .subtask__item label {\n    color: rgba(0, 0, 0, 0.87) !important; }\n\n.taskList__empty {\n  color: red; }\n\n.taskList__item {\n  font-weight: 400;\n  padding: 10px 0; }\n  .taskList__itemProgress {\n    display: inline-block;\n    vertical-align: middle;\n    width: 80px; }\n  .taskList__itemText {\n    display: inline-block;\n    vertical-align: middle;\n    text-decoration: none;\n    width: 220px; }\n  .taskList__itemLink:hover {\n    text-decoration: none; }\n  .taskList__itemProject {\n    width: 200px;\n    display: inline-block; }\n  .taskList__itemCreator {\n    width: 150px;\n    display: inline-block; }\n  .taskList__item_head {\n    font-weight: 500; }\n\n.paginationWrap {\n  text-align: center;\n  padding-top: 30px; }\n\n.pagination {\n  display: inline-block;\n  list-style-type: none;\n  margin: 0;\n  padding: 0; }\n  .pagination li {\n    display: inline-block;\n    padding: 0 3px; }\n    .pagination li.disabled {\n      display: none; }\n    .pagination li a {\n      cursor: pointer;\n      text-decoration: none;\n      font-size: 16px;\n      padding: 0 3px; }\n      .pagination li a:hover {\n        text-decoration: underline; }\n    .pagination li.active a {\n      text-decoration: underline;\n      cursor: auto; }\n",".whoweare {\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 50%;\n\t\tpadding: 0 15px;\n\t\tmargin-bottom: 30px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tdisplay: table;\n\t\t\tclear: both; }\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 60px;\n\t\t\tfloat: left;\n\t\t\twidth: 10%;\n\t\t\ttext-align: center;\n\t\t\tcolor: #4298EB; }\n\t\t&Inner {\n\t\t\tfloat: left;\n\t\t\twidth: 90%; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 15px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n$slidersize: 300px;\n\n.page {\n\t&Slider {\n\t\tposition: relative;\n\t\tmargin-bottom: 80px;\n\t\twidth: 100%;\n\t\tmargin: auto;\n\t\toverflow: hidden;\n\t\t&__items {\n\t\t\t// margin: 0 -10px\n\t\t\ttransition: 0.6s all ease;\n\t\t\t&:after {\n\t\t\t\tdisplay: table;\n\t\t\t\tclear: both;\n\t\t\t\tcontent: ''; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\twidth: $slidersize;\n\t\t\tvertical-align: top;\n\t\t\t// margin: 0 5px\n\t\t\ttd {\n\t\t\t\tborder: none;\n\t\t\t\ttext-align: center; }\n\t\t\t&ImgWrap {\n\t\t\t\tborder: none;\n\t\t\t\tmin-width: $slidersize;\n\t\t\t\tmax-width: $slidersize;\n\t\t\t\tmin-height: $slidersize;\n\t\t\t\tmax-height: $slidersize;\n\t\t\t\theight: $slidersize;\n\t\t\t\tmargin: 0;\n\t\t\t\tpadding: 0 5px;\n\t\t\t\ttext-align: center; }\n\t\t\t&TextWrap {\n\t\t\t\tpadding: 10px; }\n\t\t\t&Img {\n\t\t\t\tdisplay: block;\n\t\t\t\tmax-width: 100%;\n\t\t\t\tmax-height: 100%;\n\t\t\t\tmargin: auto; }\n\t\t\t&Name {\n\t\t\t\tfont-size: 18px; }\n\t\t\t&Descr {\n\t\t\t\tfont-weight: 400; } }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0;\n\t\t\t\ttransition: 0.3s all ease; }\n\t\t\t&_right {\n\t\t\t\tright: 0;\n\t\t\t\ttransition: 0.3s all ease; } } } }\n\n.breadcrumbs {\n\t&__items {\n\t\tlist-style-type: none;\n\t\tpadding: 15px 0 0;\n\t\tmargin: 0; }\n\t&__item {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 6px;\n\t\t&:after {\n\t\t\tcontent: '>';\n\t\t\tmargin-left: 16px; }\n\t\t&:first-child {\n\t\t\tpadding-left: 0; }\n\t\t&:last-child {\n\t\t\t&:after {\n\t\t\t\tdisplay: none; } } } }\n\n@media only screen and (max-width : 480px) {\n\t.pageSlider__itemImgWrap {\n\t\tpadding: 0; } }\n\n@media only screen and (max-width : 329px) {\n\t.pageSlider {\n\t\tmargin: 0 -5px 80px; } }\n",".addTask {\n\twidth: 300px;\n\t&__item {\n\t\t&Text {\n\t\t\tfont-size: 16px;\n\t\t\tline-height: 18px; }\n\t\t&Span {\n\t\t\tbackground-color: #000;\n\t\t\tborder-radius: 50%;\n\t\t\tfont-size: 16px;\n\t\t\tline-height: 18px;\n\t\t\tdisplay: inline-block;\n\t\t\tcolor: #fff;\n\t\t\twidth: 18px;\n\t\t\ttext-align: center;\n\t\t\tmargin-right: 5px;\n\t\t\ttransition: 0.2s all ease; }\n\t\t&_assign {\n\t\t\tpadding-top: 10px;\n\t\t\tcolor: rgba(0, 0, 0, 0.6);\n\t\t\t.addTask__itemText {\n\t\t\t\tdisplay: inline-block;\n\t\t\t\tvertical-align: top;\n\t\t\t\tline-height: 56px;\n\t\t\t\tmargin-right: 10px;\n\t\t\t\t&+div {\n\t\t\t\t\tvertical-align: top; } } } }\n\t&__subtask {\n\t\t&Add {\n\t\t\tpadding: 10px 0 0px;\n\t\t\tmargin-bottom: 20px;\n\t\t\tcolor: rgba(0, 0, 0, 0.8);\n\t\t\ttext-decoration: underline;\n\t\t\tcursor: pointer;\n\t\t\tdisplay: inline-block;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: none;\n\t\t\t\t.addTask__itemSpan {\n\t\t\t\t\tbackground-color: #989898; } } }\n\t\t&Item {\n\t\t\tposition: relative; }\n\t\t&Remove {\n\t\t\tdisplay: block;\n\t\t\tposition: absolute;\n\t\t\tright: 10px;\n\t\t\ttop: 35px;\n\t\t\tcursor: pointer;\n\t\t\ttransition: 0.2s all ease;\n\t\t\t&:hover {\n\t\t\t\tbackground-color: #989898; } } }\n\t&__button {\n\t\tmargin-top: 20px; } }\n",".pageContainer {\n\tpadding: 20px 15px; }\n\n.pageTitle {\n\tfont-size: 26px;\n\tfont-weight: 500;\n\tcolor: rgba(0,0,0,0.87); }\n\n.content:after {\n\tcontent: '';\n\tclear: both;\n\tdisplay: table; }\n\n\n.sliderBtn {\n\twidth: 40px;\n\theight: 40px;\n\tbackground-color: #000;\n\tcolor: #fff;\n\tborder: none;\n\ttransition: 0.3s all ease;\n\t&:hover {\n\t\tbackground-color: #4298EB; } }\n\n.pageLoader {\n\twidth: 19px;\n\theight: 19px;\n\tmargin: 50px auto;\n\tbackground-size: cover; }\n\n\n",".cabinet {\n\tposition: relative;\n\t&Title {\n\t\ttext-align: center;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 22px;\n\t\tpadding: 10px 0; }\n\t&SubTitle {\n\t\tfont-size: 18px;\n\t\tpadding-bottom: 10px; } }\n\n\n",".filters {\n\t&Title {\n\t\tfont-size: 18px;\n\t\tpadding-bottom: 10px; }\n\t&__groups {\n\t\tmax-height: 280px;\n\t\toverflow-y: scroll; }\n\t&__group {\n\t\tpadding-bottom: 10px;\n\t\t&Title {\n\t\t\tcolor: rgba(0,0,0,0.6); } }\n\t&__checkbox {\n\t\tmargin: 10px 0;\n\t\tlabel {\n\t\t\tmargin-left: -15px; } }\n\t&__select {\n\t\twidth: 200px !important;\n\t\thr {\n\t\t\tborder-color: #000 !important; } }\n\t&__button {\n\t\tmargin-bottom: 20px; } }\n",".sidebar {\n\tfloat: left;\n\twidth: 30%; }\n.contentRight {\n\tmargin-top: 8px;\n\tpadding: 15px;\n\tfloat: left;\n\twidth: 70%;\n\tbackground-color: #f5f5f5;\n\tposition: relative; }\n\n.sidebar {\n\t&__item {\n\t\t&Link {\n\t\t\ttext-decoration: none; } } }\n",".findUs {\n\tmargin-bottom: 30px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 33.33%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\tmargin-bottom: 20px;\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 100px;\n\t\t\tcolor: #4298EB; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 20px; }\n\t\t&Text {\n\t\t\tfont-weight: 500; } } }\n\n.contacts_mapWrap {\n\tmargin: 0 -15px 30px; }\n\n.contacts_map {\n\tposition: relative;\n\toverflow: hidden;\n\tbackground-color: rgb(229, 227, 223);\n\twidth: 100%;\n\theight: 500px; }\n\n","#mobNav {\n\tdisplay: none; }\n\n.header {\n\tbox-shadow: 0 1px 8px rgba(0,0,0,.3);\n\tpadding: 0 15px;\n\tbackground-color: #fff;\n\tposition: relative;\n\tz-index: 5;\n\t&__toggle {\n\t\t&Label {\n\t\t\tdisplay: none;\n\t\t\tcolor: #000;\n\t\t\tpadding: 10px;\n\t\t\twidth: 50px;\n\t\t\theight: 35px;\n\t\t\tspan {\n\t\t\t\tdisplay: block;\n\t\t\t\twidth: 30px;\n\t\t\t\theight: 3px;\n\t\t\t\tbackground: #000;\n\t\t\t\tposition: relative;\n\t\t\t\ttransition: ease 0.3s all;\n\t\t\t\t&:before,\n\t\t\t\t&:after {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: 100%;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\ttop: 6px;\n\t\t\t\t\tbackground-color: #000;\n\t\t\t\t\t-webkit-transition: ease 0.3s all;\n\t\t\t\t\ttransition: ease 0.3s all; }\n\t\t\t\t&:after {\n\t\t\t\t  top: 12px; } } } }\n\t&__dropdown {\n\t\t&:after {\n\t\t\tclear: both;\n\t\t\tdisplay: table;\n\t\t\tcontent: ''; } }\n\t&Logo {\n\t\tfloat: left;\n\t\tpadding: 15px 15px 15px 0;\n\t\t&__img {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 40px;\n\t\t\theight: 40px;\n\t\t\tmargin-right: 5px; }\n\t\t&__span {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tfont-size: 24px;\n\t\t\t&_blue {\n\t\t\t\tcolor: #4298EB; } } }\n\t&Menu {\n\t\tfloat: left;\n\t\t&__items {\n\t\t\tpadding: 0;\n\t\t\tmargin: 0;\n\t\t\tlist-style-type: none;\n\t\t\t&:after {\n\t\t\t\tcontent: '';\n\t\t\t\tclear: both;\n\t\t\t\tdisplay: table; } }\n\t\t&__item {\n\t\t\tfloat: left;\n\t\t\tposition: relative;\n\t\t\t&:last-child {\n\t\t\t\t.headerMenu__itemLink {\n\t\t\t\t\tborder: none; } }\n\t\t\t&Link {\n\t\t\t\tpadding: 28px 20px 22px;\n\t\t\t\tfont-size: 16px;\n\t\t\t\tline-height: 20px;\n\t\t\t\ttext-transform: uppercase;\n\t\t\t\tdisplay: block;\n\t\t\t\tcolor: #000;\n\t\t\t\ttext-decoration: none;\n\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\tposition: relative;\n\t\t\t\tborder-right: 1px solid #e8e8e8;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\theight: 4px;\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: 0;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransition: 0.3s all ease;\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\ttransform-origin: 50% 100%;\n\t\t\t\t\ttransform: scale(0); }\n\t\t\t\t&:focus {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } }\n\t\t\t\t&_active {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } }\n\t\t\t&:hover {\n\t\t\t\t.headerMenu__items_submenu {\n\t\t\t\t\tdisplay: block; }\n\t\t\t\t>.headerMenu__itemLink {\n\t\t\t\t\tcolor: #4298EB;\n\t\t\t\t\t&:before {\n\t\t\t\t\t\ttransform: scale(1); } } } }\n\t\t&__items_submenu {\n\t\t\tdisplay: none;\n\t\t\tposition: absolute;\n\t\t\tpadding: 5px 0;\n\t\t\tbackground-color: #fff;\n\t\t\tbox-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }\n\t\t&__item_submenu {}\n\t\t&__itemLink_submenu {\n\t\t\twhite-space: nowrap;\n\t\t\tfont-size: 14px;\n\t\t\tpadding: 15px 20px;\n\t\t\tborder: none;\n\t\t\t&:before {\n\t\t\t\twidth: 4px;\n\t\t\t\theight: 100%;\n\t\t\t\tleft: 0;\n\t\t\t\tright: auto;\n\t\t\t\ttransform-origin: 100% 50%; }\n\t\t\t&_active {\n\t\t\t\tcolor: #4298EB;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: '';\n\t\t\t\t\twidth: calc(100% - 40px);\n\t\t\t\t\tposition: absolute;\n\t\t\t\t\tbottom: 0;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t\ttransform: scale(1);\n\t\t\t\t\tbackground: #4298EB;\n\t\t\t\t\twidth: 4px;\n\t\t\t\t\theight: 100%;\n\t\t\t\t\tleft: 0;\n\t\t\t\t\tright: auto;\n\t\t\t\t\ttransform-origin: 100% 50%; } } } }\n\t&Search {\n\t\tfloat: left;\n\t\tposition: relative;\n\t\tpadding: 10px 0 10px;\n\t\t&__input {\n\t\t\tbackground-color: #e5e5e5;\n\t\t\tborder: none;\n\t\t\twidth: 250px;\n\t\t\theight: 48px;\n\t\t\tpadding: 15px;\n\t\t\tborder-radius: 4px; }\n\t\t&__icon {\n\t\t\tposition: absolute;\n\t\t\tright: 15px;\n\t\t\ttop: 25px;\n\t\t\tfont-size: 45px;\n\t\t\tdisplay: block;\n\t\t\twidth: 15px;\n\t\t\theight: 15px;\n\t\t\tborder: 2px solid #989898;\n\t\t\tborder-radius: 50%;\n\t\t\t// cursor: pointer\n\t\t\t&:before {\n\t\t\t\tcontent: \"\";\n\t\t\t\tdisplay: block;\n\t\t\t\tposition: absolute;\n\t\t\t\tright: -7px;\n\t\t\t\tbottom: -4px;\n\t\t\t\tborder-width: 0;\n\t\t\t\tbackground: #989898;\n\t\t\t\twidth: 10px;\n\t\t\t\theight: 3px;\n\t\t\t\ttransform: rotate(45deg); } }\n\t\t&__items {\n\t\t\tlist-style-type: none;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0 10px;\n\t\t\twidth: 250px;\n\t\t\tposition: absolute;\n\t\t\tborder-radius: 4px;\n\t\t\tbackground-color: #e5e5e5; }\n\t\t&__item {\n\t\t\twhite-space: nowrap;\n\t\t\toverflow: hidden;\n\t\t\ttext-overflow: ellipsis;\n\t\t\tmargin: 10px 0; } }\n\t&User {\n\t\tfloat: right;\n\t\t&__inner {\n\t\t\tpadding-top: 18px; }\n\t\t&__signin {\n\t\t\tpadding-top: 25px; }\n\t\t&__avatar {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t\toverflow: hidden;\n\t\t\tborder-radius: 50%;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tmargin-right: 5px;\n\t\t\t-webkit-background-size: cover;\n\t\t\tbackground-size: cover;\n\t\t\t&Img {\n\t\t\t\twidth: 100%;\n\t\t\t\tdisplay: block; } }\n\t\t&__name {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none; }\n\t\t&__link:hover {\n\t\t\t.headerUser__name {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&__exit {\n\t\t\tmargin-left: 15px;\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } } } }\n\ninput[type=\"search\"] {\n  -webkit-appearance: searchfield; }\n\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: searchfield-cancel-button; }\n\n\n\n#mobNav:checked + .header__toggleLabel span {\n\ttransform: rotate(45deg);\n\tposition: relative;\n\ttop: 10px; }\n#mobNav:checked + .header__toggleLabel span:before {\n\ttop: 0px;\n\ttransform: rotate(-90deg); }\n#mobNav:checked + .header__toggleLabel span:after {\n\topacity: 0; }\n#mobNav:checked + .header__toggleLabel + .header__dropdown {\n\ttransform: translate(0, 0);\n\ttop: 34px; }\n\n\n\n@media only screen and (max-width : 1100px) {\n\t.header__toggle {\n\t\tpadding: 10px 15px; }\n\t.header__toggleLabel {\n\t\tdisplay: block; }\n\t#mobNav:checked + .header__toggleLabel span {\n\t\ttransform: rotate(45deg);\n\t\tposition: relative;\n\t\ttop: 10px; }\n\t#mobNav:checked + .header__toggleLabel span:before {\n\t\ttop: 0px;\n\t\ttransform: rotate(-90deg); }\n\t#mobNav:checked + .header__toggleLabel span:after {\n\t\topacity: 0; }\n\t.header {\n\t\tpadding: 0; }\n\t.header__dropdown {\n\t\ttransform: translate(0, -100%);\n\t\ttop: -100%;\n\t\tposition: absolute;\n\t\ttransition: 0.5s all ease;\n\t\tbackground-color: #fff;\n\t\twidth: 100%;\n\t\tpadding: 0 15px 25px; }\n\t.headerLogo,\n\t.headerMenu,\n\t.headerSearch,\n\t.headerUser,\n\t.headerMenu__item {\n\t\tfloat: none; }\n\t.headerSearch__input {\n\t\twidth: 100%; }\n\t.headerMenu__itemLink {\n\t\tborder: none;\n\t\tdisplay: inline-block;\n\t\tpadding: 10px 20px; }\n\t.headerMenu__items_submenu {\n\t\tdisplay: block;\n\t\tposition: static;\n\t\tbox-shadow: none;\n\t\tpadding-left: 30px; }\n\t.headerMenu__itemLink_submenu {\n\t\tpadding: 5px 0 0 10px; }\n\t#mobNav:checked + .header__dropdown {\n\t\tdisplay: block;\n\t\ttransform: translate(0, 0);\n\t\ttop: 50px; } }\n",".home {\n\t&Slider {\n\t\tposition: relative;\n\t\t&__img {\n\t\t\twidth: 100%;\n\t\t\theight: 500px;\n\t\t\tbackground-size: cover;\n\t\t\tbackground-position: 50% 50%; }\n\t\t&__controls {\n\t\t\tposition: absolute;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\ttop: 50%; }\n\t\t&__control {\n\t\t\tposition: absolute;\n\t\t\ttop: 0;\n\t\t\ttransform: translate(0, -50%);\n\t\t\t&_left {\n\t\t\t\tleft: 0; }\n\t\t\t&_right {\n\t\t\t\tright: 0; } } } }\n\n\n.blockTitle {\n\ttext-align: center;\n\ttext-transform: uppercase;\n\tpadding: 20px 0 40px;\n\tposition: relative;\n\t&:before {\n\t\tcontent: '';\n\t\twidth: 100px;\n\t\theight: 2px;\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\tright: 0;\n\t\tbottom: 20px;\n\t\tmargin: auto;\n\t\tbackground-color: #4298EB; } }\n\n.pageDescr {\n\twidth: 740px;\n\tfont-weight: 400;\n\tmargin-left: auto;\n\tmargin-right: auto;\n\ttext-align: center;\n\tpadding-bottom: 30px; }\n\n.possibilities {\n\tpadding-bottom: 20px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 33.33%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\t// margin-bottom: 20px\n\t\t&Icon {\n\t\t\tfont-family: 'my-font';\n\t\t\tfont-size: 60px;\n\t\t\tline-height: 100px;\n\t\t\tcolor: #4298EB; }\n\t\t&Title {\n\t\t\tfont-size: 18px;\n\t\t\ttext-transform: uppercase;\n\t\t\tpadding-bottom: 20px; }\n\t\t&Text {\n\t\t\tfont-weight: 500;\n\t\t\tmin-height: 110px; } } }\n\n.someNumbers {\n\tpadding-bottom: 20px;\n\t&__items {\n\t\tmargin: 0 -15px;\n\t\tpadding: 20px 0 50px;\n\t\t&:after {\n\t\t\tcontent: '';\n\t\t\tclear: both;\n\t\t\tdisplay: table; } }\n\t&__item {\n\t\tfloat: left;\n\t\twidth: 25%;\n\t\tpadding: 0 15px;\n\t\ttext-align: center;\n\t\t&Inner {\n\t\t\tborder: 1px solid #4298EB;\n\t\t\tpadding: 30px 30px; }\n\t\t&Title {\n\t\t\tcolor: #4298EB;\n\t\t\tfont-size: 30px; }\n\t\t&Text {\n\t\t\ttext-transform: uppercase;\n\t\t\tfont-weight: 400;\n\t\t\tfont-size: 20px;\n\t\t\tletter-spacing: -1px; } } }\n\n\n.fade {\n\tanimation-name: fade;\n\tanimation-duration: 1.5s; }\n\n@keyframes fade {\n\tfrom {\n\t\topacity: .4; }\n\tto {\n\t\topacity: 1; } }\n\n\n@media only screen and (max-width : 1200px) {\n\t.someNumbers__item {\n\t\twidth: 50%;\n\t\tmargin-bottom: 30px; } }\n\n@media only screen and (max-width : 1100px) {\n\t.whoweare__item {\n\t\twidth: 100%; } }\n\n@media only screen and (max-width : 768px) {\n\t.pageDescr {\n\t\twidth: 100%; }\n\t.possibilities__item {\n\t\twidth: 50%; } }\n\n@media only screen and (max-width : 480px) {\n\t.someNumbers__item {\n\t\twidth: 100%; }\n\t.possibilities__item,\n\t.findUs__item {\n\t\twidth: 100%; } }\n",".cardBox {\n\tbox-shadow: 2px 2px 11px 0 rgba(0,0,0,.1);\n\tbackground-color: #fff;\n\twidth: 640px;\n\tmargin: 20px auto 0;\n\tpadding: 30px;\n\t&__item {\n\t\tpadding-bottom: 15px;\n\t\tposition: relative;\n\t\t&:last-child {\n\t\t\tpadding-top: 10px;\n\t\t\tpadding-bottom: 0; }\n\t\t&_center {\n\t\t\ttext-align: center; } }\n\t&__label {\n\t\t&Span {\n\t\t\twidth: 100px;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-align: right;\n\t\t\tpadding-right: 10px;\n\t\t\tcolor: #414141;\n\t\t\tfont-weight: 400; }\n\t\t&Input {\n\t\t\tbackground-color: #ebebeb;\n\t\t\tborder: none;\n\t\t\theight: 36px;\n\t\t\twidth: 400px;\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\tpadding: 5px 10px; } }\n\t&__itemButtonWrap {\n\t\ttext-align: center; }\n\t&__title {\n\t\tpadding-bottom: 15px; } }\n\n\n\n.spanError {\n\tcolor: red;\n\tfont-size: 12px;\n\tfont-weight: 400;\n\tdisplay: block;\n\tposition: absolute;\n\tbottom: 0;\n\tleft: 0;\n\tdisplay: none; }\n\n.pageLoader {\n }\t// display: none\n\n\n.cardBox__spanError {\n\tleft: 100px; }\n\n\nhr {\n\tborder-top: none;\n\tborder-right: none;\n\tborder-left: none;\n\tpadding: 5px 0; }\n\n\n\n@media only screen and (max-width : 768px) {\n\t.cardBox__labelSpan {\n\t\tdisplay: block;\n\t\ttext-align: left;\n\t\tmargin-bottom: 10px; }\n\t.cardBox__labelInput {\n\t\twidth: 100%; }\n\t.cardBox {\n\t\twidth: 100%; } }\n",".task {\n\t&__title {\n\t\tfont-size: 20px;\n\t\ttext-transform: uppercase;\n\t\tpadding: 0 0 10px; }\n\t&__subtitle {\n\t\tpadding: 0 0 5px; }\n\t&__progress {\n\t\theight: 5px;\n\t\tbackground-color: rgb(0, 188, 212);\n\t\tposition: absolute;\n\t\ttop: -20px;\n\t\tleft: -15px; }\n\t&Share {\n\t\tpadding-top: 50px;\n\t\t&__title {\n\t\t\tfont-size: 18px;\n\t\t\tpadding-bottom: 15px; }\n\t\t&__items {\n\t\t\tlist-style-type: none;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0; }\n\t\t&__item {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 50px;\n\t\t\theight: 40px;\n\t\t\ttransition: 0.3s all ease;\n\t\t\tfont-family: \"myfontsoc\";\n\t\t\ttext-align: center;\n\t\t\tcursor: pointer;\n\t\t\tcolor: #fff;\n\t\t\tline-height: 40px;\n\t\t\t&:before {\n\t\t\t\tdisplay: block;\n\t\t\t\tfont-size: 25px;\n\t\t\t\tfont-weight: normal;\n\t\t\t\tmargin-left: 5px; }\n\t\t\t&_twitter {\n\t\t\t\tbackground-color: #00aced;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'u'; } }\n\t\t\t&_vk {\n\t\t\t\tbackground-color: #4c75a3;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'v'; } }\n\t\t\t&_google {\n\t\t\t\tbackground-color: #e14d3a;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'w'; } }\n\t\t\t&_facebook {\n\t\t\t\tbackground-color: #3c5a99;\n\t\t\t\t&:before {\n\t\t\t\t\tcontent: 'x';\n\t\t\t\t\tfont-size: 18px; } }\n\t\t\t&:hover {\n\t\t\t\tbackground-color: #000; } } } }\n\n\n\n\n.subtask {\n\t&__item {\n\t\tfont-weight: 400;\n\t\tmargin: 10px 0;\n\t\tlabel {\n\t\t\tcolor: rgba(0, 0, 0, 0.87) !important; } } }\n",".taskList {\n\t&__empty {\n\t\tcolor: red; }\n\t&__items {}\n\t&__item {\n\t\tfont-weight: 400;\n\t\tpadding: 10px 0;\n\t\t&Progress {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\twidth: 80px; }\n\t\t&Text {\n\t\t\tdisplay: inline-block;\n\t\t\tvertical-align: middle;\n\t\t\ttext-decoration: none;\n\t\t\twidth: 220px; }\n\t\t&Link {\n\t\t\t// text-decoration: none\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: none; } }\n\t\t&Project {\n\t\t\twidth: 200px;\n\t\t\tdisplay: inline-block; }\n\t\t&Creator {\n\t\t\twidth: 150px;\n\t\t\tdisplay: inline-block; }\n\t\t&_head {\n\t\t\tfont-weight: 500; } } }\n\n.paginationWrap {\n\ttext-align: center;\n\tpadding-top: 30px; }\n.pagination {\n\tdisplay: inline-block;\n\tlist-style-type: none;\n\tmargin: 0;\n\tpadding: 0;\n\tli {\n\t\tdisplay: inline-block;\n\t\tpadding: 0 3px;\n\t\t&.disabled {\n\t\t\tdisplay: none; }\n\t\ta {\n\t\t\tcursor: pointer;\n\t\t\ttext-decoration: none;\n\t\t\tfont-size: 16px;\n\t\t\tpadding: 0 3px;\n\t\t\t&:hover {\n\t\t\t\ttext-decoration: underline; } }\n\t\t&.active {\n\t\t\ta {\n\t\t\t\ttext-decoration: underline;\n\t\t\t\tcursor: auto; } } } }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 846 */
+/* 848 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -61565,7 +61696,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(28);
 
-var _Abouteindex = __webpack_require__(847);
+var _Abouteindex = __webpack_require__(849);
 
 var _Abouteindex2 = _interopRequireDefault(_Abouteindex);
 
@@ -61573,15 +61704,15 @@ var _Breadcrumbs = __webpack_require__(70);
 
 var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-var _Ourteam = __webpack_require__(849);
+var _Ourteam = __webpack_require__(851);
 
 var _Ourteam2 = _interopRequireDefault(_Ourteam);
 
-var _Benefits = __webpack_require__(848);
+var _Benefits = __webpack_require__(850);
 
 var _Benefits2 = _interopRequireDefault(_Benefits);
 
-var _Whoweare = __webpack_require__(850);
+var _Whoweare = __webpack_require__(852);
 
 var _Whoweare2 = _interopRequireDefault(_Whoweare);
 
@@ -61636,7 +61767,7 @@ exports.default = About;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "About.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 847 */
+/* 849 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -61669,17 +61800,17 @@ var Abouteindex = function Abouteindex(props) {
 		_react2.default.createElement(
 			'div',
 			{ className: 'pageTitle blockTitle' },
-			'About us'
+			props.contents.about.block1.title
 		),
 		_react2.default.createElement(
 			'div',
 			{ className: 'pageDescr' },
-			'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+			props.contents.about.block1.description
 		),
 		_react2.default.createElement(
 			'div',
 			{ className: 'pageText' },
-			'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+			props.contents.about.block1.content
 		)
 	);
 };
@@ -61689,7 +61820,7 @@ exports.default = Abouteindex;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Abouteindex.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 848 */
+/* 850 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -61710,33 +61841,10 @@ var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var possibilities = [{
-	'icon': 'a',
-	'title': 'Analise',
-	'text': 'Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam.'
-}, {
-	'icon': 'b',
-	'title': 'Preparing',
-	'text': 'Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
-}, {
-	'icon': 'c',
-	'title': 'Working',
-	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
-}, {
-	'icon': 'd',
-	'title': 'Finalyse',
-	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
-}, {
-	'icon': 'e',
-	'title': 'Testing',
-	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
-}, {
-	'icon': 'f',
-	'title': 'Deliver',
-	'text': 'Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.'
-}];
-
 var Benefits = function Benefits(props) {
+
+	var possibilities = props.contents.benefits.block1.items;
+
 	return _react2.default.createElement(
 		'div',
 		null,
@@ -61751,12 +61859,12 @@ var Benefits = function Benefits(props) {
 			_react2.default.createElement(
 				'div',
 				{ className: 'pageTitle blockTitle' },
-				'Benefits'
+				props.contents.benefits.block1.title
 			),
 			_react2.default.createElement(
 				'div',
 				{ className: 'pageDescr' },
-				'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+				props.contents.benefits.block1.description
 			),
 			_react2.default.createElement(
 				'div',
@@ -61797,7 +61905,7 @@ exports.default = Benefits;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Benefits.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 849 */
+/* 851 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -61825,62 +61933,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var teamMembers = [{
-	"firstname": "Bumblebee",
-	"lastname": "",
-	"position": "CTO",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/bumblebee.jpg"
-}, {
-	"firstname": "Alexandra",
-	"lastname": "Daddario",
-	"position": "HR",
-	"description": "No comments..",
-	"image": "./img/team/daddario.jpg"
-}, {
-	"firstname": "Deadpool",
-	"lastname": "",
-	"position": "Team lead",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/deadpool.jpg"
-}, {
-	"firstname": "Terminator 2",
-	"lastname": "",
-	"position": "CEO",
-	"description": "Cras ultricies ligula sed magna dictum porta. Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/terminator.jpg"
-}, {
-	"firstname": "Zack",
-	"lastname": "Efron",
-	"position": "Front-end",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/efron.jpg"
-}, {
-	"firstname": "Michelangelo",
-	"lastname": "",
-	"position": "Pizza guy",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/michelangelo.jpg"
-}, {
-	"firstname": "Rocket",
-	"lastname": "Raccoon",
-	"position": "Back-end",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/rocket.jpg"
-}, {
-	"firstname": "Some",
-	"lastname": "Strangers",
-	"position": "Doing nothing",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/some.jpg"
-}, {
-	"firstname": "Dart",
-	"lastname": "Wader",
-	"position": "System administrator",
-	"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-	"image": "./img/team/wader.jpg"
-}];
 
 var Ourteam = function (_Component) {
 	_inherits(Ourteam, _Component);
@@ -61973,6 +62025,7 @@ var Ourteam = function (_Component) {
 		value: function render() {
 
 			var props = this.props;
+			var teamMembers = props.contents.team.block1.items;
 
 			return _react2.default.createElement(
 				'div',
@@ -61988,12 +62041,12 @@ var Ourteam = function (_Component) {
 					_react2.default.createElement(
 						'div',
 						{ className: 'pageTitle blockTitle' },
-						'Our team'
+						props.contents.team.block1.title
 					),
 					_react2.default.createElement(
 						'div',
 						{ className: 'pageDescr' },
-						'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+						props.contents.team.block1.description
 					),
 					_react2.default.createElement(
 						'div',
@@ -62082,7 +62135,7 @@ exports.default = Ourteam;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Ourteam.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 850 */
+/* 852 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -62103,25 +62156,10 @@ var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var whoweareItems = [{
-	'icon': 'g',
-	'title': 'On time projects',
-	'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
-}, {
-	'icon': 'h',
-	'title': 'Professional experience',
-	'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
-}, {
-	'icon': 'j',
-	'title': 'Fully support',
-	'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
-}, {
-	'icon': 'k',
-	'title': 'Communicative team',
-	'text': 'Lorem ipsum dolor sit amet. molestiae, dicta velit, pariatur optio magni! Sint repellendus natus aperiam, deleniti dolorem iste optio, at dolorum consectetur sequi odit voluptate. Unde, fugiat, officiis. Ratione, unde quos? Nihil voluptatem ab rem fugit!'
-}];
-
 var Whoweare = function Whoweare(props) {
+
+	var whoweareItems = props.contents.whoweare.block1.items;
+
 	return _react2.default.createElement(
 		'div',
 		null,
@@ -62136,12 +62174,12 @@ var Whoweare = function Whoweare(props) {
 			_react2.default.createElement(
 				'div',
 				{ className: 'pageTitle blockTitle' },
-				'Who we Are'
+				props.contents.whoweare.block1.title
 			),
 			_react2.default.createElement(
 				'div',
 				{ className: 'pageDescr' },
-				'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+				props.contents.whoweare.block1.description
 			),
 			_react2.default.createElement(
 				'div',
@@ -62181,7 +62219,7 @@ exports.default = Whoweare;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Whoweare.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 851 */
+/* 853 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -62337,7 +62375,7 @@ exports.default = Account;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Account.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 852 */
+/* 854 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -62623,7 +62661,7 @@ exports.default = AddTask;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "AddTask.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 853 */
+/* 855 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -62650,39 +62688,39 @@ var _reactTransitionGroup = __webpack_require__(796);
 
 var _reactRouterDom = __webpack_require__(28);
 
-var _About = __webpack_require__(846);
+var _About = __webpack_require__(848);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Cabinet = __webpack_require__(854);
+var _Cabinet = __webpack_require__(856);
 
 var _Cabinet2 = _interopRequireDefault(_Cabinet);
 
-var _Contacts = __webpack_require__(857);
+var _Contacts = __webpack_require__(859);
 
 var _Contacts2 = _interopRequireDefault(_Contacts);
 
-var _Header = __webpack_require__(859);
+var _Header = __webpack_require__(861);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Home = __webpack_require__(864);
+var _Home = __webpack_require__(866);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _NotFound = __webpack_require__(865);
+var _NotFound = __webpack_require__(867);
 
 var _NotFound2 = _interopRequireDefault(_NotFound);
 
-var _SignIn = __webpack_require__(866);
+var _SignIn = __webpack_require__(868);
 
 var _SignIn2 = _interopRequireDefault(_SignIn);
 
-var _ForgetPass = __webpack_require__(858);
+var _ForgetPass = __webpack_require__(860);
 
 var _ForgetPass2 = _interopRequireDefault(_ForgetPass);
 
-var _SingUp = __webpack_require__(867);
+var _SingUp = __webpack_require__(869);
 
 var _SingUp2 = _interopRequireDefault(_SingUp);
 
@@ -62762,24 +62800,12 @@ var App = function (_Component) {
 	return App;
 }(_react.Component);
 
-// <Route {...rest} render={props => (
-//   fakeAuth.isAuthenticated ? (
-//     <Component {...props}/>
-//   ) : (
-//     <Redirect to={{
-//       pathname: '/login',
-//       state: { from: props.location }
-//     }}/>
-//   )
-// )}/>
-
-
 exports.default = App;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 854 */
+/* 856 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -62798,23 +62824,23 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(28);
 
-var _Sidebar = __webpack_require__(856);
+var _Sidebar = __webpack_require__(858);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
-var _Account = __webpack_require__(851);
+var _Account = __webpack_require__(853);
 
 var _Account2 = _interopRequireDefault(_Account);
 
-var _AddTask = __webpack_require__(852);
+var _AddTask = __webpack_require__(854);
 
 var _AddTask2 = _interopRequireDefault(_AddTask);
 
-var _TaskList = __webpack_require__(868);
+var _TaskList = __webpack_require__(870);
 
 var _TaskList2 = _interopRequireDefault(_TaskList);
 
-var _Task = __webpack_require__(869);
+var _Task = __webpack_require__(871);
 
 var _Task2 = _interopRequireDefault(_Task);
 
@@ -62870,7 +62896,7 @@ exports.default = Cabinet;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Cabinet.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 855 */
+/* 857 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63069,7 +63095,7 @@ exports.default = Filters;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Filters.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 856 */
+/* 858 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63086,7 +63112,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(28);
 
-var _Filters = __webpack_require__(855);
+var _Filters = __webpack_require__(857);
 
 var _Filters2 = _interopRequireDefault(_Filters);
 
@@ -63164,7 +63190,7 @@ exports.default = Sidebar;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Sidebar.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 857 */
+/* 859 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63229,19 +63255,23 @@ var Contacts = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
+
+			var props = this.props;
+			var finUsItems = props.contents.contacts.block1.items;
+
 			return _react2.default.createElement(
 				'div',
 				{ className: 'pageContainer' },
-				_react2.default.createElement(_Breadcrumbs2.default, { name: this.props.name }),
+				_react2.default.createElement(_Breadcrumbs2.default, { name: props.name }),
 				_react2.default.createElement(
 					'div',
 					{ className: 'pageTitle blockTitle' },
-					'Where you can find us'
+					props.contents.contacts.block1.title
 				),
 				_react2.default.createElement(
 					'div',
 					{ className: 'pageDescr' },
-					'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.'
+					props.contents.contacts.block1.description
 				),
 				_react2.default.createElement(
 					'div',
@@ -63249,63 +63279,28 @@ var Contacts = function (_Component) {
 					_react2.default.createElement(
 						'div',
 						{ className: 'findUs__items' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'findUs__item' },
-							_react2.default.createElement(
+						finUsItems.map(function (f, i) {
+							return _react2.default.createElement(
 								'div',
-								{ className: 'findUs__itemIcon' },
-								'\xA0l'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemTitle' },
-								'Our adress'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemText' },
-								'Not home and not street'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'findUs__item' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemIcon' },
-								'\xA0m'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemTitle' },
-								'Our email'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemText' },
-								'www.com'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'findUs__item' },
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemIcon' },
-								'\xA0n'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemTitle' },
-								'Our phone'
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'findUs__itemText' },
-								'(0) 123-456-789-00'
-							)
-						)
+								{ key: i, className: 'findUs__item' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'findUs__itemIcon' },
+									'\xA0',
+									f.icon
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'findUs__itemTitle' },
+									f.title
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'findUs__itemText' },
+									f.text
+								)
+							);
+						})
 					)
 				),
 				_react2.default.createElement(
@@ -63325,7 +63320,7 @@ exports.default = Contacts;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Contacts.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 858 */
+/* 860 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63424,7 +63419,7 @@ exports.default = ForgetPass;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "ForgetPass.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 859 */
+/* 861 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63439,23 +63434,23 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _HeaderLogo = __webpack_require__(860);
+var _HeaderLogo = __webpack_require__(862);
 
 var _HeaderLogo2 = _interopRequireDefault(_HeaderLogo);
 
-var _HeaderMenu = __webpack_require__(861);
+var _HeaderMenu = __webpack_require__(863);
 
 var _HeaderMenu2 = _interopRequireDefault(_HeaderMenu);
 
-var _HeaderSearch = __webpack_require__(862);
+var _HeaderSearch = __webpack_require__(864);
 
 var _HeaderSearch2 = _interopRequireDefault(_HeaderSearch);
 
-var _HeaderUser = __webpack_require__(863);
+var _HeaderUser = __webpack_require__(865);
 
 var _HeaderUser2 = _interopRequireDefault(_HeaderUser);
 
-__webpack_require__(872);
+__webpack_require__(873);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63478,7 +63473,7 @@ var Header = function Header(props) {
 			{ className: 'header__dropdown' },
 			_react2.default.createElement(_HeaderLogo2.default, null),
 			_react2.default.createElement(_HeaderMenu2.default, null),
-			_react2.default.createElement(_HeaderSearch2.default, null),
+			_react2.default.createElement(_HeaderSearch2.default, props),
 			_react2.default.createElement(_HeaderUser2.default, props)
 		)
 	);
@@ -63489,7 +63484,7 @@ exports.default = Header;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Header.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 860 */
+/* 862 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63535,7 +63530,7 @@ exports.default = HeaderLogo;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderLogo.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 861 */
+/* 863 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63675,7 +63670,7 @@ exports.default = HeaderMenu;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderMenu.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 862 */
+/* 864 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63686,27 +63681,146 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(28);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HeaderSearch = function HeaderSearch(props) {
-	return _react2.default.createElement(
-		'div',
-		{ className: 'headerSearch' },
-		_react2.default.createElement('input', { className: 'headerSearch__input', type: 'search', placeholder: '\u041F\u043E\u0438\u0441\u043A...' }),
-		_react2.default.createElement('div', { className: 'headerSearch__icon' })
-	);
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var HeaderSearch = function (_Component) {
+	_inherits(HeaderSearch, _Component);
+
+	function HeaderSearch(props) {
+		_classCallCheck(this, HeaderSearch);
+
+		var _this = _possibleConstructorReturn(this, (HeaderSearch.__proto__ || Object.getPrototypeOf(HeaderSearch)).call(this, props));
+
+		_this.state = {
+			list: false,
+			items: [
+				// {
+				// 	link: '',
+				// 	text: ''
+				// }
+			]
+		};
+		return _this;
+	}
+
+	_createClass(HeaderSearch, [{
+		key: 'handleSearch',
+		value: function handleSearch(e) {
+			var _this2 = this;
+
+			//get all content from site
+			var contents = this.props.contents;
+			//get input value
+			var inputVal = e.target.value;
+			//create regular expression
+			var regexp = new RegExp(inputVal, 'gi');
+			//regular expression for images
+			var regexpImg = /(\.\/img\/)|(\.jpg)/;
+			var arrOfLinks = [];
+			var objClosure = function objClosure(obj, page) {
+				for (var key in obj) {
+					//check if value is a string
+					if (typeof obj[key] == 'string') {
+						//check if search is not empty
+						if (inputVal) {
+							//search in content
+							if (regexp.test(obj[key])) {
+								var link = void 0;
+								if (page === 'About' || obj.page === 'About') {
+									link = '/about';
+								} else if (page === 'Who we are' || obj.page === 'Who we are') {
+									link = '/about/who-we-are';
+								} else if (page === 'Benefits' || obj.page === 'Benefits') {
+									link = '/about/benefits';
+								} else if (page === 'Team' || obj.page === 'Team') {
+									link = '/about/our-team';
+								} else if (page === 'Contacts' || obj.page === 'Contacts') {
+									link = '/contacts';
+								} else {
+									link = '/';
+								}
+								var text = regexpImg.test(obj[key]) ? 'Image' : obj[key];
+								//create lits of links with found content
+								arrOfLinks.push({
+									link: link,
+									text: text
+								});
+								//unpdate state
+								_this2.setState(function (state) {
+									state.list = true;
+									state.items = arrOfLinks;
+								});
+							}
+						} else {
+							//if search input is empty - hide list of links
+							_this2.setState({
+								list: false,
+								items: [{
+									link: '',
+									text: ''
+								}]
+							});
+						}
+					} else {
+						//if obj.page is not empty set page as obj.page value
+						//else set page as previous obj.page value
+						page = obj.page ? obj.page : page;
+						//if value is not a string run function again
+						objClosure(obj[key], page);
+					}
+				}
+			};
+			objClosure(contents);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'headerSearch' },
+				_react2.default.createElement('input', { className: 'headerSearch__input', type: 'search', placeholder: '\u041F\u043E\u0438\u0441\u043A...', onChange: this.handleSearch.bind(this) }),
+				this.state.list ? _react2.default.createElement(
+					'ul',
+					{ className: 'headerSearch__items' },
+					this.state.items.map(function (li, i) {
+						return _react2.default.createElement(
+							'li',
+							{ key: i, className: 'headerSearch__item' },
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ to: li.link },
+								li.text
+							)
+						);
+					})
+				) : null
+			);
+		}
+	}]);
+
+	return HeaderSearch;
+}(_react.Component);
 
 exports.default = HeaderSearch;
 
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderSearch.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 863 */
+/* 865 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -63783,12 +63897,12 @@ exports.default = HeaderUser;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "HeaderUser.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 864 */
+/* 866 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -63808,50 +63922,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var possibilities = [{
-	"icon": "a",
-	"title": "Analise",
-	"text": "Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam."
-}, {
-	"icon": "b",
-	"title": "Preparing",
-	"text": "Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-}, {
-	"icon": "c",
-	"title": "Working",
-	"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-}, {
-	"icon": "d",
-	"title": "Finalyse",
-	"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-}, {
-	"icon": "e",
-	"title": "Testing",
-	"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-}, {
-	"icon": "f",
-	"title": "Deliver",
-	"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-}];
-
-var someNumbers = [{
-	'title': '1600',
-	'text': 'Happy clients'
-}, {
-	'title': '3200',
-	'text': 'Completed projects'
-}, {
-	'title': '40',
-	'text': 'Awards'
-}, {
-	'title': '20 000',
-	'text': 'Coffee drinks'
-}];
-
-var sliderBgStyle = {
-	backgroungImage: "url('./img/homeslider1.jpg')"
-};
-
 var Home = function (_Component) {
 	_inherits(Home, _Component);
 
@@ -63862,7 +63932,7 @@ var Home = function (_Component) {
 	}
 
 	_createClass(Home, [{
-		key: "componentDidMount",
+		key: 'componentDidMount',
 		value: function componentDidMount() {
 			//func for change slides
 			var plusSlides = function plusSlides(n) {
@@ -63916,76 +63986,78 @@ var Home = function (_Component) {
 			autoslideshow(6000);
 		}
 	}, {
-		key: "render",
+		key: 'render',
 		value: function render() {
 
 			var props = this.props;
+			var someNumbers = props.contents.home.block1.items;
+			var possibilities = props.contents.home.block2.items;
 
 			return _react2.default.createElement(
-				"div",
-				{ className: "homePage" },
+				'div',
+				{ className: 'homePage' },
 				_react2.default.createElement(
-					"div",
-					{ className: "homeSlider" },
+					'div',
+					{ className: 'homeSlider' },
 					_react2.default.createElement(
-						"div",
-						{ className: "homeSlider__imgs" },
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider5.jpg\')' } }),
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider6.png\')' } }),
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider2.jpg\')' } }),
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider3.jpg\')' } }),
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider7.png\')' } }),
-						_react2.default.createElement("div", { className: "homeSlider__img fade", style: { backgroundImage: 'url(\'./img/homeslider4.jpg\')' } })
+						'div',
+						{ className: 'homeSlider__imgs' },
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider5.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider6.png\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider2.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider3.jpg\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider7.png\')' } }),
+						_react2.default.createElement('div', { className: 'homeSlider__img fade', style: { backgroundImage: 'url(\'./img/homeslider4.jpg\')' } })
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "homeSlider__controls" },
+						'div',
+						{ className: 'homeSlider__controls' },
 						_react2.default.createElement(
-							"button",
-							{ className: "homeSlider__control homeSlider__control_left sliderBtn", "data-control": "left", type: "button" },
-							"\u276E"
+							'button',
+							{ className: 'homeSlider__control homeSlider__control_left sliderBtn', 'data-control': 'left', type: 'button' },
+							'\u276E'
 						),
 						_react2.default.createElement(
-							"button",
-							{ className: "homeSlider__control homeSlider__control_right sliderBtn", "data-control": "right", type: "button" },
-							"\u276F"
+							'button',
+							{ className: 'homeSlider__control homeSlider__control_right sliderBtn', 'data-control': 'right', type: 'button' },
+							'\u276F'
 						)
 					)
 				),
 				_react2.default.createElement(
-					"div",
-					{ className: "pageContainer" },
+					'div',
+					{ className: 'pageContainer' },
 					_react2.default.createElement(
-						"div",
-						{ className: "pageTitle blockTitle" },
-						"Some numbers"
+						'div',
+						{ className: 'pageTitle blockTitle' },
+						props.contents.home.block1.title
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "pageDescr" },
-						"Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta."
+						'div',
+						{ className: 'pageDescr' },
+						props.contents.home.block1.description
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "someNumbers" },
+						'div',
+						{ className: 'someNumbers' },
 						_react2.default.createElement(
-							"div",
-							{ className: "someNumbers__items" },
+							'div',
+							{ className: 'someNumbers__items' },
 							someNumbers.map(function (someNumber, i) {
 								return _react2.default.createElement(
-									"div",
-									{ key: i, className: "someNumbers__item" },
+									'div',
+									{ key: i, className: 'someNumbers__item' },
 									_react2.default.createElement(
-										"div",
-										{ className: "someNumbers__itemInner" },
+										'div',
+										{ className: 'someNumbers__itemInner' },
 										_react2.default.createElement(
-											"div",
-											{ className: "someNumbers__itemTitle" },
+											'div',
+											{ className: 'someNumbers__itemTitle' },
 											someNumber.title
 										),
 										_react2.default.createElement(
-											"div",
-											{ className: "someNumbers__itemText" },
+											'div',
+											{ className: 'someNumbers__itemText' },
 											someNumber.text
 										)
 									)
@@ -63994,39 +64066,39 @@ var Home = function (_Component) {
 						)
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "pageTitle blockTitle" },
-						"Possibilities"
+						'div',
+						{ className: 'pageTitle blockTitle' },
+						props.contents.home.block2.title
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "pageDescr" },
-						"Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta."
+						'div',
+						{ className: 'pageDescr' },
+						props.contents.home.block2.description
 					),
 					_react2.default.createElement(
-						"div",
-						{ className: "possibilities" },
+						'div',
+						{ className: 'possibilities' },
 						_react2.default.createElement(
-							"div",
-							{ className: "possibilities__items" },
+							'div',
+							{ className: 'possibilities__items' },
 							possibilities.map(function (possibility, i) {
 								return _react2.default.createElement(
-									"div",
-									{ key: i, className: "possibilities__item" },
+									'div',
+									{ key: i, className: 'possibilities__item' },
 									_react2.default.createElement(
-										"div",
-										{ className: "possibilities__itemIcon" },
-										"\xA0",
+										'div',
+										{ className: 'possibilities__itemIcon' },
+										'\xA0',
 										possibility.icon
 									),
 									_react2.default.createElement(
-										"div",
-										{ className: "possibilities__itemTitle" },
+										'div',
+										{ className: 'possibilities__itemTitle' },
 										possibility.title
 									),
 									_react2.default.createElement(
-										"div",
-										{ className: "possibilities__itemText" },
+										'div',
+										{ className: 'possibilities__itemText' },
 										possibility.text
 									)
 								);
@@ -64046,7 +64118,7 @@ exports.default = Home;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Home.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 865 */
+/* 867 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -64105,7 +64177,7 @@ exports.default = NotFound;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "NotFound.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 866 */
+/* 868 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -64301,7 +64373,7 @@ exports.default = SignIn;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SignIn.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 867 */
+/* 869 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -64330,7 +64402,7 @@ var _Breadcrumbs = __webpack_require__(70);
 
 var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-__webpack_require__(873);
+__webpack_require__(874);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -64712,7 +64784,7 @@ exports.default = SingUp;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "SingUp.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 868 */
+/* 870 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -64931,7 +65003,7 @@ exports.default = TaskList;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "TaskList.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 869 */
+/* 871 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -65017,107 +65089,7 @@ exports.default = Task;
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Task.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 870 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _reactRedux = __webpack_require__(316);
-
-var _reactRouterDom = __webpack_require__(28);
-
-var _redux = __webpack_require__(116);
-
-var _pageActions = __webpack_require__(838);
-
-var pageActions = _interopRequireWildcard(_pageActions);
-
-var _App = __webpack_require__(853);
-
-var _App2 = _interopRequireDefault(_App);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-//simple helper function, which return all filters from state by given key.
-function getFilters(key, tasks) {
-	return tasks.reduce(function (acc, task) {
-		if (!acc.includes(task[key])) {
-			return [].concat(_toConsumableArray(acc), [task[key]]);
-		}
-		return acc;
-	}, []);
-}
-
-//getting visible tasks from state.
-function getVisibleTasks(tasks, creator, projects, sorting) {
-	return tasks.filter(function (t) {
-		return (creator == 'All' || creator == t.creator) && (projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project);
-	}).sort(function (a, b) {
-		if (sorting == 'Random') {
-			return;
-		} else if (sorting == 'Name, A to Z') {
-			return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
-		} else if (sorting == 'Name, Z to A') {
-			return a.title < b.title ? 1 : a.title > b.title ? -1 : 0;
-		} else if (sorting == 'Progress, low to hight') {
-			return parseInt(a.progress) > parseInt(b.progress) ? 1 : parseInt(a.progress) < parseInt(b.progress) ? -1 : 0;
-		} else if (sorting == 'Progress, hight to low') {
-			return parseInt(a.progress) < parseInt(b.progress) ? 1 : parseInt(a.progress) > parseInt(b.progress) ? -1 : 0;
-		}
-	});
-}
-
-function mapStateToProps(state, props) {
-	var _state$users = state.users,
-	    preloader = _state$users.preloader,
-	    isSignIn = _state$users.isSignIn,
-	    showEmailError = _state$users.showEmailError,
-	    showPassError = _state$users.showPassError,
-	    currentUser = _state$users.currentUser,
-	    users = _state$users.users;
-	var _state$tasks = state.tasks,
-	    creator = _state$tasks.creator,
-	    projects = _state$tasks.projects,
-	    sorting = _state$tasks.sorting,
-	    tasks = _state$tasks.tasks;
-
-	return {
-		currentUser: currentUser,
-		showEmailError: showEmailError,
-		showPassError: showPassError,
-		isSignIn: isSignIn,
-		preloader: preloader,
-		tasks: getVisibleTasks(tasks, creator, projects, sorting),
-		creatorsForFilters: getFilters('creator', tasks),
-		projectsForFilters: getFilters('project', tasks),
-		creator: creator,
-		projects: projects,
-		sorting: sorting
-	};
-}
-
-function mapDispatchToProps(dispatch) {
-	return {
-		pageActions: (0, _redux.bindActionCreators)(pageActions, dispatch)
-	};
-}
-
-exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_App2.default));
-
-/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "AppContainer.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ }),
-/* 871 */
+/* 872 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react-dom/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -65131,7 +65103,7 @@ exports.default = configureStore;
 
 var _redux = __webpack_require__(116);
 
-var _reducers = __webpack_require__(840);
+var _reducers = __webpack_require__(842);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -65157,13 +65129,13 @@ function configureStore(initialState) {
 /* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("D:\\_EPAM\\final-task\\TaskTrackingSystem\\myproject\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "configureStore.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }),
-/* 872 */
+/* 873 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(843);
+var content = __webpack_require__(845);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -65188,13 +65160,13 @@ if(false) {
 }
 
 /***/ }),
-/* 873 */
+/* 874 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(844);
+var content = __webpack_require__(846);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -65219,13 +65191,13 @@ if(false) {
 }
 
 /***/ }),
-/* 874 */
+/* 875 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(845);
+var content = __webpack_require__(847);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -65250,7 +65222,7 @@ if(false) {
 }
 
 /***/ }),
-/* 875 */
+/* 876 */
 /***/ (function(module, exports) {
 
 module.exports = function() {
@@ -65259,7 +65231,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 876 */
+/* 877 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(220);

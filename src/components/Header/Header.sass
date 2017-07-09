@@ -151,7 +151,7 @@
 			border: none
 			width: 250px
 			height: 48px
-			padding: 15px 30px 15px 15px
+			padding: 15px
 			border-radius: 4px
 		&__icon
 			position: absolute
@@ -163,7 +163,7 @@
 			height: 15px
 			border: 2px solid #989898
 			border-radius: 50%
-			cursor: pointer
+			// cursor: pointer
 			&:before
 				content: ""
 				display: block
@@ -175,6 +175,19 @@
 				width: 10px
 				height: 3px
 				transform: rotate(45deg)
+		&__items
+			list-style-type: none
+			margin: 0
+			padding: 0 10px
+			width: 250px
+			position: absolute
+			border-radius: 4px
+			background-color: #e5e5e5
+		&__item
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			margin: 10px 0
 	&User
 		float: right
 		&__inner
@@ -207,6 +220,12 @@
 			text-decoration: none
 			&:hover
 				text-decoration: underline
+
+input[type="search"]
+  -webkit-appearance: searchfield
+
+input[type="search"]::-webkit-search-cancel-button
+  -webkit-appearance: searchfield-cancel-button
 
 
 

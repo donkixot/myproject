@@ -1,72 +1,6 @@
 import React, { Component } from 'react';
 import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs.jsx';
 
-const teamMembers = [
-	{
-		"firstname": "Bumblebee",
-		"lastname": "",
-		"position": "CTO",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/bumblebee.jpg"
-	},
-	{
-		"firstname": "Alexandra",
-		"lastname": "Daddario",
-		"position": "HR",
-		"description": "No comments..",
-		"image": "./img/team/daddario.jpg"
-	},
-	{
-		"firstname": "Deadpool",
-		"lastname": "",
-		"position": "Team lead",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/deadpool.jpg"
-	},
-	{
-		"firstname": "Terminator 2",
-		"lastname": "",
-		"position": "CEO",
-		"description": "Cras ultricies ligula sed magna dictum porta. Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/terminator.jpg"
-	},
-	{
-		"firstname": "Zack",
-		"lastname": "Efron",
-		"position": "Front-end",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/efron.jpg"
-	},
-	{
-		"firstname": "Michelangelo",
-		"lastname": "",
-		"position": "Pizza guy",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/michelangelo.jpg"
-	},
-	{
-		"firstname": "Rocket",
-		"lastname": "Raccoon",
-		"position": "Back-end",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/rocket.jpg"
-	},
-	{
-		"firstname": "Some",
-		"lastname": "Strangers",
-		"position": "Doing nothing",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/some.jpg"
-	},
-	{
-		"firstname": "Dart",
-		"lastname": "Wader",
-		"position": "System administrator",
-		"description": "Morbi vel felis cursus, fermentum nibh nec, volutpat urna.",
-		"image": "./img/team/wader.jpg"
-	}
-]
-
 export default class Ourteam extends Component {
 
 	componentDidMount() {
@@ -150,6 +84,7 @@ export default class Ourteam extends Component {
 	render() {
 
 		const props = this.props;
+		const teamMembers = props.contents.team.block1.items;
 
 		return (
 			<div>
@@ -159,8 +94,8 @@ export default class Ourteam extends Component {
 					parentname={props.parentname}
 				/>
 				<div className='ourteam'>
-					<div className='pageTitle blockTitle'>Our team</div>
-					<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+					<div className='pageTitle blockTitle'>{props.contents.team.block1.title}</div>
+					<div className='pageDescr'>{props.contents.team.block1.description}</div>
 					<div className='pageSlider'>
 						<div className='pageSlider__items'>
 							{

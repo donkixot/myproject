@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import { bindActionCreators } from 'redux';
-import * as pageActions from '../actions/pageActions.js';
-import App from '../components/App/App.jsx';
+import * as pageActions from '../../actions/pageActions.js';
+import App from './App.jsx';
 
 
 //simple helper function, which return all filters from state by given key.
@@ -41,9 +41,10 @@ function getVisibleTasks(tasks, creator, projects, sorting) {
 
 
 function mapStateToProps(state, props) {
-	const { preloader, isSignIn, showEmailError, showPassError, currentUser, users } = state.users;
+	const { preloader, isSignIn, showEmailError, showPassError, currentUser, users } = state.user;
 	const { creator, projects, sorting, tasks } = state.tasks;
 	return {
+		contents: state.contents,
 		currentUser,
 		showEmailError,
 		showPassError,

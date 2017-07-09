@@ -1,61 +1,5 @@
 import React, { Component } from 'react';
 
-const possibilities = [
-	{
-		"icon":"a",
-		"title": "Analise",
-		"text": "Vivamus suscipit tortor eget felis porttitor volutpat. Cura bitur aliquet quam."
-	},
-	{
-		"icon":"b",
-		"title": "Preparing",
-		"text": "Lorem Ipsum - это текст- рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon":"c",
-		"title": "Working",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon":"d",
-		"title": "Finalyse",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon":"e",
-		"title": "Testing",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	},
-	{
-		"icon":"f",
-		"title": "Deliver",
-		"text": "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов."
-	}
-]
-
-const someNumbers = [
-	{
-		'title':'1600',
-		'text': 'Happy clients'
-	},
-	{
-		'title':'3200',
-		'text': 'Completed projects'
-	},
-	{
-		'title':'40',
-		'text': 'Awards'
-	},
-	{
-		'title':'20 000',
-		'text': 'Coffee drinks'
-	}
-]
-
-const sliderBgStyle ={
-	backgroungImage: "url('./img/homeslider1.jpg')"
-}
-
 export default class Home extends Component {
 
 	componentDidMount() {
@@ -70,7 +14,6 @@ export default class Home extends Component {
 				plusSlides(1);
 			}
 		});
-
 
 		let showSlides = n => {
 			let slides = document.querySelectorAll('.homeSlider__img');
@@ -113,6 +56,8 @@ export default class Home extends Component {
 	render() {
 
 		const props = this.props;
+		const someNumbers = props.contents.home.block1.items;
+		const possibilities = props.contents.home.block2.items;
 
 		return (
 			<div className='homePage'>
@@ -131,8 +76,8 @@ export default class Home extends Component {
 					</div>
 				</div>
 				<div className='pageContainer'>
-					<div className='pageTitle blockTitle'>Some numbers</div>
-					<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+					<div className='pageTitle blockTitle'>{props.contents.home.block1.title}</div>
+					<div className='pageDescr'>{props.contents.home.block1.description}</div>
 					<div className='someNumbers'>
 						<div className='someNumbers__items'>
 							{
@@ -147,8 +92,8 @@ export default class Home extends Component {
 							}
 						</div>
 					</div>
-					<div className='pageTitle blockTitle'>Possibilities</div>
-					<div className='pageDescr'>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.</div>
+					<div className='pageTitle blockTitle'>{props.contents.home.block2.title}</div>
+					<div className='pageDescr'>{props.contents.home.block2.description}</div>
 					<div className='possibilities'>
 						<div className='possibilities__items'>
 							{

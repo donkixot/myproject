@@ -10,7 +10,7 @@ injectTapEventPlugin();
 
 import configureStore from './store/configureStore.jsx';
 
-import App from './containers/AppContainer.jsx';
+import App from './components/App/AppContainer';
 
 import './main.sass';
 

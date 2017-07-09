@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import users from './users'
+import user from './user'
 import tasks from './tasks'
+import contents from './contents'
 
 export default combineReducers({
-	users,
-	tasks
+	user,
+	tasks,
+	contents
 })
