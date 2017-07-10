@@ -89,7 +89,7 @@ export default class HeaderSearch extends Component {
 	render() {
 		return (
 			<div className='headerSearch'>
-				<input className='headerSearch__input' type='search' placeholder='Поиск...' onChange={this.handleSearch.bind(this)}/>
+				<input className='headerSearch__input' type='search' placeholder='Search...' onChange={this.handleSearch.bind(this)}/>
 				{
 					this.state.list
 					?

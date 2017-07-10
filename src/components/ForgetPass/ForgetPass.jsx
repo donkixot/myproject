@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
 
 
 const ForgetPass = () => {
@@ -28,7 +29,9 @@ const ForgetPass = () => {
 							<input className='cardBox__labelInput' type='email' required />
 						</label>
 					</div>
-					<button className='cardBox__itemButton' type='submit' onClick={handleRemindPass}>Send</button>
+					<div className='cardBox__itemButtonWrap'>
+						<RaisedButton className='cardBox__itemButton' type='submit' label="Send" primary={true} />
+					</div>
 				</form>
 				<form className='formSpree hidden' action='' method='POST' noValidate>
 					<input className='formSpree_email' type='email' name='Your email' />
@@ -37,9 +40,6 @@ const ForgetPass = () => {
 					<input type='text' name='_gotcha'/>
 					<input className='formSpree__submit' type='submit' value='Send' />
 				</form>
-				<div className='cardBox__item cardBox__item_center'>
-					<Link className='cardBox__itemLink' to='/signin'>Back to login</Link>
-				</div>
 			</div>
 		</div>
 	);

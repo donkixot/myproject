@@ -370,6 +370,62 @@ var databaseTTS = [
 				"creator": "Sith Lord",
 				"progress": "50%"
 			},
+			{
+				"id":"07ts",
+				"title": "Meet with client",
+				"subtasks": [
+					{
+						"title": "Meet with client",
+						"done": false
+					}
+				],
+				"project": "Paint shop",
+				"receiver": "Frodo Baggins",
+				"creator": "Sith Lord",
+				"progress": "0%"
+			},
+			{
+				"id":"08ts",
+				"title": "Do something evil",
+				"subtasks": [
+					{
+						"title": "Do something evil",
+						"done": false
+					}
+				],
+				"project": "Paint shop",
+				"receiver": "Anakin Skywalker",
+				"creator": "Gandalf the White",
+				"progress": "0%"
+			},
+			{
+				"id":"08ts",
+				"title": "Make the army of clones",
+				"subtasks": [
+					{
+						"title": "Make the army of clones",
+						"done": false
+					}
+				],
+				"project": "Dark Side",
+				"receiver": "Anakin Skywalker",
+				"creator": "Sith Lord",
+				"progress": "0%"
+			},
+			{
+				"id":"09ts",
+				"title": "Kill the devil monster",
+				"subtasks": [
+					{
+						"title": "Kill the devil monster",
+						"done": false
+					}
+				],
+				"project": "The fellowship of the ring",
+				"receiver": "Gendalf the White",
+				"creator": "Sith Lord",
+				"progress": "0%"
+			},
 		],
 		"contents": {
 			"home": {
