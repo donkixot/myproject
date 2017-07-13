@@ -40,8 +40,8 @@ function getVisibleTasks(tasks, creator, projects, sorting) {
 }
 
 
-function mapStateToProps(state, props) {
-	const { preloader, isSignIn, showEmailError, showPassError, currentUser, users } = state.user;
+function mapStateToProps(state) {
+	const { preloader, isSignIn, showEmailError, showPassError, currentUser } = state.user;
 	const { creator, projects, sorting, tasks } = state.tasks;
 	return {
 		contents: state.contents,

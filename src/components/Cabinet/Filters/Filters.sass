@@ -19,3 +19,34 @@
 			border-color: #000 !important
 	&__button
 		margin-bottom: 20px
+
+.sidebar__itemLink_filter
+	display: none
+
+@media only screen and (max-width : 1024px)
+	.sidebar__itemLink_filter
+		display: block
+	.filters
+		position: absolute
+		top: 0
+		left: -260px
+		padding: 15px
+		z-index: 5
+		background-color: #f5f5f5
+		box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3)
+		transition: 0.5s all ease
+	.filters__groups
+		max-height: 100%
+		overflow: hidden
+	.filters__button
+		margin: 0 0 5px 0
+	#sidebarCheckbox+div
+		transition: 0.5s all ease
+	#sidebarCheckbox:checked+div
+		margin-left: 250px
+		background-color: #eee
+	#sidebarCheckbox:checked+div+.filters
+		left: 0
+
+
+

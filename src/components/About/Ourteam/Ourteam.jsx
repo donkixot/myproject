@@ -31,7 +31,9 @@ export default class Ourteam extends Component {
 			let numberVisibleSlides = Math.floor(contentWidth / slideWidth);
 			//set width of slider wrapper
 			let sliderWrapperWidth = numberVisibleSlides*slideWidth;
-			document.querySelector('.pageSlider').setAttribute('style', `width: ${sliderWrapperWidth}px`);
+			if(document.querySelector('.pageSlider')){
+				document.querySelector('.pageSlider').setAttribute('style', `width: ${sliderWrapperWidth}px`);
+			}
 			//set slider position
 			slider.setAttribute('style',`width: ${sliderWidth}px; transform: translate(${n}px, 0);`);
 
@@ -46,12 +48,12 @@ export default class Ourteam extends Component {
 			if(n == -slideWidth*numberHiddenSlides){
 				document.querySelector('.pageSlider__control_left').setAttribute('style', `left: -${controlWidth}px`);
 			}else{
-				document.querySelector('.pageSlider__control_left').setAttribute('style', `left: 0px`);
+				document.querySelector('.pageSlider__control_left').setAttribute('style', 'left: 0px');
 			}
 
 			//if slider achive his first slide - hide right control button
 			if(n <= -slideWidth){
-				document.querySelector('.pageSlider__control_right').setAttribute('style', `right: 0px`);
+				document.querySelector('.pageSlider__control_right').setAttribute('style', 'right: 0px');
 			}else{
 				document.querySelector('.pageSlider__control_right').setAttribute('style', `right: -${controlWidth}px`);
 			}

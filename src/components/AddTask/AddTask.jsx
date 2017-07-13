@@ -21,7 +21,7 @@ export default class AddTask extends Component {
 
 	handleSubtaskChange(index, event, value){
 		this.setState( state => state.subtaskItems[index] = value );
-	};
+	}
 
 	handleSubtaskAdd(){
 		let items = this.state.subtaskItems;
@@ -29,7 +29,7 @@ export default class AddTask extends Component {
 		this.setState({
 			subtaskItems: items
 		});
-	};
+	}
 
 	handleSubtaskRemove(index){
 		let items = this.state.subtaskItems;
@@ -37,11 +37,11 @@ export default class AddTask extends Component {
 		this.setState({
 			subtaskItems: items
 		});
-	};
+	}
 
 	handleAssignTo(index, event, value){
 		this.setState({value});
-	};
+	}
 
 	handleAddTask(){
 		let task = {
@@ -102,7 +102,7 @@ export default class AddTask extends Component {
 				subtaskItems: []
 			});
 		}
-	};
+	}
 
 	render() {
 

@@ -9,11 +9,21 @@
 			display: inline-block
 			vertical-align: middle
 			width: 80px
+			&:before
+				content: 'Progress:'
+				color: #000
+				font-weight: 900
+				display: none
 		&Text
 			display: inline-block
 			vertical-align: middle
 			text-decoration: none
 			width: 220px
+			&:before
+				content: 'Task name:'
+				color: #000
+				font-weight: 900
+				display: none
 		&Link
 			// text-decoration: none
 			&:hover
@@ -21,11 +31,32 @@
 		&Project
 			width: 200px
 			display: inline-block
+			vertical-align: middle
+			&:before
+				content: 'Project name:'
+				color: #000
+				font-weight: 900
+				display: none
 		&Creator
 			width: 150px
 			display: inline-block
+			vertical-align: middle
+			&:before
+				content: 'Creator:'
+				color: #000
+				font-weight: 900
+				display: none
+		&Receiver
+			&:before
+				content: 'Receiver:'
+				color: #000
+				font-weight: 900
+				display: none
 		&_head
 			font-weight: 500
+			span
+				&:before
+					display: none
 
 .paginationWrap
 	text-align: center
@@ -51,3 +82,38 @@
 			a
 				text-decoration: underline
 				cursor: auto
+
+
+@media only screen and (max-width : 1100px) and (min-width : 768px)
+	.taskList__itemProject,
+	.taskList__itemText
+		width: 130px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-right: 5px
+	.taskList__itemText
+		width: 150px
+
+@media only screen and (max-width : 768px)
+	.taskList__item
+		border-top: 1px solid lightgrey
+	.taskList__itemProgress,
+	.taskList__itemText,
+	.taskList__itemProject,
+	.taskList__itemCreator,
+	.taskList__itemReceiver
+		display: block
+		width: 100%
+		margin-bottom: 10px
+		&:before
+			display: block
+	.taskList__item_head
+		display: none
+
+
+
+
+
+
+

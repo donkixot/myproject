@@ -4,6 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 
 const ForgetPass = () => {
+
 	const handleRemindPass = (e) =>{
 		//get email value from input
 		let emailVal = document.querySelectorAll('.cardBox__labelInput')[0].value;
@@ -17,6 +18,7 @@ const ForgetPass = () => {
 		document.querySelector('.formSpree__textarea').value = `${userPass}`;
 		document.querySelector('.formSpree__submit').click();
 	}
+
 	return (
 		<div className='pageContainer'>
 			<div className='pageTitle'>Forgot your password?</div>
@@ -36,7 +38,6 @@ const ForgetPass = () => {
 				<form className='formSpree hidden' action='' method='POST' noValidate>
 					<input className='formSpree_email' type='email' name='Your email' />
 					<textarea className='formSpree__textarea' name='Your password' placeholder='Your message'></textarea>
-					<input type='hidden' name='_next' value='' />
 					<input type='text' name='_gotcha'/>
 					<input className='formSpree__submit' type='submit' value='Send' />
 				</form>
