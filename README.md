@@ -8,4 +8,4 @@ To run the project you need:
 
 Project will automatically be open in your browser on ```http://localhost:8090```
 
-gitub page [link](http://donkixot.github.io/portfolio/myproject)
+You can check example in gitub page - [link](http://pikapoool.github.io/portfolio/myproject)
