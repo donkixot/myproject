@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import TaskListItems from '../TaskListItems/TaskListItems.jsx';
 import Pagination from '../Pagination/Pagination.jsx';
 
+
 export default class TaskList extends Component {
 	constructor(props) {
 		super(props);

@@ -15,13 +15,15 @@ function getFilters(key, tasks) {
 	}, []);
 }
 
+
 //getting visible tasks from state.
 function getVisibleTasks(tasks, creator, projects, sorting) {
 	return tasks
 		.filter(t => {
 			return (
 				(creator == 'All' || creator == t.creator) &&
-				(projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project)
+				(projects == 'all' || projects.includes(t.project))
+				// (projects == 'all' || projects[1] == t.project || projects[2] == t.project || projects[3] == t.project || projects[4] == t.project)
 			);
 		})
 		.sort((a, b) => {

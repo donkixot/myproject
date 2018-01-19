@@ -55,9 +55,6 @@ export default class Task extends Component {
 									data-size="large"
 								></a>
 							</li>
-							<li className='taskShare__item taskShare__item_vk'>
-								<a href="https://vk.com/share.php?url=https://github.com/pikapoool/myproject" target="_blank"></a>
-							</li>
 							<li className='taskShare__item taskShare__item_google'>
 								<div className="g-plus" data-height="60" data-action="share" data-annotation="none" data-href="https://github.com/pikapoool/myproject"></div>
 							</li>

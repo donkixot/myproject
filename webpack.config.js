@@ -27,11 +27,11 @@ module.exports = {
 			},
 			{
 				test: /\.sass$/,
-				loaders:["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
-        // loader: ExtractTextPlugin.extract({
-        // 	fallback: "style-loader",
-        // 	use: ["css-loader?sourceMap", "sass-loader?sourceMap"]
-        // }),
+				// loaders:["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
+        loader: ExtractTextPlugin.extract({
+        	fallback: "style-loader",
+        	use: ["css-loader?sourceMap", "sass-loader?sourceMap"]
+        }),
 			},
 			{
 				test: /\.json$/,
@@ -40,6 +40,6 @@ module.exports = {
 		]
 	},
   plugins: [
-    new ExtractTextPlugin('../css/main.css')
+		new ExtractTextPlugin('../css/main.css')
   ]
 }
